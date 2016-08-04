@@ -120,11 +120,11 @@ export default function spacing({ limit = 10, incrementBy = 1, breakpoints = {} 
                 // only_{breakpoint}_{selector}
                 if (index === 0) {
                     media[`only_${ breakpoint }_${ selector }`] = {
-                        [`@media (max-width: ${ breakpoints[Object.keys(breakpoints)[index ]] }px)`]: style[selector]
+                        [`@media (max-width: ${ breakpoints[Object.keys(breakpoints)[index]] }px)`]: style[selector]
                     }
                 } else if (index === breakpoints.length) {
                     media[`only_${ breakpoint }_${ selector }`] = {
-                        [`@media (min-width: ${ breakpoints[Object.keys(breakpoints)[index ]] }px)`]: style[selector]
+                        [`@media (min-width: ${ breakpoints[Object.keys(breakpoints)[index]] }px)`]: style[selector]
                     }
                 } else {
                     media[`only_${ breakpoint }_${ selector }`] = {

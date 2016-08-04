@@ -1,3 +1,6 @@
+/**
+ * Beard Default Settings
+ */
 export default {
     breakpoints: {
         sm: 600,
