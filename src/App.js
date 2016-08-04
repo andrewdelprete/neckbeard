@@ -7,12 +7,12 @@ import { css } from 'aphrodite'
 import neckbeard from './neckbeard'
 
 const settings = {
-    ...neckbeard.settings
+    ...neckbeard.defaultSettings
     // ...Overwrites here
 }
 
 // Compose Beard Style Object
-const b = neckbeard.create([ neckbeard.selectors.spacing ], settings)
+const b = neckbeard.create([ neckbeard.helpers.spacing ], settings)
 
 class App extends Component {
   render() {

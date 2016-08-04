@@ -6,7 +6,7 @@
  * @param  {Object} breakpoints={} (optional)
  * @return {Object}
  */
-export default function spacing({ spacing: { limit, incrementBy }, breakpoints }) {
+export default function spacing({ helpers: { spacing: { limit, incrementBy } }, breakpoints }) {
     const selectors = {}
     const media = {}
 
