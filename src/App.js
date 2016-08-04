@@ -4,15 +4,15 @@ import './App.css'
 import { css } from 'aphrodite'
 
 // Beard
-import beard from './beard'
+import neckbeard from './neckbeard'
 
 const settings = {
-    ...beard.settings
+    ...neckbeard.settings
     // ...Overwrites here
 }
 
 // Compose Beard Style Object
-const b = beard.create([ beard.selectors.spacing ], settings)
+const b = neckbeard.create([ neckbeard.selectors.spacing ], settings)
 
 class App extends Component {
   render() {

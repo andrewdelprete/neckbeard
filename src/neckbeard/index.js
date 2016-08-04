@@ -2,7 +2,11 @@ import create from './create'
 import settings from './settings'
 import spacing from './spacing'
 
-const beard = {
+/**
+ * Neckbeard
+ * @type {Object}
+ */
+export default {
     create,
     settings,
     selectors: {
@@ -12,5 +16,3 @@ const beard = {
         return Object.keys(this.selectors).map(key => this.selectors[key]);
     }
 }
-
-export default beard

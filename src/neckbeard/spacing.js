@@ -6,54 +6,54 @@
  * @param  {Object} breakpoints={} (optional)
  * @return {Object}
  */
-export default function test({ spacing: { limit, incrementBy }, breakpoints }) {
-    const style = {}
+export default function spacing({ spacing: { limit, incrementBy }, breakpoints }) {
+    const selectors = {}
     const media = {}
 
     /**
      * Margin
      */
     for (let x = incrementBy; x <= limit; x+=incrementBy) {
-        style[`mh${ x }`] = {
+        selectors[`mh${ x }`] = {
             "margin-left": `${ x }rem`,
             "margin-right": `${ x }rem`
         }
-        style[`mv${ x }`] = {
+        selectors[`mv${ x }`] = {
             "margin-top": `${ x }rem`,
             "margin-bottom": `${ x }rem`
         }
-        style[`ml${ x }`] = {
+        selectors[`ml${ x }`] = {
             "margin-left": `${ x }rem`
         }
-        style[`mr${ x }`] = {
+        selectors[`mr${ x }`] = {
             "margin-right": `${ x }rem`
         }
-        style[`mt${ x }`] = {
+        selectors[`mt${ x }`] = {
             "margin-top": `${ x }rem`
         }
-        style[`mb${ x }`] = {
+        selectors[`mb${ x }`] = {
             "margin-bottom": `${ x }rem`
         }
 
         // Remove Margin
-        style[`xmv`] = {
+        selectors[`xmv`] = {
             "margin-top": "0",
             "margin-bottom": "0"
         }
-        style[`xmh`] = {
+        selectors[`xmh`] = {
             "margin-left": "0",
             "margin-right": "0"
         }
-        style[`xmt`] = {
+        selectors[`xmt`] = {
             "margin-top": "0"
         }
-        style[`xmb`] = {
+        selectors[`xmb`] = {
             "margin-bottom": "0"
         }
-        style[`xml`] = {
+        selectors[`xml`] = {
             "margin-left": "0"
         }
-        style[`xmr`] = {
+        selectors[`xmr`] = {
             "margin-right": "0"
         }
     }
@@ -62,46 +62,46 @@ export default function test({ spacing: { limit, incrementBy }, breakpoints }) {
      * Paddings
      */
     for (let x = incrementBy; x <= limit; x+=incrementBy) {
-        style[`ph${ x }`] = {
+        selectors[`ph${ x }`] = {
             "padding-left": `${ x }rem`,
             "padding-right": `${ x }rem`
         }
-        style[`pv${ x }`] = {
+        selectors[`pv${ x }`] = {
             "padding-top": `${ x }rem`,
             "padding-bottom": `${ x }rem`
         }
-        style[`pl${ x }`] = {
+        selectors[`pl${ x }`] = {
             "padding-left": `${ x }rem`
         }
-        style[`pr${ x }`] = {
+        selectors[`pr${ x }`] = {
             "padding-right": `${ x }rem`
         }
-        style[`pt${ x }`] = {
+        selectors[`pt${ x }`] = {
             "padding-top": `${ x }rem`
         }
-        style[`pb${ x }`] = {
+        selectors[`pb${ x }`] = {
             "padding-bottom": `${ x }rem`
         }
 
         // Remove Padding
-        style[`xpv`] = {
+        selectors[`xpv`] = {
             "padding-top": "0",
             "padding-bottom": "0"
         }
-        style[`xph`] = {
+        selectors[`xph`] = {
             "padding-left": "0",
             "padding-right": "0"
         }
-        style[`xpt`] = {
+        selectors[`xpt`] = {
             "padding-top": "0"
         }
-        style[`xpb`] = {
+        selectors[`xpb`] = {
             "padding-bottom": "0"
         }
-        style[`xpl`] = {
+        selectors[`xpl`] = {
             "padding-left": "0"
         }
-        style[`xpr`] = {
+        selectors[`xpr`] = {
             "padding-right": "0"
         }
     }
@@ -117,29 +117,29 @@ export default function test({ spacing: { limit, incrementBy }, breakpoints }) {
             }
             media[breakpoint] = {}
 
-            Object.keys(style).forEach(selector => {
+            Object.keys(selectors).forEach(selector => {
                 // {breakpoint}.{selector}
                 media[breakpoint][selector] = {
-                    [`@media (min-width: ${ breakpoints[breakpoint] }px)`]: style[selector]
+                    [`@media (min-width: ${ breakpoints[breakpoint] }px)`]: selectors[selector]
                 }
 
                 // only.{breakpoint}.{selector}
                 if (index === 0) {
                     media['only'][breakpoint][selector] = {
-                        [`@media (max-width: ${ breakpoints[breakpoint] }px)`]: style[selector]
+                        [`@media (max-width: ${ breakpoints[breakpoint] }px)`]: selectors[selector]
                     }
                 } else if (index === breakpoints.length) {
                     media['only'][breakpoint][selector] = {
-                        [`@media (min-width: ${ breakpoints[breakpoint] }px)`]: style[selector]
+                        [`@media (min-width: ${ breakpoints[breakpoint] }px)`]: selectors[selector]
                     }
                 } else {
                     media['only'][breakpoint][selector] = {
-                        [`@media (min-width: ${ breakpoints[breakpoint] }px) and (max-width: ${ breakpoints[Object.keys(breakpoints)[index + 1]] }px)`]: style[selector]
+                        [`@media (min-width: ${ breakpoints[breakpoint] }px) and (max-width: ${ breakpoints[Object.keys(breakpoints)[index + 1]] }px)`]: selectors[selector]
                     }
                 }
             })
         })
     }
 
-    return { ...style, ...media }
+    return { ...selectors, ...media }
 }
