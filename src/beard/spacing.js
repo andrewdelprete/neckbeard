@@ -112,12 +112,12 @@ export default function spacing({ limit = 10, incrementBy = 1, breakpoints = {} 
     if (Object.keys(breakpoints).length !== 0) {
         Object.keys(breakpoints).forEach((breakpoint, index) => {
             Object.keys(style).forEach(selector => {
-                // {breakpoint}-{selector}
+                // {breakpoint}_{selector}
                 media[`${ breakpoint }_${ selector }`] = {
                     [`@media (min-width: ${ breakpoints[breakpoint] }px)`]: style[selector]
                 }
 
-                // only-{breakpoint}-{selector}
+                // only_{breakpoint}_{selector}
                 if (index === 0) {
                     media[`only_${ breakpoint }_${ selector }`] = {
                         [`@media (max-width: ${ breakpoints[Object.keys(breakpoints)[index ]] }px)`]: style[selector]
