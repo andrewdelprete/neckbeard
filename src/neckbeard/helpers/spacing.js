@@ -1,3 +1,5 @@
+import { addMediaQueries } from '../'
+
 /**
  * Spacing
  *
@@ -7,13 +9,13 @@
  * @return {Object}
  */
 export default function spacing({ helpers: { spacing: { limit, incrementBy } }, breakpoints }) {
-    const selectors = {}
-    const media = {}
+    let selectors = {}
+    let media = {}
 
     /**
      * Margin
      */
-    for (let x = incrementBy; x <= limit; x+=incrementBy) {
+    for (let x = incrementBy; x <= limit; x += incrementBy) {
         selectors[`mh${ x }`] = {
             "margin-left": `${ x }rem`,
             "margin-right": `${ x }rem`
@@ -59,7 +61,7 @@ export default function spacing({ helpers: { spacing: { limit, incrementBy } }, 
     }
 
     /**
-     * Paddings
+     * Padding
      */
     for (let x = incrementBy; x <= limit; x+=incrementBy) {
         selectors[`ph${ x }`] = {
@@ -110,35 +112,7 @@ export default function spacing({ helpers: { spacing: { limit, incrementBy } }, 
      * Media Queries
      */
     if (Object.keys(breakpoints).length !== 0) {
-        Object.keys(breakpoints).forEach((breakpoint, index) => {
-            media.only = {
-                ...media.only,
-                [breakpoint]: {}
-            }
-            media[breakpoint] = {}
-
-            Object.keys(selectors).forEach(selector => {
-                // {breakpoint}.{selector}
-                media[breakpoint][selector] = {
-                    [`@media (min-width: ${ breakpoints[breakpoint] }px)`]: selectors[selector]
-                }
-
-                // only.{breakpoint}.{selector}
-                if (index === 0) {
-                    media['only'][breakpoint][selector] = {
-                        [`@media (max-width: ${ breakpoints[breakpoint] }px)`]: selectors[selector]
-                    }
-                } else if (index === breakpoints.length) {
-                    media['only'][breakpoint][selector] = {
-                        [`@media (min-width: ${ breakpoints[breakpoint] }px)`]: selectors[selector]
-                    }
-                } else {
-                    media['only'][breakpoint][selector] = {
-                        [`@media (min-width: ${ breakpoints[breakpoint] }px) and (max-width: ${ breakpoints[Object.keys(breakpoints)[index + 1]] }px)`]: selectors[selector]
-                    }
-                }
-            })
-        })
+        media = addMediaQueries(selectors, breakpoints)
     }
 
     return { ...selectors, ...media }

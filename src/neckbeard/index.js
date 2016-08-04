@@ -23,12 +23,12 @@ export const defaultSettings = {
 /**
  * Returns an object ran through Aphrodite
  * and includes media queries.
- * @param  {array} selectorFns
+ * @param  {array} helperFns
  * @param  {object} settings
  * @return {object}
  */
-export function create(selectorFns, settings = defaultSettings) {
-    return _(selectorFns).map(fn => {
+export function create(helperFns, settings = defaultSettings) {
+    return _(helperFns).map(fn => {
         const selectors = fn(settings)
         let only = null
         let media = null
@@ -57,12 +57,50 @@ export function create(selectorFns, settings = defaultSettings) {
     .value()[0]
 }
 
+
+export function addMediaQueries(selectors, breakpoints) {
+    let media = {}
+
+    Object.keys(breakpoints).forEach((breakpoint, index) => {
+        media.only = {
+            ...media.only,
+            [breakpoint]: {}
+        }
+        media[breakpoint] = {}
+
+        Object.keys(selectors).forEach(selector => {
+            // {breakpoint}.{selector}
+            media[breakpoint][selector] = {
+                [`@media (min-width: ${ breakpoints[breakpoint] }px)`]: selectors[selector]
+            }
+
+            // only.{breakpoint}.{selector}
+            if (index === 0) {
+                media['only'][breakpoint][selector] = {
+                    [`@media (max-width: ${ breakpoints[breakpoint] }px)`]: selectors[selector]
+                }
+            } else if (index === breakpoints.length) {
+                media['only'][breakpoint][selector] = {
+                    [`@media (min-width: ${ breakpoints[breakpoint] }px)`]: selectors[selector]
+                }
+            } else {
+                media['only'][breakpoint][selector] = {
+                    [`@media (min-width: ${ breakpoints[breakpoint] }px) and (max-width: ${ breakpoints[Object.keys(breakpoints)[index + 1]] }px)`]: selectors[selector]
+                }
+            }
+        })
+    })
+
+    return media
+}
+
 /**
  * Neckbeard
  * @type {Object}
  */
 export default {
     create,
+    addMediaQueries,
     defaultSettings,
     helpers: {
         spacing
