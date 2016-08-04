@@ -12,7 +12,7 @@ const settings = {
 }
 
 // Compose Beard Style Object
-const b = beard.create([ beard.spacing ], settings)
+const b = beard.create([ beard.selectors.spacing ], settings)
 
 class App extends Component {
   render() {
