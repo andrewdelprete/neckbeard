@@ -23,7 +23,7 @@ class App extends Component {
           <h2>Welcome to React</h2>
         </div>
         <p className={ css(b.pv1, b.md_pv3, b.only_sm_xmv) }>
-          To get started, edit <code>src/App.js</code> and save to reload.
+            Controlled by Aphrodite - Padding changes based on browser width.
         </p>
       </div>
     );
