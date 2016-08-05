@@ -17,24 +17,24 @@ export default function spacing({ helpers: { spacing: { limit, incrementBy } }, 
      */
     for (let x = incrementBy; x <= limit; x += incrementBy) {
         selectors[`mh${ x }`] = {
-            "margin-left": `${ x }rem`,
-            "margin-right": `${ x }rem`
+            "margin-left": `${ x * incrementBy }rem`,
+            "margin-right": `${ x * incrementBy }rem`
         }
         selectors[`mv${ x }`] = {
-            "margin-top": `${ x }rem`,
-            "margin-bottom": `${ x }rem`
+            "margin-top": `${ x * incrementBy }rem`,
+            "margin-bottom": `${ x * incrementBy }rem`
         }
         selectors[`ml${ x }`] = {
-            "margin-left": `${ x }rem`
+            "margin-left": `${ x * incrementBy }rem`
         }
         selectors[`mr${ x }`] = {
-            "margin-right": `${ x }rem`
+            "margin-right": `${ x * incrementBy }rem`
         }
         selectors[`mt${ x }`] = {
-            "margin-top": `${ x }rem`
+            "margin-top": `${ x * incrementBy }rem`
         }
         selectors[`mb${ x }`] = {
-            "margin-bottom": `${ x }rem`
+            "margin-bottom": `${ x * incrementBy }rem`
         }
 
         // Remove Margin
@@ -63,26 +63,26 @@ export default function spacing({ helpers: { spacing: { limit, incrementBy } }, 
     /**
      * Padding
      */
-    for (let x = incrementBy; x <= limit; x+=incrementBy) {
+    for (let x = 1; x <= limit; x++) {
         selectors[`ph${ x }`] = {
-            "padding-left": `${ x }rem`,
-            "padding-right": `${ x }rem`
+            "padding-left": `${ x * incrementBy }rem`,
+            "padding-right": `${ x * incrementBy }rem`
         }
         selectors[`pv${ x }`] = {
-            "padding-top": `${ x }rem`,
-            "padding-bottom": `${ x }rem`
+            "padding-top": `${ x * incrementBy }rem`,
+            "padding-bottom": `${ x * incrementBy }rem`
         }
         selectors[`pl${ x }`] = {
-            "padding-left": `${ x }rem`
+            "padding-left": `${ x * incrementBy }rem`
         }
         selectors[`pr${ x }`] = {
-            "padding-right": `${ x }rem`
+            "padding-right": `${ x * incrementBy }rem`
         }
         selectors[`pt${ x }`] = {
-            "padding-top": `${ x }rem`
+            "padding-top": `${ x * incrementBy }rem`
         }
         selectors[`pb${ x }`] = {
-            "padding-bottom": `${ x }rem`
+            "padding-bottom": `${ x * incrementBy }rem`
         }
 
         // Remove Padding

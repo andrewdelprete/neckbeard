@@ -20,7 +20,7 @@ export const defaultSettings = {
         },
         fontSizes: {
             limit: 17,
-            incrementBy: .5
+            incrementBy: .25
         }
     }
 }

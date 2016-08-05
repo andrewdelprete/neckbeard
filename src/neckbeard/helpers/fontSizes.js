@@ -15,9 +15,9 @@ export default function fontSizes({ helpers: { fontSizes: { limit, incrementBy }
     /**
      * Font Sizes
      */
-    for (let x = incrementBy; x <= limit; x += incrementBy) {
+    for (let x = 1; x <= limit; x++) {
         selectors[`ft${ x }`] = {
-            "font-size": `${ x }rem`
+            "font-size": `${ x * incrementBy }rem`
         }
     }
 

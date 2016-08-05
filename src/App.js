@@ -21,7 +21,7 @@ class App extends Component {
           <img src={ logo } className="App-logo" alt="logo" />
           <h2>Welcome to React</h2>
         </div>
-        <p className={ b.css('pv2 md-pv4 only-sm-xpv ft2 only-sm-ft1') }>
+        <p className={ b.css('pv2 md-pv4 only-sm-xpv ft3 md-ft6 lg-ft8') }>
             Controlled by Aphrodite - Padding changes based on browser width.
         </p>
       </div>
