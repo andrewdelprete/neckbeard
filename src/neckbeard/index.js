@@ -1,5 +1,9 @@
 import { StyleSheet, css } from 'aphrodite'
-import _ from 'lodash'
+
+/**
+ * Neckbeard Helpers
+ */
+import borders from './helpers/borders'
 import spacing from './helpers/spacing'
 import fontSizes from './helpers/fontSizes'
 
@@ -21,6 +25,10 @@ export const defaultSettings = {
         fontSizes: {
             limit: 17,
             incrementBy: .25
+        },
+        borders: {
+            limit: 3,
+            incrementBy: 1
         }
     }
 }
@@ -106,8 +114,9 @@ export default {
     addMediaQueries,
     defaultSettings,
     helpers: {
-        spacing,
-        fontSizes
+        borders,
+        fontSizes,
+        spacing
     },
     all() {
         return Object.keys(this.helpers).map(key => this.helpers[key]);
