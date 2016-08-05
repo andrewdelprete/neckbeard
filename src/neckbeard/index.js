@@ -16,6 +16,10 @@ export const defaultSettings = {
         spacing: {
             limit: 10,
             incrementBy: 1
+        },
+        fontSizes: {
+            limit: 17,
+            incrementBy: 1
         }
     }
 }
