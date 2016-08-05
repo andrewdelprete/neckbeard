@@ -8,6 +8,7 @@ import borderRadius from './helpers/borderRadius'
 import spacing from './helpers/spacing'
 import fontSizes from './helpers/fontSizes'
 import display from './helpers/display'
+import flex from './helpers/flex'
 
 /**
  * Neckbeard Default Settings
@@ -35,9 +36,6 @@ export const defaultSettings = {
         borderRadius: {
             limit: 10,
             incrementBy: 1
-        },
-        display: {
-
         }
     }
 }
@@ -127,7 +125,8 @@ export default {
         borderRadius,
         fontSizes,
         spacing,
-        display
+        display,
+        flex
     },
     all() {
         return Object.keys(this.helpers).map(key => this.helpers[key]);
