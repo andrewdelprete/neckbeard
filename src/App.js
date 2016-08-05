@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import logo from './logo.svg'
 import './App.css'
-import { css } from 'aphrodite'
 
 // Beard
 import neckbeard from './neckbeard'
@@ -12,7 +11,7 @@ const settings = {
 }
 
 // Compose Beard Style Object
-const b = neckbeard.create([ neckbeard.helpers.spacing ], settings)
+const b = neckbeard.create(neckbeard.all(), settings)
 
 class App extends Component {
   render() {
@@ -22,7 +21,7 @@ class App extends Component {
           <img src={ logo } className="App-logo" alt="logo" />
           <h2>Welcome to React</h2>
         </div>
-        <p className={ css(b.pv2, b.md.pv4, b.only.sm.xpv) }>
+        <p className={ b.css('pv2 md-pv4 only-sm-xpv ft2 only-sm-ft1') }>
             Controlled by Aphrodite - Padding changes based on browser width.
         </p>
       </div>

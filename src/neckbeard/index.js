@@ -1,6 +1,7 @@
-import { StyleSheet } from 'aphrodite'
+import { StyleSheet, css } from 'aphrodite'
 import _ from 'lodash'
 import spacing from './helpers/spacing'
+import fontSizes from './helpers/fontSizes'
 
 /**
  * Neckbeard Default Settings
@@ -19,7 +20,7 @@ export const defaultSettings = {
         },
         fontSizes: {
             limit: 17,
-            incrementBy: 1
+            incrementBy: .5
         }
     }
 }
@@ -32,33 +33,37 @@ export const defaultSettings = {
  * @return {object}
  */
 export function create(helperFns, settings = defaultSettings) {
-    return _(helperFns).map(fn => {
-        const selectors = fn(settings)
-        let only = null
-        let media = null
+    const allSelectors = helperFns
+        .map(fn => fn(settings))
+        .reduce((previous, current) => {
+            return {
+                ...previous,
+                ...current
+            }
+        })
 
-        if (Object.keys(settings.breakpoints).length !== 0) {
-            media = Object
-                .keys(settings.breakpoints).reduce((previous, key) => ({
-                    ...previous,
-                    [key]: StyleSheet.create({ ...selectors[key] })
-                }), {})
+    return {
+        css: (selectors) => {
+            const selectorsObj = selectors
+                .split(' ')
+                .reduce((previous, current) => {
+                    if (allSelectors.hasOwnProperty(current)) {
+                        return {
+                            ...previous,
+                            [current]: allSelectors[current]
+                        }
+                    }
 
-            only = Object
-                .keys(selectors.only).reduce((previous, key) => ({
-                    ...previous,
-                    [key]: StyleSheet.create({ ...selectors.only[key] })
-                }), {})
+                    return { ...previous }
+                }, {})
+
+            const stylesObj = StyleSheet.create(selectorsObj)
+
+            const stylesArray = Object.keys(stylesObj).map(key => stylesObj[key])
+
+            return css(...stylesArray)
         }
-
-        return {
-            ...StyleSheet.create(selectors),
-            ...media,
-            only: { ...only }
-        }
-    })
-    .flatMap()
-    .value()[0]
+    }
 }
 
 
@@ -66,29 +71,23 @@ export function addMediaQueries(selectors, breakpoints) {
     let media = {}
 
     Object.keys(breakpoints).forEach((breakpoint, index) => {
-        media.only = {
-            ...media.only,
-            [breakpoint]: {}
-        }
-        media[breakpoint] = {}
-
         Object.keys(selectors).forEach(selector => {
-            // {breakpoint}.{selector}
-            media[breakpoint][selector] = {
+            // {breakpoint}-{selector}
+            media[`${ breakpoint }-${ selector }`] = {
                 [`@media (min-width: ${ breakpoints[breakpoint] }px)`]: selectors[selector]
             }
 
-            // only.{breakpoint}.{selector}
+            // only-{breakpoint}-{selector}
             if (index === 0) {
-                media['only'][breakpoint][selector] = {
+                media[`only-${ breakpoint }-${ selector }`] = {
                     [`@media (max-width: ${ breakpoints[breakpoint] }px)`]: selectors[selector]
                 }
             } else if (index === breakpoints.length) {
-                media['only'][breakpoint][selector] = {
+                media[`only-${ breakpoint }-${ selector }`] = {
                     [`@media (min-width: ${ breakpoints[breakpoint] }px)`]: selectors[selector]
                 }
             } else {
-                media['only'][breakpoint][selector] = {
+                media[`only-${ breakpoint }-${ selector }`] = {
                     [`@media (min-width: ${ breakpoints[breakpoint] }px) and (max-width: ${ breakpoints[Object.keys(breakpoints)[index + 1]] }px)`]: selectors[selector]
                 }
             }
@@ -107,7 +106,8 @@ export default {
     addMediaQueries,
     defaultSettings,
     helpers: {
-        spacing
+        spacing,
+        fontSizes
     },
     all() {
         return Object.keys(this.helpers).map(key => this.helpers[key]);
