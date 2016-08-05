@@ -30,6 +30,12 @@ class App extends Component {
                 <p className={ b.css('brdr2 br4') }>
                     Border with Radius
                 </p>
+                <p className={ b.css('dn lg-db') }>
+                    Display None until large
+                </p>
+                <p className={ b.css('dib') }>
+                    Display Inline Block
+                </p>
             </div>
         )
     }
