@@ -4,6 +4,7 @@ import { StyleSheet, css } from 'aphrodite'
  * Neckbeard Helpers
  */
 import borders from './helpers/borders'
+import borderRadius from './helpers/borderRadius'
 import spacing from './helpers/spacing'
 import fontSizes from './helpers/fontSizes'
 
@@ -28,6 +29,10 @@ export const defaultSettings = {
         },
         borders: {
             limit: 3,
+            incrementBy: 1
+        },
+        borderRadius: {
+            limit: 10,
             incrementBy: 1
         }
     }
@@ -115,6 +120,7 @@ export default {
     defaultSettings,
     helpers: {
         borders,
+        borderRadius,
         fontSizes,
         spacing
     },
