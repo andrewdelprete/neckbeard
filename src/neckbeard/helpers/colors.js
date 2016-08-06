@@ -79,7 +79,7 @@ export default function colors({ breakpoints, colors }) {
     selectors["bcg60"] = colors.beardColors.g60
     selectors["bcg70"] = colors.beardColors.g70
     selectors["bcg80"] = colors.beardColors.g80
-    selectors["bcg90"] = colors.beardColors.g9
+    selectors["bcg90"] = colors.beardColors.g90
 
     /**
      * Media Queries
