@@ -1,14 +1,20 @@
 import { StyleSheet, css } from 'aphrodite'
 
 /**
- * Neckbeard Helpers
+ * Neckbeard Imported Helpers
  */
-import borders from './helpers/borders'
 import borderRadius from './helpers/borderRadius'
-import spacing from './helpers/spacing'
-import fontSizes from './helpers/fontSizes'
+import borders from './helpers/borders'
+import colors from './helpers/colors'
 import display from './helpers/display'
 import flex from './helpers/flex'
+import fontSizes from './helpers/fontSizes'
+import spacing from './helpers/spacing'
+
+/**
+ * Neckbeard Imported Settings
+ */
+import * as colorSettings from './settings/colors'
 
 /**
  * Neckbeard Default Settings
@@ -20,6 +26,7 @@ export const defaultSettings = {
         md: 800,
         lg: 1200
     },
+    colors: colorSettings,
     helpers: {
         spacing: {
             limit: 10,
@@ -56,6 +63,8 @@ export function create(helperFns, settings = defaultSettings) {
                 ...current
             }
         })
+
+    console.log(allSelectors)
 
     return {
         css: (selectors) => {
@@ -121,12 +130,13 @@ export default {
     addMediaQueries,
     defaultSettings,
     helpers: {
-        borders,
         borderRadius,
-        fontSizes,
-        spacing,
+        borders,
+        colors,
         display,
-        flex
+        flex,
+        fontSizes,
+        spacing
     },
     all() {
         return Object.keys(this.helpers).map(key => this.helpers[key]);

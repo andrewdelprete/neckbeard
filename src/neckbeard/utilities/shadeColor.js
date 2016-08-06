@@ -7,6 +7,7 @@
  * @return {String}
  */
 export default function shadeColor(p,c0,c1) {
+    console.log(p,c0,c1)
     let n=p<0?p*-1:p,u=Math.round,w=parseInt
     if(c0.length>7) {
         let f=c0.split(","),t=(c1?c1:p<0?"rgb(0,0,0)":"rgb(255,255,255)").split(","),R=w(f[0].slice(4)),G=w(f[1]),B=w(f[2])

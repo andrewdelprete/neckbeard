@@ -36,6 +36,9 @@ class App extends Component {
                 <p className={ b.css('dib') }>
                     Display Inline Block
                 </p>
+                <p className={ b.css('bgg10 tc1') }>
+                    Colors Inline Block
+                </p>
                 <div>
                     <div className={ b.css('flex aic jcc only-md-jcfe') }>Flex Stuff</div>
                 </div>
