@@ -1,4 +1,6 @@
 import { StyleSheet, css } from 'aphrodite'
+import cssjson from 'cssjson'
+import _ from 'lodash'
 
 /**
  * Neckbeard Imported Helpers
@@ -145,5 +147,42 @@ export default {
     },
     all() {
         return Object.keys(this.helpers).map(key => this.helpers[key]);
+    },
+    static(helperFns, settings) {
+        const allSelectors = helperFns
+            .map(fn => fn(settings))
+            .reduce((previous, current) => {
+                return {
+                    ...previous,
+                    ...current
+                }
+            })
+
+        var selectors = Object.keys(allSelectors).reduce((previous, selector) => {
+            if (_.includes(selector, 'sm-') || _.includes(selector, 'md-') || _.includes(selector, 'lg-')) {
+                return {
+                    ...previous,
+                    [`.${ selector }`]: Object.keys(allSelectors[selector]).reduce((previous, mediaProperty) => {
+                        return {
+                            ...previous,
+                            children: {
+                                [mediaProperty]: {
+                                    attributes: { ...allSelectors[selector][mediaProperty] }
+                                }
+                            }
+                        }
+                    }, {})
+                }
+            }
+
+            return {
+                ...previous,
+                [`.${ selector }`]: {
+                    attributes: { ...allSelectors[selector] }
+                }
+            }
+        }, {})
+
+        return cssjson.toCSS({ children: selectors })
     }
 }

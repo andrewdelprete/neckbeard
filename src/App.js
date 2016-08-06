@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import logo from './logo.svg'
 import './App.css'
+import { StyleSheetServer } from 'aphrodite'
 
 // Beard
 import neckbeard from './neckbeard'
@@ -12,6 +13,8 @@ const settings = {
 
 // Compose Beard Style Object
 const b = neckbeard.create(neckbeard.all(), settings)
+const bstatic = neckbeard.static(neckbeard.all(), settings)
+console.log(bstatic)
 
 class App extends Component {
     render() {
