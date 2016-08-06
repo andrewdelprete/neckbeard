@@ -8,7 +8,7 @@ import { addMediaQueries } from '../'
  * @param  {Object} colors={} (optional)
  * @return {Object}
  */
-export default function colors({ breakpoints, colors }) {
+export default function colors({ breakpoints, colors, useBreakpoints }) {
     let selectors = {}
     let media = {}
 
@@ -84,7 +84,7 @@ export default function colors({ breakpoints, colors }) {
     /**
      * Media Queries
      */
-    if (Object.keys(breakpoints).length !== 0) {
+    if (Object.keys(breakpoints).length !== 0 && useBreakpoints) {
         media = addMediaQueries(selectors, breakpoints)
     }
 

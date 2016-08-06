@@ -8,7 +8,7 @@ import { addMediaQueries } from '../'
  * @param  {Object} breakpoints={} (optional)
  * @return {Object}
  */
-export default function borderRadius({ helpers: { borderRadius: { limit, incrementBy } }, breakpoints }) {
+export default function borderRadius({ helpers: { borderRadius: { limit, incrementBy, useBreakpoints } }, breakpoints }) {
     let selectors = {}
     let media = {}
     /**
@@ -49,7 +49,7 @@ export default function borderRadius({ helpers: { borderRadius: { limit, increme
     /**
      * Media Queries
      */
-    if (Object.keys(breakpoints).length !== 0) {
+    if (Object.keys(breakpoints).length !== 0 && useBreakpoints) {
         media = addMediaQueries(selectors, breakpoints)
     }
 

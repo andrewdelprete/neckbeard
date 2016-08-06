@@ -8,7 +8,7 @@ import { addMediaQueries } from '../'
  * @param  {Object} breakpoints={} (optional)
  * @return {Object}
  */
-export default function spacing({ helpers: { spacing: { limit, incrementBy } }, breakpoints }) {
+export default function spacing({ helpers: { spacing: { limit, incrementBy, useBreakpoints } }, breakpoints }) {
     let selectors = {}
     let media = {}
 
@@ -111,7 +111,7 @@ export default function spacing({ helpers: { spacing: { limit, incrementBy } }, 
     /**
      * Media Queries
      */
-    if (Object.keys(breakpoints).length !== 0) {
+    if (Object.keys(breakpoints).length !== 0 && useBreakpoints) {
         media = addMediaQueries(selectors, breakpoints)
     }
 

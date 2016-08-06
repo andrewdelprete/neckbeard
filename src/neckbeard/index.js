@@ -28,21 +28,28 @@ export const defaultSettings = {
     },
     colors: colorSettings,
     helpers: {
+        colors: {
+            useBreakpoints: false
+        },
         spacing: {
             limit: 10,
-            incrementBy: 1
+            incrementBy: 1,
+            useBreakpoints: true
         },
         fontSizes: {
             limit: 17,
-            incrementBy: .25
+            incrementBy: .25,
+            useBreakpoints: true
         },
         borders: {
             limit: 3,
-            incrementBy: 1
+            incrementBy: 1,
+            useBreakpoints: true
         },
         borderRadius: {
             limit: 10,
-            incrementBy: 1
+            incrementBy: 1,
+            useBreakpoints: true
         }
     }
 }
@@ -63,8 +70,6 @@ export function create(helperFns, settings = defaultSettings) {
                 ...current
             }
         })
-
-    console.log(allSelectors)
 
     return {
         css: (selectors) => {
