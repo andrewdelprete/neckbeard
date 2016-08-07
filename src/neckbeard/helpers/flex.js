@@ -6,7 +6,7 @@ import { addMediaQueries } from '../'
  * @param  {Object} breakpoints={} (optional)
  * @return {Object}
  */
-export default function flex({ helpers: { flex, useBreakpoints }, breakpoints }) {
+export default function flex({ helpers: { flex: { useBreakpoints } }, breakpoints }) {
     let selectors = {}
     let media = {}
 

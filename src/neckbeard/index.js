@@ -1,6 +1,6 @@
 import { StyleSheet, css } from 'aphrodite'
 import cssjson from 'cssjson'
-import _ from 'lodash'
+import includes from 'lodash/includes'
 
 /**
  * Neckbeard Imported Helpers
@@ -31,6 +31,12 @@ export const defaultSettings = {
     colors: colorSettings,
     helpers: {
         colors: {
+            useBreakpoints: false
+        },
+        display: {
+            useBreakpoints: true
+        },
+        flex: {
             useBreakpoints: false
         },
         spacing: {
@@ -113,7 +119,7 @@ export function addMediaQueries(selectors, breakpoints) {
                 media[`only-${ breakpoint }-${ selector }`] = {
                     [`@media (max-width: ${ breakpoints[breakpoint] }px)`]: selectors[selector]
                 }
-            } else if (index === breakpoints.length) {
+            } else if (index === Object.keys(breakpoints).length-1) {
                 media[`only-${ breakpoint }-${ selector }`] = {
                     [`@media (min-width: ${ breakpoints[breakpoint] }px)`]: selectors[selector]
                 }
@@ -159,7 +165,8 @@ export default {
             })
 
         var selectors = Object.keys(allSelectors).reduce((previous, selector) => {
-            if (_.includes(selector, 'sm-') || _.includes(selector, 'md-') || _.includes(selector, 'lg-')) {
+            // Media Selector (sm, md, lg, etc...)
+            if (Object.keys(settings.breakpoints).some(breakpoint => includes(selector, `${ breakpoint }-`))) {
                 return {
                     ...previous,
                     [`.${ selector }`]: Object.keys(allSelectors[selector]).reduce((previous, mediaProperty) => {
@@ -167,7 +174,7 @@ export default {
                             ...previous,
                             children: {
                                 [mediaProperty]: {
-                                    attributes: { ...allSelectors[selector][mediaProperty] }
+                                    attributes: allSelectors[selector][mediaProperty]
                                 }
                             }
                         }
@@ -175,10 +182,13 @@ export default {
                 }
             }
 
+            // Regular Selector
             return {
                 ...previous,
                 [`.${ selector }`]: {
-                    attributes: { ...allSelectors[selector] }
+                    attributes: typeof allSelectors[selector] === "object"
+                        ? { ...allSelectors[selector] }
+                        : { [selector]: allSelectors[selector] }
                 }
             }
         }, {})
