@@ -13,7 +13,7 @@ const settings = {
 
 // Compose Beard Style Object
 const b = neckbeard.create(neckbeard.all(), settings)
-const bstatic = neckbeard.static(neckbeard.all(), settings)
+const bstatic = neckbeard.selectorsToString(neckbeard.all(), settings)
 console.log(bstatic)
 
 class App extends Component {

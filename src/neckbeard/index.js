@@ -103,7 +103,11 @@ export function create(helperFns, settings = defaultSettings) {
     }
 }
 
-
+/**
+ * Adds media query classes to selectors
+ * @param {object} selectors
+ * @param {object} breakpoints
+ */
 export function addMediaQueries(selectors, breakpoints) {
     let media = {}
 
@@ -135,10 +139,61 @@ export function addMediaQueries(selectors, breakpoints) {
 }
 
 /**
+ * Returns a string off CSS Selectors
+ * @param  {array} helperFns
+ * @param  {object} settings
+ * @return {string}
+ */
+export function selectorsToString(helperFns, settings) {
+    const allSelectors = helperFns
+        .map(fn => fn(settings))
+        .reduce((previous, current) => {
+            return {
+                ...previous,
+                ...current
+            }
+        })
+
+    var selectors = Object.keys(allSelectors).reduce((previous, selector) => {
+        // Media Selector (sm, md, lg, etc...)
+        if (Object.keys(settings.breakpoints).some(breakpoint => includes(selector, `${ breakpoint }-`))) {
+            return {
+                ...previous,
+                [`.${ selector }`]: Object.keys(allSelectors[selector]).reduce((previous, mediaProperty) => {
+                    return {
+                        ...previous,
+                        children: {
+                            [mediaProperty]: {
+                                attributes: allSelectors[selector][mediaProperty]
+                            }
+                        }
+                    }
+                }, {})
+            }
+        }
+
+        // Regular Selector
+        return {
+            ...previous,
+            [`.${ selector }`]: {
+                attributes: typeof allSelectors[selector] === "object"
+                    ? { ...allSelectors[selector] }
+                    : { [selector]: allSelectors[selector] }
+            }
+        }
+    }, {})
+
+    return cssjson.toCSS({ children: selectors })
+}
+
+/**
  * Neckbeard
  * @type {Object}
  */
 export default {
+    all() {
+        return Object.keys(this.helpers).map(key => this.helpers[key]);
+    },
     create,
     addMediaQueries,
     defaultSettings,
@@ -151,48 +206,5 @@ export default {
         fontSizes,
         spacing
     },
-    all() {
-        return Object.keys(this.helpers).map(key => this.helpers[key]);
-    },
-    static(helperFns, settings) {
-        const allSelectors = helperFns
-            .map(fn => fn(settings))
-            .reduce((previous, current) => {
-                return {
-                    ...previous,
-                    ...current
-                }
-            })
-
-        var selectors = Object.keys(allSelectors).reduce((previous, selector) => {
-            // Media Selector (sm, md, lg, etc...)
-            if (Object.keys(settings.breakpoints).some(breakpoint => includes(selector, `${ breakpoint }-`))) {
-                return {
-                    ...previous,
-                    [`.${ selector }`]: Object.keys(allSelectors[selector]).reduce((previous, mediaProperty) => {
-                        return {
-                            ...previous,
-                            children: {
-                                [mediaProperty]: {
-                                    attributes: allSelectors[selector][mediaProperty]
-                                }
-                            }
-                        }
-                    }, {})
-                }
-            }
-
-            // Regular Selector
-            return {
-                ...previous,
-                [`.${ selector }`]: {
-                    attributes: typeof allSelectors[selector] === "object"
-                        ? { ...allSelectors[selector] }
-                        : { [selector]: allSelectors[selector] }
-                }
-            }
-        }, {})
-
-        return cssjson.toCSS({ children: selectors })
-    }
+    selectorsToString
 }
