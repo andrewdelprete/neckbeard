@@ -1,6 +1,9 @@
 import { StyleSheet, css } from 'aphrodite'
 import cssjson from 'cssjson'
 import includes from 'lodash/includes'
+import postcss from 'postcss'
+import postcssJs from 'postcss-js'
+import autoprefixer from 'autoprefixer'
 
 /**
  * Neckbeard Imported Helpers
@@ -79,27 +82,25 @@ export function create(helperFns, settings = defaultSettings) {
             }
         })
 
-    return {
-        css: (selectors) => {
-            const selectorsObj = selectors
-                .split(' ')
-                .reduce((previous, current) => {
-                    if (allSelectors.hasOwnProperty(current)) {
-                        return {
-                            ...previous,
-                            [current]: allSelectors[current]
-                        }
+    return (selectors) => {
+        const selectorsObj = selectors
+            .split(' ')
+            .reduce((previous, current) => {
+                if (allSelectors.hasOwnProperty(current)) {
+                    return {
+                        ...previous,
+                        [current]: allSelectors[current]
                     }
+                }
 
-                    return { ...previous }
-                }, {})
+                return { ...previous }
+            }, {})
 
-            const stylesObj = StyleSheet.create(selectorsObj)
+        const stylesObj = StyleSheet.create(selectorsObj)
 
-            const stylesArray = Object.keys(stylesObj).map(key => stylesObj[key])
+        const stylesArray = Object.keys(stylesObj).map(key => stylesObj[key])
 
-            return css(...stylesArray)
-        }
+        return css(...stylesArray)
     }
 }
 
@@ -139,51 +140,34 @@ export function addMediaQueries(selectors, breakpoints) {
 }
 
 /**
- * Returns a string off CSS Selectors
+ * Returns a string of CSS Selectors
  * @param  {array} helperFns
  * @param  {object} settings
  * @return {string}
  */
 export function selectorsToString(helperFns, settings) {
-    const allSelectors = helperFns
+    const prefixer = postcssJs.sync([ autoprefixer ])
+
+    var allSelectors = helperFns
         .map(fn => fn(settings))
-        .reduce((previous, current) => {
+        .reduce((previous, current, index) => {
             return {
                 ...previous,
                 ...current
             }
-        })
+        }, {})
 
-    var selectors = Object.keys(allSelectors).reduce((previous, selector) => {
-        // Media Selector (sm, md, lg, etc...)
-        if (Object.keys(settings.breakpoints).some(breakpoint => includes(selector, `${ breakpoint }-`))) {
-            return {
-                ...previous,
-                [`.${ selector }`]: Object.keys(allSelectors[selector]).reduce((previous, mediaProperty) => {
-                    return {
-                        ...previous,
-                        children: {
-                            [mediaProperty]: {
-                                attributes: allSelectors[selector][mediaProperty]
-                            }
-                        }
-                    }
-                }, {})
-            }
-        }
+    // Prefix each class with .
+    const newSelectors = Object.keys(allSelectors).reduce((previous, current) => {
+        allSelectors[`.${ current }`] = allSelectors[current]
+        delete allSelectors[current]
 
-        // Regular Selector
         return {
-            ...previous,
-            [`.${ selector }`]: {
-                attributes: typeof allSelectors[selector] === "object"
-                    ? { ...allSelectors[selector] }
-                    : { [selector]: allSelectors[selector] }
-            }
+            ...allSelectors
         }
     }, {})
 
-    return cssjson.toCSS({ children: selectors })
+    return postcss([ autoprefixer ]).process(newSelectors, { parser: postcssJs })
 }
 
 /**
