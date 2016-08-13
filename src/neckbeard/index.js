@@ -1,9 +1,4 @@
 import { StyleSheet, css } from 'aphrodite'
-import cssjson from 'cssjson'
-import includes from 'lodash/includes'
-import postcss from 'postcss'
-import postcssJs from 'postcss-js'
-import autoprefixer from 'autoprefixer'
 
 /**
  * Neckbeard Imported Helpers
@@ -66,8 +61,8 @@ export const defaultSettings = {
 }
 
 /**
- * Returns an object ran through Aphrodite
- * and includes media queries.
+ * Returns an object of combined
+ * helpers  ran through Aphrodite.
  * @param  {array} helperFns
  * @param  {object} settings
  * @return {object}
@@ -75,14 +70,12 @@ export const defaultSettings = {
 export function create(helperFns, settings = defaultSettings) {
     const allSelectors = helperFns
         .map(fn => fn(settings))
-        .reduce((previous, current) => {
-            return {
-                ...previous,
-                ...current
-            }
-        })
+        .reduce((previous, current) => ({ ...previous, ...current }))
 
     return (selectors) => {
+        // Takes a string of CSS selectors and
+        // checks to make sure each selector exists
+        // and then returns a usable object.
         const selectorsObj = selectors
             .split(' ')
             .reduce((previous, current) => {
@@ -96,9 +89,12 @@ export function create(helperFns, settings = defaultSettings) {
                 return { ...previous }
             }, {})
 
+        // Run our object through Aphrodite
         const stylesObj = StyleSheet.create(selectorsObj)
 
-        const stylesArray = Object.keys(stylesObj).map(key => stylesObj[key])
+        const stylesArray = Object
+            .keys(stylesObj)
+            .map(key => stylesObj[key])
 
         return css(...stylesArray)
     }
@@ -124,7 +120,7 @@ export function addMediaQueries(selectors, breakpoints) {
                 media[`only-${ breakpoint }-${ selector }`] = {
                     [`@media (max-width: ${ breakpoints[breakpoint] }px)`]: selectors[selector]
                 }
-            } else if (index === Object.keys(breakpoints).length-1) {
+            } else if (index === Object.keys(breakpoints).length - 1) {
                 media[`only-${ breakpoint }-${ selector }`] = {
                     [`@media (min-width: ${ breakpoints[breakpoint] }px)`]: selectors[selector]
                 }
@@ -140,34 +136,11 @@ export function addMediaQueries(selectors, breakpoints) {
 }
 
 /**
- * Returns a string of CSS Selectors
- * @param  {array} helperFns
- * @param  {object} settings
- * @return {string}
+ * Returns all Neckbeard helpers as an Array
+ * @return { array }
  */
-export function selectorsToString(helperFns, settings) {
-    const prefixer = postcssJs.sync([ autoprefixer ])
-
-    var allSelectors = helperFns
-        .map(fn => fn(settings))
-        .reduce((previous, current, index) => {
-            return {
-                ...previous,
-                ...current
-            }
-        }, {})
-
-    // Prefix each class with .
-    const newSelectors = Object.keys(allSelectors).reduce((previous, current) => {
-        allSelectors[`.${ current }`] = allSelectors[current]
-        delete allSelectors[current]
-
-        return {
-            ...allSelectors
-        }
-    }, {})
-
-    return postcss([ autoprefixer ]).process(newSelectors, { parser: postcssJs })
+function all() {
+    return Object.keys(this.helpers).map(key => this.helpers[key]);
 }
 
 /**
@@ -175,11 +148,9 @@ export function selectorsToString(helperFns, settings) {
  * @type {Object}
  */
 export default {
-    all() {
-        return Object.keys(this.helpers).map(key => this.helpers[key]);
-    },
-    create,
     addMediaQueries,
+    all,
+    create,
     defaultSettings,
     helpers: {
         borderRadius,
@@ -189,6 +160,5 @@ export default {
         flex,
         fontSizes,
         spacing
-    },
-    selectorsToString
+    }
 }

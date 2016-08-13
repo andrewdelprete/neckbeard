@@ -40,7 +40,7 @@ class App extends Component {
                     Colors Inline Block
                 </p>
                 <div>
-                    <div className={ b('flex aic jcc only-md-jcfe') }>Flex Stuff</div>
+                    <div className={ css('flex aic jcc only-md-jcfe') }>Flex Stuff</div>
                 </div>
             </div>
         )
