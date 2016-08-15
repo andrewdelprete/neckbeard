@@ -1,10 +1,19 @@
 var gulp = require('gulp'),
-    file = require('gulp-file')
-    // nb = require('./src/neckbeard').default
+    file = require('gulp-file'),
+    postcss = require('postcss'),
+    postcssJs = require('postcss-js'),
+    stream = require('vinyl-source-stream')
 
-gulp.task('js', function() {
-  var str = "Hey David Hemphill"
+// Neckbeard
+var nb = require('./build')
 
-  return file('nb.js', str, { src: true })
-    .pipe(gulp.dest('dist'));
-});
+gulp.task('css', function() {
+    const cssObj = nb.prefixSelectors(nb.all(), nb.defaultSettings)
+
+    return postcss()
+        .process(cssObj, { parser: postcssJs })
+        .then(result => {
+            file('nb.css', result.css, { src: true })
+                .pipe(gulp.dest('dist'))
+        })
+})

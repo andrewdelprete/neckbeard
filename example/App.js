@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
-import logo from './logo.svg'
-import './App.css'
 
 // Beard
-import nb from './neckbeard'
+import nb from '../src'
 
 const settings = {
     ...nb.defaultSettings

@@ -49,9 +49,9 @@ export default function borderRadius({ helpers: { borderRadius: { limit, increme
     /**
      * Media Queries
      */
-    if (Object.keys(breakpoints).length !== 0 && useBreakpoints) {
-        media = addMediaQueries(selectors, breakpoints)
-    }
+    // if (Object.keys(breakpoints).length !== 0 && useBreakpoints) {
+    //     media = addMediaQueries(selectors, breakpoints)
+    // }
 
     return { ...selectors, ...media }
 }
