@@ -1,12 +1,15 @@
-var gulp = require('gulp'),
+var gulp = require('gulp')
     file = require('gulp-file'),
     postcss = require('postcss'),
     postcssJs = require('postcss-js'),
     stream = require('vinyl-source-stream')
 
-// Neckbeard
 var nb = require('./build')
 
+/**
+ * Example of building a static CSS
+ * file from Neckbeard Helpers.
+ */
 gulp.task('css', function() {
     const cssObj = nb.prefixSelectors(nb.all(), nb.defaultSettings)
 

@@ -56,7 +56,7 @@ export const defaultSettings = {
 
 /**
  * Returns an object of combined
- * helpers  ran through Aphrodite.
+ * helpers ran through Aphrodite.
  * @param  {array} helperFns
  * @param  {object} settings
  * @return {object}
@@ -95,8 +95,8 @@ export function create(helperFns, settings = defaultSettings) {
 }
 
 /**
- * Returns an object of aoo passed helpers
- * and prefixes each one with a '.'
+ * Returns a new object with
+ * prefixed selectors '.'
  * @param  {array} helperFns
  * @param  {object} settings
  * @return {obj}
@@ -157,18 +157,5 @@ export function addMediaQueries(selectors, breakpoints) {
  * @return { array }
  */
 export function all() {
-    return Object.keys(this.helpers).map(key => this.helpers[key]);
-}
-
-/**
- * Neckbeard
- * @type {Object}
- */
-export {
-    addMediaQueries,
-    all,
-    create,
-    defaultSettings,
-    helpers,
-    prefixSelectors
+    return Object.keys(helpers).map(key => helpers[key]);
 }
