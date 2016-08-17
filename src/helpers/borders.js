@@ -5,8 +5,8 @@ import { addMediaQueries } from '../'
  *
  * @param  {Number} limit=10
  * @param  {object} limit, incrementBy, useBreakpoints
- * @param  {Object} breakpoints={} (optional)
- * @return {Object}
+ * @param  {object} breakpoints={} (optional)
+ * @return {object}
  */
 export default function borders({ helpers: { borders: { limit, incrementBy, useBreakpoints } }, breakpoints }) {
     let selectors = {}

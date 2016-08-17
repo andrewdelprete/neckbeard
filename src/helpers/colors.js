@@ -4,8 +4,8 @@ import { addMediaQueries } from '../'
  * Colors
  *
  * @param  {object} useBreakpoints
- * @param  {Object} breakpoints={} (optional)
- * @return {Object}
+ * @param  {object} breakpoints={} (optional)
+ * @return {object}
  */
 export default function colors({ helpers: { colors: { useBreakpoints } }, colors, breakpoints }) {
     let selectors = {}

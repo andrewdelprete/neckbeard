@@ -4,8 +4,8 @@ import { addMediaQueries } from '../'
  * Flex
  *
  * @param  {object} useBreakpoints
- * @param  {Object} breakpoints={} (optional)
- * @return {Object}
+ * @param  {object} breakpoints={} (optional)
+ * @return {object}
  */
 export default function flex({ helpers: { flex: { useBreakpoints } }, breakpoints }) {
     let selectors = {}

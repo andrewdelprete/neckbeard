@@ -2,7 +2,16 @@ const webpack = require('webpack')
 var path = require('path')
 
 // Set Plugins for both Prod and Dev
-const plugins = [ new webpack.NoErrorsPlugin() ]
+const plugins = [
+    new webpack.NoErrorsPlugin(),
+    new webpack.optimize.OccurenceOrderPlugin(), // recommanded by webpack
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.UglifyJsPlugin({
+        compress: {
+            warnings: false
+        }
+    })
+]
 
 module.exports = {
     entry: {

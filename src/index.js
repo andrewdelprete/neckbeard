@@ -22,6 +22,16 @@ export const defaultSettings = {
     },
     colors: colorSettings,
     helpers: {
+        borders: {
+            limit: 3,
+            incrementBy: 1,
+            useBreakpoints: true
+        },
+        borderRadius: {
+            limit: 10,
+            incrementBy: 1,
+            useBreakpoints: true
+        },
         colors: {
             useBreakpoints: false
         },
@@ -31,22 +41,12 @@ export const defaultSettings = {
         flex: {
             useBreakpoints: false
         },
-        spacing: {
-            limit: 10,
-            incrementBy: 1,
-            useBreakpoints: true
-        },
         fontSizes: {
             limit: 17,
             incrementBy: .25,
             useBreakpoints: true
         },
-        borders: {
-            limit: 3,
-            incrementBy: 1,
-            useBreakpoints: true
-        },
-        borderRadius: {
+        spacing: {
             limit: 10,
             incrementBy: 1,
             useBreakpoints: true

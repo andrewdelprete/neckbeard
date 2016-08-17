@@ -4,8 +4,8 @@ import { addMediaQueries } from '../'
  * Display
  *
  * @param  {object} useBreakpoints
- * @param  {Object} breakpoints={} (optional)
- * @return {Object}
+ * @param  {object} breakpoints={} (optional)
+ * @return {object}
  */
 export default function display({ helpers: { display: { useBreakpoints } }, breakpoints }) {
     let selectors = {}

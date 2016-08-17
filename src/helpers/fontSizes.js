@@ -4,8 +4,8 @@ import { addMediaQueries } from '../'
  * Font Sizes
  *
  * @param  {object} limit, incrementBy, useBreakpoints
- * @param  {Object} breakpoints={} (optional)
- * @return {Object}
+ * @param  {object} breakpoints={} (optional)
+ * @return {object}
  */
 export default function fontSizes({ helpers: { fontSizes: { limit, incrementBy, useBreakpoints } }, breakpoints }) {
     let selectors = {}

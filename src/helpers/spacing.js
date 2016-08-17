@@ -4,8 +4,8 @@ import { addMediaQueries } from '../'
  * Spacing
  *
  * @param  {object} limit, incrementBy, useBreakpoints
- * @param  {Object} breakpoints={} (optional)
- * @return {Object}
+ * @param  {object} breakpoints={} (optional)
+ * @return {object}
  */
 export default function spacing({ helpers: { spacing: { limit, incrementBy, useBreakpoints } }, breakpoints }) {
     let selectors = {}
