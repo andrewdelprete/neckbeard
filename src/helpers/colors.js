@@ -3,9 +3,8 @@ import { addMediaQueries } from '../'
 /**
  * Colors
  *
- * @param  {Number} idk
+ * @param  {object} useBreakpoints
  * @param  {Object} breakpoints={} (optional)
- * @param  {Object} colors={} (optional)
  * @return {Object}
  */
 export default function colors({ helpers: { colors: { useBreakpoints } }, colors, breakpoints }) {

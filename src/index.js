@@ -12,7 +12,7 @@ import * as colorSettings from './settings/colors'
 
 /**
  * Neckbeard Default Settings
- * @type {Object}
+ * @type {object}
  */
 export const defaultSettings = {
     breakpoints: {
@@ -62,6 +62,8 @@ export const defaultSettings = {
  * @return {object}
  */
 export function create(helperFns, settings = defaultSettings) {
+    // Envokes each helper function passed and returns
+    // an aggregrated object of all selector properties.
     const allSelectors = helperFns
         .map(fn => fn(settings))
         .reduce((previous, current) => ({ ...previous, ...current }))
@@ -99,9 +101,11 @@ export function create(helperFns, settings = defaultSettings) {
  * prefixed selectors '.'
  * @param  {array} helperFns
  * @param  {object} settings
- * @return {obj}
+ * @return {object}
  */
 export function prefixSelectors(helperFns, settings = defaultSettings) {
+    // Envokes each helper function passed and returns
+    // an aggregrated object of all selector properties.
     const allSelectors = helperFns
         .map(fn => fn(settings))
         .reduce((previous, current) => ({ ...previous, ...current }))
@@ -118,9 +122,10 @@ export function prefixSelectors(helperFns, settings = defaultSettings) {
 }
 
 /**
- * Adds media query classes to selectors
+ * Adds media query classes to passed selectors
  * @param {object} selectors
  * @param {object} breakpoints
+ * @return {object}
  */
 export function addMediaQueries(selectors, breakpoints) {
     let media = {}
@@ -154,7 +159,7 @@ export function addMediaQueries(selectors, breakpoints) {
 
 /**
  * Returns all Neckbeard helpers as an Array
- * @return { array }
+ * @return {array}
  */
 export function all() {
     return Object.keys(helpers).map(key => helpers[key]);

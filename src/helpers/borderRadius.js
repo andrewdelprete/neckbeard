@@ -4,7 +4,7 @@ import { addMediaQueries } from '../'
  * Border Radius
  *
  * @param  {Number} limit=10
- * @param  {object} helper settings
+ * @param  {object} limit, incrementBy, useBreakpoints
  * @param  {Object} breakpoints={} (optional)
  * @return {Object}
  */
@@ -49,9 +49,9 @@ export default function borderRadius({ helpers: { borderRadius: { limit, increme
     /**
      * Media Queries
      */
-    // if (Object.keys(breakpoints).length !== 0 && useBreakpoints) {
-    //     media = addMediaQueries(selectors, breakpoints)
-    // }
+    if (Object.keys(breakpoints).length !== 0 && useBreakpoints) {
+        media = addMediaQueries(selectors, breakpoints)
+    }
 
     return { ...selectors, ...media }
 }

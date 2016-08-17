@@ -28,7 +28,7 @@
   "dependencies": {},
   "scripts": {
     "start": "webpack-dev-server --config='webpack.config.example.js' --inline --hot",
-    "example-build": "webpack --config='webpack.config.example.js'",
+    "build-example": "webpack --config='webpack.config.example.js'",
     "build": "webpack"
   }
 }

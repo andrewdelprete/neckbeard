@@ -3,6 +3,7 @@ import { addMediaQueries } from '../'
 /**
  * Flex
  *
+ * @param  {object} useBreakpoints
  * @param  {Object} breakpoints={} (optional)
  * @return {Object}
  */

@@ -3,8 +3,7 @@ import { addMediaQueries } from '../'
 /**
  * Spacing
  *
- * @param  {Number} limit=10
- * @param  {object} helper settings
+ * @param  {object} limit, incrementBy, useBreakpoints
  * @param  {Object} breakpoints={} (optional)
  * @return {Object}
  */

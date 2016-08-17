@@ -25,7 +25,7 @@ class App extends Component {
                 <p className={ css('brdr2 br4') }>
                     Border with Radius
                 </p>
-                <p className={ css('dn lg-db only-sm-db') }>
+                <p className={ css('dn lg-db') }>
                     Display None until large
                 </p>
                 <p className={ css('dib') }>

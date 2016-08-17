@@ -3,6 +3,7 @@ import { addMediaQueries } from '../'
 /**
  * Display
  *
+ * @param  {object} useBreakpoints
  * @param  {Object} breakpoints={} (optional)
  * @return {Object}
  */
