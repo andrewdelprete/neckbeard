@@ -39,7 +39,7 @@ export const defaultSettings = {
             useBreakpoints: true
         },
         flex: {
-            useBreakpoints: false
+            useBreakpoints: true
         },
         fontSizes: {
             limit: 17,
