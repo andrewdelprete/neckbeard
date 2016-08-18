@@ -37,6 +37,13 @@ class App extends Component {
                 <div>
                     <div className={ css('flex aic jcc only-md-jcfe') }>Flex Stuff</div>
                 </div>
+                <div>
+                    <div className={ css('fl') }>Float Left</div>
+                    <div className={ css('fr') }>Float Right</div>
+                </div>
+                <p className={ css('bgg10 tc1 lh2') }>
+                    Line Height 2
+                </p>
             </div>
         )
     }

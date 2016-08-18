@@ -41,9 +41,15 @@ export const defaultSettings = {
         flex: {
             useBreakpoints: true
         },
+        floats: {
+            useBreakpoints: true
+        },
         fontSizes: {
             limit: 17,
             incrementBy: .25,
+            useBreakpoints: true
+        },
+        lineHeights: {
             useBreakpoints: true
         },
         spacing: {
