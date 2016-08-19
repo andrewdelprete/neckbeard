@@ -47,6 +47,9 @@ class App extends Component {
                 <p className={ css('tac') }>
                     Text Alignment
                 </p>
+                <p className={ css('absolute pin-right') }>
+                    Position
+                </p>
             </div>
         )
     }

@@ -52,6 +52,9 @@ export const defaultSettings = {
         lineHeights: {
             useBreakpoints: true
         },
+        position: {
+            useBreakpoints: true
+        },
         spacing: {
             limit: 10,
             incrementBy: 1,

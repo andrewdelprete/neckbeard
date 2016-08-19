@@ -1,7 +1,7 @@
 import { addMediaQueries } from '../'
 
 /**
- * Flex
+ * Text Alignment
  *
  * @param  {object} useBreakpoints
  * @param  {object} breakpoints={} (optional)

@@ -10,6 +10,7 @@ import flex from './flex'
 import floats from './floats'
 import fontSizes from './fontSizes'
 import lineHeights from './lineHeights'
+import position from './position'
 import spacing from './spacing'
 import textAlignment from './textAlignment'
 
@@ -22,6 +23,7 @@ export {
     floats,
     fontSizes,
     lineHeights,
+    position,
     spacing,
     textAlignment
 }
