@@ -52,6 +52,9 @@ export const defaultSettings = {
         lineHeights: {
             useBreakpoints: true
         },
+        overflow: {
+            useBreakpoints: false
+        },
         position: {
             useBreakpoints: true
         },

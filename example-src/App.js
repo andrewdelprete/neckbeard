@@ -50,6 +50,9 @@ class App extends Component {
                 <p className={ css('absolute pin-right') }>
                     Position
                 </p>
+                <p className={ css('ofx') }>
+                    overflow
+                </p>
             </div>
         )
     }
