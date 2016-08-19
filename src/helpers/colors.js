@@ -69,16 +69,16 @@ export default function colors({ helpers: { colors: { useBreakpoints } }, colors
 
     // Border Colors
     // ------------------------------------------------------------------------------------ */
-    selectors["bcg05"] = colors.beardColors.g05
-    selectors["bcg10"] = colors.beardColors.g10
-    selectors["bcg20"] = colors.beardColors.g20
-    selectors["bcg30"] = colors.beardColors.g30
-    selectors["bcg40"] = colors.beardColors.g40
-    selectors["bcg50"] = colors.beardColors.g50
-    selectors["bcg60"] = colors.beardColors.g60
-    selectors["bcg70"] = colors.beardColors.g70
-    selectors["bcg80"] = colors.beardColors.g80
-    selectors["bcg90"] = colors.beardColors.g90
+    selectors["bcg05"] = { borderColor: colors.beardColors.g05 }
+    selectors["bcg10"] = { borderColor: colors.beardColors.g10 }
+    selectors["bcg20"] = { borderColor: colors.beardColors.g20 }
+    selectors["bcg30"] = { borderColor: colors.beardColors.g30 }
+    selectors["bcg40"] = { borderColor: colors.beardColors.g40 }
+    selectors["bcg50"] = { borderColor: colors.beardColors.g50 }
+    selectors["bcg60"] = { borderColor: colors.beardColors.g60 }
+    selectors["bcg70"] = { borderColor: colors.beardColors.g70 }
+    selectors["bcg80"] = { borderColor: colors.beardColors.g80 }
+    selectors["bcg90"] = { borderColor: colors.beardColors.g90 }
 
     /**
      * Media Queries

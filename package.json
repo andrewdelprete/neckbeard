@@ -18,6 +18,7 @@
     "gulp": "~3.9.1",
     "gulp-file": "~0.3.0",
     "gulp-postcss": "~6.1.1",
+    "gulp-sass": "^2.3.2",
     "jsdom": "^9.4.2",
     "mocha": "^3.0.2",
     "mocha-jsdom": "^1.1.0",

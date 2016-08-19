@@ -117,7 +117,8 @@ export function create(helperFns, settings = defaultSettings) {
 
 /**
  * Returns a new object with
- * prefixed selectors '.'
+ * prefix class selectors with '.'
+ * and psuedo selectors with ':'
  * @param  {array} helperFns
  * @param  {object} settings
  * @return {object}
@@ -129,11 +130,20 @@ export function prefixSelectors(helperFns, settings = defaultSettings) {
         .map(fn => fn(settings))
         .reduce((previous, current) => ({ ...previous, ...current }))
 
-    // Prefix each class with .
+    // Prefix each selector with .
     return Object
         .keys(allSelectors)
         .reduce((previous, current) => {
             allSelectors[`.${ current }`] = allSelectors[current]
+
+            // Prefix psuedo selectors with :
+            Object.keys(allSelectors[`.${ current }`]).forEach(selector => {
+                if (selector[0] === ':') {
+                    allSelectors[`.${ current }`][`&${ selector }`] = allSelectors[current][selector]
+                    delete allSelectors[`.${ current }`][selector]
+                }
+             })
+
             delete allSelectors[current]
 
             return { ...allSelectors }

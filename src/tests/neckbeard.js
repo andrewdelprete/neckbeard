@@ -81,8 +81,12 @@ describe("addMediaQueries() method", function () {
 
 describe("prefixSelectors() method", function () {
     it("Should return an object of helper selectors prefixed with a '.''", function() {
-        const css = nb.prefixSelectors([ nb.helpers.spacing ])
-        assert.isOk(Object.keys(css)[0].includes("."))
+        const css = nb.prefixSelectors([ nb.helpers.misc ])
+        assert.isOk(css['.clearfix'])
+    })
+    it("Should return an object of psuedo helper selectors prefixed with a '&'", function() {
+        const css = nb.prefixSelectors([ nb.helpers.misc ])
+        assert.isOk(css['.clearfix']['&:after'])
     })
 })
 
