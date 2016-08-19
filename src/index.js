@@ -52,6 +52,9 @@ export const defaultSettings = {
         lineHeights: {
             useBreakpoints: true
         },
+        misc: {
+            useBreakpoints: false
+        },
         overflow: {
             useBreakpoints: false
         },
@@ -66,7 +69,8 @@ export const defaultSettings = {
         textAlignment: {
             useBreakpoints: true
         }
-    }
+    },
+    siteWidth: "114rem"
 }
 
 /**

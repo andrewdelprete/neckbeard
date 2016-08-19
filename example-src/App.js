@@ -51,7 +51,10 @@ class App extends Component {
                     Position
                 </p>
                 <p className={ css('ofx') }>
-                    overflow
+                    Overflow
+                </p>
+                <p className={ css('clearfix dim') }>
+                    Misc
                 </p>
             </div>
         )
