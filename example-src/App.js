@@ -44,6 +44,9 @@ class App extends Component {
                 <p className={ css('bgg10 tc1 lh2') }>
                     Line Height 2
                 </p>
+                <p className={ css('tac') }>
+                    Text Alignment
+                </p>
             </div>
         )
     }

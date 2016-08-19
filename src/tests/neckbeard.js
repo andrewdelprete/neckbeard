@@ -85,3 +85,32 @@ describe("prefixSelectors() method", function () {
         assert.isOk(Object.keys(css)[0].includes("."))
     })
 })
+
+// describe("Helpers", function () {
+//     jsdom()
+//
+//     describe("borderRadius Helper", function () {
+//         it("Should create selectors 1 to 9", function() {
+//             const css = nb.create([ nb.helpers.borderRadius ], nb.defaultSettings)
+//             assert.isOk(css("br1 br10"))
+//             assert.isNotOk(css("br11"))
+//         })
+//
+//         it("Should incrementBy by 2", function() {
+//             const settings = {
+//                 ...nb.defaultSettings,
+//                 helpers: {
+//                     ...nb.defaultSettings.helpers,
+//                     borderRadius: {
+//                         limit: 10,
+//                         incrementBy: 2,
+//                         useBreakpoints: true
+//                     }
+//                 }
+//             }
+//
+//             const css = nb.helpers.borderRadius(settings, nb.defaultSettings.breakpoints)
+//             assert.isNotOk()
+//         })
+//     })
+// })

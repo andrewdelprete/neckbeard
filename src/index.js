@@ -56,6 +56,9 @@ export const defaultSettings = {
             limit: 10,
             incrementBy: 1,
             useBreakpoints: true
+        },
+        textAlignment: {
+            useBreakpoints: true
         }
     }
 }

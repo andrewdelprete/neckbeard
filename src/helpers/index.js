@@ -11,6 +11,7 @@ import floats from './floats'
 import fontSizes from './fontSizes'
 import lineHeights from './lineHeights'
 import spacing from './spacing'
+import textAlignment from './textAlignment'
 
 export {
     borderRadius,
@@ -21,5 +22,6 @@ export {
     floats,
     fontSizes,
     lineHeights,
-    spacing
+    spacing,
+    textAlignment
 }
