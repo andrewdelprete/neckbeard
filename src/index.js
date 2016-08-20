@@ -52,6 +52,9 @@ export const defaultSettings = {
             incrementBy: .25,
             useBreakpoints: true
         },
+        fontWeight: {
+            useBreakpoints: false
+        },
         lineHeights: {
             useBreakpoints: true
         },

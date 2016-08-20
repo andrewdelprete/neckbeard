@@ -10,6 +10,7 @@ import flex from './flex'
 import floats from './floats'
 import fontFamily from './fontFamily'
 import fontSizes from './fontSizes'
+import fontWeight from './fontWeight'
 import lineHeights from './lineHeights'
 import misc from './misc'
 import overflow from './overflow'
@@ -27,6 +28,7 @@ export {
     floats,
     fontFamily,
     fontSizes,
+    fontWeight,
     lineHeights,
     misc,
     overflow,

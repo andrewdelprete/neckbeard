@@ -19,7 +19,7 @@ class App extends Component {
                 <p className={ css('pv2 md-pv4 only-sm-xpv') }>
                     Spacing
                 </p>
-                <p className={ css('ft3 md-ft6 lg-ft8 sans') }>
+                <p className={ css('ft3 md-ft6 lg-ft8 sans fwthin') }>
                     Fonts
                 </p>
                 <p className={ css('brdr2 br4') }>
