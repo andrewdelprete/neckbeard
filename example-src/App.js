@@ -56,6 +56,9 @@ class App extends Component {
                 <p className={ css('clearfix dim') }>
                     Misc
                 </p>
+                <p className={ css('zi1') }>
+                    Z Index
+                </p>
             </div>
         )
     }

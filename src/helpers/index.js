@@ -15,6 +15,7 @@ import overflow from './overflow'
 import position from './position'
 import spacing from './spacing'
 import textAlignment from './textAlignment'
+import zindex from './zindex'
 
 export {
     borderRadius,
@@ -29,5 +30,6 @@ export {
     overflow,
     position,
     spacing,
-    textAlignment
+    textAlignment,
+    zindex
 }

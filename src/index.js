@@ -68,6 +68,11 @@ export const defaultSettings = {
         },
         textAlignment: {
             useBreakpoints: true
+        },
+        zindex: {
+            limit: 10,
+            incrementBy: 1,
+            useBreakpoints: true
         }
     },
     siteWidth: "114rem"
