@@ -44,6 +44,9 @@ export const defaultSettings = {
         floats: {
             useBreakpoints: true
         },
+        fontFamily: {
+            useBreakpoints: false
+        },
         fontSizes: {
             limit: 17,
             incrementBy: .25,

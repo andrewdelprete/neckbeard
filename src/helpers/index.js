@@ -8,6 +8,7 @@ import colors from './colors'
 import display from './display'
 import flex from './flex'
 import floats from './floats'
+import fontFamily from './fontFamily'
 import fontSizes from './fontSizes'
 import lineHeights from './lineHeights'
 import misc from './misc'
@@ -24,6 +25,7 @@ export {
     display,
     flex,
     floats,
+    fontFamily,
     fontSizes,
     lineHeights,
     misc,
