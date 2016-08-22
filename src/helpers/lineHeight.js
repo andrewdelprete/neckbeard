@@ -1,13 +1,13 @@
 import { addMediaQueries } from '../'
 
 /**
- * Line Heights
+ * Line Height
  *
  * @param  {object} useBreakpoints
  * @param  {object} breakpoints={} (optional)
  * @return {object}
  */
-export default function lineHeights({ helpers: { lineHeights: { useBreakpoints } }, breakpoints }) {
+export default function lineHeight({ helpers: { lineHeights: { useBreakpoints } }, breakpoints }) {
     let selectors = {}
     let media = {}
 
