@@ -1,7 +1,7 @@
 import { addMediaQueries } from '../'
 
 /**
- * Misx
+ * Misc
  *
  * @param  {object} useBreakpoints
  * @param  {object} breakpoints={} (optional)

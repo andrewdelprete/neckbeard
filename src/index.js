@@ -55,6 +55,11 @@ export const defaultSettings = {
         fontWeight: {
             useBreakpoints: false
         },
+        grid: {
+            gridGutter: 30,
+            gridBlockCount: 12,
+            useBreakpoints: true
+        },
         lineHeights: {
             useBreakpoints: true
         },

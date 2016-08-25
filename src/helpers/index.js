@@ -11,6 +11,7 @@ import floats from './floats'
 import fontFamily from './fontFamily'
 import fontSize from './fontSize'
 import fontWeight from './fontWeight'
+import grid from './grid'
 import lineHeight from './lineHeight'
 import misc from './misc'
 import overflow from './overflow'
@@ -29,6 +30,7 @@ export {
     fontFamily,
     fontSize,
     fontWeight,
+    grid,
     lineHeight,
     misc,
     overflow,
