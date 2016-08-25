@@ -54,10 +54,11 @@ export default function grid({ helpers: { grid: { useBreakpoints, gridGutter, gr
     }
 
     // Adds the ability to add grids without padding in their blocks
-    selectors['frame--xpad [class^="blk"]'] = {
-        paddingLeft: 0,
-        paddingRight: 0
-    }
+    // @TODO - Can't do decendant selectors like this in Aphrodite.
+    // selectors['frame--xpad [class^="blk"]'] = {
+    //     paddingLeft: 0,
+    //     paddingRight: 0
+    // }
 
     // Blocks
     //-------------------------------------------------------------------------- */
