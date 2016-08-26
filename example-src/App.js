@@ -72,7 +72,7 @@ class App extends Component {
                         <div className={ css('pv2 ph2 bgg10 pos-rel') }>.blk.md-blk--offset3</div>
                     </div>
                 </div>
-                <div className={ css('frame example-frame mb6') }>
+                <div className={ css('frame frame--stay example-frame mb6') }>
                     <div className={ css('blk3 md-blk--push9 example-blk') }>
                         <div className={ css('pv2 ph2 bgg10 pos-rel') }>.blk3.md-blk--push9</div>
                     </div>

@@ -56,8 +56,9 @@ export const defaultSettings = {
             useBreakpoints: false
         },
         grid: {
-            gridGutter: 30,
             gridBlockCount: 12,
+            gridGutter: 30,
+            stackAtBreakpoint: 'sm',
             useBreakpoints: true
         },
         lineHeights: {

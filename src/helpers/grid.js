@@ -9,7 +9,7 @@ import { addMediaQueries } from '../'
  * @param  {object} breakpoints={} (optional)
  * @return {object}
  */
-export default function grid({ helpers: { grid: { useBreakpoints, gridGutter, gridBlockCount } }, breakpoints }) {
+export default function grid({ helpers: { grid: { useBreakpoints, gridGutter, gridBlockCount, stackAtBreakpoint } }, breakpoints }) {
     let selectors = {}
     let media = {}
 
@@ -101,23 +101,14 @@ export default function grid({ helpers: { grid: { useBreakpoints, gridGutter, gr
     selectors['frame'] = {
         marginLeft: -gridGutter,
         marginRight: -gridGutter,
-
-        // IDK How to do this lol
-        // @include media(md) {
-        //   display: flex
-        //   flex-direction: row
-        //   flex-wrap: wrap
-        // }
-        display: 'flex',
-        flexDirection: 'row',
-        flexWrap: 'wrap'
+        [`@media (min-width: ${ breakpoints[stackAtBreakpoint] }px)`]: {
+            display: 'flex',
+            flexDirection: 'row',
+            flexWrap: 'wrap'
+        }
     }
 
     selectors['frame--stay'] = {
-        // IDK How to do this lol
-        // @include media(only-sm) {
-        //     display: flex
-        // }
         display: 'flex'
     }
 
