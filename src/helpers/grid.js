@@ -12,46 +12,9 @@ import { addMediaQueries } from '../'
 export default function grid({ helpers: { grid: { useBreakpoints, gridGutter, gridBlockCount } }, breakpoints }) {
     let selectors = {}
     let media = {}
+
     // The default column width is 100% divided by the column count
     let blockWidth = 100 / gridBlockCount
-
-    /**
-     * Response Flexbox Grid
-     */
-    selectors['wrap'] = {
-        marginLeft: 'auto',
-        marginRight: 'auto',
-        paddingLeft: `${ gridGutter }px`,
-        paddingRight: `${ gridGutter }px`
-    }
-
-    selectors['wrap--xpad'] = {
-        paddingLeft: 0,
-        paddingRight: 0
-    }
-
-    selectors['frame'] = {
-        marginLeft: -gridGutter,
-        marginRight: -gridGutter,
-
-        // IDK How to do this lol
-        // @include media(md) {
-        //   display: flex
-        //   flex-direction: row
-        //   flex-wrap: wrap
-        // }
-        display: 'flex',
-        flexDirection: 'row',
-        flexWrap: 'wrap'
-    }
-
-    selectors['frame--stay'] = {
-        // IDK How to do this lol
-        // @include media(only-sm) {
-        //     display: flex
-        // }
-        display: 'flex'
-    }
 
     // Adds the ability to add grids without padding in their blocks
     // @TODO - Can't do decendant selectors like this in Aphrodite.
@@ -62,15 +25,6 @@ export default function grid({ helpers: { grid: { useBreakpoints, gridGutter, gr
 
     // Blocks
     //-------------------------------------------------------------------------- */
-    selectors['blk-relative'] = {
-        position: 'relative'
-    }
-
-    selectors['blk-padding'] = {
-        paddingLeft: `${ gridGutter }px`,
-        paddingRight: `${ gridGutter }px`
-    }
-
     selectors['blk'] = {
         position: 'relative',
         paddingLeft: `${ gridGutter }px`,
@@ -122,12 +76,49 @@ export default function grid({ helpers: { grid: { useBreakpoints, gridGutter, gr
         order: 1
     }
 
-
     /**
      * Media Queries
      */
     if (Object.keys(breakpoints).length !== 0 && useBreakpoints) {
         media = addMediaQueries(selectors, breakpoints)
+    }
+
+    /**
+     * Response Flexbox Grid
+     */
+    selectors['wrap'] = {
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        paddingLeft: `${ gridGutter }px`,
+        paddingRight: `${ gridGutter }px`
+    }
+
+    selectors['wrap--xpad'] = {
+        paddingLeft: 0,
+        paddingRight: 0
+    }
+
+    selectors['frame'] = {
+        marginLeft: -gridGutter,
+        marginRight: -gridGutter,
+
+        // IDK How to do this lol
+        // @include media(md) {
+        //   display: flex
+        //   flex-direction: row
+        //   flex-wrap: wrap
+        // }
+        display: 'flex',
+        flexDirection: 'row',
+        flexWrap: 'wrap'
+    }
+
+    selectors['frame--stay'] = {
+        // IDK How to do this lol
+        // @include media(only-sm) {
+        //     display: flex
+        // }
+        display: 'flex'
     }
 
     return { ...selectors, ...media }
