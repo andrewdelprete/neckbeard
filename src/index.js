@@ -16,9 +16,10 @@ import * as colorSettings from './settings/colors'
  */
 export const defaultSettings = {
     breakpoints: {
-        sm: 600,
-        md: 800,
-        lg: 1200
+        sm: 300,
+        md: 600,
+        lg: 900,
+        xlg: 1440
     },
     colors: colorSettings,
     helpers: {
@@ -196,7 +197,7 @@ export function addMediaQueries(selectors, breakpoints) {
                 }
             } else {
                 media[`only-${ breakpoint }-${ selector }`] = {
-                    [`@media (min-width: ${ breakpoints[breakpoint] }px) and (max-width: ${ breakpoints[Object.keys(breakpoints)[index + 1]] }px)`]: selectors[selector]
+                    [`@media (min-width: ${ breakpoints[breakpoint] }px) and (max-width: ${ breakpoints[Object.keys(breakpoints)[index + 1]] - 1 }px)`]: selectors[selector]
                 }
             }
         })
