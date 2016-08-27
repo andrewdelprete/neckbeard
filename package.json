@@ -1,55 +1,55 @@
 {
-    "name": "neckbeard",
-    "description": "A CSS in JS framework for people with better things to do",
-    "version": "0.0.1",
-    "main": "build/index.js",
-    "devDependencies": {
-        "aphrodite": "~0.5.0",
-        "autoprefixer": "~6.4.0",
-        "babel-eslint": "~6.1.2",
-        "babel-loader": "~6.2.4",
-        "babel-plugin-add-module-exports": "~0.2.1",
-        "babel-plugin-transform-object-rest-spread": "~6.8.0",
-        "babel-preset-es2015": "~6.13.2",
-        "babel-preset-react": "~6.11.1",
-        "babel-preset-stage-0": "~6.5.0",
-        "chai": "^3.5.0",
-        "file-loader": "~0.9.0",
-        "gulp": "~3.9.1",
-        "gulp-clean-css": "^2.0.12",
-        "gulp-file": "~0.3.0",
-        "gulp-postcss": "^6.1.1",
-        "gulp-sass": "^2.3.2",
-        "jsdom": "^9.4.2",
-        "mocha": "^3.0.2",
-        "mocha-jsdom": "^1.1.0",
-        "postcss": "~5.1.2",
-        "postcss-js": "~0.1.3",
-        "react": "~15.2.1",
-        "react-dom": "~15.2.1",
-        "sinon": "^1.17.5",
-        "webpack": "~1.13.1",
-        "webpack-dev-server": "~1.14.1"
-    },
-    "scripts": {
-        "start": "webpack-dev-server --config='docs/webpack.config.js' --inline --hot",
-        "build-docs": "webpack --config='docs/webpack.config.js'",
-        "build": "webpack",
-        "test": "NODE_ENV=test mocha --compilers js:babel-register --recursive src/tests"
-    },
-    "keywords": [
-        "css",
-        "functional",
-        "atomic",
-        "immutable",
-        "utility classes",
-        "css in js",
-        "aphrodite"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/andrewdelprete/neckbeard.git"
-    },
-    "author": "Andrew Del Prete",
-    "license": "MIT"
+  "name": "neckbeard",
+  "description": "A CSS in JS framework for people with better things to do",
+  "version": "0.0.2",
+  "main": "build/index.js",
+  "devDependencies": {
+    "aphrodite": "~0.5.0",
+    "autoprefixer": "~6.4.0",
+    "babel-eslint": "~6.1.2",
+    "babel-loader": "~6.2.4",
+    "babel-plugin-add-module-exports": "~0.2.1",
+    "babel-plugin-transform-object-rest-spread": "~6.8.0",
+    "babel-preset-es2015": "~6.13.2",
+    "babel-preset-react": "~6.11.1",
+    "babel-preset-stage-0": "~6.5.0",
+    "chai": "^3.5.0",
+    "file-loader": "~0.9.0",
+    "gulp": "~3.9.1",
+    "gulp-clean-css": "^2.0.12",
+    "gulp-file": "~0.3.0",
+    "gulp-postcss": "^6.1.1",
+    "gulp-sass": "^2.3.2",
+    "jsdom": "^9.4.2",
+    "mocha": "^3.0.2",
+    "mocha-jsdom": "^1.1.0",
+    "postcss": "~5.1.2",
+    "postcss-js": "~0.1.3",
+    "react": "~15.2.1",
+    "react-dom": "~15.2.1",
+    "sinon": "^1.17.5",
+    "webpack": "~1.13.1",
+    "webpack-dev-server": "~1.14.1"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --config='docs/webpack.config.js' --inline --hot",
+    "build-docs": "webpack --config='docs/webpack.config.js'",
+    "build": "webpack",
+    "test": "NODE_ENV=test mocha --compilers js:babel-register --recursive src/tests"
+  },
+  "keywords": [
+    "css",
+    "functional",
+    "atomic",
+    "immutable",
+    "utility classes",
+    "css in js",
+    "aphrodite"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andrewdelprete/neckbeard.git"
+  },
+  "author": "Andrew Del Prete",
+  "license": "MIT"
 }
