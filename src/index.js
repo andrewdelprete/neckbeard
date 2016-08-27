@@ -99,7 +99,7 @@ export const defaultSettings = {
  * @return {object}
  */
 export function create(settings = defaultSettings, helperFns = helpers) {
-    // Envokes each helper function passed and returns
+    // Invokes each helper function passed and returns
     // an aggregrated object of all selector properties.
     const allSelectors = Object
         .keys(helperFns)
