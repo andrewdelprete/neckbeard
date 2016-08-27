@@ -6,7 +6,7 @@ const settings = {
     // ...Overwrites here
 }
 
-// Compose Beard Style Object
+// Compose Neckbeard Selector Object
 const css = nb.create(nb.all(), settings)
 
 class App extends Component {
