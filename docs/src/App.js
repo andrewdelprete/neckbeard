@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import * as nb from '../src'
+import * as nb from '../../src'
 
 const settings = {
     ...nb.defaultSettings

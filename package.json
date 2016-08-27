@@ -33,8 +33,8 @@
   },
   "dependencies": {},
   "scripts": {
-    "start": "webpack-dev-server --config='webpack.config.example.js' --inline --hot",
-    "build-example": "webpack --config='webpack.config.example.js'",
+    "start": "webpack-dev-server --config='docs/webpack.config.js' --inline --hot",
+    "build-docs": "webpack --config='docs/webpack.config.js'",
     "build": "webpack",
     "test": "NODE_ENV=test mocha --compilers js:babel-register --recursive src/tests"
   }

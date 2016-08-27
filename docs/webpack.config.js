@@ -6,10 +6,10 @@ const plugins = [ new webpack.NoErrorsPlugin() ]
 
 module.exports = {
     entry: {
-        index: [ path.resolve(__dirname + '/example-src') + '/index.js' ],
+        index: [ path.resolve(__dirname + '/src') + '/index.js' ],
     },
     output: {
-        path: path.resolve(__dirname + '/example-build'),
+        path: path.resolve(__dirname + '/build'),
         filename: "index.js",
     },
     module: {

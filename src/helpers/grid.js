@@ -3,13 +3,14 @@ import { addMediaQueries } from '../'
 /**
  * Grid
  *
- * @param  {object} useBreakpoints
- * @param  {object} gridGutter - size of gutter
+ * @param  {object} breakpoints
  * @param  {object} gridBlockCount - number of columns
- * @param  {object} breakpoints={} (optional)
+ * @param  {object} gridGutter - size of gutter
+ * @param  {string} stackAtBreakpoint
+ * @param  {object} useBreakpoints
  * @return {object}
  */
-export default function grid({ helpers: { grid: { useBreakpoints, gridGutter, gridBlockCount, stackAtBreakpoint } }, breakpoints }) {
+export default function grid({ helpers: { grid: { gridGutter, gridBlockCount, stackAtBreakpoint, useBreakpoints } }, breakpoints }) {
     let selectors = {}
     let media = {}
 
