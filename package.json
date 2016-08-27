@@ -33,7 +33,7 @@
   },
   "scripts": {
     "start": "webpack-dev-server --config='docs/webpack.config.js' --inline --hot",
-    "build-docs": "webpack --config='docs/webpack.config.js'",
+    "build:docs": "webpack --config='docs/webpack.config.js'",
     "build": "webpack && gulp css",
     "test": "NODE_ENV=test mocha --compilers js:babel-register --recursive src/tests"
   },

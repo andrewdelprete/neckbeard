@@ -21202,15 +21202,16 @@
 
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+	// Import Neckbeard
+
+
 	var _react = __webpack_require__(2);
 
 	var _react2 = _interopRequireDefault(_react);
 
 	var _src = __webpack_require__(174);
 
-	var nb = _interopRequireWildcard(_src);
-
-	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+	var _src2 = _interopRequireDefault(_src);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -21220,14 +21221,17 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var settings = _extends({}, nb.defaultSettings);
+	// Overwrite settings if needed.
+	var settings = _extends({}, _src2.default.defaultSettings, {
+	    breakpoints: _extends({}, _src2.default.defaultSettings, {
+	        'xxlg': 1600
+	    }),
+	    colors: _src2.default.setBeardColors({ brandColor: "#FF0000" })
+	    //...Other overwrites here
+	});
 
-	// Compose Neckbeard Selector Object
-	var css = nb.create(settings);
-
-	// console.log(() => {
-	//     return nb.all()
-	// })
+	// It's Business time
+	var css = _src2.default.create(settings);
 
 	var App = function (_Component) {
 	    _inherits(App, _Component);
@@ -21249,7 +21253,7 @@
 	                    { className: 'App-header' },
 	                    _react2.default.createElement(
 	                        'h2',
-	                        null,
+	                        { className: css('tc5') },
 	                        'Neckbeard'
 	                    )
 	                ),
@@ -21412,7 +21416,7 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports.helpers = exports.defaultSettings = undefined;
+	exports.defaultSettings = undefined;
 
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -21422,7 +21426,7 @@
 
 
 	/**
-	 * Neckbeard Imported Settings
+	 * Neckbeard Set Beard Colors
 	 */
 
 
@@ -21436,9 +21440,11 @@
 
 	var helpers = _interopRequireWildcard(_helpers);
 
-	var _colors = __webpack_require__(214);
+	var _setBeardColors = __webpack_require__(214);
 
-	var colorSettings = _interopRequireWildcard(_colors);
+	var _setBeardColors2 = _interopRequireDefault(_setBeardColors);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
@@ -21452,11 +21458,12 @@
 	 */
 	var defaultSettings = exports.defaultSettings = {
 	    breakpoints: {
-	        sm: 600,
-	        md: 800,
-	        lg: 1200
+	        sm: 300,
+	        md: 600,
+	        lg: 900,
+	        xlg: 1440
 	    },
-	    colors: colorSettings,
+	    colors: (0, _setBeardColors2.default)(),
 	    helpers: {
 	        borders: {
 	            limit: 3,
@@ -21626,7 +21633,7 @@
 	            } else if (index === Object.keys(breakpoints).length - 1) {
 	                media['only-' + breakpoint + '-' + selector] = _defineProperty({}, '@media (min-width: ' + breakpoints[breakpoint] + 'px)', selectors[selector]);
 	            } else {
-	                media['only-' + breakpoint + '-' + selector] = _defineProperty({}, '@media (min-width: ' + breakpoints[breakpoint] + 'px) and (max-width: ' + breakpoints[Object.keys(breakpoints)[index + 1]] + 'px)', selectors[selector]);
+	                media['only-' + breakpoint + '-' + selector] = _defineProperty({}, '@media (min-width: ' + breakpoints[breakpoint] + 'px) and (max-width: ' + (breakpoints[Object.keys(breakpoints)[index + 1]] - 1) + 'px)', selectors[selector]);
 	            }
 	        });
 	    });
@@ -21635,9 +21642,16 @@
 	}
 
 	/**
-	 * Export helpers
+	 * Export the things we need
 	 */
-	exports.helpers = helpers;
+	exports.default = {
+	    addMediaQueries: addMediaQueries,
+	    create: create,
+	    defaultSettings: defaultSettings,
+	    helpers: helpers,
+	    prefixSelectors: prefixSelectors,
+	    setBeardColors: _setBeardColors2.default
+	};
 
 /***/ },
 /* 175 */
@@ -23667,70 +23681,70 @@
 	   * Colors
 	   */
 	  // Background colors
-	  selectors["bgb"] = { "background-color": colors.beardColors.b };
-	  selectors["bgw"] = { "background-color": colors.beardColors.w };
-	  selectors["bg1"] = { "background-color": colors.beardColors["1"] };
-	  selectors["bg2"] = { "background-color": colors.beardColors["2"] };
-	  selectors["bg3"] = { "background-color": colors.beardColors["3"] };
-	  selectors["bg4"] = { "background-color": colors.beardColors["4"] };
-	  selectors["bg5"] = { "background-color": colors.beardColors["5"] };
+	  selectors["bgb"] = { "background-color": colors.b };
+	  selectors["bgw"] = { "background-color": colors.w };
+	  selectors["bg1"] = { "background-color": colors.brandColor };
+	  selectors["bg2"] = { "background-color": colors.brandColor2 };
+	  selectors["bg3"] = { "background-color": colors.brandColor3 };
+	  selectors["bg4"] = { "background-color": colors.brandColor4 };
+	  selectors["bg5"] = { "background-color": colors.brandColor5 };
 
 	  // Text colors
-	  selectors["tcb"] = { "color": colors.beardColors.b };
-	  selectors["tcw"] = { "color": colors.beardColors.w };
-	  selectors["tc1"] = { "color": colors.beardColors["1"] };
-	  selectors["tc2"] = { "color": colors.beardColors["2"] };
-	  selectors["tc3"] = { "color": colors.beardColors["3"] };
-	  selectors["tc4"] = { "color": colors.beardColors["4"] };
-	  selectors["tc5"] = { "color": colors.beardColors["5"] };
+	  selectors["tcb"] = { "color": colors.b };
+	  selectors["tcw"] = { "color": colors.w };
+	  selectors["tc1"] = { "color": colors.brandColor };
+	  selectors["tc2"] = { "color": colors.brandColor2 };
+	  selectors["tc3"] = { "color": colors.brandColor3 };
+	  selectors["tc4"] = { "color": colors.brandColor4 };
+	  selectors["tc5"] = { "color": colors.brandColor5 };
 
 	  // Border colors
-	  selectors["bcb"] = { "border-color": colors.beardColors.b };
-	  selectors["bcw"] = { "border-color": colors.beardColors.w };
-	  selectors["bc1"] = { "border-color": colors.beardColors["1"] };
-	  selectors["bc2"] = { "border-color": colors.beardColors["2"] };
-	  selectors["bc3"] = { "border-color": colors.beardColors["3"] };
-	  selectors["bc4"] = { "border-color": colors.beardColors["4"] };
-	  selectors["bc5"] = { "border-color": colors.beardColors["5"] };
+	  selectors["bcb"] = { "border-color": colors.b };
+	  selectors["bcw"] = { "border-color": colors.w };
+	  selectors["bc1"] = { "border-color": colors.brandColor };
+	  selectors["bc2"] = { "border-color": colors.brandColor2 };
+	  selectors["bc3"] = { "border-color": colors.brandColor3 };
+	  selectors["bc4"] = { "border-color": colors.brandColor4 };
+	  selectors["bc5"] = { "border-color": colors.brandColor5 };
 
 	  // Background Colors
 	  // ------------------------------------------------------------------------------------ */
-	  selectors["bgg05"] = { "background-color": colors.beardColors.g05 };
-	  selectors["bgg10"] = { "background-color": colors.beardColors.g10 };
-	  selectors["bgg20"] = { "background-color": colors.beardColors.g20 };
-	  selectors["bgg30"] = { "background-color": colors.beardColors.g30 };
-	  selectors["bgg40"] = { "background-color": colors.beardColors.g40 };
-	  selectors["bgg50"] = { "background-color": colors.beardColors.g50 };
-	  selectors["bgg60"] = { "background-color": colors.beardColors.g60 };
-	  selectors["bgg70"] = { "background-color": colors.beardColors.g70 };
-	  selectors["bgg80"] = { "background-color": colors.beardColors.g80 };
-	  selectors["bgg90"] = { "background-color": colors.beardColors.g90 };
+	  selectors["bgg05"] = { "background-color": colors.g05 };
+	  selectors["bgg10"] = { "background-color": colors.g10 };
+	  selectors["bgg20"] = { "background-color": colors.g20 };
+	  selectors["bgg30"] = { "background-color": colors.g30 };
+	  selectors["bgg40"] = { "background-color": colors.g40 };
+	  selectors["bgg50"] = { "background-color": colors.g50 };
+	  selectors["bgg60"] = { "background-color": colors.g60 };
+	  selectors["bgg70"] = { "background-color": colors.g70 };
+	  selectors["bgg80"] = { "background-color": colors.g80 };
+	  selectors["bgg90"] = { "background-color": colors.g90 };
 
 	  // Text Colors
 	  // ------------------------------------------------------------------------------------ */
-	  selectors["tcg05"] = { "color": colors.beardColors.g05 };
-	  selectors["tcg10"] = { "color": colors.beardColors.g10 };
-	  selectors["tcg20"] = { "color": colors.beardColors.g20 };
-	  selectors["tcg30"] = { "color": colors.beardColors.g30 };
-	  selectors["tcg40"] = { "color": colors.beardColors.g40 };
-	  selectors["tcg50"] = { "color": colors.beardColors.g50 };
-	  selectors["tcg60"] = { "color": colors.beardColors.g60 };
-	  selectors["tcg70"] = { "color": colors.beardColors.g70 };
-	  selectors["tcg80"] = { "color": colors.beardColors.g80 };
-	  selectors["tcg90"] = { "color": colors.beardColors.g90 };
+	  selectors["tcg05"] = { "color": colors.g05 };
+	  selectors["tcg10"] = { "color": colors.g10 };
+	  selectors["tcg20"] = { "color": colors.g20 };
+	  selectors["tcg30"] = { "color": colors.g30 };
+	  selectors["tcg40"] = { "color": colors.g40 };
+	  selectors["tcg50"] = { "color": colors.g50 };
+	  selectors["tcg60"] = { "color": colors.g60 };
+	  selectors["tcg70"] = { "color": colors.g70 };
+	  selectors["tcg80"] = { "color": colors.g80 };
+	  selectors["tcg90"] = { "color": colors.g90 };
 
 	  // Border Colors
 	  // ------------------------------------------------------------------------------------ */
-	  selectors["bcg05"] = { borderColor: colors.beardColors.g05 };
-	  selectors["bcg10"] = { borderColor: colors.beardColors.g10 };
-	  selectors["bcg20"] = { borderColor: colors.beardColors.g20 };
-	  selectors["bcg30"] = { borderColor: colors.beardColors.g30 };
-	  selectors["bcg40"] = { borderColor: colors.beardColors.g40 };
-	  selectors["bcg50"] = { borderColor: colors.beardColors.g50 };
-	  selectors["bcg60"] = { borderColor: colors.beardColors.g60 };
-	  selectors["bcg70"] = { borderColor: colors.beardColors.g70 };
-	  selectors["bcg80"] = { borderColor: colors.beardColors.g80 };
-	  selectors["bcg90"] = { borderColor: colors.beardColors.g90 };
+	  selectors["bcg05"] = { borderColor: colors.g05 };
+	  selectors["bcg10"] = { borderColor: colors.g10 };
+	  selectors["bcg20"] = { borderColor: colors.g20 };
+	  selectors["bcg30"] = { borderColor: colors.g30 };
+	  selectors["bcg40"] = { borderColor: colors.g40 };
+	  selectors["bcg50"] = { borderColor: colors.g50 };
+	  selectors["bcg60"] = { borderColor: colors.g60 };
+	  selectors["bcg70"] = { borderColor: colors.g70 };
+	  selectors["bcg80"] = { borderColor: colors.g80 };
+	  selectors["bcg90"] = { borderColor: colors.g90 };
 
 	  /**
 	   * Media Queries
@@ -23781,11 +23795,6 @@
 	  selectors["dib"] = { "display": "inline-block" };
 	  selectors["dn"] = { "display": "none" };
 	  selectors["df"] = { "display": "flex" };
-	  selectors["full"] = {
-	    "display": "block",
-	    "width": "100%"
-	  };
-	  selectors["w100"] = { "width": "100%" };
 
 	  /**
 	   * Media Queries
@@ -23793,6 +23802,13 @@
 	  if (Object.keys(breakpoints).length !== 0 && useBreakpoints) {
 	    media = (0, _.addMediaQueries)(selectors, breakpoints);
 	  }
+
+	  selectors["full"] = {
+	    "display": "block",
+	    "width": "100%"
+	  };
+	  selectors["w100"] = { "width": "100%" };
+	  selectors["h100"] = { "height": "100%" };
 
 	  return _extends({}, selectors, media);
 	}
@@ -24117,18 +24133,19 @@
 	/**
 	 * Grid
 	 *
-	 * @param  {object} useBreakpoints
-	 * @param  {object} gridGutter - size of gutter
+	 * @param  {object} breakpoints
 	 * @param  {object} gridBlockCount - number of columns
-	 * @param  {object} breakpoints={} (optional)
+	 * @param  {object} gridGutter - size of gutter
+	 * @param  {string} stackAtBreakpoint
+	 * @param  {object} useBreakpoints
 	 * @return {object}
 	 */
 	function grid(_ref) {
 	    var _ref$helpers$grid = _ref.helpers.grid;
-	    var useBreakpoints = _ref$helpers$grid.useBreakpoints;
 	    var gridGutter = _ref$helpers$grid.gridGutter;
 	    var gridBlockCount = _ref$helpers$grid.gridBlockCount;
 	    var stackAtBreakpoint = _ref$helpers$grid.stackAtBreakpoint;
+	    var useBreakpoints = _ref$helpers$grid.useBreakpoints;
 	    var breakpoints = _ref.breakpoints;
 
 	    var selectors = {};
@@ -24770,7 +24787,11 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports.beardColors = exports.beardDangerColor = exports.beardWarningColor = exports.beardSuccessColor = exports.brandColor5 = exports.brandColor4 = exports.brandColor3 = exports.brandColor2 = exports.brandColor1 = exports.black = exports.white = undefined;
+	exports.beardColors = undefined;
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	exports.default = setBeardColors;
 
 	var _shadeColor = __webpack_require__(215);
 
@@ -24778,42 +24799,80 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	// Global Color Variables
+	// Default Beard Colors
 	// ------------------------------------------------------------------------------------ */
-	var white = exports.white = "#fff";
-	var black = exports.black = "#000";
-	var brandColor1 = exports.brandColor1 = "#3498DB";
-	var brandColor2 = exports.brandColor2 = (0, _shadeColor2.default)(-0.05, brandColor1);
-	var brandColor3 = exports.brandColor3 = (0, _shadeColor2.default)(-0.05, brandColor2);
-	var brandColor4 = exports.brandColor4 = (0, _shadeColor2.default)(-0.05, brandColor3);
-	var brandColor5 = exports.brandColor5 = (0, _shadeColor2.default)(-0.05, brandColor4);
-
-	var beardSuccessColor = exports.beardSuccessColor = "#4AB471";
-	var beardWarningColor = exports.beardWarningColor = "#F3AE4E";
-	var beardDangerColor = exports.beardDangerColor = "#CF5C60";
-
 	var beardColors = exports.beardColors = {
-	    "b": black,
-	    "w": white,
-	    "1": brandColor1,
-	    "2": brandColor2,
-	    "3": brandColor3,
-	    "4": brandColor4,
-	    "5": brandColor5,
-	    "success": beardSuccessColor,
-	    "warning": beardWarningColor,
-	    "danger": beardDangerColor,
-	    "g05": (0, _shadeColor2.default)(-0.05, white),
-	    "g10": (0, _shadeColor2.default)(.10, white),
-	    "g20": (0, _shadeColor2.default)(.20, white),
-	    "g30": (0, _shadeColor2.default)(.30, white),
-	    "g40": (0, _shadeColor2.default)(.40, white),
-	    "g50": (0, _shadeColor2.default)(.50, white),
-	    "g60": (0, _shadeColor2.default)(.60, white),
-	    "g70": (0, _shadeColor2.default)(.70, white),
-	    "g80": (0, _shadeColor2.default)(.80, white),
-	    "g90": (0, _shadeColor2.default)(.90, white)
+	    white: "#ffffff",
+	    black: "#000000",
+	    brandColor: "#3498DB",
+	    success: "#4AB471",
+	    warning: "#F3AE4E",
+	    danger: "#CF5C60"
 	};
+
+	/**
+	 * Sets Beard Colors
+	 * @param {object} beardColors
+	 * @return {object}
+	 */
+	function setBeardColors() {
+	    var colors = arguments.length <= 0 || arguments[0] === undefined ? beardColors : arguments[0];
+
+	    colors = _extends({}, beardColors, colors);
+
+	    return {
+	        brandColor: colors.brandColor,
+	        "b": colors.black,
+	        "w": colors.white,
+	        "success": colors.success,
+	        "warning": colors.warning,
+	        "danger": colors.danger,
+
+	        get g05() {
+	            return (0, _shadeColor2.default)(-0.05, colors.white);
+	        },
+	        get g10() {
+	            return (0, _shadeColor2.default)(-0.10, colors.white);
+	        },
+	        get g20() {
+	            return (0, _shadeColor2.default)(-0.20, colors.white);
+	        },
+	        get g30() {
+	            return (0, _shadeColor2.default)(-0.30, colors.white);
+	        },
+	        get g40() {
+	            return (0, _shadeColor2.default)(-0.40, colors.white);
+	        },
+	        get g50() {
+	            return (0, _shadeColor2.default)(-0.50, colors.white);
+	        },
+	        get g60() {
+	            return (0, _shadeColor2.default)(-0.60, colors.white);
+	        },
+	        get g70() {
+	            return (0, _shadeColor2.default)(-0.70, colors.white);
+	        },
+	        get g80() {
+	            return (0, _shadeColor2.default)(-0.80, colors.white);
+	        },
+	        get g90() {
+	            return (0, _shadeColor2.default)(-0.90, colors.white);
+	        },
+	        get brandColor2() {
+	            return (0, _shadeColor2.default)(-0.05, this.brandColor);
+	        },
+	        get brandColor3() {
+	            return (0, _shadeColor2.default)(-0.05, this.brandColor2);
+	        },
+	        get brandColor4() {
+	            return (0, _shadeColor2.default)(-0.05, this.brandColor3);
+	        },
+	        get brandColor5() {
+	            return (0, _shadeColor2.default)(-0.05, this.brandColor4);
+	        }
+
+	    };
+	}
 
 /***/ },
 /* 215 */
