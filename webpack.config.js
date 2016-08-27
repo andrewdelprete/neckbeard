@@ -7,6 +7,7 @@ const plugins = [
     new webpack.optimize.OccurenceOrderPlugin(), // recommanded by webpack
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin({
+        mangle: false,
         compress: {
             warnings: false
         }

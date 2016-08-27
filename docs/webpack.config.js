@@ -27,6 +27,6 @@ module.exports = {
     },
     plugins,
     devServer: {
-        contentBase: path.resolve(__dirname + '/example-src'),
+        contentBase: path.resolve(__dirname + '/docs/src'),
     }
 }
