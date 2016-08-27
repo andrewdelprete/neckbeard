@@ -9,17 +9,17 @@ describe("create() method", function () {
     jsdom()
 
     it("Should allow a string of selectors that match helper selectors", function() {
-        const css = nb.create(nb.all())
+        const css = nb.create()
         assert.isOk(css("mb1 mb2"))
     })
 
     it("Doesn't allow selectors that don't exist", function() {
-        const css = nb.create(nb.all())
+        const css = nb.create()
         assert.isNotOk(css("fakeclass"))
     })
 
     it("Should allow single helper to be passed instead of all()", function() {
-        const css = nb.create([ nb.helpers.spacing ])
+        const css = nb.create(nb.defaultSettings, { spacing: nb.helpers.spacing })
         assert.isOk(css("mb1"))
         assert.isNotOk(css("ft1"))
     })
@@ -32,7 +32,7 @@ describe("create() method", function () {
             }
         }
 
-        const css = nb.create(nb.all(), settings)
+        const css = nb.create(settings, nb.helpers)
         assert.isOk(css("xlg-mb1"))
         assert.isNotOk(css("lg-mb1"))
     })
@@ -43,7 +43,7 @@ describe("create() method", function () {
             breakpoints: {}
         }
 
-        const css = nb.create(nb.all(), settings)
+        const css = nb.create(settings, nb.helpers)
         assert.isNotOk(css("lg-mb1"))
     })
 
@@ -58,16 +58,9 @@ describe("create() method", function () {
             }
         }
 
-        const css = nb.create(nb.all(), settings)
+        const css = nb.create(settings, nb.helpers)
         assert.isNotOk(css("lg-mb1"))
         assert.isOk(css("lg-ft1"))
-    })
-})
-
-describe("all() method", function () {
-    it("Should return all helpers as an Array", function() {
-        assert.isOk(Array.isArray(nb.all()))
-        assert.equal(nb.all().length, Object.keys(nb.helpers).length)
     })
 })
 
@@ -81,11 +74,11 @@ describe("addMediaQueries() method", function () {
 
 describe("prefixSelectors() method", function () {
     it("Should return an object with helper selectors prefixed with a '.''", function() {
-        const css = nb.prefixSelectors([ nb.helpers.misc ])
+        const css = nb.prefixSelectors(nb.defaultSettings, { misc: nb.helpers.misc })
         assert.isOk(css['.clearfix'])
     })
     it("Should return an object with psuedo helper selectors prefixed with a '&'", function() {
-        const css = nb.prefixSelectors([ nb.helpers.misc ])
+        const css = nb.prefixSelectors(nb.defaultSettings, { misc: nb.helpers.misc })
         assert.isOk(css['.clearfix']['&:after'])
     })
 })

@@ -7,8 +7,11 @@ const settings = {
 }
 
 // Compose Neckbeard Selector Object
-const css = nb.create(nb.all(), settings)
+const css = nb.create(settings)
 
+// console.log(() => {
+//     return nb.all()
+// })
 class App extends Component {
     render() {
         return (

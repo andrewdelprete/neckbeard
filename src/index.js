@@ -93,15 +93,16 @@ export const defaultSettings = {
 /**
  * Returns an object of combined
  * helpers ran through Aphrodite.
- * @param  {array} helperFns
  * @param  {object} settings
+ * @param  {object} helperFns
  * @return {object}
  */
-export function create(helperFns, settings = defaultSettings) {
+export function create(settings = defaultSettings, helperFns = helpers) {
     // Envokes each helper function passed and returns
     // an aggregrated object of all selector properties.
-    const allSelectors = helperFns
-        .map(fn => fn(settings))
+    const allSelectors = Object
+        .keys(helperFns)
+        .map(fnKey => helperFns[fnKey](settings))
         .reduce((previous, current) => ({ ...previous, ...current }))
 
     return (selectors) => {
@@ -136,15 +137,16 @@ export function create(helperFns, settings = defaultSettings) {
  * Returns a new object with
  * prefix class selectors with '.'
  * and psuedo selectors with ':'
- * @param  {array} helperFns
  * @param  {object} settings
+ * @param  {object} helperFns
  * @return {object}
  */
-export function prefixSelectors(helperFns, settings = defaultSettings) {
+export function prefixSelectors(settings = defaultSettings, helperFns = helpers) {
     // Envokes each helper function passed and returns
     // an aggregrated object of all selector properties.
-    const allSelectors = helperFns
-        .map(fn => fn(settings))
+    const allSelectors = Object
+        .keys(helperFns)
+        .map(fnKey => helperFns[fnKey](settings))
         .reduce((previous, current) => ({ ...previous, ...current }))
 
     // Prefix each selector with .
@@ -201,14 +203,6 @@ export function addMediaQueries(selectors, breakpoints) {
     })
 
     return media
-}
-
-/**
- * Returns all Neckbeard helpers as an Array
- * @return {array}
- */
-export function all() {
-    return Object.keys(helpers).map(key => helpers[key]);
 }
 
 /**

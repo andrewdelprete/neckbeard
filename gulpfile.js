@@ -12,13 +12,13 @@ var nb = require('./build')
  * file from Neckbeard Helpers.
  */
 gulp.task('css', function() {
-    const cssObj = nb.prefixSelectors(nb.all(), nb.defaultSettings)
+    const cssObj = nb.prefixSelectors()
 
     return postcss()
         .process(cssObj, { parser: postcssJs })
         .then(result => {
             file('nb.css', result.css, { src: true })
                 .pipe(sass())
-                .pipe(gulp.dest('dist'))
+                .pipe(gulp.dest('build'))
         })
 })
