@@ -1,12 +1,20 @@
 import React, { Component } from 'react'
-import * as nb from '../../src'
 
+// Import Neckbeard
+import nb from '../../src'
+
+// Overwrite settings if needed.
 const settings = {
-    ...nb.defaultSettings
-    // ...Overwrites here
+    ...nb.defaultSettings,
+    breakpoints: {
+        ...nb.defaultSettings,
+        'xxlg': 1600
+    },
+    colors: nb.setBeardColors({ brandColor: "#FF0000" })
+    //...Other overwrites here
 }
 
-// Compose Neckbeard Selector Object
+// It's Business time
 const css = nb.create(settings)
 
 class App extends Component {
@@ -14,7 +22,7 @@ class App extends Component {
         return (
             <div className="App">
                 <div className="App-header">
-                    <h2>Neckbeard</h2>
+                    <h2 className={ css('tc5') }>Neckbeard</h2>
                 </div>
                 <p className={ css('pv2 md-pv4 only-sm-xpv') }>
                     Spacing

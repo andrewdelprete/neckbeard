@@ -6,9 +6,9 @@ import { StyleSheet, css } from 'aphrodite'
 import * as helpers from './helpers'
 
 /**
- * Neckbeard Imported Settings
+ * Neckbeard Set Beard Colors
  */
-import * as colorSettings from './settings/colors'
+import setBeardColors from './utilities/setBeardColors'
 
 /**
  * Neckbeard Default Settings
@@ -21,7 +21,7 @@ export const defaultSettings = {
         lg: 900,
         xlg: 1440
     },
-    colors: colorSettings,
+    colors: setBeardColors(),
     helpers: {
         borders: {
             limit: 3,
@@ -207,8 +207,13 @@ export function addMediaQueries(selectors, breakpoints) {
 }
 
 /**
- * Export helpers
+ * Export the things we need
  */
-export {
-    helpers
+export default {
+    addMediaQueries,
+    create,
+    defaultSettings,
+    helpers,
+    prefixSelectors,
+    setBeardColors
 }

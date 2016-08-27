@@ -1,7 +1,7 @@
 import { assert } from "chai"
 import sinon from "sinon"
 
-import * as nb from "../"
+import nb from "../"
 
 var jsdom = require("mocha-jsdom")
 
@@ -18,7 +18,7 @@ describe("create() method", function () {
         assert.isNotOk(css("fakeclass"))
     })
 
-    it("Should allow single helper to be passed instead of all()", function() {
+    it("Should allow single helper to be passed as an argument", function() {
         const css = nb.create(nb.defaultSettings, { spacing: nb.helpers.spacing })
         assert.isOk(css("mb1"))
         assert.isNotOk(css("ft1"))
