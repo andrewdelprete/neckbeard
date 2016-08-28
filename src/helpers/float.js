@@ -7,7 +7,7 @@ import { addMediaQueries } from '../'
  * @param  {object} breakpoints={} (optional)
  * @return {object}
  */
-export default function floats({ helpers: { floats: { useBreakpoints } }, breakpoints }) {
+export default function float({ helpers: { float: { useBreakpoints } }, breakpoints }) {
     let selectors = {}
     let media = {}
 

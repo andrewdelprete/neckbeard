@@ -8,7 +8,7 @@ import { addMediaQueries } from '../'
  * @param  {object} breakpoints={} (optional)
  * @return {object}
  */
-export default function borders({ helpers: { borders: { limit, incrementBy, useBreakpoints } }, breakpoints }) {
+export default function border({ helpers: { border: { limit, incrementBy, useBreakpoints } }, breakpoints }) {
     let selectors = {}
     let media = {}
 

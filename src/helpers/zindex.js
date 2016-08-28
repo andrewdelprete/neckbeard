@@ -8,7 +8,7 @@ import { addMediaQueries } from '../'
  * @param  {object} breakpoints={} (optional)
  * @return {object}
  */
-export default function zindex({ helpers: { zindex: { limit, incrementBy, useBreakpoints } }, breakpoints }) {
+export default function zindex({ helpers: { zIndex: { limit, incrementBy, useBreakpoints } }, breakpoints }) {
     let selectors = {}
     let media = {}
 

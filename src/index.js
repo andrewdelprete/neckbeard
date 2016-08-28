@@ -23,7 +23,7 @@ export const defaultSettings = {
     },
     colors: setBeardColors(),
     helpers: {
-        borders: {
+        border: {
             limit: 3,
             incrementBy: 1,
             useBreakpoints: true
@@ -42,7 +42,7 @@ export const defaultSettings = {
         flex: {
             useBreakpoints: true
         },
-        floats: {
+        float: {
             useBreakpoints: true
         },
         fontFamily: {
@@ -82,7 +82,7 @@ export const defaultSettings = {
         textAlignment: {
             useBreakpoints: true
         },
-        zindex: {
+        zIndex: {
             limit: 10,
             incrementBy: 1,
             useBreakpoints: true

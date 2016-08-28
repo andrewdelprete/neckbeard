@@ -3,11 +3,11 @@
  * Neckbeard Helpers
  */
 import borderRadius from './borderRadius'
-import borders from './borders'
+import border from './border'
 import colors from './colors'
 import display from './display'
 import flex from './flex'
-import floats from './floats'
+import float from './float'
 import fontFamily from './fontFamily'
 import fontSize from './fontSize'
 import fontWeight from './fontWeight'
@@ -18,15 +18,15 @@ import overflow from './overflow'
 import position from './position'
 import spacing from './spacing'
 import textAlignment from './textAlignment'
-import zindex from './zindex'
+import zIndex from './zIndex'
 
 export {
     borderRadius,
-    borders,
+    border,
     colors,
     display,
     flex,
-    floats,
+    float,
     fontFamily,
     fontSize,
     fontWeight,
@@ -37,5 +37,5 @@ export {
     position,
     spacing,
     textAlignment,
-    zindex
+    zIndex
 }
