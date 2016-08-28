@@ -59,7 +59,7 @@ export const defaultSettings = {
         grid: {
             gridBlockCount: 12,
             gridGutter: 30,
-            stackAtBreakpoint: 'sm',
+            stackAtBreakpoint: 'md',
             useBreakpoints: true
         },
         lineHeights: {
@@ -99,6 +99,9 @@ export const defaultSettings = {
  * @return {object}
  */
 export function create(settings = defaultSettings, helperFns = helpers) {
+    // Set colors
+    settings.colors = setBeardColors(settings.colors)
+
     // Invokes each helper function passed and returns
     // an aggregrated object of all selector properties.
     const allSelectors = Object
@@ -143,6 +146,9 @@ export function create(settings = defaultSettings, helperFns = helpers) {
  * @return {object}
  */
 export function prefixSelectors(settings = defaultSettings, helperFns = helpers) {
+    // Set colors
+    settings.colors = setBeardColors(settings.colors)
+
     // Envokes each helper function passed and returns
     // an aggregrated object of all selector properties.
     const allSelectors = Object

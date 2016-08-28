@@ -5,7 +5,7 @@ import nb from "../"
 
 var jsdom = require("mocha-jsdom")
 
-describe("create() method", function () {
+describe("create() function", function () {
     jsdom()
 
     it("Should allow a string of selectors that match helper selectors", function() {
@@ -64,7 +64,7 @@ describe("create() method", function () {
     })
 })
 
-describe("addMediaQueries() method", function () {
+describe("addMediaQueries() function", function () {
     it("Should return helper selectors with media queries added to it", function() {
         const spacing = nb.helpers.spacing(nb.defaultSettings)
         const css = nb.addMediaQueries(spacing, nb.defaultSettings.breakpoints)
@@ -72,8 +72,35 @@ describe("addMediaQueries() method", function () {
     })
 })
 
-describe("prefixSelectors() method", function () {
-    it("Should return an object with helper selectors prefixed with a '.''", function() {
+describe("setBeardColors() function", function () {
+    it("Should return object an object of default colors", function() {
+        const colors = nb.setBeardColors()
+        assert.isOk(typeof colors === 'object')
+        assert.isOk(colors.brandColor)
+    })
+
+    it("Should have getters", function() {
+        const colors = nb.setBeardColors()
+        assert.isOk(colors.brandColor2)
+        assert.isOk(colors.brandColor3)
+        assert.isOk(colors.brandColor4)
+        assert.isOk(colors.brandColor5)
+    })
+
+    it("Should overwrite defaults", function() {
+        const colors = nb.setBeardColors({ brandColor: "#00FF00" })
+        assert.isOk(colors.brandColor === "#00FF00")
+    })
+
+    it("Should darken colors incrementally", function() {
+        const colors = nb.setBeardColors()
+        assert.isOk(colors.g05 !== colors.g10)
+        assert.isOk(colors.g50 === "#808080")
+    })
+})
+
+describe("prefixSelectors() function", function () {
+    it("Should return an object with helper selectors prefixed with a '.'", function() {
         const css = nb.prefixSelectors(nb.defaultSettings, { misc: nb.helpers.misc })
         assert.isOk(css['.clearfix'])
     })

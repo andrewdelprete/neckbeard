@@ -10,7 +10,10 @@ const settings = {
         ...nb.defaultSettings.breakpoints,
         'xxlg': 1600
     },
-    colors: nb.setBeardColors({ brandColor: "#FF0000" })
+    colors: {
+        ...nb.defaultSettings.colors,
+        brandColor: "#FF0000"
+    }
     //...Other overwrites here
 }
 

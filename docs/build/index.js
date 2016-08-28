@@ -21223,10 +21223,12 @@
 
 	// Overwrite settings if needed.
 	var settings = _extends({}, _src2.default.defaultSettings, {
-	    breakpoints: _extends({}, _src2.default.defaultSettings, {
+	    breakpoints: _extends({}, _src2.default.defaultSettings.breakpoints, {
 	        'xxlg': 1600
 	    }),
-	    colors: _src2.default.setBeardColors({ brandColor: "#FF0000" })
+	    colors: _extends({}, _src2.default.defaultSettings.colors, {
+	        brandColor: "#FF0000"
+	    })
 	    //...Other overwrites here
 	});
 
@@ -21342,10 +21344,10 @@
 	                ),
 	                _react2.default.createElement(
 	                    'div',
-	                    { className: css('frame example-frame mb3') },
+	                    { className: css('frame mb3') },
 	                    _react2.default.createElement(
 	                        'div',
-	                        { className: css('blk md-blk6 example-blk') },
+	                        { className: css('blk md-blk6') },
 	                        _react2.default.createElement(
 	                            'div',
 	                            { className: css('pv2 ph2 bgg10 pos-rel') },
@@ -21354,7 +21356,7 @@
 	                    ),
 	                    _react2.default.createElement(
 	                        'div',
-	                        { className: css('blk md-blk6 example-blk') },
+	                        { className: css('blk md-blk6') },
 	                        _react2.default.createElement(
 	                            'div',
 	                            { className: css('pv2 ph2 bgg10 pos-rel') },
@@ -21364,10 +21366,10 @@
 	                ),
 	                _react2.default.createElement(
 	                    'div',
-	                    { className: css('frame example-frame mb3') },
+	                    { className: css('frame mb3') },
 	                    _react2.default.createElement(
 	                        'div',
-	                        { className: css('blk md-blk--offset3 example-blk') },
+	                        { className: css('blk md-blk--offset3') },
 	                        _react2.default.createElement(
 	                            'div',
 	                            { className: css('pv2 ph2 bgg10 pos-rel') },
@@ -21377,10 +21379,10 @@
 	                ),
 	                _react2.default.createElement(
 	                    'div',
-	                    { className: css('frame frame--stay example-frame mb6') },
+	                    { className: css('frame frame--stay mb6') },
 	                    _react2.default.createElement(
 	                        'div',
-	                        { className: css('blk3 md-blk--push9 example-blk') },
+	                        { className: css('blk3 md-blk--push9') },
 	                        _react2.default.createElement(
 	                            'div',
 	                            { className: css('pv2 ph2 bgg10 pos-rel') },
@@ -21389,7 +21391,7 @@
 	                    ),
 	                    _react2.default.createElement(
 	                        'div',
-	                        { className: css('blk9 md-blk--pull3 example-blk') },
+	                        { className: css('blk9 md-blk--pull3') },
 	                        _react2.default.createElement(
 	                            'div',
 	                            { className: css('pv2 ph2 bgg10 pos-rel') },
@@ -21501,7 +21503,7 @@
 	        grid: {
 	            gridBlockCount: 12,
 	            gridGutter: 30,
-	            stackAtBreakpoint: 'sm',
+	            stackAtBreakpoint: 'md',
 	            useBreakpoints: true
 	        },
 	        lineHeights: {
@@ -21544,7 +21546,10 @@
 	    var settings = arguments.length <= 0 || arguments[0] === undefined ? defaultSettings : arguments[0];
 	    var helperFns = arguments.length <= 1 || arguments[1] === undefined ? helpers : arguments[1];
 
-	    // Envokes each helper function passed and returns
+	    // Set colors
+	    settings.colors = (0, _setBeardColors2.default)(settings.colors);
+
+	    // Invokes each helper function passed and returns
 	    // an aggregrated object of all selector properties.
 	    var allSelectors = Object.keys(helperFns).map(function (fnKey) {
 	        return helperFns[fnKey](settings);
@@ -21586,6 +21591,9 @@
 	function prefixSelectors() {
 	    var settings = arguments.length <= 0 || arguments[0] === undefined ? defaultSettings : arguments[0];
 	    var helperFns = arguments.length <= 1 || arguments[1] === undefined ? helpers : arguments[1];
+
+	    // Set colors
+	    settings.colors = (0, _setBeardColors2.default)(settings.colors);
 
 	    // Envokes each helper function passed and returns
 	    // an aggregrated object of all selector properties.
