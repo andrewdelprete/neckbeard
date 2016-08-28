@@ -21467,7 +21467,7 @@
 	    },
 	    colors: (0, _setBeardColors2.default)(),
 	    helpers: {
-	        borders: {
+	        border: {
 	            limit: 3,
 	            incrementBy: 1,
 	            useBreakpoints: true
@@ -21486,7 +21486,7 @@
 	        flex: {
 	            useBreakpoints: true
 	        },
-	        floats: {
+	        float: {
 	            useBreakpoints: true
 	        },
 	        fontFamily: {
@@ -21526,7 +21526,7 @@
 	        textAlignment: {
 	            useBreakpoints: true
 	        },
-	        zindex: {
+	        zIndex: {
 	            limit: 10,
 	            incrementBy: 1,
 	            useBreakpoints: true
@@ -23405,15 +23405,15 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports.zindex = exports.textAlignment = exports.spacing = exports.position = exports.overflow = exports.misc = exports.lineHeight = exports.grid = exports.fontWeight = exports.fontSize = exports.fontFamily = exports.floats = exports.flex = exports.display = exports.colors = exports.borders = exports.borderRadius = undefined;
+	exports.zIndex = exports.textAlignment = exports.spacing = exports.position = exports.overflow = exports.misc = exports.lineHeight = exports.grid = exports.fontWeight = exports.fontSize = exports.fontFamily = exports.float = exports.flex = exports.display = exports.colors = exports.border = exports.borderRadius = undefined;
 
 	var _borderRadius = __webpack_require__(197);
 
 	var _borderRadius2 = _interopRequireDefault(_borderRadius);
 
-	var _borders = __webpack_require__(198);
+	var _border = __webpack_require__(198);
 
-	var _borders2 = _interopRequireDefault(_borders);
+	var _border2 = _interopRequireDefault(_border);
 
 	var _colors = __webpack_require__(199);
 
@@ -23427,9 +23427,9 @@
 
 	var _flex2 = _interopRequireDefault(_flex);
 
-	var _floats = __webpack_require__(202);
+	var _float = __webpack_require__(202);
 
-	var _floats2 = _interopRequireDefault(_floats);
+	var _float2 = _interopRequireDefault(_float);
 
 	var _fontFamily = __webpack_require__(203);
 
@@ -23471,18 +23471,18 @@
 
 	var _textAlignment2 = _interopRequireDefault(_textAlignment);
 
-	var _zindex = __webpack_require__(213);
+	var _zIndex = __webpack_require__(213);
 
-	var _zindex2 = _interopRequireDefault(_zindex);
+	var _zIndex2 = _interopRequireDefault(_zIndex);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.borderRadius = _borderRadius2.default;
-	exports.borders = _borders2.default;
+	exports.border = _border2.default;
 	exports.colors = _colors2.default;
 	exports.display = _display2.default;
 	exports.flex = _flex2.default;
-	exports.floats = _floats2.default;
+	exports.float = _float2.default;
 	exports.fontFamily = _fontFamily2.default;
 	exports.fontSize = _fontSize2.default;
 	exports.fontWeight = _fontWeight2.default;
@@ -23493,7 +23493,7 @@
 	exports.position = _position2.default;
 	exports.spacing = _spacing2.default;
 	exports.textAlignment = _textAlignment2.default;
-	exports.zindex = _zindex2.default;
+	exports.zIndex = _zIndex2.default;
 	/**
 	 * Neckbeard Helpers
 	 */
@@ -23591,7 +23591,7 @@
 
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-	exports.default = borders;
+	exports.default = border;
 
 	var _ = __webpack_require__(174);
 
@@ -23603,11 +23603,11 @@
 	 * @param  {object} breakpoints={} (optional)
 	 * @return {object}
 	 */
-	function borders(_ref) {
-	    var _ref$helpers$borders = _ref.helpers.borders;
-	    var limit = _ref$helpers$borders.limit;
-	    var incrementBy = _ref$helpers$borders.incrementBy;
-	    var useBreakpoints = _ref$helpers$borders.useBreakpoints;
+	function border(_ref) {
+	    var _ref$helpers$border = _ref.helpers.border;
+	    var limit = _ref$helpers$border.limit;
+	    var incrementBy = _ref$helpers$border.incrementBy;
+	    var useBreakpoints = _ref$helpers$border.useBreakpoints;
 	    var breakpoints = _ref.breakpoints;
 
 	    var selectors = {};
@@ -23917,7 +23917,7 @@
 
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-	exports.default = floats;
+	exports.default = float;
 
 	var _ = __webpack_require__(174);
 
@@ -23928,8 +23928,8 @@
 	 * @param  {object} breakpoints={} (optional)
 	 * @return {object}
 	 */
-	function floats(_ref) {
-	  var useBreakpoints = _ref.helpers.floats.useBreakpoints;
+	function float(_ref) {
+	  var useBreakpoints = _ref.helpers.float.useBreakpoints;
 	  var breakpoints = _ref.breakpoints;
 
 	  var selectors = {};
@@ -24757,10 +24757,10 @@
 	 * @return {object}
 	 */
 	function zindex(_ref) {
-	    var _ref$helpers$zindex = _ref.helpers.zindex;
-	    var limit = _ref$helpers$zindex.limit;
-	    var incrementBy = _ref$helpers$zindex.incrementBy;
-	    var useBreakpoints = _ref$helpers$zindex.useBreakpoints;
+	    var _ref$helpers$zIndex = _ref.helpers.zIndex;
+	    var limit = _ref$helpers$zIndex.limit;
+	    var incrementBy = _ref$helpers$zIndex.incrementBy;
+	    var useBreakpoints = _ref$helpers$zIndex.useBreakpoints;
 	    var breakpoints = _ref.breakpoints;
 
 	    var selectors = {};
