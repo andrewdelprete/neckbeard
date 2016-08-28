@@ -8,7 +8,7 @@ var jsdom = require("mocha-jsdom")
 describe("create() function", function () {
     jsdom()
 
-    it("Should allow a string of selectors that match helper selectors", function() {
+    it("Should allow a string of selectors that exist as helper selectors", function() {
         const css = nb.create()
         assert.isOk(css("mb1 mb2"))
     })
@@ -24,17 +24,17 @@ describe("create() function", function () {
         assert.isNotOk(css("ft1"))
     })
 
-    it("Should allow custom breakpoints", function() {
+    it("Should allow overwrite of custom breakpoints", function() {
         const settings = {
             ...nb.defaultSettings,
             breakpoints: {
-                xlg: 1400
+                xxlg: 1600
             }
         }
 
         const css = nb.create(settings, nb.helpers)
-        assert.isOk(css("xlg-mb1"))
-        assert.isNotOk(css("lg-mb1"))
+        assert.isOk(css("xxlg-mb1"))
+        assert.isNotOk(css("sm-mb1"))
     })
 
     it("Should disable all media queries", function() {
@@ -73,7 +73,7 @@ describe("addMediaQueries() function", function () {
 })
 
 describe("setBeardColors() function", function () {
-    it("Should return object an object of default colors", function() {
+    it("Should return an object of default colors", function() {
         const colors = nb.setBeardColors()
         assert.isOk(typeof colors === 'object')
         assert.isOk(colors.brandColor)
