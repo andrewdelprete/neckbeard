@@ -7,7 +7,7 @@ import nb from '../../src'
 const settings = {
     ...nb.defaultSettings,
     breakpoints: {
-        ...nb.defaultSettings,
+        ...nb.defaultSettings.breakpoints,
         'xxlg': 1600
     },
     colors: nb.setBeardColors({ brandColor: "#FF0000" })
@@ -67,24 +67,24 @@ class App extends Component {
                 <p className={ css('zi1') }>
                     Z Index
                 </p>
-                <div className={ css('frame example-frame mb3') }>
-                    <div className={ css('blk md-blk6 example-blk') }>
+                <div className={ css('frame mb3') }>
+                    <div className={ css('blk md-blk6') }>
                         <div className={ css('pv2 ph2 bgg10 pos-rel') }>.blk.md-blk6</div>
                     </div>
-                    <div className={ css('blk md-blk6 example-blk') }>
+                    <div className={ css('blk md-blk6') }>
                         <div className={ css('pv2 ph2 bgg10 pos-rel') }>.blk.md-blk6</div>
                     </div>
                 </div>
-                <div className={ css('frame example-frame mb3') }>
-                    <div className={ css('blk md-blk--offset3 example-blk') }>
+                <div className={ css('frame mb3') }>
+                    <div className={ css('blk md-blk--offset3') }>
                         <div className={ css('pv2 ph2 bgg10 pos-rel') }>.blk.md-blk--offset3</div>
                     </div>
                 </div>
-                <div className={ css('frame frame--stay example-frame mb6') }>
-                    <div className={ css('blk3 md-blk--push9 example-blk') }>
+                <div className={ css('frame frame--stay mb6') }>
+                    <div className={ css('blk3 md-blk--push9') }>
                         <div className={ css('pv2 ph2 bgg10 pos-rel') }>.blk3.md-blk--push9</div>
                     </div>
-                    <div className={ css('blk9 md-blk--pull3 example-blk') }>
+                    <div className={ css('blk9 md-blk--pull3') }>
                         <div className={ css('pv2 ph2 bgg10 pos-rel') }>blk9.md-blk--pull3</div>
                     </div>
                 </div>
