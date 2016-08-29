@@ -45,20 +45,20 @@ Neckbeard is an Atomic CSS in JS Framework highly inspired by [Beard](http://www
 ## Example
 ``` jsx
 import React, { Component } from 'react';
-import nb from 'neckbeard'
+import Neckbeard from 'neckbeard'
 
 const settings = {
-    ...nb.defaultSettings
+    ...Neckbeard.defaultSettings
     // new settings here
 }
 
-const css = nb.create(settings)
+const nb = Neckbeard.create(settings)
 
 class App extends Component {
     render() {
         return (
-            <div className={ css("flex jcc aic absolute h100 w100") }>
-                <p className={ css("ft5 tc1 tac fwthin") }>
+            <div className={ nb("flex jcc aic absolute h100 w100") }>
+                <p className={ nb("ft5 tc1 tac fwthin") }>
                     Neckbeard
                 </p>
             </div>
@@ -69,4 +69,4 @@ class App extends Component {
 export default App
 ```
 ## Documentation
-Coming Soon!
+https://neckbeard.surge.io - (Coming Soon)
