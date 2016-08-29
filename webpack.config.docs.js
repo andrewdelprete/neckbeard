@@ -6,7 +6,7 @@ const plugins = [ new webpack.NoErrorsPlugin() ]
 
 module.exports = {
     entry: {
-        index: [ path.resolve(__dirname + '/src') + '/index.js' ],
+        index: [ path.resolve(__dirname + '/docs-src') + '/index.js' ],
     },
     output: {
         path: path.resolve(__dirname + '/build'),
@@ -27,6 +27,6 @@ module.exports = {
     },
     plugins,
     devServer: {
-        contentBase: path.resolve(__dirname + '/docs/src'),
+        contentBase: path.resolve(__dirname + '/docs-src'),
     }
 }

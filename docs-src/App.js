@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 // Import Neckbeard
-import nb from '../../src'
+import nb from '../src'
 
 // Overwrite settings if needed.
 const settings = {
