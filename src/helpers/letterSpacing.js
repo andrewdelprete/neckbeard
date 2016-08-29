@@ -1,26 +1,22 @@
 import { addMediaQueries } from '../'
 
 /**
- * Line Height
+ * Letter Spacing
  *
- * @param  {object} useBreakpoints
+ * @param  {object} limit, incrementBy, useBreakpoints
  * @param  {object} breakpoints={} (optional)
  * @return {object}
  */
-export default function lineHeight({ helpers: { lineHeights: { useBreakpoints, limit, incrementBy } }, breakpoints }) {
+export default function letterSpacing({ helpers: { letterSpacing: { limit, incrementBy, useBreakpoints } }, breakpoints }) {
     let selectors = {}
     let media = {}
 
     /**
-     * Line Height Helpers
+     * Letter Spacing
      */
-    selectors["lh1"] = {
-        "line-height": "1rem"
-    }
-
     for (let x = 1; x <= limit; x++) {
-        selectors[`lh${ x }`] = {
-            "line-height": `${ 1 + x * incrementBy }rem`
+        selectors[`ls${ x }`] = {
+            "letter-spacing": `${ x * incrementBy }rem`
         }
     }
 

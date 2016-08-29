@@ -62,7 +62,14 @@ export const defaultSettings = {
             stackAtBreakpoint: 'md',
             useBreakpoints: true
         },
+        letterSpacing: {
+            limit: 10,
+            incrementBy: .1,
+            useBreakpoints: true
+        },
         lineHeights: {
+            limit: 10,
+            incrementBy: .1,
             useBreakpoints: true
         },
         misc: {
@@ -81,6 +88,9 @@ export const defaultSettings = {
         },
         textAlignment: {
             useBreakpoints: true
+        },
+        textDecoration: {
+            useBreakpoints: false
         },
         zIndex: {
             limit: 10,

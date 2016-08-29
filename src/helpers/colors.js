@@ -80,6 +80,11 @@ export default function colors({ helpers: { colors: { useBreakpoints } }, colors
     selectors["bcg80"] = { borderColor: colors.g80 }
     selectors["bcg90"] = { borderColor: colors.g90 }
 
+    // @TODO - Write loop to add all hover, focus, and active colors
+    selectors["h-tc1"] = {
+        ":hover": selectors["tc1"]
+    }
+
     /**
      * Media Queries
      */

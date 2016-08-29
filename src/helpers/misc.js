@@ -7,7 +7,7 @@ import { addMediaQueries } from '../'
  * @param  {object} breakpoints={} (optional)
  * @return {object}
  */
-export default function misc({ helpers: { misc: { useBreakpoints }, siteWidth }, breakpoints }) {
+export default function misc({ helpers: { misc: { useBreakpoints } }, siteWidth, breakpoints }) {
     let selectors = {}
     let media = {}
 

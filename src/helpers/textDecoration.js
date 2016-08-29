@@ -1,28 +1,23 @@
 import { addMediaQueries } from '../'
 
 /**
- * Line Height
+ * Text Decoration
  *
  * @param  {object} useBreakpoints
  * @param  {object} breakpoints={} (optional)
  * @return {object}
  */
-export default function lineHeight({ helpers: { lineHeights: { useBreakpoints, limit, incrementBy } }, breakpoints }) {
+export default function textDecoration({ helpers: { textDecoration: { useBreakpoints } }, breakpoints }) {
     let selectors = {}
     let media = {}
 
     /**
-     * Line Height Helpers
+     * Text Decoration Helpers
      */
-    selectors["lh1"] = {
-        "line-height": "1rem"
-    }
-
-    for (let x = 1; x <= limit; x++) {
-        selectors[`lh${ x }`] = {
-            "line-height": `${ 1 + x * incrementBy }rem`
-        }
-    }
+    selectors["overline"] = { textDecoration: "overline"}
+    selectors["line-through"] = { textDecoration: "line-through" }
+    selectors["underline"] = { textDecoration: "underline" }
+    selectors["xtd"] = { textDecoration: "none" }
 
     /**
      * Media Queries

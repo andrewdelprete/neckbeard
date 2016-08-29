@@ -10,13 +10,16 @@ import App from './pages/App'
 import Overview from './pages/Overview'
 import Border from './pages/Border'
 
+import Neckbeard from '../src'
+
 // Neckbeard
 // Overwrite settings if needed.
+// https://color.adobe.com/oddend-color-theme-2181/
 const settings = {
     ...Neckbeard.defaultSettings,
     colors: {
         ...Neckbeard.defaultSettings.colors,
-        brandColor: "#FF0000"
+        brandColor: "#c397d8"
     }
     //...Other overwrites here
 }
