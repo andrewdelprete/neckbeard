@@ -69,4 +69,4 @@ class App extends Component {
 export default App
 ```
 ## Documentation
-https://neckbeard.surge.io - (Coming Soon)
+https://neckbeard.surge.sh - (Coming Soon)
