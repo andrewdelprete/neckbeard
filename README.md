@@ -43,7 +43,7 @@ Neckbeard is an Atomic CSS in JS Framework highly inspired by [Beard](http://www
 5. > npm run build:docs - (Builds docs / demo site)
 
 ## Example
-``` jsx
+``` javascript
 import React, { Component } from 'react';
 import Neckbeard from 'neckbeard'
 
