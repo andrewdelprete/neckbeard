@@ -37,7 +37,7 @@ export default Button
 const Installation = () => (
     <div>
         <H1>Installation</H1>
-        <Copy>There are several ways of using the awesome that is Neckbeard:</Copy>
+        <Copy>There are several ways of installing the awesome that is Neckbeard:</Copy>
         <H2>NPM</H2>
         <Highlight className={ nb("ph2 pv2 mb2") }>
             > npm install neckbeard --save-dev
@@ -53,7 +53,7 @@ const Installation = () => (
             Using the CDN option Neckbeard is added as a global <Code>window.Neckbeard</Code>
         </Copy>
         <H2>No  Magical Unicorn?</H2>
-        <Copy>If you don't want to utilize CSS in JS, have no fear, we've imported all the helpers into a CSS file for you. Keep in mind this is a static CSS file and you won't be able to adjust settings.</Copy>
+        <Copy>If you don't want to utilize CSS in JS, have no fear, we've exported all the helpers into a CSS file for you. Keep in mind this is a static CSS file and you won't be able to adjust settings.</Copy>
         <Highlight className={ nb("ph2 pv2 mb2") }>
             { '<link href="https://npmcdn.com/neckbeard/build/nb.css" rel="stylesheet" />' }
         </Highlight>

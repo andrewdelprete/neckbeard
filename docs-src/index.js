@@ -9,6 +9,7 @@ import { Router, Route, browserHistory, IndexRoute } from 'react-router'
 import App from './pages/App'
 import Overview from './pages/Overview'
 import Installation from './pages/Installation'
+import Usage from './pages/Usage'
 import Border from './pages/Border'
 
 import Neckbeard from '../src'
@@ -36,6 +37,7 @@ ReactDOM.render((
         <Route path="/" component={ App }>
             <IndexRoute component={ Overview } />
             <Route path="/installation" component={ Installation } />
+            <Route path="/usage" component={ Usage } />
             <Route path="/border" component={ Border } />
         </Route>
     </Router>
