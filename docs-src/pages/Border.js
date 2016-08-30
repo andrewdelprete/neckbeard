@@ -1,5 +1,4 @@
 import React, { Component } from "react"
-import { Router, Route, Link } from "react-router"
 import Highlight from "react-highlight"
 import Heading1 from "../components/Headings/Heading1"
 

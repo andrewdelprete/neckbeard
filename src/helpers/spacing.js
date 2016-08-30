@@ -14,6 +14,27 @@ export default function spacing({ helpers: { spacing: { limit, incrementBy, useB
     /**
      * Margin
      */
+    selectors["mh05"] = {
+        "margin-left": "0.5rem",
+        "margin-right": "0.5rem",
+    }
+    selectors["mv05"] = {
+        "margin-top": "0.5rem",
+        "margin-bottom": "0.5rem",
+    }
+    selectors["ml05"] = {
+        "margin-left": "0.5rem"
+    }
+    selectors["mr05"] = {
+        "margin-right": "0.5rem"
+    }
+    selectors["mb05"] = {
+        "margin-bottom": "0.5rem"
+    }
+    selectors["mt05"] = {
+        "margin-top": "0.5rem"
+    }
+
     for (let x = incrementBy; x <= limit; x += incrementBy) {
         selectors[`mh${ x }`] = {
             "margin-left": `${ x * incrementBy }rem`,
@@ -62,6 +83,26 @@ export default function spacing({ helpers: { spacing: { limit, incrementBy, useB
     /**
      * Padding
      */
+    selectors["ph05"] = {
+        "padding-left": "0.5rem",
+        "padding-right": "0.5rem",
+    }
+    selectors["pv05"] = {
+        "padding-top": "0.5rem",
+        "padding-bottom": "0.5rem",
+    }
+    selectors["pl05"] = {
+        "padding-left": "0.5rem"
+    }
+    selectors["pr05"] = {
+        "padding-right": "0.5rem"
+    }
+    selectors["pb05"] = {
+        "padding-bottom": "0.5rem"
+    }
+    selectors["pt05"] = {
+        "padding-top": "0.5rem"
+    }
     for (let x = 1; x <= limit; x++) {
         selectors[`ph${ x }`] = {
             "padding-left": `${ x * incrementBy }rem`,
