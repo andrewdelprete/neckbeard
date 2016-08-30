@@ -1,13 +1,11 @@
 import React, { Component } from "react"
 import Highlight from "react-highlight"
-import Heading1 from "../components/elements/Heading1"
+import Heading1 from "../components/elements/H1"
 
 /**
  * Overview Page
  */
-const snippet1 =
-`
-`
+const snippet1 = ``
 const Border = () => (
     <div>
         <Heading1>Border</Heading1>

@@ -8,6 +8,7 @@ import { Router, Route, browserHistory, IndexRoute } from 'react-router'
 
 import App from './pages/App'
 import Overview from './pages/Overview'
+import Installation from './pages/Installation'
 import Border from './pages/Border'
 
 import Neckbeard from '../src'
@@ -34,6 +35,7 @@ ReactDOM.render((
     <Router history={ browserHistory }>
         <Route path="/" component={ App }>
             <IndexRoute component={ Overview } />
+            <Route path="/installation" component={ Installation } />
             <Route path="/border" component={ Border } />
         </Route>
     </Router>

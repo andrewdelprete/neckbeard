@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import { Router, Route, Link } from 'react-router'
+import H3 from "../components/elements/H3"
 
 /**
  * Nav
  */
-
 const NavItem = ({ children, to }) => {
     return (
         <li className={ nb("db brdr1--bottom bcg10") }>
@@ -22,7 +22,14 @@ const NavItem = ({ children, to }) => {
 const Nav = () => (
     <nav>
         <ul className={ nb("sans") }>
+            <H3>Getting Started</H3>
             <NavItem to="/">Overview</NavItem>
+            <NavItem to="/installation">Installation</NavItem>
+            <NavItem to="/usage">Usage</NavItem>
+
+            <div className={ nb("mt2") }>
+                <H3>Helpers</H3>
+            </div>
             <NavItem to="/border">Border</NavItem>
             <NavItem to="/border-radius">Border Radius</NavItem>
             <NavItem to="/colors">Colors</NavItem>
