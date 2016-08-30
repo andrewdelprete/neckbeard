@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import Highlight from "react-highlight"
-import Heading1 from "../components/Headings/Heading1"
+import Heading1 from "../components/elements/Heading1"
 
 /**
  * Overview Page
