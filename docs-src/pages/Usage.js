@@ -18,7 +18,7 @@ const nb = Neckbeard.create();
 
 // create() is invoked and classes are injected
 // into the DOM dynamically using Aphrodite.
-nb('pv1 ph1 ft2')
+nb('pv1 ph1 ft2');
 </script>`
 
 const snippet2 = `<script>
@@ -33,9 +33,9 @@ const settings = {
     }
 }
 
-const nb = Neckbeard.create(settings)
+const nb = Neckbeard.create(settings);
 
-nb('pv1 ph1 ft2')
+nb('pv1 ph1 ft2');
 </script>
 `
 
@@ -51,9 +51,9 @@ var settings = Object.assign(Neckbeard.defaultSettings, {
     colors: newColors
 })
 
-var nb = Neckbeard.create(settings)
+var nb = Neckbeard.create(settings);
 
-nb('pv1 ph1 ft2')
+nb('pv1 ph1 ft2');
 </script>`
 
 const snippet4 = `<script>
@@ -62,8 +62,8 @@ import Neckbeard from 'neckbeard';
 // Uses ES6 Destructuring to destructure
 // settings object and retrieve what we need.
 export default function unicorn({ helpers: { unicorn: { useBreakpoints } }, breakpoints }) {
-    let selectors = {}
-    let media = {}
+    let selectors = {};
+    let media = {};
 
     /**
      * My New Helper
@@ -79,7 +79,7 @@ export default function unicorn({ helpers: { unicorn: { useBreakpoints } }, brea
      * Example: .only-sm-awesome-unicorn
      */
     if (Object.keys(breakpoints).length !== 0 && useBreakpoints) {
-        media = Neckbeard.addMediaQueries(selectors, breakpoints)
+        media = Neckbeard.addMediaQueries(selectors, breakpoints);
     }
 
     // Merge it all together in one object and return
@@ -105,9 +105,9 @@ const helpers = {
     unicorn
 }
 
-const nb = Neckbeard.create(settings, helpers)
+const nb = Neckbeard.create(settings, helpers);
 
-nb('unicorn-awesome')
+nb('unicorn-awesome');
 </script>
 `
 
@@ -158,7 +158,7 @@ const Usage = () => (
         <Highlight className={ nb("ph2 pv2 lh3 mb2") }>
             { snippet5 }
         </Highlight>
-        <H3>Default Settings</H3>
+        <H2>Default Settings</H2>
         <Copy>Neckbeard has a number of Default Settings that are stored in <Code>Neckbeard.defaultSettings</Code> and can be overwritten or extended as needed.</Copy>
         <Highlight className={ nb("ph2 pv2 lh3 mb2") }>
             { snippet6 }

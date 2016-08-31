@@ -1,6 +1,9 @@
 # Neckbeard
 Neckbeard is an Atomic CSS in JS Framework highly inspired by [Beard](http://www.buildwithbeard.com) and powered by [Aphrodite](https://github.com/Khan/aphrodite). Neckbeard provides common CSS utility classes to help you scaffold components quickly.
 
+## Documentation Site
+https://neckbeard.surge.sh (work in progress)
+
 ## Benefits
 1. Works great with component based frameworks / libraries like React or standalone.
 2. No longer worry about naming CSS selectors.
@@ -9,25 +12,6 @@ Neckbeard is an Atomic CSS in JS Framework highly inspired by [Beard](http://www
 5. Easily extensible by adding your own helpers or overwrite existing ones.
 6. Installable via NPM (import or require) or just drop it in via CDN (umd).
 7. 11.5kb gzipped
-
-## Helpers
-* borderRadius
-* border
-* colors
-* display
-* flex
-* float
-* fontFamily
-* fontSize
-* fontWeight
-* grid
-* lineHeight
-* misc
-* overflow
-* position
-* spacing
-* textAlignment
-* zIndex
 
 ## Installation
 1. > npm install neckbeard --save-dev
@@ -68,5 +52,3 @@ class App extends Component {
 
 export default App
 ```
-## Documentation
-https://neckbeard.surge.sh - (Coming Soon)

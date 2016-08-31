@@ -16,9 +16,11 @@ import Neckbeard from '../src'
 
 // Neckbeard
 // Overwrite settings if needed.
-// https://color.adobe.com/oddend-color-theme-2181/
 const settings = {
     ...Neckbeard.defaultSettings,
+    // breakpoints: {
+    //     ...Neckbeard.defaultSettings.breakpoints,
+    // }
     colors: {
         ...Neckbeard.defaultSettings.colors,
         brandColor: "#c397d8"
