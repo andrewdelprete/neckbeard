@@ -1,7 +1,7 @@
 {
   "name": "neckbeard",
   "description": "A CSS in JS framework for people with better things to do",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "main": "build/index.js",
   "devDependencies": {
     "aphrodite": "~0.5.0",
