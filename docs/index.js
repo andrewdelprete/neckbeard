@@ -27266,7 +27266,7 @@
 	var Footer = function Footer() {
 	    return _react2.default.createElement(
 	        'footer',
-	        { className: nb("brdr1--top bcg10 pv3") },
+	        { className: nb("brdr1--top bcg10 pv3 sans") },
 	        _react2.default.createElement(
 	            'div',
 	            { className: nb("ph2") },
@@ -27278,13 +27278,18 @@
 	                    { className: nb("mb1") },
 	                    _react2.default.createElement(
 	                        'p',
-	                        { className: nb("ft3 tcg40") },
-	                        '©2016 Andrew Del Prete'
+	                        { className: nb("ft4 tcg40") },
+	                        _react2.default.createElement(
+	                            'span',
+	                            { className: nb("tc1") },
+	                            '©'
+	                        ),
+	                        ' 2016 Andrew Del Prete'
 	                    )
 	                ),
 	                _react2.default.createElement(
 	                    'p',
-	                    { className: nb("ft3 tcg40") },
+	                    { className: nb("ft4 tcg40") },
 	                    _react2.default.createElement(
 	                        'a',
 	                        { href: 'https://github.com/andrewdelprete/neckbeard', className: nb("tc5 xtd h-tc1") },
@@ -27609,7 +27614,7 @@
 	                { href: "https://github.com/Khan/aphrodite", className: nb("tc5 xtd h-tc1") },
 	                "Aphrodite"
 	            ),
-	            " to build things rapidly. Neckbeard is highly inspired by ",
+	            " to build components rapidly. Neckbeard is highly inspired by ",
 	            _react2.default.createElement(
 	                "a",
 	                { href: "https://www.buildwithbeard.com", className: nb("tc5 xtd h-tc1") },
@@ -27670,7 +27675,7 @@
 	                { href: "https://github.com/Khan/aphrodite", className: nb("tc5 xtd h-tc1") },
 	                "Aphrodite"
 	            ),
-	            " under the hood which is used to only apply styles to the page that you're actually using."
+	            " under the hood which is used to apply only the styles that you're actually using to the page."
 	        ),
 	        _react2.default.createElement(
 	            _H6.default,
@@ -36885,12 +36890,12 @@
 	        _react2.default.createElement(
 	            _H6.default,
 	            null,
-	            "Create a Helper Function"
+	            "Write a Helper Function"
 	        ),
 	        _react2.default.createElement(
 	            _Copy2.default,
 	            null,
-	            "To create your own custom helper or component classes, write a function that has one parameter for settings and returns an object of selectors. Save your helper functions somewhere handy."
+	            "To create your own custom helper or component class, write a function that has one parameter for settings and returns an object of selectors. Save your helper function file somewhere handy."
 	        ),
 	        _react2.default.createElement(
 	            _reactHighlight2.default,
@@ -36905,7 +36910,7 @@
 	        _react2.default.createElement(
 	            _Copy2.default,
 	            null,
-	            "Once you your helper function created, we need to make Neckbeard aware of it. We do this when we initialize Neckbeard with the create() function and passing a new settings and helpers object."
+	            "Once your helper class function is created, you need to make Neckbeard aware of it. You do this when initializing Neckbeard with the create() function and passing a new settings and helpers object."
 	        ),
 	        _react2.default.createElement(
 	            _reactHighlight2.default,
@@ -36920,7 +36925,7 @@
 	        _react2.default.createElement(
 	            _Copy2.default,
 	            null,
-	            "Neckbeard has a number of Default Settings that are stored in ",
+	            "Neckbeard has a number of Default Settings that are declared in ",
 	            _react2.default.createElement(
 	                _Code2.default,
 	                null,

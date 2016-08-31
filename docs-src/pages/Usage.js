@@ -148,18 +148,18 @@ const Usage = () => (
             The <Code>Neckbeard.create()</Code> function has an optional second parameter (object) to overwrite or extend default helpers.
             You can extend or overwrite the existing default helpers by using the <a href="http://babeljs.io/docs/plugins/transform-object-rest-spread/" className={ nb("tc5 xtd h-tc1") }>Object Spread Syntax</a> <Code>...nb.helpers</Code> or <Code>Object.assign()</Code>.
         </Copy>
-        <H3>Create a Helper Function</H3>
-        <Copy>To create your own custom helper or component classes, write a function that has one parameter for settings and returns an object of selectors. Save your helper functions somewhere handy.</Copy>
+        <H3>Write a Helper Function</H3>
+        <Copy>To create your own custom helper or component class, write a function that has one parameter for settings and returns an object of selectors. Save your helper function file somewhere handy.</Copy>
         <Highlight className={ nb("ph2 pv2 lh3 mb2") }>
             { snippet4 }
         </Highlight>
         <H3>Make Helper Available to Neckbeard</H3>
-        <Copy>Once you your helper function created, we need to make Neckbeard aware of it. We do this when we initialize Neckbeard with the create() function and passing a new settings and helpers object.</Copy>
+        <Copy>Once your helper class function is created, you need to make Neckbeard aware of it. You do this when initializing Neckbeard with the create() function and passing a new settings and helpers object.</Copy>
         <Highlight className={ nb("ph2 pv2 lh3 mb2") }>
             { snippet5 }
         </Highlight>
         <H2>Default Settings</H2>
-        <Copy>Neckbeard has a number of Default Settings that are stored in <Code>Neckbeard.defaultSettings</Code> and can be overwritten or extended as needed.</Copy>
+        <Copy>Neckbeard has a number of Default Settings that are declared in <Code>Neckbeard.defaultSettings</Code> and can be overwritten or extended as needed.</Copy>
         <Highlight className={ nb("ph2 pv2 lh3 mb2") }>
             { snippet6 }
         </Highlight>
