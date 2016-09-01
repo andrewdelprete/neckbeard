@@ -45,34 +45,34 @@ const Border = () => (
         <table className={ nb("w100 mb2 ft4 tcg60 lh2 sans") }>
             <thead>
                 <tr className={ nb("brdr1--bottom bcg10 bgg05") }>
-                    <th className={ nb("pv1 ph1 tal fwsemibold ph1") }>Class</th>
-                    <th className={ nb("pv1 ph1 tal fwsemibold ph1") }>Purpose</th>
+                    <th className={ nb("tcg50 fw3 pv1 ph1 tal fwsemibold ph1") }>Class</th>
+                    <th className={ nb("tcg50 fw3 pv1 ph1 tal fwsemibold ph1") }>Purpose</th>
                 </tr>
             </thead>
             <tbody>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("pv1 ph1") }><Code>.xbrdr</Code></td>
-                    <td className={ nb("pv1 ph1") }>Remove the border from an element</td>
+                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.xbrdr</Code></td>
+                    <td className={ nb("tcg50 fw3 pv1 ph1") }>Remove the border from an element</td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("pv1 ph1") }><Code>.brdr1</Code></td>
-                    <td className={ nb("pv1 ph1") }>Add a border to all sides of an element</td>
+                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.brdr1</Code></td>
+                    <td className={ nb("tcg50 fw3 pv1 ph1") }>Add a border to all sides of an element</td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("pv1 ph1") }><Code>.brdr1--top</Code></td>
-                    <td className={ nb("pv1 ph1") }>Add a border to the top of an element</td>
+                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.brdr1--top</Code></td>
+                    <td className={ nb("tcg50 fw3 pv1 ph1") }>Add a border to the top of an element</td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("pv1 ph1") }><Code>.brdr1--right</Code></td>
-                    <td className={ nb("pv1 ph1") }>Add a border to the right side of an element</td>
+                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.brdr1--right</Code></td>
+                    <td className={ nb("tcg50 fw3 pv1 ph1") }>Add a border to the right side of an element</td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("pv1 ph1") }><Code>.brdr1--bottom</Code></td>
-                    <td className={ nb("pv1 ph1") }>Add a border to the bottom of an element</td>
+                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.brdr1--bottom</Code></td>
+                    <td className={ nb("tcg50 fw3 pv1 ph1") }>Add a border to the bottom of an element</td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("pv1 ph1") }><Code>.brdr1--left</Code></td>
-                    <td className={ nb("pv1 ph1") }>Add a border to the left side of an element</td>
+                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.brdr1--left</Code></td>
+                    <td className={ nb("tcg50 fw3 pv1 ph1") }>Add a border to the left side of an element</td>
                 </tr>
             </tbody>
         </table>
