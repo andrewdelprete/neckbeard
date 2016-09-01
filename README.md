@@ -17,7 +17,7 @@ https://neckbeard.surge.sh (work in progress)
 1. > npm install neckbeard --save-dev
 
 ### CDN (umd version)
-1. https://npmcdn.com/neckbeard
+1. https://unpkg.com/neckbeard
 
 ### Development
 1. Clone

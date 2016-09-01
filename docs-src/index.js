@@ -13,6 +13,7 @@ import Usage from './pages/Usage'
 import Border from './pages/Border'
 import BorderRadius from './pages/BorderRadius'
 import Colors from './pages/Colors'
+import Display from './pages/Display'
 
 import Neckbeard from '../src'
 
@@ -38,6 +39,7 @@ ReactDOM.render((
             <Route path="/border" component={ Border } />
             <Route path="/border-radius" component={ BorderRadius } />
             <Route path="/colors" component={ Colors } />
+            <Route path="/display" component={ Display } />
         </Route>
     </Router>
 ), document.getElementById('app'))
