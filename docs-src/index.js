@@ -15,6 +15,7 @@ import BorderRadius from './pages/BorderRadius'
 import Colors from './pages/Colors'
 import Display from './pages/Display'
 import Flexbox from './pages/Flexbox'
+import Float from './pages/Float'
 
 import Neckbeard from '../src'
 
@@ -42,6 +43,7 @@ ReactDOM.render((
             <Route path="/colors" component={ Colors } />
             <Route path="/display" component={ Display } />
             <Route path="/flexbox" component={ Flexbox } />
+            <Route path="/float" component={ Float } />
         </Route>
     </Router>
 ), document.getElementById('app'))

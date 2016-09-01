@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { Router, Route, Link } from 'react-router'
+import { Router, Route, Link } from "react-router"
 import Neckbeard from "../../src"
 import Highlight from "react-highlight"
 import H1 from "../components/elements/H1"
@@ -11,7 +11,7 @@ import Code from "../components/elements/Code"
 /**
  * Flexbox Page
  */
-const snippet = `<div className={ nb('relative mb2') }>
+const snippet = `<div className={ nb("relative mb2") }>
     <div className={ nb("brdr1 bc1 br5 flex jcc aic absolute h100 w100") }>
         <span className={ nb("ft5 tc1 tac fwthin") }>
             Vertical and Horizontal Centering
@@ -168,7 +168,7 @@ const Flexbox = () => (
             { snippet }
         </Highlight>
 
-        <div className={ nb('relative mb2') } style={{ height: "100px" }}>
+        <div className={ nb("relative mb2") } style={{ height: "100px" }}>
             <div className={ nb("brdr1 bc1 br5 flex jcc aic absolute h100 w100") }>
                 <span className={ nb("ft5 tc1 tac fwthin") }>
                     Vertical and Horizontal Centering
@@ -181,7 +181,7 @@ const Flexbox = () => (
             <Copy>See <Link to="/usage#configuration" className={ nb("tc5 xtd h-tc1") }>Configuration</Link> to learn how to overwrite helper settings.</Copy>
             <Highlight className={ nb("ph2 pv2") }>
                 {"// Neckbeard.defaultSettings.helpers.flex \n" }
-                { JSON.stringify(Neckbeard.defaultSettings.helpers.flex, null, '    ') }
+                { JSON.stringify(Neckbeard.defaultSettings.helpers.flex, null, "    ") }
             </Highlight>
         </div>
     </div>
