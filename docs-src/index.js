@@ -12,6 +12,7 @@ import Installation from './pages/Installation'
 import Usage from './pages/Usage'
 import Border from './pages/Border'
 import BorderRadius from './pages/BorderRadius'
+import Colors from './pages/Colors'
 
 import Neckbeard from '../src'
 
@@ -19,10 +20,6 @@ import Neckbeard from '../src'
 // Overwrite settings if needed.
 const settings = {
     ...Neckbeard.defaultSettings,
-    colors: {
-        ...Neckbeard.defaultSettings.colors,
-        brandColor: "#c397d8"
-    }
     //...Other overwrites here
 }
 
@@ -40,6 +37,7 @@ ReactDOM.render((
             <Route path="/usage" component={ Usage } />
             <Route path="/border" component={ Border } />
             <Route path="/border-radius" component={ BorderRadius } />
+            <Route path="/colors" component={ Colors } />
         </Route>
     </Router>
 ), document.getElementById('app'))

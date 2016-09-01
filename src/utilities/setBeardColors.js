@@ -5,10 +5,10 @@ import shadeColor from '../utilities/shadeColor'
 export const beardColors = {
     white: "#ffffff",
     black: "#000000",
-    brandColor: "#3498DB",
-    success: "#4AB471",
-    warning: "#F3AE4E",
-    danger: "#CF5C60"
+    brandColor: "#c397d8",
+    success: "#b9ca4a",
+    warning: "#e78c45",
+    danger: "#d54e53"
 }
 
 /**

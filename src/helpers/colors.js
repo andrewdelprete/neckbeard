@@ -22,6 +22,9 @@ export default function colors({ helpers: { colors: { useBreakpoints } }, colors
     selectors["bg3"] = { "background-color": colors.brandColor3 }
     selectors["bg4"] = { "background-color": colors.brandColor4 }
     selectors["bg5"] = { "background-color": colors.brandColor5 }
+    selectors["bgsuccess"] = { "background-color": colors.success }
+    selectors["bgwarning"] = { "background-color": colors.warning }
+    selectors["bgdanger"] = { "background-color": colors.danger }
 
     // Text colors
     selectors["tcb"] = { "color": colors.b }
@@ -31,6 +34,10 @@ export default function colors({ helpers: { colors: { useBreakpoints } }, colors
     selectors["tc3"] = { "color": colors.brandColor3 }
     selectors["tc4"] = { "color": colors.brandColor4 }
     selectors["tc5"] = { "color": colors.brandColor5 }
+    selectors["tcsuccess"] = { "color": colors.success }
+    selectors["tcwarning"] = { "color": colors.warning }
+    selectors["tcdanger"] = { "color": colors.danger }
+
 
     // Border colors
     selectors["bcb"] = { "border-color": colors.b }
@@ -40,8 +47,11 @@ export default function colors({ helpers: { colors: { useBreakpoints } }, colors
     selectors["bc3"] = { "border-color": colors.brandColor3 }
     selectors["bc4"] = { "border-color": colors.brandColor4 }
     selectors["bc5"] = { "border-color": colors.brandColor5 }
+    selectors["bcsuccess"] = { "border-color": colors.success }
+    selectors["bcwarning"] = { "border-color": colors.warning }
+    selectors["bcdanger"] = { "border-color": colors.danger }
 
-    // Background Colors
+    // Background Colors Gray
     // ------------------------------------------------------------------------------------ */
     selectors["bgg05"] = { "background-color": colors.g05 }
     selectors["bgg10"] = { "background-color": colors.g10 }
@@ -54,7 +64,7 @@ export default function colors({ helpers: { colors: { useBreakpoints } }, colors
     selectors["bgg80"] = { "background-color": colors.g80 }
     selectors["bgg90"] = { "background-color": colors.g90 }
 
-    // Text Colors
+    // Text Colors Gray
     // ------------------------------------------------------------------------------------ */
     selectors["tcg05"] = { "color": colors.g05 }
     selectors["tcg10"] = { "color": colors.g10 }
@@ -67,7 +77,7 @@ export default function colors({ helpers: { colors: { useBreakpoints } }, colors
     selectors["tcg80"] = { "color": colors.g80 }
     selectors["tcg90"] = { "color": colors.g90 }
 
-    // Border Colors
+    // Border Colors Gray
     // ------------------------------------------------------------------------------------ */
     selectors["bcg05"] = { borderColor: colors.g05 }
     selectors["bcg10"] = { borderColor: colors.g10 }
