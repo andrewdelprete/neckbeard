@@ -77,7 +77,7 @@ const Border = () => (
             </tbody>
         </table>
         <H2>Example</H2>
-        <Highlight className={ nb("ph2 pv2 mb2") }>
+        <Highlight className={ nb("ph2 pv2 mb2 lh5") }>
             { snippet2 }
         </Highlight>
 
@@ -86,7 +86,7 @@ const Border = () => (
         <H2>Default Settings</H2>
         <div className={ nb("lh4 mb2") }>
             <Copy>See <Link to="/usage#configuration" className={ nb("tc5 xtd h-tc1") }>Configuration</Link> to learn how to overwrite helper settings.</Copy>
-            <Highlight className={ nb("ph2 pv2") }>
+            <Highlight className={ nb("ph2 pv2 lh5") }>
                 {"// Neckbeard.defaultSettings.helpers.border \n" }
                 { snippet3 }
             </Highlight>
