@@ -25,12 +25,12 @@ const snippet2 = `<script>
 import Neckbeard from 'neckbeard';
 
 // Using ES6 Spread makes it easy
-const settings = {
-    ...Neckbeard.defaultSettings,
-    colors: {
-        ...Neckbeard.defaultSettings.colors,
-        brandColor: "#ef42ab"
-    }
+const settings = { ...NeckBeard.defaultSettings };
+
+settings.helpers.fontSize = {
+    limit: 20,
+    incrementBy: .10,
+    useBreakpoints: false
 }
 
 const nb = Neckbeard.create(settings);
@@ -42,14 +42,14 @@ nb('pv1 ph1 ft2');
 const snippet3 = `<script>
 import Neckbeard from 'neckbeard';
 
-// Same with Object.assign()
-var newColors = Object.assign(Neckbeard.defaultSettings.colors, {
-    brandColor: "#ef42ab"
-})
+// Same settings as above but using Object.assign()
+var settings = Object.assign({}, Neckbeard.defaultSettings);
 
-var settings = Object.assign(Neckbeard.defaultSettings, {
-    colors: newColors
-})
+settings.helpers.fontSize = {
+    limit: 20,
+    incrementBy: .10,
+    useBreakpoints: false
+}
 
 var nb = Neckbeard.create(settings);
 
@@ -83,7 +83,7 @@ export default function unicorn({ helpers: { unicorn: { useBreakpoints } }, brea
     }
 
     // Merge it all together in one object and return
-    return { ...selectors, ...media }
+    return { ...selectors, ...media };
 }
 </script>`
 
@@ -92,18 +92,16 @@ import Neckbeard from 'neckbeard';
 import unicorn from '/path/where/your/helpers/are/unicorn';
 
 // Extend settings
-const settings = {
-    ...Neckbeard.defaultSettings,
-    unicorn: {
-        useBreakpoints: true
-    }
+const settings = { ...NeckBeard.defaultSettings };
+
+settings.helpers.unicorn = {
+    useBreakpoints: true
 }
 
 // Extend helpers
-const helpers = {
-    ...Neckbeard.helpers,
-    unicorn
-}
+const helpers = { ...NeckBeard.helpers };
+
+helpers.unicorn = unicorn;
 
 const nb = Neckbeard.create(settings, helpers);
 
@@ -129,6 +127,7 @@ const Usage = () => (
         <Highlight className={ nb("ph2 pv2 lh3 mb2") }>
             { snippet }
         </Highlight>
+        <a name="configuration"></a>
         <H2>Configuration</H2>
         <Copy>
             The <Code>Neckbeard.create()</Code> function has an optional first parameter (object) to overwrite or extend default settings.
