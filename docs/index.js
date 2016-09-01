@@ -89,6 +89,14 @@
 
 	var _Border2 = _interopRequireDefault(_Border);
 
+	var _BorderRadius = __webpack_require__(436);
+
+	var _BorderRadius2 = _interopRequireDefault(_BorderRadius);
+
+	var _Colors = __webpack_require__(437);
+
+	var _Colors2 = _interopRequireDefault(_Colors);
+
 	var _src = __webpack_require__(391);
 
 	var _src2 = _interopRequireDefault(_src);
@@ -97,15 +105,7 @@
 
 	// Neckbeard
 	// Overwrite settings if needed.
-	var settings = _extends({}, _src2.default.defaultSettings, {
-	    // breakpoints: {
-	    //     ...Neckbeard.defaultSettings.breakpoints,
-	    // }
-	    colors: _extends({}, _src2.default.defaultSettings.colors, {
-	        brandColor: "#c397d8"
-	    })
-	    //...Other overwrites here
-	});
+	var settings = _extends({}, _src2.default.defaultSettings);
 
 	// Neckbeard
 	// Set a global to reuse this Neckbeard instance
@@ -122,7 +122,9 @@
 	        _react2.default.createElement(_reactRouter.IndexRoute, { component: _Overview2.default }),
 	        _react2.default.createElement(_reactRouter.Route, { path: '/installation', component: _Installation2.default }),
 	        _react2.default.createElement(_reactRouter.Route, { path: '/usage', component: _Usage2.default }),
-	        _react2.default.createElement(_reactRouter.Route, { path: '/border', component: _Border2.default })
+	        _react2.default.createElement(_reactRouter.Route, { path: '/border', component: _Border2.default }),
+	        _react2.default.createElement(_reactRouter.Route, { path: '/border-radius', component: _BorderRadius2.default }),
+	        _react2.default.createElement(_reactRouter.Route, { path: '/colors', component: _Colors2.default })
 	    )
 	), document.getElementById('app'));
 
@@ -36743,13 +36745,13 @@
 
 	var snippet = "<script>\nimport Neckbeard from 'neckbeard';\n\nconst nb = Neckbeard.create();\n\n// create() is invoked and classes are injected\n// into the DOM dynamically using Aphrodite.\nnb('pv1 ph1 ft2');\n</script>";
 
-	var snippet2 = "<script>\nimport Neckbeard from 'neckbeard';\n\n// Using ES6 Spread makes it easy\nconst settings = {\n    ...Neckbeard.defaultSettings,\n    colors: {\n        ...Neckbeard.defaultSettings.colors,\n        brandColor: \"#ef42ab\"\n    }\n}\n\nconst nb = Neckbeard.create(settings);\n\nnb('pv1 ph1 ft2');\n</script>\n";
+	var snippet2 = "<script>\nimport Neckbeard from 'neckbeard';\n\n// Using ES6 Spread makes it easy\nconst settings = { ...NeckBeard.defaultSettings };\n\nsettings.helpers.fontSize = {\n    limit: 20,\n    incrementBy: .10,\n    useBreakpoints: false\n}\n\nconst nb = Neckbeard.create(settings);\n\nnb('pv1 ph1 ft2');\n</script>\n";
 
-	var snippet3 = "<script>\nimport Neckbeard from 'neckbeard';\n\n// Same with Object.assign()\nvar newColors = Object.assign(Neckbeard.defaultSettings.colors, {\n    brandColor: \"#ef42ab\"\n})\n\nvar settings = Object.assign(Neckbeard.defaultSettings, {\n    colors: newColors\n})\n\nvar nb = Neckbeard.create(settings);\n\nnb('pv1 ph1 ft2');\n</script>";
+	var snippet3 = "<script>\nimport Neckbeard from 'neckbeard';\n\n// Same settings as above but using Object.assign()\nvar settings = Object.assign({}, Neckbeard.defaultSettings);\n\nsettings.helpers.fontSize = {\n    limit: 20,\n    incrementBy: .10,\n    useBreakpoints: false\n}\n\nvar nb = Neckbeard.create(settings);\n\nnb('pv1 ph1 ft2');\n</script>";
 
-	var snippet4 = "<script>\nimport Neckbeard from 'neckbeard';\n\n// Uses ES6 Destructuring to destructure\n// settings object and retrieve what we need.\nexport default function unicorn({ helpers: { unicorn: { useBreakpoints } }, breakpoints }) {\n    let selectors = {};\n    let media = {};\n\n    /**\n     * My New Helper\n     */\n    selectors[\"unicorn-awesome\"] = {\n        fontSize: \"2rem\",\n        // and so on\n    }\n\n    /**\n     * Media Queries\n     * Adds classes for each breakpoint .{breakpoint}-{selector} and .only-{breakpoint}-{selector}\n     * Example: .only-sm-awesome-unicorn\n     */\n    if (Object.keys(breakpoints).length !== 0 && useBreakpoints) {\n        media = Neckbeard.addMediaQueries(selectors, breakpoints);\n    }\n\n    // Merge it all together in one object and return\n    return { ...selectors, ...media }\n}\n</script>";
+	var snippet4 = "<script>\nimport Neckbeard from 'neckbeard';\n\n// Uses ES6 Destructuring to destructure\n// settings object and retrieve what we need.\nexport default function unicorn({ helpers: { unicorn: { useBreakpoints } }, breakpoints }) {\n    let selectors = {};\n    let media = {};\n\n    /**\n     * My New Helper\n     */\n    selectors[\"unicorn-awesome\"] = {\n        fontSize: \"2rem\",\n        // and so on\n    }\n\n    /**\n     * Media Queries\n     * Adds classes for each breakpoint .{breakpoint}-{selector} and .only-{breakpoint}-{selector}\n     * Example: .only-sm-awesome-unicorn\n     */\n    if (Object.keys(breakpoints).length !== 0 && useBreakpoints) {\n        media = Neckbeard.addMediaQueries(selectors, breakpoints);\n    }\n\n    // Merge it all together in one object and return\n    return { ...selectors, ...media };\n}\n</script>";
 
-	var snippet5 = "<script>\nimport Neckbeard from 'neckbeard';\nimport unicorn from '/path/where/your/helpers/are/unicorn';\n\n// Extend settings\nconst settings = {\n    ...Neckbeard.defaultSettings,\n    unicorn: {\n        useBreakpoints: true\n    }\n}\n\n// Extend helpers\nconst helpers = {\n    ...Neckbeard.helpers,\n    unicorn\n}\n\nconst nb = Neckbeard.create(settings, helpers);\n\nnb('unicorn-awesome');\n</script>\n";
+	var snippet5 = "<script>\nimport Neckbeard from 'neckbeard';\nimport unicorn from '/path/where/your/helpers/are/unicorn';\n\n// Extend settings\nconst settings = { ...NeckBeard.defaultSettings };\n\nsettings.helpers.unicorn = {\n    useBreakpoints: true\n}\n\n// Extend helpers\nconst helpers = { ...NeckBeard.helpers };\n\nhelpers.unicorn = unicorn;\n\nconst nb = Neckbeard.create(settings, helpers);\n\nnb('unicorn-awesome');\n</script>\n";
 
 	var snippet6 = JSON.stringify(_src2.default.defaultSettings, null, '    ');
 
@@ -36798,6 +36800,7 @@
 	            { className: nb("ph2 pv2 lh3 mb2") },
 	            snippet
 	        ),
+	        _react2.default.createElement("a", { name: "configuration" }),
 	        _react2.default.createElement(
 	            _H4.default,
 	            null,
@@ -39267,6 +39270,9 @@
 	  selectors["bg3"] = { "background-color": colors.brandColor3 };
 	  selectors["bg4"] = { "background-color": colors.brandColor4 };
 	  selectors["bg5"] = { "background-color": colors.brandColor5 };
+	  selectors["bgsuccess"] = { "background-color": colors.success };
+	  selectors["bgwarning"] = { "background-color": colors.warning };
+	  selectors["bgdanger"] = { "background-color": colors.danger };
 
 	  // Text colors
 	  selectors["tcb"] = { "color": colors.b };
@@ -39276,6 +39282,9 @@
 	  selectors["tc3"] = { "color": colors.brandColor3 };
 	  selectors["tc4"] = { "color": colors.brandColor4 };
 	  selectors["tc5"] = { "color": colors.brandColor5 };
+	  selectors["tcsuccess"] = { "color": colors.success };
+	  selectors["tcwarning"] = { "color": colors.warning };
+	  selectors["tcdanger"] = { "color": colors.danger };
 
 	  // Border colors
 	  selectors["bcb"] = { "border-color": colors.b };
@@ -39285,8 +39294,11 @@
 	  selectors["bc3"] = { "border-color": colors.brandColor3 };
 	  selectors["bc4"] = { "border-color": colors.brandColor4 };
 	  selectors["bc5"] = { "border-color": colors.brandColor5 };
+	  selectors["bcsuccess"] = { "border-color": colors.success };
+	  selectors["bcwarning"] = { "border-color": colors.warning };
+	  selectors["bcdanger"] = { "border-color": colors.danger };
 
-	  // Background Colors
+	  // Background Colors Gray
 	  // ------------------------------------------------------------------------------------ */
 	  selectors["bgg05"] = { "background-color": colors.g05 };
 	  selectors["bgg10"] = { "background-color": colors.g10 };
@@ -39299,7 +39311,7 @@
 	  selectors["bgg80"] = { "background-color": colors.g80 };
 	  selectors["bgg90"] = { "background-color": colors.g90 };
 
-	  // Text Colors
+	  // Text Colors Gray
 	  // ------------------------------------------------------------------------------------ */
 	  selectors["tcg05"] = { "color": colors.g05 };
 	  selectors["tcg10"] = { "color": colors.g10 };
@@ -39312,7 +39324,7 @@
 	  selectors["tcg80"] = { "color": colors.g80 };
 	  selectors["tcg90"] = { "color": colors.g90 };
 
-	  // Border Colors
+	  // Border Colors Gray
 	  // ------------------------------------------------------------------------------------ */
 	  selectors["bcg05"] = { borderColor: colors.g05 };
 	  selectors["bcg10"] = { borderColor: colors.g10 };
@@ -40531,10 +40543,10 @@
 	var beardColors = exports.beardColors = {
 	    white: "#ffffff",
 	    black: "#000000",
-	    brandColor: "#3498DB",
-	    success: "#4AB471",
-	    warning: "#F3AE4E",
-	    danger: "#CF5C60"
+	    brandColor: "#c397d8",
+	    success: "#b9ca4a",
+	    warning: "#e78c45",
+	    danger: "#d54e53"
 	};
 
 	/**
@@ -40655,6 +40667,12 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _reactRouter = __webpack_require__(175);
+
+	var _src = __webpack_require__(391);
+
+	var _src2 = _interopRequireDefault(_src);
+
 	var _reactHighlight = __webpack_require__(244);
 
 	var _reactHighlight2 = _interopRequireDefault(_reactHighlight);
@@ -40663,12 +40681,29 @@
 
 	var _H2 = _interopRequireDefault(_H);
 
+	var _H3 = __webpack_require__(386);
+
+	var _H4 = _interopRequireDefault(_H3);
+
+	var _Copy = __webpack_require__(388);
+
+	var _Copy2 = _interopRequireDefault(_Copy);
+
+	var _Code = __webpack_require__(387);
+
+	var _Code2 = _interopRequireDefault(_Code);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	/**
 	 * Overview Page
 	 */
-	var snippet1 = "";
+	var snippet = "import React, { Component } from \"react\"\n\n// ES6 Modules and CommonJS compatible\nimport Neckbeard from \"neckbeard\"\n\nconst settings = {\n    ...Neckbeard.defaultSettings\n    // Overwrite settings here\n}\n\n// Instantiates Neckbeard and returns a function\n// that accepts a string of approved helpers.\nconst nb = Neckbeard.create(settings)\n\nconst Button = ({ children }) => (\n    <button className={ nb(\"bg1 tcw br3 ft4\") }>\n        { children }\n    </button>\n)\n\nexport default Button\n";
+
+	var snippet2 = "<div className={ nb(\"brdr1 bc1 pv1 tac mb2\") }>.brdr1.bc1.pv1</div>";
+
+	var snippet3 = JSON.stringify(_src2.default.defaultSettings.helpers.border, null, '    ');
+
 	var Border = function Border() {
 	    return _react2.default.createElement(
 	        "div",
@@ -40679,18 +40714,1151 @@
 	            "Border"
 	        ),
 	        _react2.default.createElement(
+	            _H4.default,
+	            null,
+	            "Options"
+	        ),
+	        _react2.default.createElement(
+	            "table",
+	            { className: nb("w100 mb2 ft4 tcg60 lh2 sans") },
+	            _react2.default.createElement(
+	                "thead",
+	                null,
+	                _react2.default.createElement(
+	                    "tr",
+	                    { className: nb("brdr1--bottom bcg10 bgg05") },
+	                    _react2.default.createElement(
+	                        "th",
+	                        { className: nb("tcg50 fw3 pv1 ph1 tal fwsemibold ph1") },
+	                        "Class"
+	                    ),
+	                    _react2.default.createElement(
+	                        "th",
+	                        { className: nb("tcg50 fw3 pv1 ph1 tal fwsemibold ph1") },
+	                        "Purpose"
+	                    )
+	                )
+	            ),
+	            _react2.default.createElement(
+	                "tbody",
+	                null,
+	                _react2.default.createElement(
+	                    "tr",
+	                    { className: nb("brdr1--bottom bcg10") },
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            ".xbrdr"
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        "Remove the border from an element"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "tr",
+	                    { className: nb("brdr1--bottom bcg10") },
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            ".brdr1"
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        "Add a border to all sides of an element"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "tr",
+	                    { className: nb("brdr1--bottom bcg10") },
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            ".brdr1--top"
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        "Add a border to the top of an element"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "tr",
+	                    { className: nb("brdr1--bottom bcg10") },
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            ".brdr1--right"
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        "Add a border to the right side of an element"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "tr",
+	                    { className: nb("brdr1--bottom bcg10") },
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            ".brdr1--bottom"
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        "Add a border to the bottom of an element"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "tr",
+	                    { className: nb("brdr1--bottom bcg10") },
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            ".brdr1--left"
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        "Add a border to the left side of an element"
+	                    )
+	                )
+	            )
+	        ),
+	        _react2.default.createElement(
+	            _H4.default,
+	            null,
+	            "Example"
+	        ),
+	        _react2.default.createElement(
+	            _reactHighlight2.default,
+	            { className: nb("ph2 pv2 mb2") },
+	            snippet2
+	        ),
+	        _react2.default.createElement(
 	            "div",
-	            { className: nb("lh4") },
+	            { className: nb("brdr1 bc1 pv1 tac mb2") },
+	            ".brdr1.bc1.pv1"
+	        ),
+	        _react2.default.createElement(
+	            _H4.default,
+	            null,
+	            "Default Settings"
+	        ),
+	        _react2.default.createElement(
+	            "div",
+	            { className: nb("lh4 mb2") },
+	            _react2.default.createElement(
+	                _Copy2.default,
+	                null,
+	                "See ",
+	                _react2.default.createElement(
+	                    _reactRouter.Link,
+	                    { to: "/usage#configuration", className: nb("tc5 xtd h-tc1") },
+	                    "Configuration"
+	                ),
+	                " to learn how to overwrite helper settings."
+	            ),
 	            _react2.default.createElement(
 	                _reactHighlight2.default,
 	                { className: nb("ph2 pv2") },
-	                snippet1
+	                "// Neckbeard.defaultSettings.helpers.border \n",
+	                snippet3
 	            )
 	        )
 	    );
 	};
 
 	exports.default = Border;
+	module.exports = exports["default"];
+
+/***/ },
+/* 436 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _react = __webpack_require__(4);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(175);
+
+	var _src = __webpack_require__(391);
+
+	var _src2 = _interopRequireDefault(_src);
+
+	var _reactHighlight = __webpack_require__(244);
+
+	var _reactHighlight2 = _interopRequireDefault(_reactHighlight);
+
+	var _H = __webpack_require__(385);
+
+	var _H2 = _interopRequireDefault(_H);
+
+	var _H3 = __webpack_require__(386);
+
+	var _H4 = _interopRequireDefault(_H3);
+
+	var _Copy = __webpack_require__(388);
+
+	var _Copy2 = _interopRequireDefault(_Copy);
+
+	var _Code = __webpack_require__(387);
+
+	var _Code2 = _interopRequireDefault(_Code);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	/**
+	 * Overview Page
+	 */
+	var snippet = "import React, { Component } from \"react\"\n\n// ES6 Modules and CommonJS compatible\nimport Neckbeard from \"neckbeard\"\n\nconst settings = {\n    ...Neckbeard.defaultSettings\n    // Overwrite settings here\n}\n\n// Instantiates Neckbeard and returns a function\n// that accepts a string of approved helpers.\nconst nb = Neckbeard.create(settings)\n\nconst Button = ({ children }) => (\n    <button className={ nb(\"bg1 tcw br3 ft4\") }>\n        { children }\n    </button>\n)\n\nexport default Button\n";
+
+	var snippet2 = "<div className={ nb(\"brdr1 br3 bc1 pv1 tac mb2\") }>.brdr1.br3.bc1.pv1.mb2</div>";
+
+	var BorderRadius = function BorderRadius() {
+	    return _react2.default.createElement(
+	        "div",
+	        null,
+	        _react2.default.createElement(
+	            _H2.default,
+	            null,
+	            "Border Radius"
+	        ),
+	        _react2.default.createElement(
+	            _H4.default,
+	            null,
+	            "Options"
+	        ),
+	        _react2.default.createElement(
+	            "table",
+	            { className: nb("w100 mb2 ft4 tcg60 lh2 sans") },
+	            _react2.default.createElement(
+	                "thead",
+	                null,
+	                _react2.default.createElement(
+	                    "tr",
+	                    { className: nb("brdr1--bottom bcg10 bgg05") },
+	                    _react2.default.createElement(
+	                        "th",
+	                        { className: nb("pv1 ph1 tal fwsemibold ph1") },
+	                        "Border Direction"
+	                    ),
+	                    _react2.default.createElement(
+	                        "th",
+	                        { className: nb("pv1 ph1 tal fwsemibold ph1") },
+	                        "Class Prefix"
+	                    ),
+	                    _react2.default.createElement(
+	                        "th",
+	                        { className: nb("pv1 ph1 tal fwsemibold ph1") },
+	                        "Default Amounts"
+	                    )
+	                )
+	            ),
+	            _react2.default.createElement(
+	                "tbody",
+	                null,
+	                _react2.default.createElement(
+	                    "tr",
+	                    { className: nb("brdr1--bottom bcg10") },
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        "Border Radius"
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        ".br"
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        "0-10"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "tr",
+	                    { className: nb("brdr1--bottom bcg10") },
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        "Border Left Radius"
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        ".blr"
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        "0-10"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "tr",
+	                    { className: nb("brdr1--bottom bcg10") },
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        "Border Right Radius"
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        ".brr"
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        "0-10"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "tr",
+	                    { className: nb("brdr1--bottom bcg10") },
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        "Border Top Left Radius"
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        ".btlr"
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        "0-10"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "tr",
+	                    { className: nb("brdr1--bottom bcg10") },
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        "Border Top Right Radius"
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        ".btrr"
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        "0-10"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "tr",
+	                    { className: nb("brdr1--bottom bcg10") },
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        "Border Bottom Left Radius"
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        ".bblr"
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        "0-10"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "tr",
+	                    { className: nb("brdr1--bottom bcg10") },
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        "Border Bottom Right Radius"
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        ".bbrr"
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        "0-10"
+	                    )
+	                )
+	            )
+	        ),
+	        _react2.default.createElement(
+	            _H4.default,
+	            null,
+	            "Example"
+	        ),
+	        _react2.default.createElement(
+	            _reactHighlight2.default,
+	            { className: nb("ph2 pv2 mb2") },
+	            snippet2
+	        ),
+	        _react2.default.createElement(
+	            "div",
+	            { className: nb("brdr1 br5 bc1 pv1 tac mb2") },
+	            ".brdr1.br5.bc1.pv1.mb2"
+	        ),
+	        _react2.default.createElement(
+	            _H4.default,
+	            null,
+	            "Default Settings"
+	        ),
+	        _react2.default.createElement(
+	            "div",
+	            { className: nb("lh4 mb2") },
+	            _react2.default.createElement(
+	                _Copy2.default,
+	                null,
+	                "See ",
+	                _react2.default.createElement(
+	                    _reactRouter.Link,
+	                    { to: "/usage#configuration", className: nb("tc5 xtd h-tc1") },
+	                    "Configuration"
+	                ),
+	                " to learn how to overwrite helper settings."
+	            ),
+	            _react2.default.createElement(
+	                _reactHighlight2.default,
+	                { className: nb("ph2 pv2") },
+	                "// Neckbeard.defaultSettings.helpers.borderRadius \n",
+	                JSON.stringify(_src2.default.defaultSettings.helpers.borderRadius, null, '    ')
+	            )
+	        )
+	    );
+	};
+
+	exports.default = BorderRadius;
+	module.exports = exports["default"];
+
+/***/ },
+/* 437 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _react = __webpack_require__(4);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(175);
+
+	var _src = __webpack_require__(391);
+
+	var _src2 = _interopRequireDefault(_src);
+
+	var _reactHighlight = __webpack_require__(244);
+
+	var _reactHighlight2 = _interopRequireDefault(_reactHighlight);
+
+	var _H = __webpack_require__(385);
+
+	var _H2 = _interopRequireDefault(_H);
+
+	var _H3 = __webpack_require__(386);
+
+	var _H4 = _interopRequireDefault(_H3);
+
+	var _H5 = __webpack_require__(242);
+
+	var _H6 = _interopRequireDefault(_H5);
+
+	var _Copy = __webpack_require__(388);
+
+	var _Copy2 = _interopRequireDefault(_Copy);
+
+	var _Code = __webpack_require__(387);
+
+	var _Code2 = _interopRequireDefault(_Code);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	/**
+	 * Overview Page
+	 */
+	var snippet = "import React, { Component } from \"react\"\n\n// ES6 Modules and CommonJS compatible\nimport Neckbeard from \"neckbeard\"\n\nconst settings = {\n    ...Neckbeard.defaultSettings\n    // Overwrite settings here\n}\n\n// Instantiates Neckbeard and returns a function\n// that accepts a string of approved helpers.\nconst nb = Neckbeard.create(settings)\n\nconst Button = ({ children }) => (\n    <button className={ nb(\"bg1 tcw br3 ft4\") }>\n        { children }\n    </button>\n)\n\nexport default Button\n";
+
+	var snippet2 = "<div className={ nb(\"bgsuccess bcsuccess br5 pv1 tac tcw mb2 fwthin\") }>\n    .bgsuccess.bcsuccess.br5.pv1.tac.tcw.mb2.fwthin\n</div>";
+
+	var Color = function Color() {
+	    return _react2.default.createElement(
+	        "div",
+	        null,
+	        _react2.default.createElement(
+	            _H2.default,
+	            null,
+	            "Colors"
+	        ),
+	        _react2.default.createElement(
+	            "div",
+	            { className: nb("mb2") },
+	            _react2.default.createElement(
+	                "div",
+	                { className: nb("frame xmh") },
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("blk6 xph") },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: nb("pv2 ph1 flex jcc bgsuccess tcw") },
+	                        ".bgsuccess"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("blk6 xph") },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: nb("pv2 ph1 flex jcc xbg tcsuccess") },
+	                        ".tcsuccess"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("blk6 xph") },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: nb("pv2 ph1 flex jcc bgwarning tcw") },
+	                        ".bgwarning"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("blk6 xph") },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: nb("pv2 ph1 flex jcc xbg tcwarning") },
+	                        ".tcwarning"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("blk6 xph") },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: nb("pv2 ph1 flex jcc bgdanger tcw") },
+	                        ".bgdanger"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("blk6 xph") },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: nb("pv2 ph1 flex jcc xbg tcdanger") },
+	                        ".tcdanger"
+	                    )
+	                )
+	            ),
+	            _react2.default.createElement(
+	                "div",
+	                { className: nb("frame xmh") },
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("blk xph") },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: nb("pv2 ph1 flex jcc bg1 tcw") },
+	                        ".bg1"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("blk xph") },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: nb("pv2 ph1 flex jcc bg2 tcw") },
+	                        ".bg2"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("blk xph") },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: nb("pv2 ph1 flex jcc bg3 tcw") },
+	                        ".bg3"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("blk xph") },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: nb("pv2 ph1 flex jcc bg4 tcw") },
+	                        ".bg4"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("blk xph") },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: nb("pv2 ph1 flex jcc bg5 tcw") },
+	                        ".bg5"
+	                    )
+	                )
+	            ),
+	            _react2.default.createElement(
+	                "div",
+	                { className: nb("frame xmh") },
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("blk xph") },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: nb("pv2 ph1 flex jcc xbg tc1") },
+	                        ".tc1"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("blk xph") },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: nb("pv2 ph1 flex jcc xbg tc2") },
+	                        ".tc2"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("blk xph") },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: nb("pv2 ph1 flex jcc xbg tc3") },
+	                        ".tc3"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("blk xph") },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: nb("pv2 ph1 flex jcc xbg tc4") },
+	                        ".tc4"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("blk xph") },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: nb("pv2 ph1 flex jcc xbg tc5") },
+	                        ".tc5"
+	                    )
+	                )
+	            ),
+	            _react2.default.createElement(
+	                "div",
+	                { className: nb("frame xmh") },
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("blk xph") },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: nb("pv2 ph1 flex jcc xbg brdr1 bc1") },
+	                        ".bc1"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("blk xph") },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: nb("pv2 ph1 flex jcc xbg brdr1 bc2") },
+	                        ".bc2"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("blk xph") },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: nb("pv2 ph1 flex jcc xbg brdr1 bc3") },
+	                        ".bc3"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("blk xph") },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: nb("pv2 ph1 flex jcc xbg brdr1 bc4") },
+	                        ".bc4"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("blk xph") },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: nb("pv2 ph1 flex jcc xbg brdr1 bc5") },
+	                        ".bc5"
+	                    )
+	                )
+	            ),
+	            _react2.default.createElement(
+	                "div",
+	                { className: nb("frame xmh") },
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("blk xph") },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: nb("pv2 ph1 flex jcc bgw tcg40") },
+	                        ".bgw"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("blk xph") },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: nb("pv2 ph1 flex jcc bgg40 tcw") },
+	                        ".tcw"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("blk xph") },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: nb("pv2 ph1 flex jcc brdr1 bcw xbg tcg40") },
+	                        ".bcw"
+	                    )
+	                )
+	            ),
+	            _react2.default.createElement(
+	                "div",
+	                { className: nb("frame xmh") },
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("blk xph") },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: nb("pv2 ph1 flex jcc bgg05 tcg60") },
+	                        ".bgg05"
+	                    )
+	                )
+	            ),
+	            _react2.default.createElement(
+	                "div",
+	                { className: nb("frame xmh") },
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("blk xph") },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: nb("pv2 ph1 flex jcc bgg10 tcg60") },
+	                        ".bgg10"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("blk xph") },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: nb("pv2 ph1 flex jcc bgg20 tcg60") },
+	                        ".bgg20"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("blk xph") },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: nb("pv2 ph1 flex jcc bgg30 tcw") },
+	                        ".bgg30"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("blk xph") },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: nb("pv2 ph1 flex jcc bgg40 tcw") },
+	                        ".bgg40"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("blk xph") },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: nb("pv2 ph1 flex jcc bgg50 tcw") },
+	                        ".bgg50"
+	                    )
+	                )
+	            ),
+	            _react2.default.createElement(
+	                "div",
+	                { className: nb("frame xmh") },
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("blk xph") },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: nb("pv2 ph1 flex jcc bgg60 tcw") },
+	                        ".bgg60"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("blk xph") },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: nb("pv2 ph1 flex jcc bgg70 tcw") },
+	                        ".bgg70"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("blk xph") },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: nb("pv2 ph1 flex jcc bgg80 tcw") },
+	                        ".bgg80"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("blk xph") },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: nb("pv2 ph1 flex jcc bgg90 tcw") },
+	                        ".bgg90"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("blk xph") },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: nb("pv2 ph1 flex jcc bgb tcw") },
+	                        ".bgb"
+	                    )
+	                )
+	            ),
+	            _react2.default.createElement(
+	                "div",
+	                { className: nb("frame xmh") },
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("blk xph") },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: nb("pv2 ph1 flex jcc bgg20 tcg05") },
+	                        ".tcg05"
+	                    )
+	                )
+	            ),
+	            _react2.default.createElement(
+	                "div",
+	                { className: nb("frame xmh") },
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("blk xph") },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: nb("pv2 ph1 flex jcc xbg tcg10") },
+	                        ".tcg10"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("blk xph") },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: nb("pv2 ph1 flex jcc xbg tcg20") },
+	                        ".tcg20"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("blk xph") },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: nb("pv2 ph1 flex jcc xbg tcg30") },
+	                        ".tcg30"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("blk xph") },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: nb("pv2 ph1 flex jcc xbg tcg40") },
+	                        ".tcg40"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("blk xph") },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: nb("pv2 ph1 flex jcc xbg tcg50") },
+	                        ".tcg50"
+	                    )
+	                )
+	            ),
+	            _react2.default.createElement(
+	                "div",
+	                { className: nb("frame xmh") },
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("blk xph") },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: nb("pv2 ph1 flex jcc xbg tcg60") },
+	                        ".tcg60"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("blk xph") },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: nb("pv2 ph1 flex jcc xbg tcg70") },
+	                        ".tcg70"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("blk xph") },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: nb("pv2 ph1 flex jcc xbg tcg80") },
+	                        ".tcg80"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("blk xph") },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: nb("pv2 ph1 flex jcc xbg tcg90") },
+	                        ".tcg90"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("blk xph") },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: nb("pv2 ph1 flex jcc xbg tcb") },
+	                        ".tcb"
+	                    )
+	                )
+	            ),
+	            _react2.default.createElement(
+	                "div",
+	                { className: nb("frame xmh") },
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("blk xph") },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: nb("pv2 ph1 flex jcc xbg tcg40 brdr1 bcg05") },
+	                        ".bcg05"
+	                    )
+	                )
+	            ),
+	            _react2.default.createElement(
+	                "div",
+	                { className: nb("frame xmh") },
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("blk xph") },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: nb("pv2 ph1 flex jcc xbg tcg40 brdr1 bcg10") },
+	                        ".bcg10"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("blk xph") },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: nb("pv2 ph1 flex jcc xbg tcg40 brdr1 bcg20") },
+	                        ".bcg20"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("blk xph") },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: nb("pv2 ph1 flex jcc xbg tcg40 brdr1 bcg30") },
+	                        ".bcg30"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("blk xph") },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: nb("pv2 ph1 flex jcc xbg tcg40 brdr1 bcg40") },
+	                        ".bcg40"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("blk xph") },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: nb("pv2 ph1 flex jcc xbg tcg40 brdr1 bcg50") },
+	                        ".bcg50"
+	                    )
+	                )
+	            ),
+	            _react2.default.createElement(
+	                "div",
+	                { className: nb("frame xmh") },
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("blk xph") },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: nb("pv2 ph1 flex jcc xbg tcg40 brdr1 bcg60") },
+	                        ".bcg60"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("blk xph") },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: nb("pv2 ph1 flex jcc xbg tcg40 brdr1 bcg70") },
+	                        ".bcg70"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("blk xph") },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: nb("pv2 ph1 flex jcc xbg tcg40 brdr1 bcg80") },
+	                        ".bcg80"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("blk xph") },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: nb("pv2 ph1 flex jcc xbg tcg40 brdr1 bcg90") },
+	                        ".bcg90"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("blk xph") },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: nb("pv2 ph1 flex jcc xbg tcg40 brdr1 bcb") },
+	                        ".bcb"
+	                    )
+	                )
+	            )
+	        ),
+	        _react2.default.createElement(
+	            _H4.default,
+	            null,
+	            "Example"
+	        ),
+	        _react2.default.createElement(
+	            _reactHighlight2.default,
+	            { className: nb("ph2 pv2 mb2") },
+	            snippet2
+	        ),
+	        _react2.default.createElement(
+	            "div",
+	            { className: nb("bgsuccess bcsuccess br5 pv1 tac tcw mb2 fwthin") },
+	            ".bgsuccess.bcsuccess.br5.pv1.tac.tcw.mb2.fwthin"
+	        ),
+	        _react2.default.createElement(
+	            _H4.default,
+	            null,
+	            "Default Settings"
+	        ),
+	        _react2.default.createElement(
+	            "div",
+	            { className: nb("lh4") },
+	            _react2.default.createElement(
+	                _Copy2.default,
+	                null,
+	                "See ",
+	                _react2.default.createElement(
+	                    _reactRouter.Link,
+	                    { to: "/usage#configuration", className: nb("tc5 xtd h-tc1") },
+	                    "Configuration"
+	                ),
+	                " to learn how to overwrite helper settings."
+	            ),
+	            _react2.default.createElement(
+	                _reactHighlight2.default,
+	                { className: nb("ph2 pv2 mb2") },
+	                "// Neckbeard.defaultSettings.colors \n",
+	                JSON.stringify(_src2.default.defaultSettings.colors, null, '    ')
+	            ),
+	            _react2.default.createElement(
+	                _reactHighlight2.default,
+	                { className: nb("ph2 pv2 mb2") },
+	                "// Neckbeard.defaultSettings.helpers.colors \n",
+	                JSON.stringify(_src2.default.defaultSettings.helpers.colors, null, '    ')
+	            )
+	        )
+	    );
+	};
+
+	exports.default = Color;
 	module.exports = exports["default"];
 
 /***/ }
