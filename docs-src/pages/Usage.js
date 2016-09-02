@@ -73,7 +73,7 @@ export default function unicorn({ helpers: { unicorn: { useBreakpoints } }, brea
         // and so on
     }
     // more selectors here
-    
+
     /**
      * Media Queries
      * Adds classes for each breakpoint .{breakpoint}-{selector} and .only-{breakpoint}-{selector}
@@ -148,7 +148,7 @@ const Usage = () => (
             You can do this by using the <a href="http://babeljs.io/docs/plugins/transform-object-rest-spread/" className={ nb("tc5 xtd h-tc1") }>Object Spread Syntax</a> <Code>...nb.helpers</Code> or <Code>Object.assign()</Code>.
         </Copy>
         <H3>Write a Helper Function</H3>
-        <Copy>To create your own custom helper or component class, write a function that has one parameter for settings and returns an object of selectors. Save your helper function file somewhere handy.</Copy>
+        <Copy>To create your own custom helper, write a function that has one parameter for settings and returns an object of selectors. Save your helper function file somewhere handy.</Copy>
         <Highlight className={ nb("ph2 pv2 lh3 mb2") }>
             { snippet4 }
         </Highlight>
