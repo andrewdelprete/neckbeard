@@ -37,7 +37,8 @@
     "start": "webpack-dev-server --config='webpack.config.docs.js' --inline --history-api-fallback --hot",
     "build:docs": "webpack --config='webpack.config.docs.js'",
     "build": "webpack && gulp css",
-    "test": "NODE_ENV=test mocha --compilers js:babel-register --recursive src/tests"
+    "test": "NODE_ENV=test mocha --compilers js:babel-register --recursive src/tests",
+    "deploy": "npm run build:docs && surge ./docs neckbeard.surge.sh"
   },
   "keywords": [
     "css",
