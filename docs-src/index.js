@@ -16,6 +16,7 @@ import Colors from './pages/Colors'
 import Display from './pages/Display'
 import Flexbox from './pages/Flexbox'
 import Float from './pages/Float'
+import Fonts from './pages/Fonts'
 
 import Neckbeard from '../src'
 
@@ -44,6 +45,7 @@ ReactDOM.render((
             <Route path="/display" component={ Display } />
             <Route path="/flexbox" component={ Flexbox } />
             <Route path="/float" component={ Float } />
+            <Route path="/fonts" component={ Fonts } />
         </Route>
     </Router>
 ), document.getElementById('app'))

@@ -72,7 +72,8 @@ export default function unicorn({ helpers: { unicorn: { useBreakpoints } }, brea
         fontSize: "2rem",
         // and so on
     }
-
+    // more selectors here
+    
     /**
      * Media Queries
      * Adds classes for each breakpoint .{breakpoint}-{selector} and .only-{breakpoint}-{selector}

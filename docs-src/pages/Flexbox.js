@@ -67,7 +67,9 @@ const Flexbox = () => (
             </tbody>
         </table>
 
-        <H3>Content Justification</H3>
+        <div className={ nb("mb1") }>
+            <H3>Content Justification</H3>
+        </div>
         <table className={ nb("w100 mb2 ft4 tcg60 lh2 sans") }>
             <thead>
                 <tr className={ nb("brdr1--bottom bcg10 bgg05") }>
@@ -99,7 +101,9 @@ const Flexbox = () => (
             </tbody>
         </table>
 
-        <H3>Item Alignment</H3>
+        <div className={ nb("mb1") }>
+            <H3>Item Alignment</H3>
+        </div>
         <table className={ nb("w100 mb2 ft4 tcg60 lh2 sans") }>
             <thead>
                 <tr className={ nb("brdr1--bottom bcg10 bgg05") }>
@@ -130,8 +134,10 @@ const Flexbox = () => (
                 </tr>
             </tbody>
         </table>
-
-        <H3>Content Alignment</H3>
+        
+        <div className={ nb("mb1") }>
+            <H3>Content Alignment</H3>
+        </div>
         <table className={ nb("w100 mb2 ft4 tcg60 lh2 sans") }>
             <thead>
                 <tr className={ nb("brdr1--bottom bcg10 bgg05") }>
