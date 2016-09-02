@@ -130,7 +130,7 @@ const Usage = () => (
         <H2>Configuration</H2>
         <Copy>
             The <Code>Neckbeard.create()</Code> function has an optional first parameter (object) to overwrite or extend default settings.
-            You can extend or overwrite settings by using the <a href="http://babeljs.io/docs/plugins/transform-object-rest-spread/" className={ nb("tc5 xtd h-tc1") }>Object Spread Syntax</a> <Code>...nb.defaultSettings</Code> or <Code>Object.assign()</Code>.
+            You can do this by using the <a href="http://babeljs.io/docs/plugins/transform-object-rest-spread/" className={ nb("tc5 xtd h-tc1") }>Object Spread Syntax</a> <Code>...nb.defaultSettings</Code> or <Code>Object.assign()</Code>.
         </Copy>
         <Copy>
             Neckbeard has Default Settings for all helpers and can be found on the Neckbeard object as <Code>Neckbeard.defaultSettings</Code>.
@@ -144,7 +144,7 @@ const Usage = () => (
         <H2>Adding Custom Helpers</H2>
         <Copy>
             The <Code>Neckbeard.create()</Code> function has an optional second parameter (object) to overwrite or extend default helpers.
-            You can extend or overwrite the existing default helpers by using the <a href="http://babeljs.io/docs/plugins/transform-object-rest-spread/" className={ nb("tc5 xtd h-tc1") }>Object Spread Syntax</a> <Code>...nb.helpers</Code> or <Code>Object.assign()</Code>.
+            You can do this by using the <a href="http://babeljs.io/docs/plugins/transform-object-rest-spread/" className={ nb("tc5 xtd h-tc1") }>Object Spread Syntax</a> <Code>...nb.helpers</Code> or <Code>Object.assign()</Code>.
         </Copy>
         <H3>Write a Helper Function</H3>
         <Copy>To create your own custom helper or component class, write a function that has one parameter for settings and returns an object of selectors. Save your helper function file somewhere handy.</Copy>
