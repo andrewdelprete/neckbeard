@@ -71,8 +71,6 @@ describe("create() function", function () {
             }
         }
 
-        const css = nb.create(settings, nb.helpers)
-        console.log(settings)
         assert.isOk(settings.fonts.sans === "'Times New Roman'")
         assert.isNotOk(settings.fonts.sans === "Helvetica Neue, Helvetica, Arial, sans-serif")
     })
