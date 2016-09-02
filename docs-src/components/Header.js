@@ -9,7 +9,7 @@ const Header = () => (
         <div className={ nb("tc5 fwthin uppercase pv2 mr2 ft6 sans ls3") }>
             <Link to="/" className={ nb("xtd")}>Neckbeard</Link>
         </div>
-        <div className={ nb("tc5 sm-dn md-db fwsemibold ft3 ls1 sans") }>An Atomic CSS in JS Framework for people with better things to do</div>
+        <div className={ nb("tcb sm-dn md-db fwsemibold ft3 ls1 sans") }>Your kids will thank us</div>
     </div>
 )
 

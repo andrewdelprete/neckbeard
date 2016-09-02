@@ -23,8 +23,14 @@ import Neckbeard from '../src'
 // Overwrite settings if needed.
 const settings = {
     ...Neckbeard.defaultSettings,
+    fonts: {
+        sans: "Poppins, Helvetica Neue, Helvetica, Arial, sans-serif",
+        serif: "Merriweather, Georgia, serif",
+        code: "'Source Code Pro', Consolas, Monaco, 'Andale Mono', monospace"
+    }
     //...Other overwrites here
 }
+
 
 // Neckbeard
 // Set a global to reuse this Neckbeard instance

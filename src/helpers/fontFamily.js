@@ -7,16 +7,16 @@ import { addMediaQueries } from '../'
  * @param  {object} breakpoints={} (optional)
  * @return {object}
  */
-export default function fontFamily({ helpers: { fontFamily: { useBreakpoints } }, breakpoints }) {
+export default function fontFamily({ helpers: { fontFamily: { useBreakpoints } }, fonts, breakpoints }) {
     let selectors = {}
     let media = {}
 
     /**
      * Font Family Helpers
      */
-    selectors["sans"] = { fontFamily: "Helvetica Neue, Helvetica, Arial, sans-serif"}
-    selectors["serif"] = { fontFamily: "Merriweather, Georgia, serif" }
-    selectors["code"] = { fontFamily: "Consolas, Monaco, 'Andale Mono', monospace" }
+    selectors["sans"] = { fontFamily: fonts.sans }
+    selectors["serif"] = { fontFamily: fonts.serif }
+    selectors["code"] = { fontFamily: fonts.code }
 
     /**
      * Media Queries

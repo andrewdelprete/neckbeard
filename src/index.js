@@ -22,6 +22,11 @@ export const defaultSettings = {
         xlg: 1440
     },
     colors: setBeardColors(),
+    fonts: {
+        sans: "Helvetica Neue, Helvetica, Arial, sans-serif",
+        serif: "Merriweather, Georgia, serif",
+        code: "Consolas, Monaco, 'Andale Mono', monospace"
+    },
     helpers: {
         border: {
             limit: 3,
@@ -46,7 +51,7 @@ export const defaultSettings = {
             useBreakpoints: true
         },
         fontFamily: {
-            useBreakpoints: false
+            useBreakpoints: false,
         },
         fontSizes: {
             limit: 17,
