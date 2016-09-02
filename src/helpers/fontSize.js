@@ -7,7 +7,7 @@ import { addMediaQueries } from '../'
  * @param  {object} breakpoints={} (optional)
  * @return {object}
  */
-export default function fontSize({ helpers: { fontSizes: { limit, incrementBy, useBreakpoints } }, breakpoints }) {
+export default function fontSize({ helpers: { fontSize: { limit, incrementBy, useBreakpoints } }, breakpoints }) {
     let selectors = {}
     let media = {}
 

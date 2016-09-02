@@ -53,7 +53,7 @@ export const defaultSettings = {
         fontFamily: {
             useBreakpoints: false,
         },
-        fontSizes: {
+        fontSize: {
             limit: 17,
             incrementBy: .25,
             useBreakpoints: true

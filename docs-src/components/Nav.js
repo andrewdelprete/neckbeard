@@ -36,7 +36,7 @@ const Nav = () => (
             <NavItem to="/display">Display</NavItem>
             <NavItem to="/flexbox">Flexbox</NavItem>
             <NavItem to="/float">Float</NavItem>
-            <NavItem to="/fonts">Font Size</NavItem>
+            <NavItem to="/fonts">Fonts</NavItem>
             <NavItem to="/grid">Grid</NavItem>
             <NavItem to="/letter-spacing">Letter Spacing</NavItem>
             <NavItem to="/line-height">Line Height</NavItem>

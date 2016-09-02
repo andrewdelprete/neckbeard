@@ -10,33 +10,9 @@ import Code from "../components/elements/Code"
 /**
  * Overview Page
  */
-const snippet =
-`import React, { Component } from "react"
+const snippet = `<div className={ nb("brdr1 bc1 pv1 tac mb2") }>.brdr1.bc1.pv1.tac.mb2</div>`
 
-// ES6 Modules and CommonJS compatible
-import Neckbeard from "neckbeard"
-
-const settings = {
-    ...Neckbeard.defaultSettings
-    // Overwrite settings here
-}
-
-// Instantiates Neckbeard and returns a function
-// that accepts a string of approved helpers.
-const nb = Neckbeard.create(settings)
-
-const Button = ({ children }) => (
-    <button className={ nb("bg1 tcw br3 ft4") }>
-        { children }
-    </button>
-)
-
-export default Button
-`
-
-const snippet2 = `<div className={ nb("brdr1 bc1 pv1 tac mb2") }>.brdr1.bc1.pv1</div>`
-
-const snippet3 = JSON.stringify(Neckbeard.defaultSettings.helpers.border, null, '    ')
+const snippet2 = JSON.stringify(Neckbeard.defaultSettings.helpers.border, null, '    ')
 
 const Border = () => (
     <div>
@@ -78,17 +54,17 @@ const Border = () => (
         </table>
         <H2>Example</H2>
         <Highlight className={ nb("ph2 pv2 mb2 lh5") }>
-            { snippet2 }
+            { snippet }
         </Highlight>
 
-        <div className={ nb("brdr1 bc1 pv1 tac mb2") }>.brdr1.bc1.pv1</div>
+        <div className={ nb("brdr1 bc1 pv1 tac mb2") }>.brdr1.bc1.pv1.tac.mb2</div>
 
         <H2>Default Settings</H2>
         <div className={ nb("lh4 mb2") }>
             <Copy>See <Link to="/usage#configuration" className={ nb("tc5 xtd h-tc1") }>Configuration</Link> to learn how to overwrite helper settings.</Copy>
             <Highlight className={ nb("ph2 pv2 lh5") }>
                 {"// Neckbeard.defaultSettings.helpers.border \n" }
-                { snippet3 }
+                { snippet2 }
             </Highlight>
         </div>
     </div>
