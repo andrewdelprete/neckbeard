@@ -27374,7 +27374,7 @@
 	    _createClass(Header, [{
 	        key: 'componentDidMount',
 	        value: function componentDidMount() {
-	            var taglines = ['Your kids will thank us', 'The Future', 'Pushing it to the next level for future generations', 'Not your mothers CSS'];
+	            var taglines = ["Your kids will thank us", "The Future", "Pushing it to the next level for future generations", "Not your mother's CSS"];
 	            var tagline = document.getElementById('tagline');
 
 	            tagline.innerHTML = taglines[Math.floor(Math.random() * taglines.length)];
@@ -27650,7 +27650,7 @@
 	/**
 	 * Overview Page
 	 */
-	var snippet1 = "import React, { Component } from \"react\"\nimport Neckbeard from \"neckbeard\"\n\nconst settings = {\n    ...Neckbeard.defaultSettings\n    // Overwrite settings here\n}\n\nconst nb = Neckbeard.create(settings)\n\nconst Button = ({ children }) => (\n    <button className={ nb(\"bg1 tcw br3 ft4\") }>\n        { children }\n    </button>\n)\n\nexport default Button\n";
+	var snippet1 = "import React, { Component } from \"react\"\nimport Neckbeard from \"neckbeard\"\n\n// Instantiates Neckbeard and returns a function\n// that accepts a string of approved helpers.\nconst nb = Neckbeard.create()\n\nconst Button = ({ children }) => (\n    // Pass a string of helper classes\n    // to be injected into the page.\n    <button className={ nb(\"bg1 tcw br3 ft4\") }>\n        { children }\n    </button>\n)\n\nexport default Button\n";
 	var Installation = function Installation() {
 	    return _react2.default.createElement(
 	        "div",
@@ -36681,7 +36681,7 @@
 	 * Installation Page
 	 */
 
-	var snippet = "import React, { Component } from \"react\"\n\n// ES6 Modules and CommonJS compatible\nimport Neckbeard from \"neckbeard\"\n\nconst settings = {\n    ...Neckbeard.defaultSettings\n    // Overwrite settings here\n}\n\n// Instantiates Neckbeard and returns a function\n// that accepts a string of approved helpers.\nconst nb = Neckbeard.create(settings)\n\nconst Button = ({ children }) => (\n    <button className={ nb(\"bg1 tcw br3 ft4\") }>\n        { children }\n    </button>\n)\n\nexport default Button\n";
+	var snippet = "import React, { Component } from \"react\"\n\n// ES6 Modules and CommonJS compatible\nimport Neckbeard from \"neckbeard\"\n\n// Instantiates Neckbeard and returns a function\n// that accepts a string of approved helpers.\nconst nb = Neckbeard.create()\n\nconst Button = ({ children }) => (\n    // Pass a string of helper classes\n    // to be injected into the page.\n    <button className={ nb(\"bg1 tcw br3 ft4\") }>\n        { children }\n    </button>\n)\n\nexport default Button\n";
 
 	var Installation = function Installation() {
 	    return _react2.default.createElement(
@@ -44144,6 +44144,12 @@
 	                    "Configuration"
 	                ),
 	                " to learn how to overwrite helper settings."
+	            ),
+	            _react2.default.createElement(
+	                _reactHighlight2.default,
+	                { className: nb("ph2 pv2 mb2") },
+	                "// Neckbeard.defaultSettings.fonts \n",
+	                JSON.stringify(_src2.default.defaultSettings.fonts, null, '    ')
 	            ),
 	            _react2.default.createElement(
 	                _reactHighlight2.default,

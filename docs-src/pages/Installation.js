@@ -16,16 +16,13 @@ const snippet =
 // ES6 Modules and CommonJS compatible
 import Neckbeard from "neckbeard"
 
-const settings = {
-    ...Neckbeard.defaultSettings
-    // Overwrite settings here
-}
-
 // Instantiates Neckbeard and returns a function
 // that accepts a string of approved helpers.
-const nb = Neckbeard.create(settings)
+const nb = Neckbeard.create()
 
 const Button = ({ children }) => (
+    // Pass a string of helper classes
+    // to be injected into the page.
     <button className={ nb("bg1 tcw br3 ft4") }>
         { children }
     </button>

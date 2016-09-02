@@ -218,6 +218,10 @@ const Fonts = () => (
         <div className={ nb("lh5 mb2") }>
             <Copy>See <Link to="/usage#configuration" className={ nb("tc5 xtd h-tc1") }>Configuration</Link> to learn how to overwrite helper settings.</Copy>
             <Highlight className={ nb("ph2 pv2 mb2") }>
+                {"// Neckbeard.defaultSettings.fonts \n" }
+                { JSON.stringify(Neckbeard.defaultSettings.fonts, null, '    ') }
+            </Highlight>
+            <Highlight className={ nb("ph2 pv2 mb2") }>
                 {"// Neckbeard.defaultSettings.helpers.fontFamily \n" }
                 { JSON.stringify(Neckbeard.defaultSettings.helpers.fontFamily, null, '    ') }
             </Highlight>
