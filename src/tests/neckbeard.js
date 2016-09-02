@@ -62,6 +62,20 @@ describe("create() function", function () {
         assert.isNotOk(css("lg-mb1"))
         assert.isOk(css("lg-ft1"))
     })
+
+    it("Should allow overwrite of fonts", function() {
+        const settings = {
+            ...nb.defaultSettings,
+            fonts: {
+                sans: "'Times New Roman'"
+            }
+        }
+
+        const css = nb.create(settings, nb.helpers)
+        console.log(settings)
+        assert.isOk(settings.fonts.sans === "'Times New Roman'")
+        assert.isNotOk(settings.fonts.sans === "Helvetica Neue, Helvetica, Arial, sans-serif")
+    })
 })
 
 describe("addMediaQueries() function", function () {
