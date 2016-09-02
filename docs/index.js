@@ -109,6 +109,10 @@
 
 	var _Float2 = _interopRequireDefault(_Float);
 
+	var _Fonts = __webpack_require__(441);
+
+	var _Fonts2 = _interopRequireDefault(_Fonts);
+
 	var _src = __webpack_require__(391);
 
 	var _src2 = _interopRequireDefault(_src);
@@ -117,7 +121,14 @@
 
 	// Neckbeard
 	// Overwrite settings if needed.
-	var settings = _extends({}, _src2.default.defaultSettings);
+	var settings = _extends({}, _src2.default.defaultSettings, {
+	    fonts: {
+	        sans: "Poppins, Helvetica Neue, Helvetica, Arial, sans-serif",
+	        serif: "Merriweather, Georgia, serif",
+	        code: "'Source Code Pro', Consolas, Monaco, 'Andale Mono', monospace"
+	    }
+	    //...Other overwrites here
+	});
 
 	// Neckbeard
 	// Set a global to reuse this Neckbeard instance
@@ -139,7 +150,8 @@
 	        _react2.default.createElement(_reactRouter.Route, { path: '/colors', component: _Colors2.default }),
 	        _react2.default.createElement(_reactRouter.Route, { path: '/display', component: _Display2.default }),
 	        _react2.default.createElement(_reactRouter.Route, { path: '/flexbox', component: _Flexbox2.default }),
-	        _react2.default.createElement(_reactRouter.Route, { path: '/float', component: _Float2.default })
+	        _react2.default.createElement(_reactRouter.Route, { path: '/float', component: _Float2.default }),
+	        _react2.default.createElement(_reactRouter.Route, { path: '/fonts', component: _Fonts2.default })
 	    )
 	), document.getElementById('app'));
 
@@ -845,7 +857,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule reactProdInvariant
-	 *
+	 * 
 	 */
 	'use strict';
 
@@ -1413,7 +1425,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 *
+	 * 
 	 */
 
 	function makeEmptyFunction(arg) {
@@ -1653,7 +1665,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule getIteratorFn
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -1699,7 +1711,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule KeyEscapeUtils
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -6240,7 +6252,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule accumulateInto
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -6304,7 +6316,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule forEachAccumulated
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -7566,7 +7578,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule ReactFeatureFlags
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -8787,7 +8799,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule isTextInputElement
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -12263,7 +12275,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 *
+	 * 
 	 * @typechecks static-only
 	 */
 
@@ -16030,7 +16042,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule ReactNodeTypes
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -16242,7 +16254,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule flattenChildren
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -16407,7 +16419,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule ReactServerUpdateQueue
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -16786,7 +16798,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @typechecks
-	 *
+	 * 
 	 */
 
 	/*eslint-disable no-self-compare */
@@ -18636,7 +18648,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 *
+	 * 
 	 */
 
 	var isTextNode = __webpack_require__(151);
@@ -21114,7 +21126,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule adler32
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -27331,6 +27343,8 @@
 	    value: true
 	});
 
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 	var _react = __webpack_require__(4);
 
 	var _react2 = _interopRequireDefault(_react);
@@ -27339,29 +27353,58 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
 	/**
 	 * Header
 	 */
-	var Header = function Header() {
-	    return _react2.default.createElement(
-	        'div',
-	        { className: nb("bg1 flex aic acc wrap") },
-	        _react2.default.createElement(
-	            'div',
-	            { className: nb("tc5 fwthin uppercase pv2 mr2 ft6 sans ls3") },
-	            _react2.default.createElement(
-	                _reactRouter.Link,
-	                { to: '/', className: nb("xtd") },
-	                'Neckbeard'
-	            )
-	        ),
-	        _react2.default.createElement(
-	            'div',
-	            { className: nb("tc5 sm-dn md-db fwsemibold ft3 ls1 sans") },
-	            'An Atomic CSS in JS Framework for people with better things to do'
-	        )
-	    );
-	};
+	var Header = function (_React$Component) {
+	    _inherits(Header, _React$Component);
+
+	    function Header() {
+	        _classCallCheck(this, Header);
+
+	        return _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).apply(this, arguments));
+	    }
+
+	    _createClass(Header, [{
+	        key: 'componentDidMount',
+	        value: function componentDidMount() {
+	            var taglines = ['Your kids will thank us', 'The Future', 'Pushing it to the next level for future generations', 'Not your mothers CSS'];
+	            var tagline = document.getElementById('tagline');
+
+	            tagline.innerHTML = taglines[Math.floor(Math.random() * taglines.length)];
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                { className: nb("bg1 flex aic acc wrap") },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: nb("tc5 fwthin uppercase pv2 mr2 ft6 sans ls3") },
+	                    _react2.default.createElement(
+	                        _reactRouter.Link,
+	                        { to: '/', className: nb("xtd") },
+	                        'Neckbeard'
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: nb("tcb sm-dn md-db fwsemibold ft3 ls1 sans"), id: 'tagline' },
+	                    'Default'
+	                )
+	            );
+	        }
+	    }]);
+
+	    return Header;
+	}(_react2.default.Component);
 
 	exports.default = Header;
 	module.exports = exports['default'];
@@ -27478,7 +27521,7 @@
 	            _react2.default.createElement(
 	                NavItem,
 	                { to: '/fonts' },
-	                'Font Size'
+	                'Fonts'
 	            ),
 	            _react2.default.createElement(
 	                NavItem,
@@ -36555,7 +36598,7 @@
 	  var children = _ref.children;
 	  return _react2.default.createElement(
 	    "code",
-	    { className: nb("ft3 brdr1 br3 bcg10 bgg05 pv05 ph05") },
+	    { className: nb("ft3 brdr1 br3 bcg10 bgg05 pv05 ph05 code") },
 	    children
 	  );
 	};
@@ -36764,7 +36807,7 @@
 
 	var snippet3 = "<script>\nimport Neckbeard from 'neckbeard';\n\n// Same settings as above but using Object.assign()\nvar settings = Object.assign({}, Neckbeard.defaultSettings);\n\nsettings.helpers.fontSize = {\n    limit: 20,\n    incrementBy: .10,\n    useBreakpoints: false\n}\n\nvar nb = Neckbeard.create(settings);\n\nnb('pv1 ph1 ft2');\n</script>";
 
-	var snippet4 = "<script>\nimport Neckbeard from 'neckbeard';\n\n// Uses ES6 Destructuring to destructure\n// settings object and retrieve what we need.\nexport default function unicorn({ helpers: { unicorn: { useBreakpoints } }, breakpoints }) {\n    let selectors = {};\n    let media = {};\n\n    /**\n     * My New Helper\n     */\n    selectors[\"unicorn-awesome\"] = {\n        fontSize: \"2rem\",\n        // and so on\n    }\n\n    /**\n     * Media Queries\n     * Adds classes for each breakpoint .{breakpoint}-{selector} and .only-{breakpoint}-{selector}\n     * Example: .only-sm-awesome-unicorn\n     */\n    if (Object.keys(breakpoints).length !== 0 && useBreakpoints) {\n        media = Neckbeard.addMediaQueries(selectors, breakpoints);\n    }\n\n    // Merge it all together in one object and return\n    return { ...selectors, ...media };\n}\n</script>";
+	var snippet4 = "<script>\nimport Neckbeard from 'neckbeard';\n\n// Uses ES6 Destructuring to destructure\n// settings object and retrieve what we need.\nexport default function unicorn({ helpers: { unicorn: { useBreakpoints } }, breakpoints }) {\n    let selectors = {};\n    let media = {};\n\n    /**\n     * My New Helper\n     */\n    selectors[\"unicorn-awesome\"] = {\n        fontSize: \"2rem\",\n        // and so on\n    }\n    // more selectors here\n\n    /**\n     * Media Queries\n     * Adds classes for each breakpoint .{breakpoint}-{selector} and .only-{breakpoint}-{selector}\n     * Example: .only-sm-awesome-unicorn\n     */\n    if (Object.keys(breakpoints).length !== 0 && useBreakpoints) {\n        media = Neckbeard.addMediaQueries(selectors, breakpoints);\n    }\n\n    // Merge it all together in one object and return\n    return { ...selectors, ...media };\n}\n</script>";
 
 	var snippet5 = "<script>\nimport Neckbeard from 'neckbeard';\nimport unicorn from '/path/where/your/helpers/are/unicorn';\n\n// Extend settings\nconst settings = { ...NeckBeard.defaultSettings };\n\nsettings.helpers.unicorn = {\n    useBreakpoints: true\n}\n\n// Extend helpers\nconst helpers = { ...NeckBeard.helpers };\n\nhelpers.unicorn = unicorn;\n\nconst nb = Neckbeard.create(settings, helpers);\n\nnb('unicorn-awesome');\n</script>\n";
 
@@ -36830,7 +36873,7 @@
 	                null,
 	                "Neckbeard.create()"
 	            ),
-	            " function has an optional first parameter (object) to overwrite or extend default settings. You can extend or overwrite settings by using the ",
+	            " function has an optional first parameter (object) to overwrite or extend default settings. You can do this by using the ",
 	            _react2.default.createElement(
 	                "a",
 	                { href: "http://babeljs.io/docs/plugins/transform-object-rest-spread/", className: nb("tc5 xtd h-tc1") },
@@ -36885,7 +36928,7 @@
 	                null,
 	                "Neckbeard.create()"
 	            ),
-	            " function has an optional second parameter (object) to overwrite or extend default helpers. You can extend or overwrite the existing default helpers by using the ",
+	            " function has an optional second parameter (object) to overwrite or extend default helpers. You can do this by using the ",
 	            _react2.default.createElement(
 	                "a",
 	                { href: "http://babeljs.io/docs/plugins/transform-object-rest-spread/", className: nb("tc5 xtd h-tc1") },
@@ -36913,7 +36956,7 @@
 	        _react2.default.createElement(
 	            _Copy2.default,
 	            null,
-	            "To create your own custom helper or component class, write a function that has one parameter for settings and returns an object of selectors. Save your helper function file somewhere handy."
+	            "To create your own custom helper, write a function that has one parameter for settings and returns an object of selectors. Save your helper function file somewhere handy."
 	        ),
 	        _react2.default.createElement(
 	            _reactHighlight2.default,
@@ -37035,6 +37078,11 @@
 	        xlg: 1440
 	    },
 	    colors: (0, _setBeardColors2.default)(),
+	    fonts: {
+	        sans: "Helvetica Neue, Helvetica, Arial, sans-serif",
+	        serif: "Merriweather, Georgia, serif",
+	        code: "Consolas, Monaco, 'Andale Mono', monospace"
+	    },
 	    helpers: {
 	        border: {
 	            limit: 3,
@@ -37059,14 +37107,9 @@
 	            useBreakpoints: true
 	        },
 	        fontFamily: {
-	            useBreakpoints: false,
-                fonts: {
-                    sans: "Helvetica Neue, Helvetica, Arial, sans-serif",
-                    serif: "Merriweather, Georgia, serif",
-                    code: "Consolas, Monaco, 'Andale Mono', monospace"
-                }
+	            useBreakpoints: false
 	        },
-	        fontSizes: {
+	        fontSize: {
 	            limit: 17,
 	            incrementBy: .25,
 	            useBreakpoints: true
@@ -39588,6 +39631,7 @@
 	 */
 	function fontFamily(_ref) {
 	  var useBreakpoints = _ref.helpers.fontFamily.useBreakpoints;
+	  var fonts = _ref.fonts;
 	  var breakpoints = _ref.breakpoints;
 
 	  var selectors = {};
@@ -39596,9 +39640,9 @@
 	  /**
 	   * Font Family Helpers
 	   */
-	  selectors["sans"] = { fontFamily: "Helvetica Neue, Helvetica, Arial, sans-serif" };
-	  selectors["serif"] = { fontFamily: "Merriweather, Georgia, serif" };
-	  selectors["code"] = { fontFamily: "Consolas, Monaco, 'Andale Mono', monospace" };
+	  selectors["sans"] = { fontFamily: fonts.sans };
+	  selectors["serif"] = { fontFamily: fonts.serif };
+	  selectors["code"] = { fontFamily: fonts.code };
 
 	  /**
 	   * Media Queries
@@ -39635,7 +39679,7 @@
 	 * @return {object}
 	 */
 	function fontSize(_ref) {
-	    var _ref$helpers$fontSize = _ref.helpers.fontSizes;
+	    var _ref$helpers$fontSize = _ref.helpers.fontSize;
 	    var limit = _ref$helpers$fontSize.limit;
 	    var incrementBy = _ref$helpers$fontSize.incrementBy;
 	    var useBreakpoints = _ref$helpers$fontSize.useBreakpoints;
@@ -40718,11 +40762,9 @@
 	/**
 	 * Overview Page
 	 */
-	var snippet = "import React, { Component } from \"react\"\n\n// ES6 Modules and CommonJS compatible\nimport Neckbeard from \"neckbeard\"\n\nconst settings = {\n    ...Neckbeard.defaultSettings\n    // Overwrite settings here\n}\n\n// Instantiates Neckbeard and returns a function\n// that accepts a string of approved helpers.\nconst nb = Neckbeard.create(settings)\n\nconst Button = ({ children }) => (\n    <button className={ nb(\"bg1 tcw br3 ft4\") }>\n        { children }\n    </button>\n)\n\nexport default Button\n";
+	var snippet = "<div className={ nb(\"brdr1 bc1 pv1 tac mb2\") }>.brdr1.bc1.pv1.tac.mb2</div>";
 
-	var snippet2 = "<div className={ nb(\"brdr1 bc1 pv1 tac mb2\") }>.brdr1.bc1.pv1</div>";
-
-	var snippet3 = JSON.stringify(_src2.default.defaultSettings.helpers.border, null, '    ');
+	var snippet2 = JSON.stringify(_src2.default.defaultSettings.helpers.border, null, '    ');
 
 	var Border = function Border() {
 	    return _react2.default.createElement(
@@ -40880,12 +40922,12 @@
 	        _react2.default.createElement(
 	            _reactHighlight2.default,
 	            { className: nb("ph2 pv2 mb2 lh5") },
-	            snippet2
+	            snippet
 	        ),
 	        _react2.default.createElement(
 	            "div",
 	            { className: nb("brdr1 bc1 pv1 tac mb2") },
-	            ".brdr1.bc1.pv1"
+	            ".brdr1.bc1.pv1.tac.mb2"
 	        ),
 	        _react2.default.createElement(
 	            _H4.default,
@@ -40910,7 +40952,7 @@
 	                _reactHighlight2.default,
 	                { className: nb("ph2 pv2 lh5") },
 	                "// Neckbeard.defaultSettings.helpers.border \n",
-	                snippet3
+	                snippet2
 	            )
 	        )
 	    );
@@ -42388,9 +42430,13 @@
 	            )
 	        ),
 	        _react2.default.createElement(
-	            _H6.default,
-	            null,
-	            "Content Justification"
+	            "div",
+	            { className: nb("mb1") },
+	            _react2.default.createElement(
+	                _H6.default,
+	                null,
+	                "Content Justification"
+	            )
 	        ),
 	        _react2.default.createElement(
 	            "table",
@@ -42529,9 +42575,13 @@
 	            )
 	        ),
 	        _react2.default.createElement(
-	            _H6.default,
-	            null,
-	            "Item Alignment"
+	            "div",
+	            { className: nb("mb1") },
+	            _react2.default.createElement(
+	                _H6.default,
+	                null,
+	                "Item Alignment"
+	            )
 	        ),
 	        _react2.default.createElement(
 	            "table",
@@ -42670,9 +42720,13 @@
 	            )
 	        ),
 	        _react2.default.createElement(
-	            _H6.default,
-	            null,
-	            "Content Alignment"
+	            "div",
+	            { className: nb("mb1") },
+	            _react2.default.createElement(
+	                _H6.default,
+	                null,
+	                "Content Alignment"
+	            )
 	        ),
 	        _react2.default.createElement(
 	            "table",
@@ -43111,6 +43165,1009 @@
 	};
 
 	exports.default = Float;
+	module.exports = exports["default"];
+
+/***/ },
+/* 441 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _react = __webpack_require__(4);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(175);
+
+	var _src = __webpack_require__(391);
+
+	var _src2 = _interopRequireDefault(_src);
+
+	var _reactHighlight = __webpack_require__(244);
+
+	var _reactHighlight2 = _interopRequireDefault(_reactHighlight);
+
+	var _H = __webpack_require__(385);
+
+	var _H2 = _interopRequireDefault(_H);
+
+	var _H3 = __webpack_require__(386);
+
+	var _H4 = _interopRequireDefault(_H3);
+
+	var _H5 = __webpack_require__(242);
+
+	var _H6 = _interopRequireDefault(_H5);
+
+	var _Copy = __webpack_require__(388);
+
+	var _Copy2 = _interopRequireDefault(_Copy);
+
+	var _Code = __webpack_require__(387);
+
+	var _Code2 = _interopRequireDefault(_Code);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	/**
+	 * Fonts Page
+	 */
+	var snippet = "<div className={ nb(\"md-dn mb2 brdr1 br5 tac pv1\") }>\n    Show content on small to medium breakpoint\n</div>\n\n<div className={ nb(\"dn md-db mb2 brdr1 br5 tac pv1\") }>\n    Show content on large breakpoint\n</div>\n";
+
+	var Fonts = function Fonts() {
+	    return _react2.default.createElement(
+	        "div",
+	        null,
+	        _react2.default.createElement(
+	            _H2.default,
+	            null,
+	            "Fonts"
+	        ),
+	        _react2.default.createElement(
+	            "div",
+	            { className: nb("mb1") },
+	            _react2.default.createElement(
+	                _H6.default,
+	                null,
+	                "Font Family Helpers",
+	                _react2.default.createElement(
+	                    "span",
+	                    { className: nb("tc1 ft3 capitalize fw3 ml1") },
+	                    "Not Responsive"
+	                )
+	            )
+	        ),
+	        _react2.default.createElement(
+	            "table",
+	            { className: nb("w100 mb2 ft4 tcg60 lh2 sans") },
+	            _react2.default.createElement(
+	                "thead",
+	                null,
+	                _react2.default.createElement(
+	                    "tr",
+	                    { className: nb("brdr1--bottom bcg10 bgg05") },
+	                    _react2.default.createElement(
+	                        "th",
+	                        { className: nb("pv1 ph1 tal fwsemibold") },
+	                        "Style"
+	                    ),
+	                    _react2.default.createElement(
+	                        "th",
+	                        { className: nb("pv1 ph1 tal fwsemibold") },
+	                        "Class"
+	                    ),
+	                    _react2.default.createElement(
+	                        "th",
+	                        { className: nb("pv1 ph1 tal fwsemibold") },
+	                        "Default Stack"
+	                    )
+	                )
+	            ),
+	            _react2.default.createElement(
+	                "tbody",
+	                null,
+	                _react2.default.createElement(
+	                    "tr",
+	                    { className: nb("brdr1--bottom bcg10") },
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        "Sans Serif"
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            ".sans"
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            "'Helvetica Neue', Helvetica, Arial, sans-serif"
+	                        )
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "tr",
+	                    { className: nb("brdr1--bottom bcg10") },
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        "Serif"
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            ".serif"
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            "Merriweather, Georgia, serif"
+	                        )
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "tr",
+	                    { className: nb("brdr1--bottom bcg10") },
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        "Code"
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            ".Code"
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            "Consolas, Monaco, 'Andale Mono', monospace"
+	                        )
+	                    )
+	                )
+	            )
+	        ),
+	        _react2.default.createElement(
+	            "div",
+	            { className: nb("mb1") },
+	            _react2.default.createElement(
+	                _H6.default,
+	                null,
+	                "Font Weight Helpers",
+	                _react2.default.createElement(
+	                    "span",
+	                    { className: nb("tc1 ft3 capitalize fw3 ml1") },
+	                    "Not Responsive"
+	                )
+	            )
+	        ),
+	        _react2.default.createElement(
+	            "table",
+	            { className: nb("w100 mb2 ft4 tcg60 lh2 sans") },
+	            _react2.default.createElement(
+	                "thead",
+	                null,
+	                _react2.default.createElement(
+	                    "tr",
+	                    { className: nb("brdr1--bottom bcg10 bgg05") },
+	                    _react2.default.createElement(
+	                        "th",
+	                        { className: nb("pv1 ph1 tal fwsemibold") },
+	                        "Style"
+	                    ),
+	                    _react2.default.createElement(
+	                        "th",
+	                        { className: nb("pv1 ph1 tal fwsemibold") },
+	                        "Class"
+	                    ),
+	                    _react2.default.createElement(
+	                        "th",
+	                        { className: nb("pv1 ph1 tal fwsemibold") },
+	                        "Default Stack"
+	                    )
+	                )
+	            ),
+	            _react2.default.createElement(
+	                "tbody",
+	                null,
+	                _react2.default.createElement(
+	                    "tr",
+	                    { className: nb("brdr1--bottom bcg10") },
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        "Thin"
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            "100"
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            ".fw1"
+	                        ),
+	                        " or ",
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            ".fwthin"
+	                        )
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "tr",
+	                    { className: nb("brdr1--bottom bcg10") },
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        "Extra Light"
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            "200"
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            ".fw2"
+	                        ),
+	                        " or ",
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            ".fwxlight"
+	                        )
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "tr",
+	                    { className: nb("brdr1--bottom bcg10") },
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        "Light"
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            "300"
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            ".fw3"
+	                        ),
+	                        " or ",
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            ".fwlight"
+	                        )
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "tr",
+	                    { className: nb("brdr1--bottom bcg10") },
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        "Normal"
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            "400"
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            ".fw4"
+	                        ),
+	                        " or ",
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            ".fwnormal"
+	                        )
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "tr",
+	                    { className: nb("brdr1--bottom bcg10") },
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        "Medium"
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            "500"
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            ".fw5"
+	                        ),
+	                        " or ",
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            ".fwmedium"
+	                        )
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "tr",
+	                    { className: nb("brdr1--bottom bcg10") },
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        "Semibold"
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            "600"
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            ".fw6"
+	                        ),
+	                        " or ",
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            ".fwsemibold"
+	                        )
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "tr",
+	                    { className: nb("brdr1--bottom bcg10") },
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        "Bold"
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            "700"
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            ".fw7"
+	                        ),
+	                        " or ",
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            ".fwbold"
+	                        )
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "tr",
+	                    { className: nb("brdr1--bottom bcg10") },
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        "Extra Bold"
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            "800"
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            ".fw8"
+	                        ),
+	                        " or ",
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            ".fwxbold"
+	                        )
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "tr",
+	                    { className: nb("brdr1--bottom bcg10") },
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        "Black"
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            "900"
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            ".fw9"
+	                        ),
+	                        " or ",
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            ".fwblack"
+	                        )
+	                    )
+	                )
+	            )
+	        ),
+	        _react2.default.createElement(
+	            "div",
+	            { className: nb("mb1") },
+	            _react2.default.createElement(
+	                _H6.default,
+	                null,
+	                "Font Size Helpers"
+	            )
+	        ),
+	        _react2.default.createElement(
+	            "table",
+	            { className: nb("w100 mb2 ft4 tcg60 lh2 sans") },
+	            _react2.default.createElement(
+	                "thead",
+	                null,
+	                _react2.default.createElement(
+	                    "tr",
+	                    { className: nb("brdr1--bottom bcg10 bgg05") },
+	                    _react2.default.createElement(
+	                        "th",
+	                        { className: nb("pv1 ph1 tal fwsemibold") },
+	                        "Style"
+	                    ),
+	                    _react2.default.createElement(
+	                        "th",
+	                        { className: nb("pv1 ph1 tal fwsemibold") },
+	                        "Class"
+	                    ),
+	                    _react2.default.createElement(
+	                        "th",
+	                        { className: nb("pv1 tal fwsemibold") },
+	                        "Default Stack"
+	                    )
+	                )
+	            ),
+	            _react2.default.createElement(
+	                "tbody",
+	                null,
+	                _react2.default.createElement(
+	                    "tr",
+	                    { className: nb("brdr1--bottom bcg10") },
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1 vam") },
+	                        "Font Level 1"
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1 vam") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            ".ft1"
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("vam pv1 ft1") },
+	                        "Hi"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "tr",
+	                    { className: nb("brdr1--bottom bcg10") },
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1 vam") },
+	                        "Font Level 2"
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1 vam") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            ".ft2"
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("vam pv1 ft2") },
+	                        "Hi"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "tr",
+	                    { className: nb("brdr1--bottom bcg10") },
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1 vam") },
+	                        "Font Level 3"
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1 vam") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            ".ft3"
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("vam pv1 ft3") },
+	                        "Hi"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "tr",
+	                    { className: nb("brdr1--bottom bcg10") },
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1 vam") },
+	                        "Font Level 4"
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1 vam") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            ".ft4"
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("vam pv1 ft4") },
+	                        "Hi"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "tr",
+	                    { className: nb("brdr1--bottom bcg10") },
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1 vam") },
+	                        "Font Level 5"
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1 vam") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            ".ft4"
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("vam pv1 ft5") },
+	                        "Hi"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "tr",
+	                    { className: nb("brdr1--bottom bcg10") },
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1 vam") },
+	                        "Font Level 6"
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1 vam") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            ".ft4"
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("vam pv1 ft6") },
+	                        "Hi"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "tr",
+	                    { className: nb("brdr1--bottom bcg10") },
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1 vam") },
+	                        "Font Level 7"
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1 vam") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            ".ft7"
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("vam pv1 ft7") },
+	                        "Hi"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "tr",
+	                    { className: nb("brdr1--bottom bcg10") },
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1 vam") },
+	                        "Font Level 8"
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1 vam") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            ".ft8"
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("vam pv1 ft8") },
+	                        "Hi"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "tr",
+	                    { className: nb("brdr1--bottom bcg10") },
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1 vam") },
+	                        "Font Level 9"
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1 vam") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            ".ft9"
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("vam pv1 ft9") },
+	                        "Hi"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "tr",
+	                    { className: nb("brdr1--bottom bcg10") },
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1 vam") },
+	                        "Font Level 10"
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1 vam") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            ".ft10"
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("vam pv1 ft10") },
+	                        "Hi"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "tr",
+	                    { className: nb("brdr1--bottom bcg10") },
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1 vam") },
+	                        "Font Level 11"
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1 vam") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            ".ft11"
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("vam pv1 ft10") },
+	                        "Hi"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "tr",
+	                    { className: nb("brdr1--bottom bcg10") },
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1 vam") },
+	                        "Font Level 12"
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1 vam") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            ".ft12"
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("vam pv1 ft12") },
+	                        "Hi"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "tr",
+	                    { className: nb("brdr1--bottom bcg10") },
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1 vam") },
+	                        "Font Level 13"
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1 vam") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            ".ft13"
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("vam pv1 ft13") },
+	                        "Hi"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "tr",
+	                    { className: nb("brdr1--bottom bcg10") },
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1 vam") },
+	                        "Font Level 14"
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1 vam") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            ".ft14"
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("vam pv1 ft14") },
+	                        "Hi"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "tr",
+	                    { className: nb("brdr1--bottom bcg10") },
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1 vam") },
+	                        "Font Level 15"
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1 vam") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            ".ft15"
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("vam pv1 ft15") },
+	                        "Hi"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "tr",
+	                    { className: nb("brdr1--bottom bcg10") },
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1 vam") },
+	                        "Font Level 16"
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1 vam") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            ".ft16"
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("vam pv1 ft16") },
+	                        "Hi"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "tr",
+	                    { className: nb("brdr1--bottom bcg10") },
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1 vam") },
+	                        "Font Level 17"
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv1 ph1 vam") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            ".ft17"
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("vam pv1 ft17") },
+	                        "Hi"
+	                    )
+	                )
+	            )
+	        ),
+	        _react2.default.createElement(
+	            _H4.default,
+	            null,
+	            "Default Settings"
+	        ),
+	        _react2.default.createElement(
+	            "div",
+	            { className: nb("lh5 mb2") },
+	            _react2.default.createElement(
+	                _Copy2.default,
+	                null,
+	                "See ",
+	                _react2.default.createElement(
+	                    _reactRouter.Link,
+	                    { to: "/usage#configuration", className: nb("tc5 xtd h-tc1") },
+	                    "Configuration"
+	                ),
+	                " to learn how to overwrite helper settings."
+	            ),
+	            _react2.default.createElement(
+	                _reactHighlight2.default,
+	                { className: nb("ph2 pv2 mb2") },
+	                "// Neckbeard.defaultSettings.helpers.fontFamily \n",
+	                JSON.stringify(_src2.default.defaultSettings.helpers.fontFamily, null, '    ')
+	            ),
+	            _react2.default.createElement(
+	                _reactHighlight2.default,
+	                { className: nb("ph2 pv2 mb2") },
+	                "// Neckbeard.defaultSettings.helpers.fontWeight \n",
+	                JSON.stringify(_src2.default.defaultSettings.helpers.fontWeight, null, '    ')
+	            ),
+	            _react2.default.createElement(
+	                _reactHighlight2.default,
+	                { className: nb("ph2 pv2") },
+	                "// Neckbeard.defaultSettings.helpers.fontSize \n",
+	                JSON.stringify(_src2.default.defaultSettings.helpers.fontSize, null, '    ')
+	            )
+	        )
+	    );
+	};
+
+	exports.default = Fonts;
 	module.exports = exports["default"];
 
 /***/ }
