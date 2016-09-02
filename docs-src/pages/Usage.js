@@ -117,21 +117,20 @@ const Usage = () => (
         <H2>The Basics</H2>
         <Copy>
             After installing Neckbeard via NPM or CDN you'll need to call the <Code>Neckbeard.create()</Code> function and assign it to a variable.
-            Run the new function by passing in a string of helper classes.
         </Copy>
+        <Highlight className={ nb("ph2 pv2 lh3 mb2") }>
+            { snippet }
+        </Highlight>
         <Copy>
             Neckbeard.create([ settings, helpers ])
             <div className={ nb("ph1 pt1 tcg40 sm-mb1 md-xmb") }>- settings (optional) - An object of all available settings</div>
             <div className={ nb("ph1 tcg40 sm-mb1 md-xmb") }>- helpers (optional) - An object of all available helper functions</div>
         </Copy>
-        <Highlight className={ nb("ph2 pv2 lh3 mb2") }>
-            { snippet }
-        </Highlight>
         <a name="configuration"></a>
         <H2>Configuration</H2>
         <Copy>
             The <Code>Neckbeard.create()</Code> function has an optional first parameter (object) to overwrite or extend default settings.
-            You can extend or overwrite the existing default settings by using the <a href="http://babeljs.io/docs/plugins/transform-object-rest-spread/" className={ nb("tc5 xtd h-tc1") }>Object Spread Syntax</a> <Code>...nb.defaultSettings</Code> or <Code>Object.assign()</Code>.
+            You can extend or overwrite settings by using the <a href="http://babeljs.io/docs/plugins/transform-object-rest-spread/" className={ nb("tc5 xtd h-tc1") }>Object Spread Syntax</a> <Code>...nb.defaultSettings</Code> or <Code>Object.assign()</Code>.
         </Copy>
         <Copy>
             Neckbeard has Default Settings for all helpers and can be found on the Neckbeard object as <Code>Neckbeard.defaultSettings</Code>.

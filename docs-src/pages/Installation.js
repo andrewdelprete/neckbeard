@@ -47,7 +47,7 @@ const Installation = () => (
         </Highlight>
         <H2>CDN</H2>
         <Highlight className={ nb("ph2 pv2 mb2") }>
-            { '<script src="https://www.npmjs.com/package/neckbeard"></script>' }
+            { '<script src="https://unpkg.com/neckbeard"></script>' }
         </Highlight>
         <Copy>
             Using the CDN option Neckbeard is added as a global <Code>window.Neckbeard</Code>
