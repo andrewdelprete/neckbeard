@@ -30,9 +30,9 @@ const Fonts = () => (
         <table className={ nb("w100 mb2 ft4 tcg60 lh2 sans") }>
             <thead>
                 <tr className={ nb("brdr1--bottom bcg10 bgg05") }>
-                    <th className={ nb("pv1 ph1 tal fwsemibold ph1") }>Style</th>
-                    <th className={ nb("pv1 ph1 tal fwsemibold ph1") }>Class</th>
-                    <th className={ nb("pv1 ph1 tal fwsemibold ph1") }>Default Stack</th>
+                    <th className={ nb("pv1 ph1 tal fwsemibold") }>Style</th>
+                    <th className={ nb("pv1 ph1 tal fwsemibold") }>Class</th>
+                    <th className={ nb("pv1 ph1 tal fwsemibold") }>Default Stack</th>
                 </tr>
             </thead>
             <tbody>
@@ -60,9 +60,9 @@ const Fonts = () => (
         <table className={ nb("w100 mb2 ft4 tcg60 lh2 sans") }>
             <thead>
                 <tr className={ nb("brdr1--bottom bcg10 bgg05") }>
-                    <th className={ nb("pv1 ph1 tal fwsemibold ph1") }>Style</th>
-                    <th className={ nb("pv1 ph1 tal fwsemibold ph1") }>Class</th>
-                    <th className={ nb("pv1 ph1 tal fwsemibold ph1") }>Default Stack</th>
+                    <th className={ nb("pv1 ph1 tal fwsemibold") }>Style</th>
+                    <th className={ nb("pv1 ph1 tal fwsemibold") }>Class</th>
+                    <th className={ nb("pv1 ph1 tal fwsemibold") }>Default Stack</th>
                 </tr>
             </thead>
             <tbody>
@@ -120,9 +120,9 @@ const Fonts = () => (
         <table className={ nb("w100 mb2 ft4 tcg60 lh2 sans") }>
             <thead>
                 <tr className={ nb("brdr1--bottom bcg10 bgg05") }>
-                    <th className={ nb("pv1 ph1 tal fwsemibold ph1") }>Style</th>
-                    <th className={ nb("pv1 ph1 tal fwsemibold ph1") }>Class</th>
-                    <th className={ nb("pv1 ph1 tal fwsemibold ph1") }>Default Stack</th>
+                    <th className={ nb("pv1 ph1 tal fwsemibold") }>Style</th>
+                    <th className={ nb("pv1 ph1 tal fwsemibold") }>Class</th>
+                    <th className={ nb("pv1 tal fwsemibold") }>Default Stack</th>
                 </tr>
             </thead>
             <tbody>
@@ -221,11 +221,11 @@ const Fonts = () => (
                 {"// Neckbeard.defaultSettings.helpers.fontFamily \n" }
                 { JSON.stringify(Neckbeard.defaultSettings.helpers.fontFamily, null, '    ') }
             </Highlight>
-            <Highlight className={ nb("ph2 pv2") }>
+            <Highlight className={ nb("ph2 pv2 mb2") }>
                 {"// Neckbeard.defaultSettings.helpers.fontWeight \n" }
                 { JSON.stringify(Neckbeard.defaultSettings.helpers.fontWeight, null, '    ') }
             </Highlight>
-            <Highlight className={ nb("ph2 pv2 mb2") }>
+            <Highlight className={ nb("ph2 pv2") }>
                 {"// Neckbeard.defaultSettings.helpers.fontSize \n" }
                 { JSON.stringify(Neckbeard.defaultSettings.helpers.fontSize, null, '    ') }
             </Highlight>
