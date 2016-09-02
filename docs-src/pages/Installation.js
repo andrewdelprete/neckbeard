@@ -55,7 +55,7 @@ const Installation = () => (
         <H2>No  Magical Unicorn?</H2>
         <Copy>If you don't want to utilize CSS in JS, have no fear, we've exported all the helpers into a CSS file for you. Keep in mind this is a static CSS file and you won't be able to adjust settings.</Copy>
         <Highlight className={ nb("ph2 pv2 mb2") }>
-            { '<link href="https://npmcdn.com/neckbeard/build/nb.css" rel="stylesheet" />' }
+            { '<link href="https://unpkg.com/neckbeard/build/nb.css" rel="stylesheet" />' }
         </Highlight>
     </div>
 )

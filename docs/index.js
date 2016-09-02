@@ -36687,7 +36687,7 @@
 	        _react2.default.createElement(
 	            _reactHighlight2.default,
 	            { className: nb("ph2 pv2 mb2") },
-	            '<link href="https://npmcdn.com/neckbeard/build/nb.css" rel="stylesheet" />'
+	            '<link href="https://unpkg.com/neckbeard/build/nb.css" rel="stylesheet" />'
 	        )
 	    );
 	};
