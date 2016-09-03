@@ -20,6 +20,13 @@ import Fonts from './pages/Fonts'
 import Grid from './pages/Grid'
 import LetterSpacing from './pages/LetterSpacing'
 import LineHeight from './pages/LineHeight'
+import Misc from './pages/Misc'
+import Overflow from './pages/Overflow'
+import Position from './pages/Position'
+import Spacing from './pages/Spacing'
+import TextAlignment from './pages/TextAlignment'
+import TextDecoration from './pages/TextDecoration'
+import ZIndex from './pages/ZIndex'
 
 import Neckbeard from '../src'
 
@@ -58,6 +65,13 @@ ReactDOM.render((
             <Route path="/grid" component={ Grid } />
             <Route path="/letter-spacing" component={ LetterSpacing } />
             <Route path="/line-height" component={ LineHeight } />
+            <Route path="/misc" component={ Misc } />
+            <Route path="/overflow" component={ Overflow } />
+            <Route path="/position" component={ Position } />
+            <Route path="/spacing" component={ Spacing } />
+            <Route path="/text-alignment" component={ TextAlignment } />
+            <Route path="/text-decoration" component={ TextDecoration } />
+            <Route path="/z-index" component={ ZIndex } />
         </Route>
     </Router>
 ), document.getElementById('app'))

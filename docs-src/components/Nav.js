@@ -46,6 +46,7 @@ const Nav = () => (
             <NavItem to="/spacing">Spacing</NavItem>
             <NavItem to="/text-alignment">Text Alignment</NavItem>
             <NavItem to="/text-decoration">Text Decoration</NavItem>
+            <NavItem to="/z-index">Z Index</NavItem>
         </ul>
     </nav>
 )

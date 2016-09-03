@@ -14,6 +14,9 @@ export default function spacing({ helpers: { spacing: { limit, incrementBy, resp
     /**
      * Margin
      */
+    selectors["ma"] = {
+        "margin": "0.5rem"
+    }
     selectors["mh05"] = {
         "margin-left": "0.5rem",
         "margin-right": "0.5rem",
@@ -36,6 +39,9 @@ export default function spacing({ helpers: { spacing: { limit, incrementBy, resp
     }
 
     for (let x = incrementBy; x <= limit; x += incrementBy) {
+        selectors[`ma{ x }`] = {
+            "margin": `${ x * incrementBy }rem`,
+        }
         selectors[`mh${ x }`] = {
             "margin-left": `${ x * incrementBy }rem`,
             "margin-right": `${ x * incrementBy }rem`
@@ -83,6 +89,9 @@ export default function spacing({ helpers: { spacing: { limit, incrementBy, resp
     /**
      * Padding
      */
+    selectors["pa05"] = {
+        padding: "0.5rem"
+    }
     selectors["ph05"] = {
         "padding-left": "0.5rem",
         "padding-right": "0.5rem",
@@ -104,6 +113,9 @@ export default function spacing({ helpers: { spacing: { limit, incrementBy, resp
         "padding-top": "0.5rem"
     }
     for (let x = 1; x <= limit; x++) {
+        selectors[`pa${ x }`] = {
+            "padding": `${ x * incrementBy }rem`,
+        }
         selectors[`ph${ x }`] = {
             "padding-left": `${ x * incrementBy }rem`,
             "padding-right": `${ x * incrementBy }rem`

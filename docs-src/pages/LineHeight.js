@@ -30,47 +30,47 @@ const LineHeight = () => (
                 </tr>
             </thead>
             <tbody>
-                    <tr className={ nb("brdr1--bottom bcg10") }>
-                        <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.lh1</Code></td>
-                        <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>line-height: 1</Code></td>
-                    </tr>
-                    <tr className={ nb("brdr1--bottom bcg10") }>
-                        <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.lh2</Code></td>
-                        <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>line-height: 1.1</Code></td>
-                    </tr>
-                    <tr className={ nb("brdr1--bottom bcg10") }>
-                        <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.lh3</Code></td>
-                        <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>line-height: 1.3</Code></td>
-                    </tr>
-                    <tr className={ nb("brdr1--bottom bcg10") }>
-                        <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.lh4</Code></td>
-                        <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>line-height: 1.4</Code></td>
-                    </tr>
-                    <tr className={ nb("brdr1--bottom bcg10") }>
-                        <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.lh5</Code></td>
-                        <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>line-height: 1.4</Code></td>
-                    </tr>
-                    <tr className={ nb("brdr1--bottom bcg10") }>
-                        <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.lh6</Code></td>
-                        <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>line-height: 1.6</Code></td>
-                    </tr>
-                    <tr className={ nb("brdr1--bottom bcg10") }>
-                        <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.lh7</Code></td>
-                        <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>line-height: 1.7</Code></td>
-                    </tr>
-                    <tr className={ nb("brdr1--bottom bcg10") }>
-                        <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.lh8</Code></td>
-                        <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>line-height: 1.8</Code></td>
-                    </tr>
-                    <tr className={ nb("brdr1--bottom bcg10") }>
-                        <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.lh9</Code></td>
-                        <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>line-height: 1.9</Code></td>
-                    </tr>
-                    <tr className={ nb("brdr1--bottom bcg10") }>
-                        <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.lh10</Code></td>
-                        <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>line-height: 2</Code></td>
-                    </tr>
-                </tbody>
+                <tr className={ nb("brdr1--bottom bcg10") }>
+                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.lh1</Code></td>
+                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>line-height: 1rem</Code></td>
+                </tr>
+                <tr className={ nb("brdr1--bottom bcg10") }>
+                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.lh2</Code></td>
+                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>line-height: 1.1rem</Code></td>
+                </tr>
+                <tr className={ nb("brdr1--bottom bcg10") }>
+                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.lh3</Code></td>
+                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>line-height: 1.3rem</Code></td>
+                </tr>
+                <tr className={ nb("brdr1--bottom bcg10") }>
+                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.lh4</Code></td>
+                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>line-height: 1.4rem</Code></td>
+                </tr>
+                <tr className={ nb("brdr1--bottom bcg10") }>
+                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.lh5</Code></td>
+                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>line-height: 1.5rem</Code></td>
+                </tr>
+                <tr className={ nb("brdr1--bottom bcg10") }>
+                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.lh6</Code></td>
+                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>line-height: 1.6rem</Code></td>
+                </tr>
+                <tr className={ nb("brdr1--bottom bcg10") }>
+                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.lh7</Code></td>
+                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>line-height: 1.7rem</Code></td>
+                </tr>
+                <tr className={ nb("brdr1--bottom bcg10") }>
+                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.lh8</Code></td>
+                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>line-height: 1.8rem</Code></td>
+                </tr>
+                <tr className={ nb("brdr1--bottom bcg10") }>
+                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.lh9</Code></td>
+                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>line-height: 1.9rem</Code></td>
+                </tr>
+                <tr className={ nb("brdr1--bottom bcg10") }>
+                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.lh10</Code></td>
+                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>line-height: 2rem</Code></td>
+                </tr>
+            </tbody>
         </table>
 
         <H2>Default Settings</H2>

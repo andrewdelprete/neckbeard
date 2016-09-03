@@ -54,7 +54,7 @@ export const defaultSettings = {
             responsive: false,
         },
         fontSize: {
-            limit: 17,
+            limit: 10,
             incrementBy: .25,
             responsive: true
         },
@@ -78,7 +78,8 @@ export const defaultSettings = {
             responsive: true
         },
         misc: {
-            responsive: false
+            responsive: false,
+            siteWidth: "114rem"
         },
         overflow: {
             responsive: false
@@ -102,8 +103,7 @@ export const defaultSettings = {
             incrementBy: 1,
             responsive: true
         }
-    },
-    siteWidth: "114rem"
+    }
 }
 
 /**

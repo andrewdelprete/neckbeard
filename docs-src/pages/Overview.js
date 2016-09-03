@@ -9,13 +9,13 @@ import Copy from "../components/elements/Copy"
 /**
  * Overview Page
  */
-const snippet1 =
-`import React, { Component } from "react"
-import Neckbeard from "neckbeard"
+const snippet1 = `<script>
+import React, { Component } from "react";
+import Neckbeard from "neckbeard";
 
 // Instantiates Neckbeard and returns a function
 // that accepts a string of approved helpers.
-const nb = Neckbeard.create()
+const nb = Neckbeard.create();
 
 const Button = ({ children }) => (
     // Pass a string of helper classes
@@ -26,6 +26,7 @@ const Button = ({ children }) => (
 )
 
 export default Button
+</script>
 `
 const Installation = () => (
     <div>
@@ -66,12 +67,14 @@ const Installation = () => (
         </Copy>
 
         <H3>Example Usage in React</H3>
-        <div className={ nb("lh4") }>
+        <div className={ nb("lh4 mb2") }>
             <Highlight className={ nb("ph2 pv2") }>
                 { snippet1 }
             </Highlight>
         </div>
-        <Copy></Copy>
+        <Copy>
+            <span className={ nb('fwsemibold') }>*Note</span> - The <Code>{ "<script></script>" }</Code> tags in these examples are for highlighting purposes only.
+        </Copy>
     </div>
 )
 

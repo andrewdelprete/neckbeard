@@ -181,41 +181,6 @@ const Fonts = () => (
                     <td className={ nb("tcg50 fw3 pv1 ph1 vam") }><Code>.ft10</Code></td>
                     <td className={ nb("vam pv1 ft10") }>Hi</td>
                 </tr>
-                <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1 vam") }>Font Level 11</td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1 vam") }><Code>.ft11</Code></td>
-                    <td className={ nb("vam pv1 ft10") }>Hi</td>
-                </tr>
-                <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1 vam") }>Font Level 12</td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1 vam") }><Code>.ft12</Code></td>
-                    <td className={ nb("vam pv1 ft12") }>Hi</td>
-                </tr>
-                <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1 vam") }>Font Level 13</td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1 vam") }><Code>.ft13</Code></td>
-                    <td className={ nb("vam pv1 ft13") }>Hi</td>
-                </tr>
-                <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1 vam") }>Font Level 14</td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1 vam") }><Code>.ft14</Code></td>
-                    <td className={ nb("vam pv1 ft14") }>Hi</td>
-                </tr>
-                <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1 vam") }>Font Level 15</td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1 vam") }><Code>.ft15</Code></td>
-                    <td className={ nb("vam pv1 ft15") }>Hi</td>
-                </tr>
-                <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1 vam") }>Font Level 16</td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1 vam") }><Code>.ft16</Code></td>
-                    <td className={ nb("vam pv1 ft16") }>Hi</td>
-                </tr>
-                <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1 vam") }>Font Level 17</td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1 vam") }><Code>.ft17</Code></td>
-                    <td className={ nb("vam pv1 ft17") }>Hi</td>
-                </tr>
             </tbody>
         </table>
 
