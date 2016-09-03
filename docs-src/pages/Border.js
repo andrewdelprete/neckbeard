@@ -16,7 +16,10 @@ const snippet2 = JSON.stringify(Neckbeard.defaultSettings.helpers.border, null, 
 
 const Border = () => (
     <div>
-        <H1>Border</H1>
+        <H1>
+            Border
+            <span className={ nb("tc1 ft3 capitalize fw3 ml1") }>Responsive</span>
+        </H1>
         <H2>Options</H2>
         <table className={ nb("w100 mb2 ft4 tcg60 lh2 sans") }>
             <thead>

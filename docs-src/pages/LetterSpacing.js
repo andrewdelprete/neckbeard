@@ -17,7 +17,10 @@ const snippet = `<div className={ nb("md-ls2 lg-ls5 xlg-ls8 mb2 brdr1 br5 tac pv
 
 const LetterSpacing = () => (
     <div>
-        <H1>Letter Spacing</H1>
+        <H1>
+            Letter Spacing
+            <span className={ nb("tc1 ft3 capitalize fw3 ml1") }>Responsive</span>
+        </H1>
         <H2>Options</H2>
         <table className={ nb("w100 mb2 ft4 tcg60 lh2 sans") }>
             <thead>

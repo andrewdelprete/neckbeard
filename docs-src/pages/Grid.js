@@ -24,7 +24,10 @@ const snippet = `<div className={ nb("frame mb2") }>
 
 const Grid = () => (
     <div>
-        <H1>Grid</H1>
+        <H1>
+            Grid
+            <span className={ nb("tc1 ft3 capitalize fw3 ml1") }>Responsive</span>
+        </H1>
         <div className={ nb("mb1") }>
             <H3>12-column Grid</H3>
         </div>

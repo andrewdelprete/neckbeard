@@ -41,7 +41,10 @@ const snippet2 = `<div className={ nb("bgsuccess bcsuccess br5 pv1 tac tcw mb2 f
 
 const Color = () => (
     <div>
-        <H1>Colors</H1>
+        <H1>
+            Colors
+            <span className={ nb("tc1 ft3 capitalize fw3 ml1") }>Responsive</span>
+        </H1>
         <div className={ nb("mb2") }>
             <div className={ nb("frame xmh") }>
                 <div className={ nb("blk6 xph") }><div className={ nb("pv2 ph1 flex jcc bgsuccess tcw") }>.bgsuccess</div></div>

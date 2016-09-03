@@ -22,7 +22,9 @@ const snippet = `<div className={ nb("md-dn mb2 brdr1 br5 tac pv1") }>
 
 const Fonts = () => (
     <div>
-        <H1>Fonts</H1>
+        <H1>
+            Fonts
+        </H1>
         {/* <H2>Options</H2> */}
         <div className={ nb("mb1") }>
             <H3>Font Family Helpers<span className={ nb("tc1 ft3 capitalize fw3 ml1") }>Not Responsive</span></H3>
@@ -115,7 +117,10 @@ const Fonts = () => (
         </table>
 
         <div className={ nb("mb1") }>
-            <H3>Font Size Helpers</H3>
+            <H3>
+                Font Size Helpers
+                <span className={ nb("tc1 ft3 capitalize fw3 ml1") }>Responsive</span>
+            </H3>
         </div>
         <table className={ nb("w100 mb2 ft4 tcg60 lh2 sans") }>
             <thead>
