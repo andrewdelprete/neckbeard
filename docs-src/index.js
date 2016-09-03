@@ -17,6 +17,7 @@ import Display from './pages/Display'
 import Flexbox from './pages/Flexbox'
 import Float from './pages/Float'
 import Fonts from './pages/Fonts'
+import Grid from './pages/Grid'
 
 import Neckbeard from '../src'
 
@@ -52,6 +53,7 @@ ReactDOM.render((
             <Route path="/flexbox" component={ Flexbox } />
             <Route path="/float" component={ Float } />
             <Route path="/fonts" component={ Fonts } />
+            <Route path="/grid" component={ Grid } />
         </Route>
     </Router>
 ), document.getElementById('app'))
