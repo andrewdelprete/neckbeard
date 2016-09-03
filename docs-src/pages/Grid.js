@@ -28,7 +28,7 @@ const Grid = () => (
         <div className={ nb("mb1") }>
             <H3>12-column Grid</H3>
         </div>
-        <Copy>Beard ships with a standard 12-column grid and provides responsive helper classes to change the layout when the viewport reaches a certain breakpoint. It also supports nested grids and non-responsive grids for increased flexibility.</Copy>
+        <Copy>Neckbeard like Beard ships with a standard 12-column grid and provides responsive helper classes to change the layout when the viewport reaches a certain breakpoint. It also supports nested grids and non-responsive grids for increased flexibility.</Copy>
         <BlockQuote>
             Hint: To get the grid to maintain its ratios on the small breakpoint, use the <Code type="purple">.frame--stay</Code> modifier on your <Code type="purple">.frame</Code> wrapper.
         </BlockQuote>

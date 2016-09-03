@@ -113,6 +113,10 @@
 
 	var _Fonts2 = _interopRequireDefault(_Fonts);
 
+	var _Grid = __webpack_require__(442);
+
+	var _Grid2 = _interopRequireDefault(_Grid);
+
 	var _src = __webpack_require__(391);
 
 	var _src2 = _interopRequireDefault(_src);
@@ -151,7 +155,8 @@
 	        _react2.default.createElement(_reactRouter.Route, { path: '/display', component: _Display2.default }),
 	        _react2.default.createElement(_reactRouter.Route, { path: '/flexbox', component: _Flexbox2.default }),
 	        _react2.default.createElement(_reactRouter.Route, { path: '/float', component: _Float2.default }),
-	        _react2.default.createElement(_reactRouter.Route, { path: '/fonts', component: _Fonts2.default })
+	        _react2.default.createElement(_reactRouter.Route, { path: '/fonts', component: _Fonts2.default }),
+	        _react2.default.createElement(_reactRouter.Route, { path: '/grid', component: _Grid2.default })
 	    )
 	), document.getElementById('app'));
 
@@ -36582,7 +36587,7 @@
 	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+	    value: true
 	});
 
 	var _react = __webpack_require__(4);
@@ -36595,12 +36600,20 @@
 	 * Code
 	 */
 	var Code = function Code(_ref) {
-	  var children = _ref.children;
-	  return _react2.default.createElement(
-	    "code",
-	    { className: nb("ft3 brdr1 br3 bcg10 bgg05 pv05 ph05 code") },
-	    children
-	  );
+	    var children = _ref.children;
+	    var _ref$type = _ref.type;
+	    var type = _ref$type === undefined ? "gray" : _ref$type;
+
+	    var classes = {
+	        gray: "ft3 brdr1 br3 bcg10 bgg05 pv05 ph05 code",
+	        purple: "ft3 br3 xbrdr bg5 pv05 ph05 tcw code"
+	    };
+
+	    return _react2.default.createElement(
+	        "code",
+	        { className: nb(classes[type]) },
+	        children
+	    );
 	};
 
 	exports.default = Code;
@@ -44174,6 +44187,452 @@
 	};
 
 	exports.default = Fonts;
+	module.exports = exports["default"];
+
+/***/ },
+/* 442 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _react = __webpack_require__(4);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(175);
+
+	var _src = __webpack_require__(391);
+
+	var _src2 = _interopRequireDefault(_src);
+
+	var _reactHighlight = __webpack_require__(244);
+
+	var _reactHighlight2 = _interopRequireDefault(_reactHighlight);
+
+	var _H = __webpack_require__(385);
+
+	var _H2 = _interopRequireDefault(_H);
+
+	var _H3 = __webpack_require__(386);
+
+	var _H4 = _interopRequireDefault(_H3);
+
+	var _H5 = __webpack_require__(242);
+
+	var _H6 = _interopRequireDefault(_H5);
+
+	var _Copy = __webpack_require__(388);
+
+	var _Copy2 = _interopRequireDefault(_Copy);
+
+	var _Code = __webpack_require__(387);
+
+	var _Code2 = _interopRequireDefault(_Code);
+
+	var _BlockQuote = __webpack_require__(443);
+
+	var _BlockQuote2 = _interopRequireDefault(_BlockQuote);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	/**
+	 * Grid Page
+	 */
+	var snippet = "<div className={ nb(\"frame mb2\") }>\n    <div className={ nb(\"blk md-blk6\") }>\n        <div className={ nb(\"bgg05 flex pv1 ph2 jcc aic tcg30 ft3\") }>.blk.md-blk6</div>\n    </div>\n    <div className={ nb(\"blk md-blk6\") }>\n        <div className={ nb(\"bgg05 flex pv1 ph2 jcc aic tcg30 ft3\") }>.blk.md-blk6</div>\n    </div>\n</div>\n";
+
+	var Grid = function Grid() {
+	    return _react2.default.createElement(
+	        "div",
+	        null,
+	        _react2.default.createElement(
+	            _H2.default,
+	            null,
+	            "Grid"
+	        ),
+	        _react2.default.createElement(
+	            "div",
+	            { className: nb("mb1") },
+	            _react2.default.createElement(
+	                _H6.default,
+	                null,
+	                "12-column Grid"
+	            )
+	        ),
+	        _react2.default.createElement(
+	            _Copy2.default,
+	            null,
+	            "Beard ships with a standard 12-column grid and provides responsive helper classes to change the layout when the viewport reaches a certain breakpoint. It also supports nested grids and non-responsive grids for increased flexibility."
+	        ),
+	        _react2.default.createElement(
+	            _BlockQuote2.default,
+	            null,
+	            "Hint: To get the grid to maintain its ratios on the small breakpoint, use the ",
+	            _react2.default.createElement(
+	                _Code2.default,
+	                { type: "purple" },
+	                ".frame--stay"
+	            ),
+	            " modifier on your ",
+	            _react2.default.createElement(
+	                _Code2.default,
+	                { type: "purple" },
+	                ".frame"
+	            ),
+	            " wrapper."
+	        ),
+	        _react2.default.createElement(
+	            "div",
+	            { className: nb("frame mb2") },
+	            _react2.default.createElement(
+	                "div",
+	                { className: nb("blk md-blk6") },
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("bgg05 flex pv1 ph2 jcc aic tcg30 ft3") },
+	                    ".blk.md-blk6"
+	                )
+	            ),
+	            _react2.default.createElement(
+	                "div",
+	                { className: nb("blk md-blk6") },
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("bgg05 flex pv1 ph2 jcc aic tcg30 ft3") },
+	                    ".blk.md-blk6"
+	                )
+	            )
+	        ),
+	        _react2.default.createElement(
+	            "div",
+	            { className: nb("frame mb2") },
+	            _react2.default.createElement(
+	                "div",
+	                { className: nb("blk md-blk--offset3") },
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("bgg05 flex pv1 ph2 jcc aic tcg30 ft3") },
+	                    ".blk.md-blk--offset3"
+	                )
+	            )
+	        ),
+	        _react2.default.createElement(
+	            "div",
+	            { className: nb("frame relative mb2") },
+	            _react2.default.createElement(
+	                "div",
+	                { className: nb("blk3 md-blk--push9") },
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("bgg05 flex pv1 ph2 jcc aic tcg30 ft3") },
+	                    ".blk3.md-blk--push9"
+	                )
+	            ),
+	            _react2.default.createElement(
+	                "div",
+	                { className: nb("blk9 md-blk--pull3") },
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("bgg05 flex pv1 ph2 jcc aic tcg30 ft3") },
+	                    ".blk9.md-blk--pull3"
+	                )
+	            )
+	        ),
+	        _react2.default.createElement(
+	            "div",
+	            { className: nb("mb1") },
+	            _react2.default.createElement(
+	                _H6.default,
+	                null,
+	                "The AutoGrid"
+	            )
+	        ),
+	        _react2.default.createElement(
+	            _Copy2.default,
+	            null,
+	            "The AutoGrid is the easiest way to get started. Simply use a div with a ",
+	            _react2.default.createElement(
+	                _Code2.default,
+	                null,
+	                ".frame"
+	            ),
+	            " class and place any number of ",
+	            _react2.default.createElement(
+	                _Code2.default,
+	                null,
+	                ".blk"
+	            ),
+	            " elements as direct descendants. The AutoGrid will automatically figure out the width for each column and will give it a generous 30px of padding between each of them. This will create 60px wide gutter between columns."
+	        ),
+	        _react2.default.createElement(
+	            "div",
+	            { className: nb("frame relative mb2") },
+	            _react2.default.createElement(
+	                "div",
+	                { className: nb("blk") },
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("bgg05 flex pv1 ph2 jcc aic tcg30 ft3") },
+	                    ".blk"
+	                )
+	            ),
+	            _react2.default.createElement(
+	                "div",
+	                { className: nb("blk") },
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("bgg05 flex pv1 ph2 jcc aic tcg30 ft3") },
+	                    ".blk"
+	                )
+	            ),
+	            _react2.default.createElement(
+	                "div",
+	                { className: nb("blk") },
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("bgg05 flex pv1 ph2 jcc aic tcg30 ft3") },
+	                    ".blk"
+	                )
+	            ),
+	            _react2.default.createElement(
+	                "div",
+	                { className: nb("blk") },
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("bgg05 flex pv1 ph2 jcc aic tcg30 ft3") },
+	                    ".blk"
+	                )
+	            )
+	        ),
+	        _react2.default.createElement(
+	            "div",
+	            { className: nb("frame relative mb2") },
+	            _react2.default.createElement(
+	                "div",
+	                { className: nb("blk") },
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("bgg05 flex pv1 ph2 jcc aic tcg30 ft3") },
+	                    ".blk"
+	                )
+	            ),
+	            _react2.default.createElement(
+	                "div",
+	                { className: nb("blk") },
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("bgg05 flex pv1 ph2 jcc aic tcg30 ft3") },
+	                    ".blk"
+	                )
+	            ),
+	            _react2.default.createElement(
+	                "div",
+	                { className: nb("blk") },
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("bgg05 flex pv1 ph2 jcc aic tcg30 ft3") },
+	                    ".blk"
+	                )
+	            )
+	        ),
+	        _react2.default.createElement(
+	            "div",
+	            { className: nb("frame relative mb2") },
+	            _react2.default.createElement(
+	                "div",
+	                { className: nb("blk") },
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("bgg05 flex pv1 ph2 jcc aic tcg30 ft3") },
+	                    ".blk"
+	                )
+	            ),
+	            _react2.default.createElement(
+	                "div",
+	                { className: nb("blk") },
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("bgg05 flex pv1 ph2 jcc aic tcg30 ft3") },
+	                    ".blk"
+	                )
+	            )
+	        ),
+	        _react2.default.createElement(
+	            "div",
+	            { className: nb("mb1") },
+	            _react2.default.createElement(
+	                _H6.default,
+	                null,
+	                "Grid with no padding"
+	            )
+	        ),
+	        _react2.default.createElement(
+	            "div",
+	            { className: nb("frame relative mb2") },
+	            _react2.default.createElement(
+	                "div",
+	                { className: nb("blk xph brdr1 bcg20") },
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("bgg05 flex pv1 ph2 jcc aic tcg30 ft3") },
+	                    ".blk.xph"
+	                )
+	            ),
+	            _react2.default.createElement(
+	                "div",
+	                { className: nb("blk xph brdr1 bcg20") },
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("bgg05 flex pv1 ph2 jcc aic tcg30 ft3") },
+	                    ".blk.xph"
+	                )
+	            ),
+	            _react2.default.createElement(
+	                "div",
+	                { className: nb("blk xph brdr1 bcg20") },
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("bgg05 flex pv1 ph2 jcc aic tcg30 ft3") },
+	                    ".blk.xph"
+	                )
+	            ),
+	            _react2.default.createElement(
+	                "div",
+	                { className: nb("blk xph brdr1 bcg20") },
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("bgg05 flex pv1 ph2 jcc aic tcg30 ft3") },
+	                    ".blk.xph"
+	                )
+	            )
+	        ),
+	        _react2.default.createElement(
+	            "div",
+	            { className: nb("frame relative mb2") },
+	            _react2.default.createElement(
+	                "div",
+	                { className: nb("blk xph brdr1 bcg20") },
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("bgg05 flex pv1 ph2 jcc aic tcg30 ft3") },
+	                    ".blk.xph"
+	                )
+	            ),
+	            _react2.default.createElement(
+	                "div",
+	                { className: nb("blk xph brdr1 bcg20") },
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("bgg05 flex pv1 ph2 jcc aic tcg30 ft3") },
+	                    ".blk.xph"
+	                )
+	            ),
+	            _react2.default.createElement(
+	                "div",
+	                { className: nb("blk xph brdr1 bcg20") },
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("bgg05 flex pv1 ph2 jcc aic tcg30 ft3") },
+	                    ".blk.xph"
+	                )
+	            )
+	        ),
+	        _react2.default.createElement(
+	            "div",
+	            { className: nb("frame relative mb2") },
+	            _react2.default.createElement(
+	                "div",
+	                { className: nb("blk xph brdr1 bcg20") },
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("bgg05 flex pv1 ph2 jcc aic tcg30 ft3") },
+	                    ".blk.xph"
+	                )
+	            ),
+	            _react2.default.createElement(
+	                "div",
+	                { className: nb("blk xph brdr1 bcg20") },
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: nb("bgg05 flex pv1 ph2 jcc aic tcg30 ft3") },
+	                    ".blk.xph"
+	                )
+	            )
+	        ),
+	        _react2.default.createElement(
+	            _H4.default,
+	            null,
+	            "Example"
+	        ),
+	        _react2.default.createElement(
+	            _reactHighlight2.default,
+	            { className: nb("ph2 pv2 mb2 lh5") },
+	            snippet
+	        ),
+	        _react2.default.createElement(
+	            _H4.default,
+	            null,
+	            "Default Settings"
+	        ),
+	        _react2.default.createElement(
+	            "div",
+	            { className: nb("lh5 mb2") },
+	            _react2.default.createElement(
+	                _Copy2.default,
+	                null,
+	                "See ",
+	                _react2.default.createElement(
+	                    _reactRouter.Link,
+	                    { to: "/usage#configuration", className: nb("tc5 xtd h-tc1") },
+	                    "Configuration"
+	                ),
+	                " to learn how to overwrite helper settings."
+	            ),
+	            _react2.default.createElement(
+	                _reactHighlight2.default,
+	                { className: nb("ph2 pv2") },
+	                "// Neckbeard.defaultSettings.helpers.grid \n",
+	                JSON.stringify(_src2.default.defaultSettings.helpers.grid, null, '    ')
+	            )
+	        )
+	    );
+	};
+
+	exports.default = Grid;
+	module.exports = exports["default"];
+
+/***/ },
+/* 443 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(4);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	/**
+	 * BlockQuote
+	 */
+	var BlockQuote = function BlockQuote(_ref) {
+	  var children = _ref.children;
+	  return _react2.default.createElement(
+	    "blockquote",
+	    { className: nb("bg3 bc2 ph2 pv2 br3 mb2 tcw xbrdr") },
+	    children
+	  );
+	};
+
+	exports.default = BlockQuote;
 	module.exports = exports["default"];
 
 /***/ }

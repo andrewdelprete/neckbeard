@@ -34,7 +34,7 @@ const Installation = () => (
         <Copy className={ nb("ft4 sans tcg50 lh10 fwlight mb2") }>
             Neckbeard is an Atomic CSS in JS framework that leverages the composibility nature of helper (utility) classes and the awesome power of <a href="https://github.com/Khan/aphrodite" className={ nb("tc5 xtd h-tc1") }>Aphrodite</a> to build components rapidly.
             Neckbeard is highly inspired by <a href="https://www.buildwithbeard.com" className={ nb("tc5 xtd h-tc1") }>Beard</a>, built by <a href="https://www.twitter.com/davidhemphill" className={ nb("tc5 xtd h-tc1") }>@davidhemphill</a> and uses much of the same syntax as Beard.
-            The main difference is Neckbeard is built with Javacript and Beard is built with SCSS. Using Javascript to build a CSS framework allows us to do some
+            The main difference is Neckbeard is built with Javascript whereas Beard is built with SCSS. Using Javascript to build a CSS framework allows us to do some
             fantastic things.
         </Copy>
         <H3>Helper Classes</H3>
@@ -52,7 +52,7 @@ const Installation = () => (
             framework agnostic and can be used anywhere you use Javascript to add CSS classes.
         </Copy>
         <Copy>
-            Neckbeard wraps the library <a href="https://github.com/Khan/aphrodite" className={ nb("tc5 xtd h-tc1") }>Aphrodite</a> under the hood which is used to apply only the styles that you're actually using to the page.
+            Neckbeard wraps the library <a href="https://github.com/Khan/aphrodite" className={ nb("tc5 xtd h-tc1") }>Aphrodite</a> under the hood. Aphrodite is used to apply only the styles you're actually using to the page. 
         </Copy>
         <H3>The Magical Unicorn 🦄</H3>
         <Copy>
