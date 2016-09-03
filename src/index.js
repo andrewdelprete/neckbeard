@@ -72,7 +72,7 @@ export const defaultSettings = {
             incrementBy: .1,
             useBreakpoints: true
         },
-        lineHeights: {
+        lineHeight: {
             limit: 10,
             incrementBy: .1,
             useBreakpoints: true

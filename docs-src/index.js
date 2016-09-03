@@ -19,6 +19,7 @@ import Float from './pages/Float'
 import Fonts from './pages/Fonts'
 import Grid from './pages/Grid'
 import LetterSpacing from './pages/LetterSpacing'
+import LineHeight from './pages/LineHeight'
 
 import Neckbeard from '../src'
 
@@ -56,6 +57,7 @@ ReactDOM.render((
             <Route path="/fonts" component={ Fonts } />
             <Route path="/grid" component={ Grid } />
             <Route path="/letter-spacing" component={ LetterSpacing } />
+            <Route path="/line-height" component={ LineHeight } />
         </Route>
     </Router>
 ), document.getElementById('app'))
