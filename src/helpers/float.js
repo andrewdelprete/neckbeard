@@ -3,11 +3,11 @@ import { addMediaQueries } from '../'
 /**
  * Floats
  *
- * @param  {object} useBreakpoints
+ * @param  {object} responsive
  * @param  {object} breakpoints={} (optional)
  * @return {object}
  */
-export default function float({ helpers: { float: { useBreakpoints } }, breakpoints }) {
+export default function float({ helpers: { float: { responsive } }, breakpoints }) {
     let selectors = {}
     let media = {}
 
@@ -23,7 +23,7 @@ export default function float({ helpers: { float: { useBreakpoints } }, breakpoi
     /**
      * Media Queries
      */
-    if (Object.keys(breakpoints).length !== 0 && useBreakpoints) {
+    if (Object.keys(breakpoints).length !== 0 && responsive) {
         media = addMediaQueries(selectors, breakpoints)
     }
 

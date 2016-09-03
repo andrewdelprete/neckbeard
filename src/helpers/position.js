@@ -3,11 +3,11 @@ import { addMediaQueries } from '../'
 /**
  * Position
  *
- * @param  {object} useBreakpoints
+ * @param  {object} responsive
  * @param  {object} breakpoints={} (optional)
  * @return {object}
  */
-export default function position({ helpers: { position: { useBreakpoints } }, breakpoints }) {
+export default function position({ helpers: { position: { responsive } }, breakpoints }) {
     let selectors = {}
     let media = {}
 
@@ -26,7 +26,7 @@ export default function position({ helpers: { position: { useBreakpoints } }, br
     /**
      * Media Queries
      */
-    if (Object.keys(breakpoints).length !== 0 && useBreakpoints) {
+    if (Object.keys(breakpoints).length !== 0 && responsive) {
         media = addMediaQueries(selectors, breakpoints)
     }
 

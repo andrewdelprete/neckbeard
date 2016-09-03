@@ -3,11 +3,11 @@ import { addMediaQueries } from '../'
 /**
  * Line Height
  *
- * @param  {object} useBreakpoints
+ * @param  {object} responsive
  * @param  {object} breakpoints={} (optional)
  * @return {object}
  */
-export default function lineHeight({ helpers: { lineHeight: { useBreakpoints, limit, incrementBy } }, breakpoints }) {
+export default function lineHeight({ helpers: { lineHeight: { responsive, limit, incrementBy } }, breakpoints }) {
     let selectors = {}
     let media = {}
 
@@ -27,7 +27,7 @@ export default function lineHeight({ helpers: { lineHeight: { useBreakpoints, li
     /**
      * Media Queries
      */
-    if (Object.keys(breakpoints).length !== 0 && useBreakpoints) {
+    if (Object.keys(breakpoints).length !== 0 && responsive) {
         media = addMediaQueries(selectors, breakpoints)
     }
 

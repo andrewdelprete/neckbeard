@@ -3,11 +3,11 @@ import { addMediaQueries } from '../'
 /**
  * Misc
  *
- * @param  {object} useBreakpoints
+ * @param  {object} responsive
  * @param  {object} breakpoints={} (optional)
  * @return {object}
  */
-export default function misc({ helpers: { misc: { useBreakpoints } }, siteWidth, breakpoints }) {
+export default function misc({ helpers: { misc: { responsive } }, siteWidth, breakpoints }) {
     let selectors = {}
     let media = {}
 
@@ -97,7 +97,7 @@ export default function misc({ helpers: { misc: { useBreakpoints } }, siteWidth,
     /**
      * Media Queries
      */
-    if (Object.keys(breakpoints).length !== 0 && useBreakpoints) {
+    if (Object.keys(breakpoints).length !== 0 && responsive) {
         media = addMediaQueries(selectors, breakpoints)
     }
 

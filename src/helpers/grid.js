@@ -7,10 +7,10 @@ import { addMediaQueries } from '../'
  * @param  {object} gridBlockCount - number of columns
  * @param  {object} gridGutter - size of gutter
  * @param  {string} stackAtBreakpoint
- * @param  {object} useBreakpoints
+ * @param  {object} responsive
  * @return {object}
  */
-export default function grid({ helpers: { grid: { gridGutter, gridBlockCount, stackAtBreakpoint, useBreakpoints } }, breakpoints }) {
+export default function grid({ helpers: { grid: { gridGutter, gridBlockCount, stackAtBreakpoint, responsive } }, breakpoints }) {
     let selectors = {}
     let media = {}
 
@@ -80,7 +80,7 @@ export default function grid({ helpers: { grid: { gridGutter, gridBlockCount, st
     /**
      * Media Queries
      */
-    if (Object.keys(breakpoints).length !== 0 && useBreakpoints) {
+    if (Object.keys(breakpoints).length !== 0 && responsive) {
         media = addMediaQueries(selectors, breakpoints)
     }
 

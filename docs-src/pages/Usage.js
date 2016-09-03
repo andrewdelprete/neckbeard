@@ -30,7 +30,7 @@ const settings = { ...NeckBeard.defaultSettings };
 settings.helpers.fontSize = {
     limit: 20,
     incrementBy: .10,
-    useBreakpoints: false
+    responsive: false
 }
 
 const nb = Neckbeard.create(settings);
@@ -48,7 +48,7 @@ var settings = Object.assign({}, Neckbeard.defaultSettings);
 settings.helpers.fontSize = {
     limit: 20,
     incrementBy: .10,
-    useBreakpoints: false
+    responsive: false
 }
 
 var nb = Neckbeard.create(settings);
@@ -61,7 +61,7 @@ import Neckbeard from 'neckbeard';
 
 // Uses ES6 Destructuring to destructure
 // settings object and retrieve what we need.
-export default function unicorn({ helpers: { unicorn: { useBreakpoints } }, breakpoints }) {
+export default function unicorn({ helpers: { unicorn: { responsive } }, breakpoints }) {
     let selectors = {};
     let media = {};
 
@@ -79,7 +79,7 @@ export default function unicorn({ helpers: { unicorn: { useBreakpoints } }, brea
      * Adds classes for each breakpoint .{breakpoint}-{selector} and .only-{breakpoint}-{selector}
      * Example: .only-sm-awesome-unicorn
      */
-    if (Object.keys(breakpoints).length !== 0 && useBreakpoints) {
+    if (Object.keys(breakpoints).length !== 0 && responsive) {
         media = Neckbeard.addMediaQueries(selectors, breakpoints);
     }
 
@@ -96,7 +96,7 @@ import unicorn from '/path/where/your/helpers/are/unicorn';
 const settings = { ...NeckBeard.defaultSettings };
 
 settings.helpers.unicorn = {
-    useBreakpoints: true
+    responsive: true
 }
 
 // Extend helpers

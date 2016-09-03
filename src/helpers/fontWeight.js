@@ -3,11 +3,11 @@ import { addMediaQueries } from '../'
 /**
  * Font Weight
  *
- * @param  {object} useBreakpoints
+ * @param  {object} responsive
  * @param  {object} breakpoints={} (optional)
  * @return {object}
  */
-export default function fontWeight({ helpers: { fontWeight: { useBreakpoints } }, breakpoints }) {
+export default function fontWeight({ helpers: { fontWeight: { responsive } }, breakpoints }) {
     let selectors = {}
     let media = {}
 
@@ -37,7 +37,7 @@ export default function fontWeight({ helpers: { fontWeight: { useBreakpoints } }
     /**
      * Media Queries
      */
-    if (Object.keys(breakpoints).length !== 0 && useBreakpoints) {
+    if (Object.keys(breakpoints).length !== 0 && responsive) {
         media = addMediaQueries(selectors, breakpoints)
     }
 

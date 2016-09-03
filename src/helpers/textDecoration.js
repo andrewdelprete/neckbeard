@@ -3,11 +3,11 @@ import { addMediaQueries } from '../'
 /**
  * Text Decoration
  *
- * @param  {object} useBreakpoints
+ * @param  {object} responsive
  * @param  {object} breakpoints={} (optional)
  * @return {object}
  */
-export default function textDecoration({ helpers: { textDecoration: { useBreakpoints } }, breakpoints }) {
+export default function textDecoration({ helpers: { textDecoration: { responsive } }, breakpoints }) {
     let selectors = {}
     let media = {}
 
@@ -22,7 +22,7 @@ export default function textDecoration({ helpers: { textDecoration: { useBreakpo
     /**
      * Media Queries
      */
-    if (Object.keys(breakpoints).length !== 0 && useBreakpoints) {
+    if (Object.keys(breakpoints).length !== 0 && responsive) {
         media = addMediaQueries(selectors, breakpoints)
     }
 

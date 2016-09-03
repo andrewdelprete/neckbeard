@@ -36821,13 +36821,13 @@
 
 	var snippet = "<script>\nimport Neckbeard from 'neckbeard';\n\nconst nb = Neckbeard.create();\n\n// create() is invoked and classes are injected\n// into the DOM dynamically using Aphrodite.\nnb('pv1 ph1 ft2');\n</script>";
 
-	var snippet2 = "<script>\nimport Neckbeard from 'neckbeard';\n\n// Using ES6 Spread makes it easy\nconst settings = { ...NeckBeard.defaultSettings };\n\nsettings.helpers.fontSize = {\n    limit: 20,\n    incrementBy: .10,\n    useBreakpoints: false\n}\n\nconst nb = Neckbeard.create(settings);\n\nnb('pv1 ph1 ft2');\n</script>\n";
+	var snippet2 = "<script>\nimport Neckbeard from 'neckbeard';\n\n// Using ES6 Spread makes it easy\nconst settings = { ...NeckBeard.defaultSettings };\n\nsettings.helpers.fontSize = {\n    limit: 20,\n    incrementBy: .10,\n    responsive: false\n}\n\nconst nb = Neckbeard.create(settings);\n\nnb('pv1 ph1 ft2');\n</script>\n";
 
-	var snippet3 = "<script>\nimport Neckbeard from 'neckbeard';\n\n// Same settings as above but using Object.assign()\nvar settings = Object.assign({}, Neckbeard.defaultSettings);\n\nsettings.helpers.fontSize = {\n    limit: 20,\n    incrementBy: .10,\n    useBreakpoints: false\n}\n\nvar nb = Neckbeard.create(settings);\n\nnb('pv1 ph1 ft2');\n</script>";
+	var snippet3 = "<script>\nimport Neckbeard from 'neckbeard';\n\n// Same settings as above but using Object.assign()\nvar settings = Object.assign({}, Neckbeard.defaultSettings);\n\nsettings.helpers.fontSize = {\n    limit: 20,\n    incrementBy: .10,\n    responsive: false\n}\n\nvar nb = Neckbeard.create(settings);\n\nnb('pv1 ph1 ft2');\n</script>";
 
-	var snippet4 = "<script>\nimport Neckbeard from 'neckbeard';\n\n// Uses ES6 Destructuring to destructure\n// settings object and retrieve what we need.\nexport default function unicorn({ helpers: { unicorn: { useBreakpoints } }, breakpoints }) {\n    let selectors = {};\n    let media = {};\n\n    /**\n     * My New Helper\n     */\n    selectors[\"unicorn-awesome\"] = {\n        fontSize: \"2rem\",\n        // and so on\n    }\n    // more selectors here\n\n    /**\n     * Media Queries\n     * Adds classes for each breakpoint .{breakpoint}-{selector} and .only-{breakpoint}-{selector}\n     * Example: .only-sm-awesome-unicorn\n     */\n    if (Object.keys(breakpoints).length !== 0 && useBreakpoints) {\n        media = Neckbeard.addMediaQueries(selectors, breakpoints);\n    }\n\n    // Merge it all together in one object and return\n    return { ...selectors, ...media };\n}\n</script>";
+	var snippet4 = "<script>\nimport Neckbeard from 'neckbeard';\n\n// Uses ES6 Destructuring to destructure\n// settings object and retrieve what we need.\nexport default function unicorn({ helpers: { unicorn: { responsive } }, breakpoints }) {\n    let selectors = {};\n    let media = {};\n\n    /**\n     * My New Helper\n     */\n    selectors[\"unicorn-awesome\"] = {\n        fontSize: \"2rem\",\n        // and so on\n    }\n    // more selectors here\n\n    /**\n     * Media Queries\n     * Adds classes for each breakpoint .{breakpoint}-{selector} and .only-{breakpoint}-{selector}\n     * Example: .only-sm-awesome-unicorn\n     */\n    if (Object.keys(breakpoints).length !== 0 && responsive) {\n        media = Neckbeard.addMediaQueries(selectors, breakpoints);\n    }\n\n    // Merge it all together in one object and return\n    return { ...selectors, ...media };\n}\n</script>";
 
-	var snippet5 = "<script>\nimport Neckbeard from 'neckbeard';\nimport unicorn from '/path/where/your/helpers/are/unicorn';\n\n// Extend settings\nconst settings = { ...NeckBeard.defaultSettings };\n\nsettings.helpers.unicorn = {\n    useBreakpoints: true\n}\n\n// Extend helpers\nconst helpers = { ...NeckBeard.helpers };\n\nhelpers.unicorn = unicorn;\n\nconst nb = Neckbeard.create(settings, helpers);\n\nnb('unicorn-awesome');\n</script>\n";
+	var snippet5 = "<script>\nimport Neckbeard from 'neckbeard';\nimport unicorn from '/path/where/your/helpers/are/unicorn';\n\n// Extend settings\nconst settings = { ...NeckBeard.defaultSettings };\n\nsettings.helpers.unicorn = {\n    responsive: true\n}\n\n// Extend helpers\nconst helpers = { ...NeckBeard.helpers };\n\nhelpers.unicorn = unicorn;\n\nconst nb = Neckbeard.create(settings, helpers);\n\nnb('unicorn-awesome');\n</script>\n";
 
 	var snippet6 = JSON.stringify(_src2.default.defaultSettings, null, '    ');
 
@@ -37105,76 +37105,76 @@
 	        border: {
 	            limit: 3,
 	            incrementBy: 1,
-	            useBreakpoints: true
+	            responsive: true
 	        },
 	        borderRadius: {
 	            limit: 10,
 	            incrementBy: 1,
-	            useBreakpoints: true
+	            responsive: true
 	        },
 	        colors: {
-	            useBreakpoints: false
+	            responsive: false
 	        },
 	        display: {
-	            useBreakpoints: true
+	            responsive: true
 	        },
 	        flex: {
-	            useBreakpoints: true
+	            responsive: true
 	        },
 	        float: {
-	            useBreakpoints: true
+	            responsive: true
 	        },
 	        fontFamily: {
-	            useBreakpoints: false
+	            responsive: false
 	        },
 	        fontSize: {
 	            limit: 17,
 	            incrementBy: .25,
-	            useBreakpoints: true
+	            responsive: true
 	        },
 	        fontWeight: {
-	            useBreakpoints: false
+	            responsive: false
 	        },
 	        grid: {
 	            gridBlockCount: 12,
 	            gridGutter: 30,
 	            stackAtBreakpoint: 'md',
-	            useBreakpoints: true
+	            responsive: true
 	        },
 	        letterSpacing: {
 	            limit: 10,
 	            incrementBy: .1,
-	            useBreakpoints: true
+	            responsive: true
 	        },
 	        lineHeights: {
 	            limit: 10,
 	            incrementBy: .1,
-	            useBreakpoints: true
+	            responsive: true
 	        },
 	        misc: {
-	            useBreakpoints: false
+	            responsive: false
 	        },
 	        overflow: {
-	            useBreakpoints: false
+	            responsive: false
 	        },
 	        position: {
-	            useBreakpoints: true
+	            responsive: true
 	        },
 	        spacing: {
 	            limit: 10,
 	            incrementBy: 1,
-	            useBreakpoints: true
+	            responsive: true
 	        },
 	        textAlignment: {
-	            useBreakpoints: true
+	            responsive: true
 	        },
 	        textDecoration: {
-	            useBreakpoints: false
+	            responsive: false
 	        },
 	        zIndex: {
 	            limit: 10,
 	            incrementBy: 1,
-	            useBreakpoints: true
+	            responsive: true
 	        }
 	    },
 	    siteWidth: "114rem"
@@ -39173,7 +39173,7 @@
 	 * Border Radius
 	 *
 	 * @param  {Number} limit=10
-	 * @param  {object} limit, incrementBy, useBreakpoints
+	 * @param  {object} limit, incrementBy, responsive
 	 * @param  {object} breakpoints={} (optional)
 	 * @return {object}
 	 */
@@ -39181,7 +39181,7 @@
 	    var _ref$helpers$borderRa = _ref.helpers.borderRadius;
 	    var limit = _ref$helpers$borderRa.limit;
 	    var incrementBy = _ref$helpers$borderRa.incrementBy;
-	    var useBreakpoints = _ref$helpers$borderRa.useBreakpoints;
+	    var responsive = _ref$helpers$borderRa.responsive;
 	    var breakpoints = _ref.breakpoints;
 
 
@@ -39226,7 +39226,7 @@
 	    /**
 	     * Media Queries
 	     */
-	    if (Object.keys(breakpoints).length !== 0 && useBreakpoints) {
+	    if (Object.keys(breakpoints).length !== 0 && responsive) {
 	        media = (0, _.addMediaQueries)(selectors, breakpoints);
 	    }
 
@@ -39254,7 +39254,7 @@
 	 * Borders
 	 *
 	 * @param  {Number} limit=10
-	 * @param  {object} limit, incrementBy, useBreakpoints
+	 * @param  {object} limit, incrementBy, responsive
 	 * @param  {object} breakpoints={} (optional)
 	 * @return {object}
 	 */
@@ -39262,7 +39262,7 @@
 	    var _ref$helpers$border = _ref.helpers.border;
 	    var limit = _ref$helpers$border.limit;
 	    var incrementBy = _ref$helpers$border.incrementBy;
-	    var useBreakpoints = _ref$helpers$border.useBreakpoints;
+	    var responsive = _ref$helpers$border.responsive;
 	    var breakpoints = _ref.breakpoints;
 
 	    var selectors = {};
@@ -39301,7 +39301,7 @@
 	    /**
 	     * Media Queries
 	     */
-	    if (Object.keys(breakpoints).length !== 0 && useBreakpoints) {
+	    if (Object.keys(breakpoints).length !== 0 && responsive) {
 	        media = (0, _.addMediaQueries)(selectors, breakpoints);
 	    }
 
@@ -39328,12 +39328,12 @@
 	/**
 	 * Colors
 	 *
-	 * @param  {object} useBreakpoints
+	 * @param  {object} responsive
 	 * @param  {object} breakpoints={} (optional)
 	 * @return {object}
 	 */
 	function colors(_ref) {
-	  var useBreakpoints = _ref.helpers.colors.useBreakpoints;
+	  var responsive = _ref.helpers.colors.responsive;
 	  var colors = _ref.colors;
 	  var breakpoints = _ref.breakpoints;
 
@@ -39426,7 +39426,7 @@
 	  /**
 	   * Media Queries
 	   */
-	  if (Object.keys(breakpoints).length !== 0 && useBreakpoints) {
+	  if (Object.keys(breakpoints).length !== 0 && responsive) {
 	    media = (0, _.addMediaQueries)(selectors, breakpoints);
 	  }
 
@@ -39453,12 +39453,12 @@
 	/**
 	 * Display
 	 *
-	 * @param  {object} useBreakpoints
+	 * @param  {object} responsive
 	 * @param  {object} breakpoints={} (optional)
 	 * @return {object}
 	 */
 	function display(_ref) {
-	  var useBreakpoints = _ref.helpers.display.useBreakpoints;
+	  var responsive = _ref.helpers.display.responsive;
 	  var breakpoints = _ref.breakpoints;
 
 	  var selectors = {};
@@ -39476,7 +39476,7 @@
 	  /**
 	   * Media Queries
 	   */
-	  if (Object.keys(breakpoints).length !== 0 && useBreakpoints) {
+	  if (Object.keys(breakpoints).length !== 0 && responsive) {
 	    media = (0, _.addMediaQueries)(selectors, breakpoints);
 	  }
 
@@ -39510,12 +39510,12 @@
 	/**
 	 * Flex
 	 *
-	 * @param  {object} useBreakpoints
+	 * @param  {object} responsive
 	 * @param  {object} breakpoints={} (optional)
 	 * @return {object}
 	 */
 	function flex(_ref) {
-	  var useBreakpoints = _ref.helpers.flex.useBreakpoints;
+	  var responsive = _ref.helpers.flex.responsive;
 	  var breakpoints = _ref.breakpoints;
 
 	  var selectors = {};
@@ -39566,7 +39566,7 @@
 	  /**
 	   * Media Queries
 	   */
-	  if (Object.keys(breakpoints).length !== 0 && useBreakpoints) {
+	  if (Object.keys(breakpoints).length !== 0 && responsive) {
 	    media = (0, _.addMediaQueries)(selectors, breakpoints);
 	  }
 
@@ -39593,12 +39593,12 @@
 	/**
 	 * Floats
 	 *
-	 * @param  {object} useBreakpoints
+	 * @param  {object} responsive
 	 * @param  {object} breakpoints={} (optional)
 	 * @return {object}
 	 */
 	function float(_ref) {
-	  var useBreakpoints = _ref.helpers.float.useBreakpoints;
+	  var responsive = _ref.helpers.float.responsive;
 	  var breakpoints = _ref.breakpoints;
 
 	  var selectors = {};
@@ -39616,7 +39616,7 @@
 	  /**
 	   * Media Queries
 	   */
-	  if (Object.keys(breakpoints).length !== 0 && useBreakpoints) {
+	  if (Object.keys(breakpoints).length !== 0 && responsive) {
 	    media = (0, _.addMediaQueries)(selectors, breakpoints);
 	  }
 
@@ -39643,12 +39643,12 @@
 	/**
 	 * Font Family
 	 *
-	 * @param  {object} useBreakpoints
+	 * @param  {object} responsive
 	 * @param  {object} breakpoints={} (optional)
 	 * @return {object}
 	 */
 	function fontFamily(_ref) {
-	  var useBreakpoints = _ref.helpers.fontFamily.useBreakpoints;
+	  var responsive = _ref.helpers.fontFamily.responsive;
 	  var fonts = _ref.fonts;
 	  var breakpoints = _ref.breakpoints;
 
@@ -39665,7 +39665,7 @@
 	  /**
 	   * Media Queries
 	   */
-	  if (Object.keys(breakpoints).length !== 0 && useBreakpoints) {
+	  if (Object.keys(breakpoints).length !== 0 && responsive) {
 	    media = (0, _.addMediaQueries)(selectors, breakpoints);
 	  }
 
@@ -39692,7 +39692,7 @@
 	/**
 	 * Font Size
 	 *
-	 * @param  {object} limit, incrementBy, useBreakpoints
+	 * @param  {object} limit, incrementBy, responsive
 	 * @param  {object} breakpoints={} (optional)
 	 * @return {object}
 	 */
@@ -39700,7 +39700,7 @@
 	    var _ref$helpers$fontSize = _ref.helpers.fontSize;
 	    var limit = _ref$helpers$fontSize.limit;
 	    var incrementBy = _ref$helpers$fontSize.incrementBy;
-	    var useBreakpoints = _ref$helpers$fontSize.useBreakpoints;
+	    var responsive = _ref$helpers$fontSize.responsive;
 	    var breakpoints = _ref.breakpoints;
 
 	    var selectors = {};
@@ -39718,7 +39718,7 @@
 	    /**
 	     * Media Queries
 	     */
-	    if (Object.keys(breakpoints).length !== 0 && useBreakpoints) {
+	    if (Object.keys(breakpoints).length !== 0 && responsive) {
 	        media = (0, _.addMediaQueries)(selectors, breakpoints);
 	    }
 
@@ -39745,12 +39745,12 @@
 	/**
 	 * Font Weight
 	 *
-	 * @param  {object} useBreakpoints
+	 * @param  {object} responsive
 	 * @param  {object} breakpoints={} (optional)
 	 * @return {object}
 	 */
 	function fontWeight(_ref) {
-	  var useBreakpoints = _ref.helpers.fontWeight.useBreakpoints;
+	  var responsive = _ref.helpers.fontWeight.responsive;
 	  var breakpoints = _ref.breakpoints;
 
 	  var selectors = {};
@@ -39782,7 +39782,7 @@
 	  /**
 	   * Media Queries
 	   */
-	  if (Object.keys(breakpoints).length !== 0 && useBreakpoints) {
+	  if (Object.keys(breakpoints).length !== 0 && responsive) {
 	    media = (0, _.addMediaQueries)(selectors, breakpoints);
 	  }
 
@@ -39815,7 +39815,7 @@
 	 * @param  {object} gridBlockCount - number of columns
 	 * @param  {object} gridGutter - size of gutter
 	 * @param  {string} stackAtBreakpoint
-	 * @param  {object} useBreakpoints
+	 * @param  {object} responsive
 	 * @return {object}
 	 */
 	function grid(_ref) {
@@ -39823,7 +39823,7 @@
 	    var gridGutter = _ref$helpers$grid.gridGutter;
 	    var gridBlockCount = _ref$helpers$grid.gridBlockCount;
 	    var stackAtBreakpoint = _ref$helpers$grid.stackAtBreakpoint;
-	    var useBreakpoints = _ref$helpers$grid.useBreakpoints;
+	    var responsive = _ref$helpers$grid.responsive;
 	    var breakpoints = _ref.breakpoints;
 
 	    var selectors = {};
@@ -39895,7 +39895,7 @@
 	    /**
 	     * Media Queries
 	     */
-	    if (Object.keys(breakpoints).length !== 0 && useBreakpoints) {
+	    if (Object.keys(breakpoints).length !== 0 && responsive) {
 	        media = (0, _.addMediaQueries)(selectors, breakpoints);
 	    }
 
@@ -39950,7 +39950,7 @@
 	/**
 	 * Letter Spacing
 	 *
-	 * @param  {object} limit, incrementBy, useBreakpoints
+	 * @param  {object} limit, incrementBy, responsive
 	 * @param  {object} breakpoints={} (optional)
 	 * @return {object}
 	 */
@@ -39958,7 +39958,7 @@
 	    var _ref$helpers$letterSp = _ref.helpers.letterSpacing;
 	    var limit = _ref$helpers$letterSp.limit;
 	    var incrementBy = _ref$helpers$letterSp.incrementBy;
-	    var useBreakpoints = _ref$helpers$letterSp.useBreakpoints;
+	    var responsive = _ref$helpers$letterSp.responsive;
 	    var breakpoints = _ref.breakpoints;
 
 	    var selectors = {};
@@ -39976,7 +39976,7 @@
 	    /**
 	     * Media Queries
 	     */
-	    if (Object.keys(breakpoints).length !== 0 && useBreakpoints) {
+	    if (Object.keys(breakpoints).length !== 0 && responsive) {
 	        media = (0, _.addMediaQueries)(selectors, breakpoints);
 	    }
 
@@ -40003,13 +40003,13 @@
 	/**
 	 * Line Height
 	 *
-	 * @param  {object} useBreakpoints
+	 * @param  {object} responsive
 	 * @param  {object} breakpoints={} (optional)
 	 * @return {object}
 	 */
 	function lineHeight(_ref) {
 	    var _ref$helpers$lineHeig = _ref.helpers.lineHeights;
-	    var useBreakpoints = _ref$helpers$lineHeig.useBreakpoints;
+	    var responsive = _ref$helpers$lineHeig.responsive;
 	    var limit = _ref$helpers$lineHeig.limit;
 	    var incrementBy = _ref$helpers$lineHeig.incrementBy;
 	    var breakpoints = _ref.breakpoints;
@@ -40033,7 +40033,7 @@
 	    /**
 	     * Media Queries
 	     */
-	    if (Object.keys(breakpoints).length !== 0 && useBreakpoints) {
+	    if (Object.keys(breakpoints).length !== 0 && responsive) {
 	        media = (0, _.addMediaQueries)(selectors, breakpoints);
 	    }
 
@@ -40060,12 +40060,12 @@
 	/**
 	 * Misc
 	 *
-	 * @param  {object} useBreakpoints
+	 * @param  {object} responsive
 	 * @param  {object} breakpoints={} (optional)
 	 * @return {object}
 	 */
 	function misc(_ref) {
-	    var useBreakpoints = _ref.helpers.misc.useBreakpoints;
+	    var responsive = _ref.helpers.misc.responsive;
 	    var siteWidth = _ref.siteWidth;
 	    var breakpoints = _ref.breakpoints;
 
@@ -40158,7 +40158,7 @@
 	    /**
 	     * Media Queries
 	     */
-	    if (Object.keys(breakpoints).length !== 0 && useBreakpoints) {
+	    if (Object.keys(breakpoints).length !== 0 && responsive) {
 	        media = (0, _.addMediaQueries)(selectors, breakpoints);
 	    }
 
@@ -40185,12 +40185,12 @@
 	/**
 	 * Overflow
 	 *
-	 * @param  {object} useBreakpoints
+	 * @param  {object} responsive
 	 * @param  {object} breakpoints={} (optional)
 	 * @return {object}
 	 */
 	function overflow(_ref) {
-	  var useBreakpoints = _ref.helpers.overflow.useBreakpoints;
+	  var responsive = _ref.helpers.overflow.responsive;
 	  var breakpoints = _ref.breakpoints;
 
 	  var selectors = {};
@@ -40206,7 +40206,7 @@
 	  /**
 	   * Media Queries
 	   */
-	  if (Object.keys(breakpoints).length !== 0 && useBreakpoints) {
+	  if (Object.keys(breakpoints).length !== 0 && responsive) {
 	    media = (0, _.addMediaQueries)(selectors, breakpoints);
 	  }
 
@@ -40233,12 +40233,12 @@
 	/**
 	 * Position
 	 *
-	 * @param  {object} useBreakpoints
+	 * @param  {object} responsive
 	 * @param  {object} breakpoints={} (optional)
 	 * @return {object}
 	 */
 	function position(_ref) {
-	  var useBreakpoints = _ref.helpers.position.useBreakpoints;
+	  var responsive = _ref.helpers.position.responsive;
 	  var breakpoints = _ref.breakpoints;
 
 	  var selectors = {};
@@ -40259,7 +40259,7 @@
 	  /**
 	   * Media Queries
 	   */
-	  if (Object.keys(breakpoints).length !== 0 && useBreakpoints) {
+	  if (Object.keys(breakpoints).length !== 0 && responsive) {
 	    media = (0, _.addMediaQueries)(selectors, breakpoints);
 	  }
 
@@ -40286,7 +40286,7 @@
 	/**
 	 * Spacing
 	 *
-	 * @param  {object} limit, incrementBy, useBreakpoints
+	 * @param  {object} limit, incrementBy, responsive
 	 * @param  {object} breakpoints={} (optional)
 	 * @return {object}
 	 */
@@ -40294,7 +40294,7 @@
 	    var _ref$helpers$spacing = _ref.helpers.spacing;
 	    var limit = _ref$helpers$spacing.limit;
 	    var incrementBy = _ref$helpers$spacing.incrementBy;
-	    var useBreakpoints = _ref$helpers$spacing.useBreakpoints;
+	    var responsive = _ref$helpers$spacing.responsive;
 	    var breakpoints = _ref.breakpoints;
 
 	    var selectors = {};
@@ -40440,7 +40440,7 @@
 	    /**
 	     * Media Queries
 	     */
-	    if (Object.keys(breakpoints).length !== 0 && useBreakpoints) {
+	    if (Object.keys(breakpoints).length !== 0 && responsive) {
 	        media = (0, _.addMediaQueries)(selectors, breakpoints);
 	    }
 
@@ -40467,12 +40467,12 @@
 	/**
 	 * Text Alignment
 	 *
-	 * @param  {object} useBreakpoints
+	 * @param  {object} responsive
 	 * @param  {object} breakpoints={} (optional)
 	 * @return {object}
 	 */
 	function textAlignment(_ref) {
-	  var useBreakpoints = _ref.helpers.textAlignment.useBreakpoints;
+	  var responsive = _ref.helpers.textAlignment.responsive;
 	  var breakpoints = _ref.breakpoints;
 
 	  var selectors = {};
@@ -40488,7 +40488,7 @@
 	  /**
 	   * Media Queries
 	   */
-	  if (Object.keys(breakpoints).length !== 0 && useBreakpoints) {
+	  if (Object.keys(breakpoints).length !== 0 && responsive) {
 	    media = (0, _.addMediaQueries)(selectors, breakpoints);
 	  }
 
@@ -40515,12 +40515,12 @@
 	/**
 	 * Text Decoration
 	 *
-	 * @param  {object} useBreakpoints
+	 * @param  {object} responsive
 	 * @param  {object} breakpoints={} (optional)
 	 * @return {object}
 	 */
 	function textDecoration(_ref) {
-	  var useBreakpoints = _ref.helpers.textDecoration.useBreakpoints;
+	  var responsive = _ref.helpers.textDecoration.responsive;
 	  var breakpoints = _ref.breakpoints;
 
 	  var selectors = {};
@@ -40537,7 +40537,7 @@
 	  /**
 	   * Media Queries
 	   */
-	  if (Object.keys(breakpoints).length !== 0 && useBreakpoints) {
+	  if (Object.keys(breakpoints).length !== 0 && responsive) {
 	    media = (0, _.addMediaQueries)(selectors, breakpoints);
 	  }
 
@@ -40565,7 +40565,7 @@
 	 * Z-index
 	 *
 	 * @param  {Number} limit=10
-	 * @param  {object} limit, incrementBy, useBreakpoints
+	 * @param  {object} limit, incrementBy, responsive
 	 * @param  {object} breakpoints={} (optional)
 	 * @return {object}
 	 */
@@ -40573,7 +40573,7 @@
 	    var _ref$helpers$zIndex = _ref.helpers.zIndex;
 	    var limit = _ref$helpers$zIndex.limit;
 	    var incrementBy = _ref$helpers$zIndex.incrementBy;
-	    var useBreakpoints = _ref$helpers$zIndex.useBreakpoints;
+	    var responsive = _ref$helpers$zIndex.responsive;
 	    var breakpoints = _ref.breakpoints;
 
 	    var selectors = {};
@@ -40591,7 +40591,7 @@
 	    /**
 	     * Media Queries
 	     */
-	    if (Object.keys(breakpoints).length !== 0 && useBreakpoints) {
+	    if (Object.keys(breakpoints).length !== 0 && responsive) {
 	        media = (0, _.addMediaQueries)(selectors, breakpoints);
 	    }
 

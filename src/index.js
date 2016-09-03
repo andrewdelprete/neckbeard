@@ -31,76 +31,76 @@ export const defaultSettings = {
         border: {
             limit: 3,
             incrementBy: 1,
-            useBreakpoints: true
+            responsive: true
         },
         borderRadius: {
             limit: 10,
             incrementBy: 1,
-            useBreakpoints: true
+            responsive: true
         },
         colors: {
-            useBreakpoints: false
+            responsive: false
         },
         display: {
-            useBreakpoints: true
+            responsive: true
         },
         flex: {
-            useBreakpoints: true
+            responsive: true
         },
         float: {
-            useBreakpoints: true
+            responsive: true
         },
         fontFamily: {
-            useBreakpoints: false,
+            responsive: false,
         },
         fontSize: {
             limit: 17,
             incrementBy: .25,
-            useBreakpoints: true
+            responsive: true
         },
         fontWeight: {
-            useBreakpoints: false
+            responsive: false
         },
         grid: {
             gridBlockCount: 12,
             gridGutter: 30,
             stackAtBreakpoint: 'md',
-            useBreakpoints: true
+            responsive: true
         },
         letterSpacing: {
             limit: 10,
             incrementBy: .1,
-            useBreakpoints: true
+            responsive: true
         },
         lineHeight: {
             limit: 10,
             incrementBy: .1,
-            useBreakpoints: true
+            responsive: true
         },
         misc: {
-            useBreakpoints: false
+            responsive: false
         },
         overflow: {
-            useBreakpoints: false
+            responsive: false
         },
         position: {
-            useBreakpoints: true
+            responsive: true
         },
         spacing: {
             limit: 10,
             incrementBy: 1,
-            useBreakpoints: true
+            responsive: true
         },
         textAlignment: {
-            useBreakpoints: true
+            responsive: true
         },
         textDecoration: {
-            useBreakpoints: false
+            responsive: false
         },
         zIndex: {
             limit: 10,
             incrementBy: 1,
-            useBreakpoints: true
+            responsive: true
         }
     },
     siteWidth: "114rem"

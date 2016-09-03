@@ -3,11 +3,11 @@ import { addMediaQueries } from '../'
 /**
  * Colors
  *
- * @param  {object} useBreakpoints
+ * @param  {object} responsive
  * @param  {object} breakpoints={} (optional)
  * @return {object}
  */
-export default function colors({ helpers: { colors: { useBreakpoints } }, colors, breakpoints }) {
+export default function colors({ helpers: { colors: { responsive } }, colors, breakpoints }) {
     let selectors = {}
     let media = {}
 
@@ -98,7 +98,7 @@ export default function colors({ helpers: { colors: { useBreakpoints } }, colors
     /**
      * Media Queries
      */
-    if (Object.keys(breakpoints).length !== 0 && useBreakpoints) {
+    if (Object.keys(breakpoints).length !== 0 && responsive) {
         media = addMediaQueries(selectors, breakpoints)
     }
 

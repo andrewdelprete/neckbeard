@@ -4,11 +4,11 @@ import { addMediaQueries } from '../'
  * Borders
  *
  * @param  {Number} limit=10
- * @param  {object} limit, incrementBy, useBreakpoints
+ * @param  {object} limit, incrementBy, responsive
  * @param  {object} breakpoints={} (optional)
  * @return {object}
  */
-export default function border({ helpers: { border: { limit, incrementBy, useBreakpoints } }, breakpoints }) {
+export default function border({ helpers: { border: { limit, incrementBy, responsive } }, breakpoints }) {
     let selectors = {}
     let media = {}
 
@@ -45,7 +45,7 @@ export default function border({ helpers: { border: { limit, incrementBy, useBre
     /**
      * Media Queries
      */
-    if (Object.keys(breakpoints).length !== 0 && useBreakpoints) {
+    if (Object.keys(breakpoints).length !== 0 && responsive) {
         media = addMediaQueries(selectors, breakpoints)
     }
 

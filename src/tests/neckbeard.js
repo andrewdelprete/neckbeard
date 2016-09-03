@@ -53,7 +53,7 @@ describe("create() function", function () {
             helpers: {
                 ...nb.defaultSettings.helpers,
                 spacing: {
-                    useBreakpoints: false
+                    responsive: false
                 }
             }
         }
@@ -140,7 +140,7 @@ describe("prefixSelectors() function", function () {
 //                     borderRadius: {
 //                         limit: 10,
 //                         incrementBy: 2,
-//                         useBreakpoints: true
+//                         responsive: true
 //                     }
 //                 }
 //             }

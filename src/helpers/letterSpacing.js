@@ -3,11 +3,11 @@ import { addMediaQueries } from '../'
 /**
  * Letter Spacing
  *
- * @param  {object} limit, incrementBy, useBreakpoints
+ * @param  {object} limit, incrementBy, responsive
  * @param  {object} breakpoints={} (optional)
  * @return {object}
  */
-export default function letterSpacing({ helpers: { letterSpacing: { limit, incrementBy, useBreakpoints } }, breakpoints }) {
+export default function letterSpacing({ helpers: { letterSpacing: { limit, incrementBy, responsive } }, breakpoints }) {
     let selectors = {}
     let media = {}
 
@@ -23,7 +23,7 @@ export default function letterSpacing({ helpers: { letterSpacing: { limit, incre
     /**
      * Media Queries
      */
-    if (Object.keys(breakpoints).length !== 0 && useBreakpoints) {
+    if (Object.keys(breakpoints).length !== 0 && responsive) {
         media = addMediaQueries(selectors, breakpoints)
     }
 

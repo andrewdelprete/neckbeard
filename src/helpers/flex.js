@@ -3,11 +3,11 @@ import { addMediaQueries } from '../'
 /**
  * Flex
  *
- * @param  {object} useBreakpoints
+ * @param  {object} responsive
  * @param  {object} breakpoints={} (optional)
  * @return {object}
  */
-export default function flex({ helpers: { flex: { useBreakpoints } }, breakpoints }) {
+export default function flex({ helpers: { flex: { responsive } }, breakpoints }) {
     let selectors = {}
     let media = {}
 
@@ -57,7 +57,7 @@ export default function flex({ helpers: { flex: { useBreakpoints } }, breakpoint
     /**
      * Media Queries
      */
-    if (Object.keys(breakpoints).length !== 0 && useBreakpoints) {
+    if (Object.keys(breakpoints).length !== 0 && responsive) {
         media = addMediaQueries(selectors, breakpoints)
     }
 

@@ -3,11 +3,11 @@ import { addMediaQueries } from '../'
 /**
  * Font Family
  *
- * @param  {object} useBreakpoints
+ * @param  {object} responsive
  * @param  {object} breakpoints={} (optional)
  * @return {object}
  */
-export default function fontFamily({ helpers: { fontFamily: { useBreakpoints } }, fonts, breakpoints }) {
+export default function fontFamily({ helpers: { fontFamily: { responsive } }, fonts, breakpoints }) {
     let selectors = {}
     let media = {}
 
@@ -21,7 +21,7 @@ export default function fontFamily({ helpers: { fontFamily: { useBreakpoints } }
     /**
      * Media Queries
      */
-    if (Object.keys(breakpoints).length !== 0 && useBreakpoints) {
+    if (Object.keys(breakpoints).length !== 0 && responsive) {
         media = addMediaQueries(selectors, breakpoints)
     }
 

@@ -3,11 +3,11 @@ import { addMediaQueries } from '../'
 /**
  * Font Size
  *
- * @param  {object} limit, incrementBy, useBreakpoints
+ * @param  {object} limit, incrementBy, responsive
  * @param  {object} breakpoints={} (optional)
  * @return {object}
  */
-export default function fontSize({ helpers: { fontSize: { limit, incrementBy, useBreakpoints } }, breakpoints }) {
+export default function fontSize({ helpers: { fontSize: { limit, incrementBy, responsive } }, breakpoints }) {
     let selectors = {}
     let media = {}
 
@@ -23,7 +23,7 @@ export default function fontSize({ helpers: { fontSize: { limit, incrementBy, us
     /**
      * Media Queries
      */
-    if (Object.keys(breakpoints).length !== 0 && useBreakpoints) {
+    if (Object.keys(breakpoints).length !== 0 && responsive) {
         media = addMediaQueries(selectors, breakpoints)
     }
 

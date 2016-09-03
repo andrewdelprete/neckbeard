@@ -3,11 +3,11 @@ import { addMediaQueries } from '../'
 /**
  * Text Alignment
  *
- * @param  {object} useBreakpoints
+ * @param  {object} responsive
  * @param  {object} breakpoints={} (optional)
  * @return {object}
  */
-export default function textAlignment({ helpers: { textAlignment: { useBreakpoints } }, breakpoints }) {
+export default function textAlignment({ helpers: { textAlignment: { responsive } }, breakpoints }) {
     let selectors = {}
     let media = {}
 
@@ -21,7 +21,7 @@ export default function textAlignment({ helpers: { textAlignment: { useBreakpoin
     /**
      * Media Queries
      */
-    if (Object.keys(breakpoints).length !== 0 && useBreakpoints) {
+    if (Object.keys(breakpoints).length !== 0 && responsive) {
         media = addMediaQueries(selectors, breakpoints)
     }
 
