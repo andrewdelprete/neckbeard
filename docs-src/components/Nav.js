@@ -26,6 +26,7 @@ const Nav = () => (
             <NavItem to="/">Overview</NavItem>
             <NavItem to="/installation">Installation</NavItem>
             <NavItem to="/usage">Usage</NavItem>
+            <NavItem to="/faq">Faq</NavItem>
 
             <div className={ nb("mt2") }>
                 <H3>Helpers</H3>

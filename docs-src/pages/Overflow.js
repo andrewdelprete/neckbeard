@@ -10,11 +10,6 @@ import Code from "../components/elements/Code"
 /**
  * Overflow Page
  */
-const snippet = `<div className={ nb("md-ls2 lg-ls5 xlg-ls8 mb2 brdr1 br5 tac pv1") }>
-    Different Letter Spacing Depending on Breakpoint
-</div>
-`
-
 const Overflow = () => (
     <div>
         <H1>

@@ -39,7 +39,7 @@ export default function spacing({ helpers: { spacing: { limit, incrementBy, resp
     }
 
     for (let x = incrementBy; x <= limit; x += incrementBy) {
-        selectors[`ma{ x }`] = {
+        selectors[`ma${ x }`] = {
             "margin": `${ x * incrementBy }rem`,
         }
         selectors[`mh${ x }`] = {

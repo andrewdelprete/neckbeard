@@ -32,14 +32,14 @@ const Installation = () => (
     <div>
         <H1>Overview</H1>
         <H2>Why Neckbeard?</H2>
-        <Copy className={ nb("ft4 sans tcg50 lh10 fwlight mb2") }>
-            Neckbeard is an Atomic CSS in JS framework that leverages the composibility nature of helper (utility) classes and the awesome power of <a href="https://github.com/Khan/aphrodite" className={ nb("tc5 xtd h-tc1") }>Aphrodite</a> to build components rapidly.
+        <Copy>
+            Neckbeard is an Atomic CSS in JS framework that leverages the composibility nature of helper (utility) classes and the awesome power of <a href="https://github.com/Khan/aphrodite" className={ nb("tc5 xtd h-tc1") }>Aphrodite</a> to rapidly build components.
             Neckbeard is created by <a href="https://www.twitter.com/andrewdelprete" className={ nb("tc5 xtd h-tc1") }>@andrewdelprete</a> and <a href="https://www.twitter.com/colinhoweth" className={ nb("tc5 xtd h-tc1") }>@colinhoweth</a> and highly inspired by <a href="https://www.buildwithbeard.com" className={ nb("tc5 xtd h-tc1") }>Beard</a>, built by <a href="https://www.twitter.com/davidhemphill" className={ nb("tc5 xtd h-tc1") }>@davidhemphill</a> and uses much of the same syntax as Beard.
-            The main difference is Neckbeard is built with Javascript whereas Beard is built with SCSS. Using Javascript to build a CSS framework allows us to do some
+            The main difference is Neckbeard is built with Javascript and Beard is built with SCSS. Using Javascript to build a CSS framework allows us to do some
             fantastic things.
         </Copy>
         <H3>Helper Classes</H3>
-        <Copy className={ nb("ft4 sans tcg50 lh10 fwlight mb2") }>
+        <Copy>
             A Helper Class is a very flat and simple method for applying aesthetic styles to HTML elements. These classes can be used in numerous contexts and are optimal for
             composing small to large components or sprinkling throughout your site or application. Neckbeard provides a Helper Class for just about everything you can think
             of and is extensible per project if custom classes are necessary. An example of a Helper Class to add spacing looks like <Code>.pv1</Code> which translates
@@ -47,13 +47,13 @@ const Installation = () => (
             In fact this entire site is made up of such helpers.
         </Copy>
         <H3>CSS in Javascript</H3>
-        <Copy className={ nb("ft4 sans tcg50 lh10 fwlight mb2") }>
-            CSS in Javascript is a fairly new practice in which we write our CSS in Javascript as an object and load styles on the page dynamically. Because the CSS syntax is fairly JSONish to begin with, using Javascript
-            just makes sense. Javascript gives us the power of a real programming language to generate, extend, and compose CSS classes. Whereas something like SCSS or LESS can feel consiberably more limiting. Neckbeard is
-            framework agnostic and can be used anywhere you use Javascript to add CSS classes.
+        <Copy>
+            CSS in Javascript is a fairly new practice in which we write our CSS in Javascript as an object and load styles on the page dynamically. Because CSS syntax is fairly JSONish to begin with, using Javascript
+            just makes sense. Javascript gives us the power of a real programming language to generate, extend, and compose CSS classes. Whereas something like SCSS or LESS can feel consiberably more limiting. We use React in our examples, however Neckbeard is
+            framework agnostic and can be used anywhere Javascript is used to add CSS classes.
         </Copy>
         <Copy>
-            Neckbeard wraps the library <a href="https://github.com/Khan/aphrodite" className={ nb("tc5 xtd h-tc1") }>Aphrodite</a> under the hood. Aphrodite is used to apply only the styles you're actually using to the page.
+            Neckbeard wraps the library <a href="https://github.com/Khan/aphrodite" className={ nb("tc5 xtd h-tc1") }>Aphrodite</a> under the hood. Aphrodite is used to only apply the styles you're actually using to the page.
         </Copy>
         <H3>The Magical Unicorn 🦄</H3>
         <Copy>
@@ -66,7 +66,10 @@ const Installation = () => (
             <div className={ nb("ph1 tcg40 sm-mb1 md-xmb") }>- No cascading styles and CSS specificity issues.</div>
         </Copy>
 
-        <H3>Example Usage in React</H3>
+        <div className={ nb("mb1") }>
+            <H3>Example Usage in React</H3>
+        </div>
+
         <div className={ nb("lh4 mb2") }>
             <Highlight className={ nb("ph2 pv2") }>
                 { snippet1 }

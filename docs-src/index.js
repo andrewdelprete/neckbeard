@@ -10,6 +10,8 @@ import App from './pages/App'
 import Overview from './pages/Overview'
 import Installation from './pages/Installation'
 import Usage from './pages/Usage'
+import Faq from './pages/Faq'
+
 import Border from './pages/Border'
 import BorderRadius from './pages/BorderRadius'
 import Colors from './pages/Colors'
@@ -55,6 +57,9 @@ ReactDOM.render((
             <IndexRoute component={ Overview } />
             <Route path="/installation" component={ Installation } />
             <Route path="/usage" component={ Usage } />
+            <Route path="/faq" component={ Faq } />
+
+            {/* Helpers */}
             <Route path="/border" component={ Border } />
             <Route path="/border-radius" component={ BorderRadius } />
             <Route path="/colors" component={ Colors } />

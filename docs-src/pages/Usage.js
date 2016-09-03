@@ -117,7 +117,7 @@ const Usage = () => (
         <H1>Usage</H1>
         <H2>The Basics</H2>
         <Copy>
-            After installing Neckbeard via NPM or CDN you'll need to call the <Code>Neckbeard.create()</Code> function and assign it to a variable.
+            After installing Neckbeard via NPM or CDN you'll invoke the <Code>Neckbeard.create()</Code> function and assign it to a variable.
         </Copy>
         <Highlight className={ nb("ph2 pv2 lh3 mb2") }>
             { snippet }
