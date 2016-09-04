@@ -6,15 +6,17 @@ import { StyleSheet, css } from 'aphrodite'
 import * as helpers from './helpers'
 
 /**
- * Neckbeard Set Beard Colors
+ * Neckbeard Utilities
  */
+import addMediaQueries from './utilities/addMediaQueries'
+import prefixSelectors from './utilities/prefixSelectors'
 import setBeardColors from './utilities/setBeardColors'
 
 /**
  * Neckbeard Default Settings
  * @type {object}
  */
-export const defaultSettings = {
+const defaultSettings = {
     breakpoints: {
         sm: 300,
         md: 600,
@@ -113,7 +115,7 @@ export const defaultSettings = {
  * @param  {object} helperFns
  * @return {object}
  */
-export function create(settings = defaultSettings, helperFns = helpers) {
+function create(settings = defaultSettings, helperFns = helpers) {
     // Set colors
     settings.colors = setBeardColors(settings.colors)
 
@@ -150,81 +152,6 @@ export function create(settings = defaultSettings, helperFns = helpers) {
 
         return css(...stylesArray)
     }
-}
-
-/**
- * Returns a new object with
- * prefix class selectors with '.'
- * and psuedo selectors with ':'
- * @param  {object} settings
- * @param  {object} helperFns
- * @return {object}
- */
-export function prefixSelectors(settings = defaultSettings, helperFns = helpers) {
-    // Set colors
-    settings.colors = setBeardColors(settings.colors)
-
-    // Envokes each helper function passed and returns
-    // an aggregrated object of all selector properties.
-    const allSelectors = Object
-        .keys(helperFns)
-        .map(fnKey => helperFns[fnKey](settings))
-        .reduce((previous, current) => ({ ...previous, ...current }))
-
-    // Prefix each selector with .
-    return Object
-        .keys(allSelectors)
-        .reduce((previous, current) => {
-            allSelectors[`.${ current }`] = allSelectors[current]
-
-            // Prefix psuedo selectors with :
-            Object.keys(allSelectors[`.${ current }`]).forEach(selector => {
-                if (selector[0] === ':') {
-                    allSelectors[`.${ current }`][`&${ selector }`] = allSelectors[current][selector]
-                    delete allSelectors[`.${ current }`][selector]
-                }
-             })
-
-            delete allSelectors[current]
-
-            return { ...allSelectors }
-        }, {})
-}
-
-/**
- * Adds media query classes to passed selectors
- * @param {object} selectors
- * @param {object} breakpoints
- * @return {object}
- */
-export function addMediaQueries(selectors, breakpoints) {
-    let media = {}
-
-    Object.keys(breakpoints).forEach((breakpoint, index) => {
-        Object.keys(selectors).forEach(selector => {
-            // {breakpoint}-{selector}
-            media[`${ breakpoint }-${ selector }`] = {
-                [`@media (min-width: ${ breakpoints[breakpoint] }px)`]: selectors[selector]
-            }
-
-            // only-{breakpoint}-{selector}
-            if (index === 0) {
-                media[`only-${ breakpoint }-${ selector }`] = {
-                    [`@media (max-width: ${ breakpoints[breakpoint] }px)`]: selectors[selector]
-                }
-            } else if (index === Object.keys(breakpoints).length - 1) {
-                media[`only-${ breakpoint }-${ selector }`] = {
-                    [`@media (min-width: ${ breakpoints[breakpoint] }px)`]: selectors[selector]
-                }
-            } else {
-                media[`only-${ breakpoint }-${ selector }`] = {
-                    [`@media (min-width: ${ breakpoints[breakpoint] }px) and (max-width: ${ breakpoints[Object.keys(breakpoints)[index + 1]] - 1 }px)`]: selectors[selector]
-                }
-            }
-        })
-    })
-
-    return media
 }
 
 /**

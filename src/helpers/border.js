@@ -1,4 +1,4 @@
-import { addMediaQueries } from '../'
+import addMediaQueries from '../utilities/addMediaQueries'
 
 /**
  * Borders

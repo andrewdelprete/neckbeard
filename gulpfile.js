@@ -14,7 +14,7 @@ var nb = require('./build')
  * file from Neckbeard Helpers.
  */
 gulp.task('css', function() {
-    const cssObj = nb.prefixSelectors()
+    const cssObj = nb.prefixSelectors(nb.defaultSettings, nb.helpers)
 
     return postcss()
         .process(cssObj, { parser: postcssJs })
