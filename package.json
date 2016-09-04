@@ -39,7 +39,7 @@
     "build": "webpack && gulp css",
     "test": "NODE_ENV=test mocha --compilers js:babel-register --recursive src/tests",
     "deploy:surge": "npm run build:docs && surge ./docs neckbeard.surge.sh",
-    "deploy": "npm run build:docs && rsync -rvvz --delete docs/* andrew@162.243.24.224:/var/www/neckbeardjs.com"
+    "deploy": "NODE_ENV=production npm run build:docs && rsync -rvvz --delete docs/* andrew@162.243.24.224:/var/www/neckbeardjs.com"
   },
   "keywords": [
     "css",
