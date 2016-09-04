@@ -11,12 +11,10 @@ import Code from "../components/elements/Code"
 /**
  * Flexbox Page
  */
-const snippet = `<div className={ nb("relative mb2") }>
-    <div className={ nb("brdr1 bc1 br5 flex jcc aic absolute h100 w100") }>
-        <span className={ nb("ft5 tc1 tac fwthin") }>
-            Vertical and Horizontal Centering
-        </span>
-    </div>
+const snippet = `<div className={ nb("flex jcc aic absolute h100 w100 brdr1 bc1 br5") }>
+    <span className={ nb("ft5 tc1 tac fwthin") }>
+        Vertical and Horizontal Centering
+    </span>
 </div>
 `
 
@@ -178,7 +176,7 @@ const Flexbox = () => (
         </Highlight>
 
         <div className={ nb("relative mb2") } style={{ height: "100px" }}>
-            <div className={ nb("brdr1 bc1 br5 flex jcc aic absolute h100 w100") }>
+            <div className={ nb("flex jcc aic absolute h100 w100 brdr1 bc1 br5") }>
                 <span className={ nb("ft5 tc1 tac fwthin") }>
                     Vertical and Horizontal Centering
                 </span>
