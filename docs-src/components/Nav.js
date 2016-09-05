@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react'
 import { Router, Route, Link } from 'react-router'
 import H3 from "../components/elements/H3"
 
@@ -19,7 +19,7 @@ const NavItem = ({ children, to }) => {
 }
 
 
-const Nav = () => (
+const Nav = ({ onMenuToggle }) => (
     <nav>
         <ul className={ nb("sans") }>
             <H3>Getting Started</H3>
@@ -51,5 +51,12 @@ const Nav = () => (
         </ul>
     </nav>
 )
+Nav.defaultProps = {
+    onMenuToggle: () => {}
+}
+
+Nav.propTypes = {
+    onMenuToggle: PropTypes.func
+}
 
 export default Nav
