@@ -43,7 +43,7 @@ const Color = () => (
     <div>
         <H1>
             Colors
-            <span className={ nb("tc1 ft3 capitalize fw3 ml1") }>Responsive</span>
+            <span className={ nb("tc1 ft3 capitalize fw3 ml1") }>Not Responsive</span>
         </H1>
         <div className={ nb("mb2") }>
             <div className={ nb("frame xmh") }>

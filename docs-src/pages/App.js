@@ -18,6 +18,7 @@ export default class App extends React.Component {
     }
 
     componentWillReceiveProps() {
+        scroll(0,0)
         this.state.showMenu = false
     }
 
