@@ -90,6 +90,10 @@ const Misc = () => (
                     <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.hidetext</Code></td>
                     <td className={ nb("tcg50 fw3 pv1 ph1") }>Hide text from the viewer, but leave it for search engines and screen readers.</td>
                 </tr>
+                <tr className={ nb("brdr1--bottom bcg10") }>
+                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.pointer</Code></td>
+                    <td className={ nb("tcg50 fw3 pv1 ph1") }>Set cursor to pointer on hover.</td>
+                </tr>
             </tbody>
         </table>
 

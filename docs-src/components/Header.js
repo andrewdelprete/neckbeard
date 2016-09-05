@@ -20,7 +20,7 @@ export default class Header extends Component {
                     <div className={ nb("tcb sm-dn md-db fwsemibold ft3 ls1 sans") } id="tagline">Default</div>
                 </div>
                 <div className={ nb("md-db lg-dn") }>
-                    <a onClick={ this.props.onMenuToggle } className={ nb("sans ft3 fwthin uppercase tcb xtd ls1 code brdr1 br3 bg2 ph1 pv05 bc5 dim") }>Menu</a>
+                    <a onClick={ this.props.onMenuToggle } className={ nb("sans ft3 fwthin uppercase tcb xtd ls1 code brdr1 br3 bg2 ph1 pv05 bc5 dim pointer") }>Menu</a>
                 </div>
             </div>
         )

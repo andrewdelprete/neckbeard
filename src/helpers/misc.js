@@ -94,6 +94,10 @@ export default function misc({ helpers: { misc: { responsive, siteWidth } }, bre
         overflow: 'hidden'
     }
 
+    selectors['pointer'] = {
+        cursor: "pointer"
+    }
+
     /**
      * Media Queries
      */
