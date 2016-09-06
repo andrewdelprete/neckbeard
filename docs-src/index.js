@@ -10,7 +10,8 @@ import App from './pages/App'
 import Overview from './pages/Overview'
 import Installation from './pages/Installation'
 import Usage from './pages/Usage'
-import Faq from './pages/Faq'
+import Breakpoints from './pages/Breakpoints'
+import Examples from './pages/Examples'
 
 import Border from './pages/Border'
 import BorderRadius from './pages/BorderRadius'
@@ -57,7 +58,8 @@ ReactDOM.render((
             <IndexRoute component={ Overview } />
             <Route path="/installation" component={ Installation } />
             <Route path="/usage" component={ Usage } />
-            <Route path="/faq" component={ Faq } />
+            <Route path="/breakpoints" component={ Breakpoints } />
+            <Route path="/examples" component={ Examples } />
 
             {/* Helpers */}
             <Route path="/border" component={ Border } />

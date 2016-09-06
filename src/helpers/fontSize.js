@@ -20,7 +20,7 @@ export default function fontSize({ helpers: { fontSize: { limit, incrementBy, re
 
     for (let x = 2; x <= limit; x++) {
         selectors[`ft${ x }`] = {
-            "font-size": `${ 1 + x * incrementBy }rem`
+            "font-size": `${ 1 + (x - 1) * incrementBy }rem`
         }
     }
 

@@ -8,13 +8,13 @@ import Copy from "../components/elements/Copy"
 import Code from "../components/elements/Code"
 
 /**
- * Faq Page
+ * Breakpoints Page
  */
-const Faq = () => (
+const Breakpoints = () => (
     <div>
-        <H1>Faq</H1>
+        <H1>Breakpoints</H1>
         <Copy>Coming Soon</Copy>
     </div>
 )
 
-export default Faq
+export default Breakpoints

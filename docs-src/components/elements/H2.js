@@ -4,7 +4,7 @@ import React, { Component } from 'react'
  * Heading 2
  */
 const H2 = ({ children }) => (
-    <h2 className={ nb("ft15 pv2 xmv bc1 ls1 sans fwlight") }>
+    <h2 className={ nb("ft17 pv2 xmv bc1 ls1 sans fwlight") }>
         { children }
     </h2>
 )

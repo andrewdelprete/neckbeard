@@ -15,12 +15,12 @@ export default function lineHeight({ helpers: { lineHeight: { responsive, limit,
      * Line Height Helpers
      */
     selectors["lh1"] = {
-        "line-height": "1rem"
+        "line-height": "1"
     }
 
     for (let x = 2; x <= limit; x++) {
         selectors[`lh${ x }`] = {
-            "line-height": `${ 1 + x * incrementBy }`
+            "line-height": `${ 1 + (x - .1) * incrementBy }`
         }
     }
 

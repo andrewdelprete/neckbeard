@@ -9,7 +9,7 @@ const NavItem = ({ children, to }) => {
     return (
         <li className={ nb("db brdr1--bottom bcg10") }>
             <Link
-                className={ nb("db ft4 tc5 pv1 xtd h-tc1") }
+                className={ nb("db ft5 tc5 pv1 xtd h-tc1") }
                 to={ to }
             >
             { children }
@@ -26,9 +26,10 @@ const Nav = ({ onMenuToggle }) => (
             <NavItem to="/">Overview</NavItem>
             <NavItem to="/installation">Installation</NavItem>
             <NavItem to="/usage">Usage</NavItem>
-            <NavItem to="/faq">Faq</NavItem>
+            <NavItem to="/breakpoints">Breakpoints</NavItem>
+            <NavItem to="/examples">Examples</NavItem>
 
-            <div className={ nb("mt2") }>
+            <div className={ nb("mt3") }>
                 <H3>Helpers</H3>
             </div>
             <NavItem to="/border">Border</NavItem>
