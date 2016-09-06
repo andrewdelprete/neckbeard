@@ -135,14 +135,14 @@ const Grid = () => (
         </div>
 
         <H2>Example</H2>
-        <Highlight className={ nb("ph2 pv2 mb2 lh5") }>
+        <Highlight className={ nb("pa1 mb2 lh5 ft3") }>
             { snippet }
         </Highlight>
 
         <H2>Default Settings</H2>
-        <div className={ nb("lh5 mb2") }>
+        <div className={ nb("lh5 mb2 ft3") }>
             <Copy>See <Link to="/usage#configuration" className={ nb("tc5 xtd h-tc1") }>Configuration</Link> to learn how to overwrite helper settings.</Copy>
-            <Highlight className={ nb("ph2 pv2") }>
+            <Highlight className={ nb("pa1") }>
                 {"// Neckbeard.defaultSettings.helpers.grid \n" }
                 { JSON.stringify(Neckbeard.defaultSettings.helpers.grid, null, '    ') }
             </Highlight>

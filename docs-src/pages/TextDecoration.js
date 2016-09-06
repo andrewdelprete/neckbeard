@@ -20,34 +20,34 @@ const TextDecoration = () => (
         <table className={ nb("w100 mb2 ft4 tcg60 lh2 sans") }>
             <thead>
                 <tr className={ nb("brdr1--bottom bcg10 bgg05") }>
-                    <th className={ nb("pv1 ph1 tal fwsemibold ph1") }>Name</th>
-                    <th className={ nb("pv1 ph1 tal fwsemibold ph1") }>Class</th>
+                    <th className={ nb("pa1 tal fwsemibold ph1") }>Name</th>
+                    <th className={ nb("pa1 tal fwsemibold ph1") }>Class</th>
                 </tr>
             </thead>
             <tbody>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>Overline</Code></td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.overline</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>Overline</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>.overline</Code></td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>Line Through</Code></td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.line-through</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>Line Through</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>.line-through</Code></td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>Underline</Code></td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.underline</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>Underline</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>.underline</Code></td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>Remove Text Decoration</Code></td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.xtd</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>Remove Text Decoration</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>.xtd</Code></td>
                 </tr>
             </tbody>
         </table>
 
         <H2>Default Settings</H2>
-        <div className={ nb("lh5 mb2") }>
+        <div className={ nb("lh5 mb2 ft3") }>
             <Copy>See <Link to="/usage#configuration" className={ nb("tc5 xtd h-tc1") }>Configuration</Link> to learn how to overwrite helper settings.</Copy>
-            <Highlight className={ nb("ph2 pv2") }>
+            <Highlight className={ nb("pa1") }>
                 {"// Neckbeard.defaultSettings.helpers.textDecoration \n" }
                 { JSON.stringify(Neckbeard.defaultSettings.helpers.textDecoration, null, '    ') }
             </Highlight>

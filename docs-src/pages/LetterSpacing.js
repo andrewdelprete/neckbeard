@@ -25,55 +25,55 @@ const LetterSpacing = () => (
         <table className={ nb("w100 mb2 ft4 tcg60 lh2 sans") }>
             <thead>
                 <tr className={ nb("brdr1--bottom bcg10 bgg05") }>
-                    <th className={ nb("pv1 ph1 tal fwsemibold ph1") }>Name</th>
-                    <th className={ nb("pv1 ph1 tal fwsemibold ph1") }>Class</th>
+                    <th className={ nb("pa1 tal fwsemibold ph1") }>Name</th>
+                    <th className={ nb("pa1 tal fwsemibold ph1") }>Class</th>
                 </tr>
             </thead>
             <tbody>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.ls1</Code></td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>line-spacing .1rem</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>.ls1</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>line-spacing .1rem</Code></td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.ls2</Code></td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>line-spacing: .2rem</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>.ls2</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>line-spacing: .2rem</Code></td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.ls3</Code></td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>line-spacing: .3rem</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>.ls3</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>line-spacing: .3rem</Code></td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.ls4</Code></td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>line-spacing: .4rem</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>.ls4</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>line-spacing: .4rem</Code></td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.ls5</Code></td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>line-spacing: .5rem</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>.ls5</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>line-spacing: .5rem</Code></td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.ls6</Code></td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>line-spacing: .6rem</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>.ls6</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>line-spacing: .6rem</Code></td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.ls7</Code></td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>line-spacing: .7rem</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>.ls7</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>line-spacing: .7rem</Code></td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.ls8</Code></td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>line-spacing: .8rem</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>.ls8</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>line-spacing: .8rem</Code></td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.ls9</Code></td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>line-spacing: .9rem</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>.ls9</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>line-spacing: .9rem</Code></td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.ls10</Code></td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>line-spacing: 1rem</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>.ls10</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>line-spacing: 1rem</Code></td>
                 </tr>
             </tbody>
         </table>
         <H2>Example</H2>
-        <Highlight className={ nb("ph2 pv2 mb2 lh5") }>
+        <Highlight className={ nb("pa1 mb2 lh5 ft3") }>
             { snippet }
         </Highlight>
 
@@ -82,9 +82,9 @@ const LetterSpacing = () => (
         </div>
 
         <H2>Default Settings</H2>
-        <div className={ nb("lh5 mb2") }>
+        <div className={ nb("lh5 mb2 ft3") }>
             <Copy>See <Link to="/usage#configuration" className={ nb("tc5 xtd h-tc1") }>Configuration</Link> to learn how to overwrite helper settings.</Copy>
-            <Highlight className={ nb("ph2 pv2") }>
+            <Highlight className={ nb("pa1") }>
                 {"// Neckbeard.defaultSettings.helpers.letterSpacing \n" }
                 { JSON.stringify(Neckbeard.defaultSettings.helpers.letterSpacing, null, '    ') }
             </Highlight>

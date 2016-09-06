@@ -20,30 +20,30 @@ const Overflow = () => (
         <table className={ nb("w100 mb2 ft4 tcg60 lh2 sans") }>
             <thead>
                 <tr className={ nb("brdr1--bottom bcg10 bgg05") }>
-                    <th className={ nb("pv1 ph1 tal fwsemibold ph1") }>Class</th>
-                    <th className={ nb("pv1 ph1 tal fwsemibold ph1") }>Value</th>
+                    <th className={ nb("pa1 tal fwsemibold ph1") }>Class</th>
+                    <th className={ nb("pa1 tal fwsemibold ph1") }>Value</th>
                 </tr>
             </thead>
             <tbody>
                     <tr className={ nb("brdr1--bottom bcg10") }>
-                        <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.ofh</Code></td>
-                        <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>overflow: hidden</Code></td>
+                        <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>.ofh</Code></td>
+                        <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>overflow: hidden</Code></td>
                     </tr>
                     <tr className={ nb("brdr1--bottom bcg10") }>
-                        <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.ofx</Code></td>
-                        <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>overflow-x: scroll</Code></td>
+                        <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>.ofx</Code></td>
+                        <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>overflow-x: scroll</Code></td>
                     </tr>
                     <tr className={ nb("brdr1--bottom bcg10") }>
-                        <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.ofy</Code></td>
-                        <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>overflow-y: scroll</Code></td>
+                        <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>.ofy</Code></td>
+                        <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>overflow-y: scroll</Code></td>
                     </tr>
                 </tbody>
         </table>
 
         <H2>Default Settings</H2>
-        <div className={ nb("lh5 mb2") }>
+        <div className={ nb("lh5 mb2 ft3") }>
             <Copy>See <Link to="/usage#configuration" className={ nb("tc5 xtd h-tc1") }>Configuration</Link> to learn how to overwrite helper settings.</Copy>
-            <Highlight className={ nb("ph2 pv2") }>
+            <Highlight className={ nb("pa1") }>
                 {"// Neckbeard.defaultSettings.helpers.overflow \n" }
                 { JSON.stringify(Neckbeard.defaultSettings.helpers.overflow, null, '    ') }
             </Highlight>

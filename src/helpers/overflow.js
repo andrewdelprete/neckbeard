@@ -21,7 +21,7 @@ export default function overflow({ helpers: { overflow: { responsive } }, breakp
     /**
      * Media Queries
      */
-    if (Object.keys(breakpoints).length !== 0 && responsive) {
+    if (responsive) {
         media = addMediaQueries(selectors, breakpoints)
     }
 

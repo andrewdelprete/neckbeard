@@ -51,7 +51,7 @@ export default function borderRadius({ helpers: { borderRadius: { limit, increme
     /**
      * Media Queries
      */
-    if (Object.keys(breakpoints).length !== 0 && responsive) {
+    if (responsive) {
         media = addMediaQueries(selectors, breakpoints)
     }
 

@@ -28,71 +28,71 @@ const Spacing = () => (
         <table className={ nb("w100 mb2 ft4 tcg60 lh2 sans") }>
             <thead>
                 <tr className={ nb("brdr1--bottom bcg10 bgg05") }>
-                    <th className={ nb("pv1 ph1 tal fwsemibold ph1") }>Name</th>
-                    <th className={ nb("pv1 ph1 tal fwsemibold ph1") }>Class</th>
+                    <th className={ nb("pa1 tal fwsemibold ph1") }>Name</th>
+                    <th className={ nb("pa1 tal fwsemibold ph1") }>Class</th>
                 </tr>
             </thead>
             <tbody>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>Margin All</td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.ma</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>Margin All</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>.ma</Code></td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>Margin Vertical</td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.mv</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>Margin Vertical</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>.mv</Code></td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>Margin Horizontal</td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.mh</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>Margin Horizontal</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>.mh</Code></td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>Margin Top</td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.mt</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>Margin Top</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>.mt</Code></td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>Margin Right</td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.mr</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>Margin Right</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>.mr</Code></td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>Margin Bottom</td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.mb</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>Margin Bottom</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>.mb</Code></td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>Margin Left</td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.ml</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>Margin Left</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>.ml</Code></td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>Padding All</td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.pa</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>Padding All</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>.pa</Code></td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>Padding Vertical</td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.pv</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>Padding Vertical</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>.pv</Code></td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>Padding Horizontal</td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.ph</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>Padding Horizontal</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>.ph</Code></td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>Padding Top</td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.pt</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>Padding Top</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>.pt</Code></td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>Padding Right</td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.pr</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>Padding Right</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>.pr</Code></td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>Padding Bottom</td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.pb</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>Padding Bottom</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>.pb</Code></td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>Padding Left</td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.pl</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>Padding Left</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>.pl</Code></td>
                 </tr>
             </tbody>
         </table>
         <H2>Example</H2>
-        <Highlight className={ nb("ph2 pv2 mb2 lh5") }>
+        <Highlight className={ nb("pa1 mb2 lh5 ft3") }>
             { snippet }
         </Highlight>
         <div className={ nb("md-pa1 lg-pa3 xlg-pa5 mb2 brdr1 br5 tac") }>
@@ -100,9 +100,9 @@ const Spacing = () => (
         </div>
 
         <H2>Default Settings</H2>
-        <div className={ nb("lh5 mb2") }>
+        <div className={ nb("lh5 mb2 ft3") }>
             <Copy>See <Link to="/usage#configuration" className={ nb("tc5 xtd h-tc1") }>Configuration</Link> to learn how to overwrite helper settings.</Copy>
-            <Highlight className={ nb("ph2 pv2") }>
+            <Highlight className={ nb("pa1") }>
                 {"// Neckbeard.defaultSettings.helpers.spacing \n" }
                 { JSON.stringify(Neckbeard.defaultSettings.helpers.spacing, null, '    ') }
             </Highlight>

@@ -56,8 +56,8 @@ const defaultSettings = {
             responsive: false,
         },
         fontSize: {
-            limit: 10,
-            incrementBy: .25,
+            limit: 15,
+            incrementBy: .1,
             responsive: true
         },
         fontWeight: {

@@ -36,14 +36,14 @@ const Installation = () => (
         <H1>Installation</H1>
         <Copy>There are several ways of installing the awesome that is Neckbeard:</Copy>
         <H2>NPM</H2>
-        <Highlight className={ nb("ph2 pv2 mb2") }>
+        <Highlight className={ nb("pa1 mb2") }>
             > npm install neckbeard --save-dev
         </Highlight>
-        <Highlight className={ nb("ph2 pv2 lh3 mb2") }>
+        <Highlight className={ nb("pa1 mb2 lh5 ft3") }>
             { snippet }
         </Highlight>
         <H2>CDN</H2>
-        <Highlight className={ nb("ph2 pv2 mb2") }>
+        <Highlight className={ nb("pa1 mb2") }>
             { '<script src="https://unpkg.com/neckbeard"></script>' }
         </Highlight>
         <Copy>
@@ -51,7 +51,7 @@ const Installation = () => (
         </Copy>
         <H2>No  Magical Unicorn?</H2>
         <Copy>If you don't want to utilize CSS in JS, have no fear, we've exported all the helpers into a CSS file for you. Keep in mind this is a static CSS file and you won't be able to adjust settings.</Copy>
-        <Highlight className={ nb("ph2 pv2 mb2") }>
+        <Highlight className={ nb("pa1 mb2") }>
             { '<link href="https://unpkg.com/neckbeard/build/nb.css" rel="stylesheet" />' }
         </Highlight>
     </div>

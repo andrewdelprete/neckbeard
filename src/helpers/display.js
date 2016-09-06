@@ -23,7 +23,7 @@ export default function display({ helpers: { display: { responsive } }, breakpoi
     /**
      * Media Queries
      */
-    if (Object.keys(breakpoints).length !== 0 && responsive) {
+    if (responsive) {
         media = addMediaQueries(selectors, breakpoints)
     }
 

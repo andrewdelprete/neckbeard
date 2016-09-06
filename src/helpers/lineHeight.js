@@ -18,16 +18,16 @@ export default function lineHeight({ helpers: { lineHeight: { responsive, limit,
         "line-height": "1rem"
     }
 
-    for (let x = 1; x <= limit; x++) {
+    for (let x = 2; x <= limit; x++) {
         selectors[`lh${ x }`] = {
-            "line-height": `${ 1 + x * incrementBy }rem`
+            "line-height": `${ 1 + x * incrementBy }`
         }
     }
 
     /**
      * Media Queries
      */
-    if (Object.keys(breakpoints).length !== 0 && responsive) {
+    if (responsive) {
         media = addMediaQueries(selectors, breakpoints)
     }
 

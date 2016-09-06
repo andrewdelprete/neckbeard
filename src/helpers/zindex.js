@@ -24,7 +24,7 @@ export default function zindex({ helpers: { zIndex: { limit, incrementBy, respon
     /**
      * Media Queries
      */
-    if (Object.keys(breakpoints).length !== 0 && responsive) {
+    if (responsive) {
         media = addMediaQueries(selectors, breakpoints)
     }
 

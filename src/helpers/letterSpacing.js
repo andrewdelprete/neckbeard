@@ -23,7 +23,7 @@ export default function letterSpacing({ helpers: { letterSpacing: { limit, incre
     /**
      * Media Queries
      */
-    if (Object.keys(breakpoints).length !== 0 && responsive) {
+    if (responsive) {
         media = addMediaQueries(selectors, breakpoints)
     }
 

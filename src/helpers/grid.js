@@ -80,7 +80,7 @@ export default function grid({ helpers: { grid: { gridGutter, gridBlockCount, st
     /**
      * Media Queries
      */
-    if (Object.keys(breakpoints).length !== 0 && responsive) {
+    if (responsive) {
         media = addMediaQueries(selectors, breakpoints)
     }
 

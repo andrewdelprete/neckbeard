@@ -41,10 +41,10 @@ export default class App extends React.Component {
                         <div className={ nb(mobileMenuClasses) }>
                             <Nav onMenuToggle={ this.handleMenuToggle } />
                         </div>
-                        <div className={ nb('blk md-blk2 lg-db dn bgg05 pv2') }>
+                        <div className={ nb('blk md-blk2 lg-db dn bgg05 pv3') }>
                             <Nav />
                         </div>
-                        <div className={ nb('blk md-blk10 pv2') }>
+                        <div className={ nb('blk md-blk10 pv3') }>
                             { this.props.children }
                         </div>
                     </div>

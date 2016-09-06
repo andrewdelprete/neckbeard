@@ -46,60 +46,60 @@ const BorderRadius = () => (
         <table className={ nb("w100 mb2 ft4 tcg60 lh2 sans") }>
             <thead>
                 <tr className={ nb("brdr1--bottom bcg10 bgg05") }>
-                    <th className={ nb("pv1 ph1 tal fwsemibold ph1") }>Border Direction</th>
-                    <th className={ nb("pv1 ph1 tal fwsemibold ph1") }>Class Prefix</th>
-                    <th className={ nb("pv1 ph1 tal fwsemibold ph1") }>Default Amounts</th>
+                    <th className={ nb("pa1 tal fwsemibold ph1") }>Border Direction</th>
+                    <th className={ nb("pa1 tal fwsemibold ph1") }>Class Prefix</th>
+                    <th className={ nb("pa1 tal fwsemibold ph1") }>Default Amounts</th>
                 </tr>
             </thead>
             <tbody>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>Border Radius</td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>.br</td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>0-10</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>Border Radius</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>.br</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>0-10</td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>Border Left Radius</td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>.blr</td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>0-10</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>Border Left Radius</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>.blr</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>0-10</td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>Border Right Radius</td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>.brr</td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>0-10</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>Border Right Radius</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>.brr</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>0-10</td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>Border Top Left Radius</td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>.btlr</td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>0-10</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>Border Top Left Radius</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>.btlr</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>0-10</td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>Border Top Right Radius</td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>.btrr</td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>0-10</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>Border Top Right Radius</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>.btrr</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>0-10</td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>Border Bottom Left Radius</td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>.bblr</td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>0-10</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>Border Bottom Left Radius</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>.bblr</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>0-10</td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>Border Bottom Right Radius</td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>.bbrr</td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>0-10</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>Border Bottom Right Radius</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>.bbrr</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>0-10</td>
                 </tr>
             </tbody>
         </table>
         <H2>Example</H2>
-        <Highlight className={ nb("ph2 pv2 mb2 lh5") }>
+        <Highlight className={ nb("pa1 mb2 lh5 ft3") }>
             { snippet2 }
         </Highlight>
 
         <div className={ nb("brdr1 br5 bc1 pv1 tac mb2") }>.brdr1.br5.bc1.pv1.mb2</div>
 
         <H2>Default Settings</H2>
-        <div className={ nb("lh4 mb2") }>
+        <div className={ nb("lh5 mb2 ft3") }>
             <Copy>See <Link to="/usage#configuration" className={ nb("tc5 xtd h-tc1") }>Configuration</Link> to learn how to overwrite helper settings.</Copy>
-            <Highlight className={ nb("ph2 pv2 lh5") }>
+            <Highlight className={ nb("pa1 lh5") }>
                 {"// Neckbeard.defaultSettings.helpers.borderRadius \n" }
                 { JSON.stringify(Neckbeard.defaultSettings.helpers.borderRadius, null, '    ') }
             </Highlight>

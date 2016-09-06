@@ -29,39 +29,39 @@ const Display = () => (
         <table className={ nb("w100 mb2 ft4 tcg60 lh2 sans") }>
             <thead>
                 <tr className={ nb("brdr1--bottom bcg10 bgg05") }>
-                    <th className={ nb("pv1 ph1 tal fwsemibold ph1") }>Name</th>
-                    <th className={ nb("pv1 ph1 tal fwsemibold ph1") }>Class</th>
+                    <th className={ nb("pa1 tal fwsemibold ph1") }>Name</th>
+                    <th className={ nb("pa1 tal fwsemibold ph1") }>Class</th>
                 </tr>
             </thead>
             <tbody>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>Display Block</td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>.db</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>Display Block</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>.db</td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>Display Inline</td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>.di</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>Display Inline</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>.di</td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>Display Inline-block</td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>.dib</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>Display Inline-block</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>.dib</td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>Display None</td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>.dn</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>Display None</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>.dn</td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>Full Width<span className={ nb("tc1 ft4 fw3 ml1") }>Not Responsive</span></td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>.full</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>Full Width<span className={ nb("tc1 ft4 fw3 ml1") }>Not Responsive</span></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>.full</td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>w100<span className={ nb("tc1 ft4 fw3 ml1") }>Not Responsive</span></td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>.w100</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>w100<span className={ nb("tc1 ft4 fw3 ml1") }>Not Responsive</span></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>.w100</td>
                 </tr>
             </tbody>
         </table>
         <H2>Example</H2>
-        <Highlight className={ nb("ph2 pv2 mb2 lh5") }>
+        <Highlight className={ nb("pa1 mb2 lh5 ft3") }>
             { snippet }
         </Highlight>
 
@@ -74,9 +74,9 @@ const Display = () => (
         </div>
 
         <H2>Default Settings</H2>
-        <div className={ nb("lh5 mb2") }>
+        <div className={ nb("lh5 mb2 ft3") }>
             <Copy>See <Link to="/usage#configuration" className={ nb("tc5 xtd h-tc1") }>Configuration</Link> to learn how to overwrite helper settings.</Copy>
-            <Highlight className={ nb("ph2 pv2") }>
+            <Highlight className={ nb("pa1") }>
                 {"// Neckbeard.defaultSettings.helpers.display \n" }
                 { JSON.stringify(Neckbeard.defaultSettings.helpers.display, null, '    ') }
             </Highlight>

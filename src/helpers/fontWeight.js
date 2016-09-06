@@ -37,7 +37,7 @@ export default function fontWeight({ helpers: { fontWeight: { responsive } }, br
     /**
      * Media Queries
      */
-    if (Object.keys(breakpoints).length !== 0 && responsive) {
+    if (responsive) {
         media = addMediaQueries(selectors, breakpoints)
     }
 

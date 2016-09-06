@@ -14,16 +14,20 @@ export default function fontSize({ helpers: { fontSize: { limit, incrementBy, re
     /**
      * Font Sizes
      */
-    for (let x = 1; x <= limit; x++) {
+    selectors["ft1"] = {
+        "font-size": "1rem"
+    }
+
+    for (let x = 2; x <= limit; x++) {
         selectors[`ft${ x }`] = {
-            "font-size": `${ x * incrementBy }rem`
+            "font-size": `${ 1 + x * incrementBy }rem`
         }
     }
 
     /**
      * Media Queries
      */
-    if (Object.keys(breakpoints).length !== 0 && responsive) {
+    if (responsive) {
         media = addMediaQueries(selectors, breakpoints)
     }
 

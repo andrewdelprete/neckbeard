@@ -22,7 +22,7 @@ export default function textDecoration({ helpers: { textDecoration: { responsive
     /**
      * Media Queries
      */
-    if (Object.keys(breakpoints).length !== 0 && responsive) {
+    if (responsive) {
         media = addMediaQueries(selectors, breakpoints)
     }
 

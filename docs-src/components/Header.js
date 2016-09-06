@@ -16,8 +16,8 @@ export default class Header extends Component {
         return (
             <div className={ nb("bg1 flex aic acc wrap jcsb") }>
                 <div className={ nb("iflex aic") }>
-                    <Link to="/" className={ nb("fwthin uppercase pv2 mr2 ft6 sans ls3 xtd tcb dim")}>Neckbeard</Link>
-                    <div className={ nb("tcb sm-dn md-db fwsemibold ft3 ls1 sans") } id="tagline">Default</div>
+                    <Link to="/" className={ nb("fwthin uppercase pv3 mr3 ft15 sans ls3 xtd tcb pointer") }>Neckbeard</Link>
+                    <div className={ nb("tcb sm-dn md-db ft2 ls1 sans") } id="tagline">Default</div>
                 </div>
                 <div className={ nb("md-db lg-dn") }>
                     <a onClick={ this.props.onMenuToggle } className={ nb("sans ft3 fwthin uppercase tcb xtd ls1 code brdr1 br3 bg2 ph1 pv05 bc5 dim pointer") }>Menu</a>

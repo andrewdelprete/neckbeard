@@ -30,42 +30,42 @@ const Border = () => (
             </thead>
             <tbody>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.xbrdr</Code></td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>Remove the border from an element</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>.xbrdr</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>Remove the border from an element</td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.brdr1</Code></td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>Add a border to all sides of an element</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>.brdr1</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>Add a border to all sides of an element</td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.brdr1--top</Code></td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>Add a border to the top of an element</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>.brdr1--top</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>Add a border to the top of an element</td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.brdr1--right</Code></td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>Add a border to the right side of an element</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>.brdr1--right</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>Add a border to the right side of an element</td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.brdr1--bottom</Code></td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>Add a border to the bottom of an element</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>.brdr1--bottom</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>Add a border to the bottom of an element</td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.brdr1--left</Code></td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>Add a border to the left side of an element</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>.brdr1--left</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>Add a border to the left side of an element</td>
                 </tr>
             </tbody>
         </table>
         <H2>Example</H2>
-        <Highlight className={ nb("ph2 pv2 mb2 lh5") }>
+        <Highlight className={ nb("pa1 mb2 lh5 ft3") }>
             { snippet }
         </Highlight>
 
         <div className={ nb("brdr1 bc1 pv1 tac mb2") }>.brdr1.bc1.pv1.tac.mb2</div>
 
         <H2>Default Settings</H2>
-        <div className={ nb("lh4 mb2") }>
+        <div className={ nb("lh5 mb2 ft3") }>
             <Copy>See <Link to="/usage#configuration" className={ nb("tc5 xtd h-tc1") }>Configuration</Link> to learn how to overwrite helper settings.</Copy>
-            <Highlight className={ nb("ph2 pv2 lh5") }>
+            <Highlight className={ nb("pa1 lh5") }>
                 {"// Neckbeard.defaultSettings.helpers.border \n" }
                 { snippet2 }
             </Highlight>

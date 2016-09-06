@@ -91,15 +91,25 @@ export default function colors({ helpers: { colors: { responsive } }, colors, br
     selectors["bcg90"] = { borderColor: colors.g90 }
 
     /**
+     * Hover, Focus, and Active Color Helpers
+     */
+    Object.keys(selectors).map(selector => {
+        selectors[`h-${ selector }`] = {
+            ":hover": selectors[selector]
+        }
+        selectors[`a-${ selector }`] = {
+            ":active": selectors[selector]
+        }
+        selectors[`f-${ selector }`] = {
+            ":focus": selectors[selector]
+        }
+    })
+
+    /**
      * Media Queries
      */
-    if (Object.keys(breakpoints).length !== 0 && responsive) {
+    if (responsive) {
         media = addMediaQueries(selectors, breakpoints)
-    }
-
-    // @TODO - Write loop to add all hover, focus, and active colors
-    selectors["h-tc1"] = {
-        ":hover": selectors["tc1"]
     }
 
     return { ...selectors, ...media }

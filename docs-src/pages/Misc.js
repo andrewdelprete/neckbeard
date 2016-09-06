@@ -25,82 +25,82 @@ const Misc = () => (
         <table className={ nb("w100 mb2 ft4 tcg60 lh2 sans") }>
             <thead>
                 <tr className={ nb("brdr1--bottom bcg10 bgg05") }>
-                    <th className={ nb("pv1 ph1 tal fwsemibold ph1") }>Class</th>
-                    <th className={ nb("pv1 ph1 tal fwsemibold ph1") }>Purpose</th>
+                    <th className={ nb("pa1 tal fwsemibold ph1") }>Class</th>
+                    <th className={ nb("pa1 tal fwsemibold ph1") }>Purpose</th>
                 </tr>
             </thead>
             <tbody>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.center</Code></td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>Center an element using auto margin.</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>.center</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>Center an element using auto margin.</td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.default-hover</Code></td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>Lower the opacity for an element on its hover state</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>.default-hover</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>Lower the opacity for an element on its hover state</td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.default-active</Code></td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>Lower the opacity for an element on its active state</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>.default-active</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>Lower the opacity for an element on its active state</td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.dim</Code></td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>Apply a combination of .default-hover and .default-active</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>.dim</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>Apply a combination of .default-hover and .default-active</td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.site-width</Code></td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>Set the element's <Code>max-width</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>.site-width</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>Set the element's <Code>max-width</Code></td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.lowercase</Code></td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>Transform the text to lowercase</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>.lowercase</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>Transform the text to lowercase</td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.uppercase</Code></td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>Transform the text to uppercase</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>.uppercase</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>Transform the text to uppercase</td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.ell</Code></td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>Add an ellipsis when text gets longer than its container</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>.ell</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>Add an ellipsis when text gets longer than its container</td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.imax</Code></td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>Allow an image to scale to 100% of its containing element's size</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>.imax</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>Allow an image to scale to 100% of its containing element's size</td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.i100</Code></td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>Set an image's width to 100%</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>.i100</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>Set an image's width to 100%</td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.bgcover</Code></td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>Set an element's background-size to fill up its container proportionally</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>.bgcover</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>Set an element's background-size to fill up its container proportionally</td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.bgcenter</Code></td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>Center an element's background</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>.bgcenter</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>Center an element's background</td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.vam</Code></td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>Vertically align a <Code>td</Code> element's content to the middle</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>.vam</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>Vertically align a <Code>td</Code> element's content to the middle</td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.clearfix</Code></td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>Apply a classic clearfix to a containing element.</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>.clearfix</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>Apply a classic clearfix to a containing element.</td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.hidetext</Code></td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>Hide text from the viewer, but leave it for search engines and screen readers.</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>.hidetext</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>Hide text from the viewer, but leave it for search engines and screen readers.</td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }><Code>.pointer</Code></td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1") }>Set cursor to pointer on hover.</td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>.pointer</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }>Set cursor to pointer on hover.</td>
                 </tr>
             </tbody>
         </table>
 
         <H2>Default Settings</H2>
-        <div className={ nb("lh5 mb2") }>
+        <div className={ nb("lh5 mb2 ft3") }>
             <Copy>See <Link to="/usage#configuration" className={ nb("tc5 xtd h-tc1") }>Configuration</Link> to learn how to overwrite helper settings.</Copy>
-            <Highlight className={ nb("ph2 pv2 mb2") }>
+            <Highlight className={ nb("pa1 mb2") }>
                 {"// Neckbeard.defaultSettings.helpers.misc \n" }
                 { JSON.stringify(Neckbeard.defaultSettings.helpers.misc, null, '    ') }
             </Highlight>
