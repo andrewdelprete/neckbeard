@@ -45,9 +45,10 @@ const Installation = () => (
             of and is extensible per project if custom classes are necessary.
         </Copy>
         <Copy>
-            An example of a Helper Class to add spacing looks like <Code>.pv1</Code> which translates
-            to <Code>padding-top: 1rem; padding-bottom: 1rem;</Code> and the classes making up these code blocks consist of <Code>.ft3.brdr1.br2.bcg10.bgg05.pv05.ph1</Code>.
-            In fact this entire site is made up of such helpers.
+            An example of a Helper Class to add spacing looks like <Code>.pv1</Code> which translates to <Code>padding-top: 1rem; padding-bottom: 1rem;</Code>.
+            These helper classes can be composed to create complex ui elements. The code blocks that you see in this very paragraph are
+            styled using a group of helper classes <Code>.ft3.brdr1.br2.bcg10.bgg05.pv05.ph1</Code> and in fact, every piece of styling on this 
+            site is made using a similar grouping of helpers.
         </Copy>
         <H3>CSS in Javascript</H3>
         <Copy>
