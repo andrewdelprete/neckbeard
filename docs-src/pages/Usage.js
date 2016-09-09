@@ -16,8 +16,8 @@ import Neckbeard from 'neckbeard';
 
 const nb = Neckbeard.create();
 
-// create() is invoked and classes are injected
-// into the DOM dynamically using Aphrodite.
+// Classes are injected into the
+// DOM dynamically using Aphrodite.
 nb('pv1 ph1 ft2');
 </script>`
 
