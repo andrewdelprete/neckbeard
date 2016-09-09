@@ -76,7 +76,7 @@ const Installation = () => (
             <H3>Example in ReactJS</H3>
         </div>
 
-        <Highlight className={ nb("pa2 lh5 ft4") }>
+        <Highlight className={ nb("pa2 lh5 ft4 mb2") }>
             { snippet1 }
         </Highlight>
         <Copy>

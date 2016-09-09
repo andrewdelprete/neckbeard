@@ -6,7 +6,7 @@ import { Link } from 'react-router'
  */
 export default class Header extends Component {
     componentDidMount() {
-        const taglines = ["Javascript all the things", "Your kids will thank us", "The Future", "Pushing it to the next level for future generations"]
+        const taglines = ["An Atomic CSS in JS Framework", "Javascript all the things", "Your kids will thank us", "The Future", "Pushing it to the next level for future generations"]
         const tagline = document.getElementById('tagline')
 
         tagline.innerHTML = taglines[Math.floor(Math.random()*taglines.length)]

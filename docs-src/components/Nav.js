@@ -9,7 +9,7 @@ const NavItem = ({ children, to }) => {
     return (
         <li className={ nb("db brdr1--bottom bcg10") }>
             <Link
-                className={ nb("db ft5 tc5 pv1 xtd h-tc1") }
+                className={ nb("db ft6 tc5 pv1 xtd h-tc1") }
                 to={ to }
             >
             { children }
