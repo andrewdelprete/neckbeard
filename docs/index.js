@@ -16740,25 +16740,21 @@
 	            "Default Settings"
 	        ),
 	        _react2.default.createElement(
-	            "div",
-	            { className: nb("lh5 mb2 ft3") },
+	            _Copy2.default,
+	            null,
+	            "See ",
 	            _react2.default.createElement(
-	                _Copy2.default,
-	                null,
-	                "See ",
-	                _react2.default.createElement(
-	                    _reactRouter.Link,
-	                    { to: "/usage#configuration", className: nb("tc5 xtd h-tc1") },
-	                    "Configuration"
-	                ),
-	                " to learn how to overwrite helper settings."
+	                _reactRouter.Link,
+	                { to: "/usage#configuration", className: nb("tc5 xtd h-tc1") },
+	                "Configuration"
 	            ),
-	            _react2.default.createElement(
-	                _reactHighlight2.default,
-	                { className: nb("pa2 lh5 ft4") },
-	                "// Neckbeard.defaultSettings.helpers.border \n",
-	                snippet2
-	            )
+	            " to learn how to overwrite helper settings."
+	        ),
+	        _react2.default.createElement(
+	            _reactHighlight2.default,
+	            { className: nb("pa2 lh5 ft4") },
+	            "// Neckbeard.defaultSettings.helpers.border \n",
+	            snippet2
 	        )
 	    );
 	};
@@ -17019,25 +17015,21 @@
 	            "Default Settings"
 	        ),
 	        _react2.default.createElement(
-	            "div",
-	            { className: nb("lh5 mb2 ft3") },
+	            _Copy2.default,
+	            null,
+	            "See ",
 	            _react2.default.createElement(
-	                _Copy2.default,
-	                null,
-	                "See ",
-	                _react2.default.createElement(
-	                    _reactRouter.Link,
-	                    { to: "/usage#configuration", className: nb("tc5 xtd h-tc1") },
-	                    "Configuration"
-	                ),
-	                " to learn how to overwrite helper settings."
+	                _reactRouter.Link,
+	                { to: "/usage#configuration", className: nb("tc5 xtd h-tc1") },
+	                "Configuration"
 	            ),
-	            _react2.default.createElement(
-	                _reactHighlight2.default,
-	                { className: nb("pa2 lh5 ft4") },
-	                "// Neckbeard.defaultSettings.helpers.borderRadius \n",
-	                JSON.stringify(_src2.default.defaultSettings.helpers.borderRadius, null, '    ')
-	            )
+	            " to learn how to overwrite helper settings."
+	        ),
+	        _react2.default.createElement(
+	            _reactHighlight2.default,
+	            { className: nb("pa2 lh5 ft4") },
+	            "// Neckbeard.defaultSettings.helpers.borderRadius \n",
+	            JSON.stringify(_src2.default.defaultSettings.helpers.borderRadius, null, '    ')
 	        )
 	    );
 	};
@@ -17088,9 +17080,11 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	/**
-	 * Breakpoints Page
+	 * Overview Page
 	 */
-	var Breakpoints = function Breakpoints() {
+	var snippet = "<div className={ nb(\"lg-dn\") }>.lg-dn</div>";
+
+	var BreakPoints = function BreakPoints() {
 	    return _react2.default.createElement(
 	        "div",
 	        null,
@@ -17102,12 +17096,301 @@
 	        _react2.default.createElement(
 	            _Copy2.default,
 	            null,
-	            "Coming Soon"
+	            "Because Neckbeard ships with a standard set of breakpoints, many of the helpers are responsive. These helpers are generated from the breakpoints in your configuration. These are the default breakpoints:"
+	        ),
+	        _react2.default.createElement(
+	            _H4.default,
+	            null,
+	            "Options"
+	        ),
+	        _react2.default.createElement(
+	            "table",
+	            { className: nb("w100 mb2 ft4 tcg60 lh2 sans") },
+	            _react2.default.createElement(
+	                "thead",
+	                null,
+	                _react2.default.createElement(
+	                    "tr",
+	                    { className: nb("brdr1--bottom bcg10 bgg05") },
+	                    _react2.default.createElement(
+	                        "th",
+	                        { className: nb("pa1 tal fwsemibold ph1") },
+	                        "Name"
+	                    ),
+	                    _react2.default.createElement(
+	                        "th",
+	                        { className: nb("pa1 tal fwsemibold ph1") },
+	                        "Prefix"
+	                    ),
+	                    _react2.default.createElement(
+	                        "th",
+	                        { className: nb("pa1 tal fwsemibold ph1") },
+	                        "Target"
+	                    )
+	                )
+	            ),
+	            _react2.default.createElement(
+	                "tbody",
+	                null,
+	                _react2.default.createElement(
+	                    "tr",
+	                    { className: nb("brdr1--bottom bcg10") },
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv2 ph1") },
+	                        "Small"
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv2 ph1") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            ".sm-"
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv2 ph1") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            "(min-width: 300px)"
+	                        )
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "tr",
+	                    { className: nb("brdr1--bottom bcg10") },
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv2 ph1") },
+	                        "Medium"
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv2 ph1") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            ".md-"
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv2 ph1") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            "(min-width: 600px)"
+	                        )
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "tr",
+	                    { className: nb("brdr1--bottom bcg10") },
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv2 ph1") },
+	                        "Large"
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv2 ph1") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            ".lg-"
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv2 ph1") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            "(min-width: 900px)"
+	                        )
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "tr",
+	                    { className: nb("brdr1--bottom bcg10") },
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv2 ph1") },
+	                        "Extra Large"
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv2 ph1") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            ".xlg-"
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv2 ph1") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            "(min-width: 1440px)"
+	                        )
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "tr",
+	                    { className: nb("brdr1--bottom bcg10") },
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv2 ph1") },
+	                        "Only Small"
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv2 ph1") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            ".only-sm-"
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv2 ph1") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            "(max-width: 599px)"
+	                        )
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "tr",
+	                    { className: nb("brdr1--bottom bcg10") },
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv2 ph1") },
+	                        "Only Medium"
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv2 ph1") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            ".only-md-"
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv2 ph1") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            "(min-width: 600px) and (max-width: 899px)"
+	                        )
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "tr",
+	                    { className: nb("brdr1--bottom bcg10") },
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv2 ph1") },
+	                        "Only Large"
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv2 ph1") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            ".only-lg-"
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv2 ph1") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            "(min-width: 900px) and (max-width: 1439px)"
+	                        )
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "tr",
+	                    { className: nb("brdr1--bottom bcg10") },
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv2 ph1") },
+	                        "Only Extra Large"
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv2 ph1") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            ".only-xlg-"
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        "td",
+	                        { className: nb("tcg50 fw3 pv2 ph1") },
+	                        _react2.default.createElement(
+	                            _Code2.default,
+	                            null,
+	                            "(min-width: 1440px)"
+	                        )
+	                    )
+	                )
+	            )
+	        ),
+	        _react2.default.createElement(
+	            _H4.default,
+	            null,
+	            "Example"
+	        ),
+	        _react2.default.createElement(
+	            _Copy2.default,
+	            null,
+	            "You can use responsive prefixes to specify when an element should be shown on a page. The following would hide the element on the 'lg' breakpoint."
+	        ),
+	        _react2.default.createElement(
+	            _reactHighlight2.default,
+	            { className: nb("pa2 mb2 lh5 ft4") },
+	            snippet
+	        ),
+	        _react2.default.createElement(
+	            _H4.default,
+	            null,
+	            "Default Settings"
+	        ),
+	        _react2.default.createElement(
+	            _Copy2.default,
+	            null,
+	            "See ",
+	            _react2.default.createElement(
+	                _reactRouter.Link,
+	                { to: "/usage#configuration", className: nb("tc5 xtd h-tc1") },
+	                "Configuration"
+	            ),
+	            " to learn how to overwrite helper settings."
+	        ),
+	        _react2.default.createElement(
+	            _reactHighlight2.default,
+	            { className: nb("pa2 lh5 ft4") },
+	            "// Neckbeard.defaultSettings.breakpoints \n",
+	            JSON.stringify(_src2.default.defaultSettings.breakpoints, null, '    ')
 	        )
 	    );
 	};
 
-	exports.default = Breakpoints;
+	exports.default = BreakPoints;
 	module.exports = exports["default"];
 
 /***/ },
@@ -17933,31 +18216,27 @@
 	            "Default Settings"
 	        ),
 	        _react2.default.createElement(
-	            "div",
-	            { className: nb("lh5") },
+	            _Copy2.default,
+	            null,
+	            "See ",
 	            _react2.default.createElement(
-	                _Copy2.default,
-	                null,
-	                "See ",
-	                _react2.default.createElement(
-	                    _reactRouter.Link,
-	                    { to: "/usage#configuration", className: nb("tc5 xtd h-tc1") },
-	                    "Configuration"
-	                ),
-	                " to learn how to overwrite helper settings."
+	                _reactRouter.Link,
+	                { to: "/usage#configuration", className: nb("tc5 xtd h-tc1") },
+	                "Configuration"
 	            ),
-	            _react2.default.createElement(
-	                _reactHighlight2.default,
-	                { className: nb("pa2 mb2 lh5 ft4") },
-	                "// Neckbeard.defaultSettings.colors \n",
-	                JSON.stringify(_src2.default.defaultSettings.colors, null, '    ')
-	            ),
-	            _react2.default.createElement(
-	                _reactHighlight2.default,
-	                { className: nb("pa2 mb2 lh5 ft4") },
-	                "// Neckbeard.defaultSettings.helpers.colors \n",
-	                JSON.stringify(_src2.default.defaultSettings.helpers.colors, null, '    ')
-	            )
+	            " to learn how to overwrite helper settings."
+	        ),
+	        _react2.default.createElement(
+	            _reactHighlight2.default,
+	            { className: nb("pa2 mb2 lh5 ft4") },
+	            "// Neckbeard.defaultSettings.colors \n",
+	            JSON.stringify(_src2.default.defaultSettings.colors, null, '    ')
+	        ),
+	        _react2.default.createElement(
+	            _reactHighlight2.default,
+	            { className: nb("pa2 lh5 ft4") },
+	            "// Neckbeard.defaultSettings.helpers.colors \n",
+	            JSON.stringify(_src2.default.defaultSettings.helpers.colors, null, '    ')
 	        )
 	    );
 	};
@@ -18177,25 +18456,21 @@
 	            "Default Settings"
 	        ),
 	        _react2.default.createElement(
-	            "div",
-	            { className: nb("lh5 mb2 ft3") },
+	            _Copy2.default,
+	            null,
+	            "See ",
 	            _react2.default.createElement(
-	                _Copy2.default,
-	                null,
-	                "See ",
-	                _react2.default.createElement(
-	                    _reactRouter.Link,
-	                    { to: "/usage#configuration", className: nb("tc5 xtd h-tc1") },
-	                    "Configuration"
-	                ),
-	                " to learn how to overwrite helper settings."
+	                _reactRouter.Link,
+	                { to: "/usage#configuration", className: nb("tc5 xtd h-tc1") },
+	                "Configuration"
 	            ),
-	            _react2.default.createElement(
-	                _reactHighlight2.default,
-	                { className: nb("pa1") },
-	                "// Neckbeard.defaultSettings.helpers.display \n",
-	                JSON.stringify(_src2.default.defaultSettings.helpers.display, null, '    ')
-	            )
+	            " to learn how to overwrite helper settings."
+	        ),
+	        _react2.default.createElement(
+	            _reactHighlight2.default,
+	            { className: nb("pa2 lh5 ft4") },
+	            "// Neckbeard.defaultSettings.helpers.display \n",
+	            JSON.stringify(_src2.default.defaultSettings.helpers.display, null, '    ')
 	        )
 	    );
 	};
@@ -18267,27 +18542,63 @@
 	            "Button Component - ReactJS"
 	        ),
 	        _react2.default.createElement(
-	            "iframe",
-	            { height: "300", scrolling: "no", src: "//codepen.io/andrewdelprete/embed/VKYQqb/?height=265&theme-id=0&default-tab=js,result&embed-version=2", frameBorder: "no", allowTransparency: "true", allowFullscreen: "true", className: nb("w100") },
-	            "See the Pen ",
+	            "div",
+	            { className: nb("mb3") },
 	            _react2.default.createElement(
-	                "a",
-	                { href: "http://codepen.io/andrewdelprete/pen/VKYQqb/" },
-	                "Neckbeard Button Component Demo in ReactJS"
-	            ),
-	            " by Andrew Del Prete (",
+	                "iframe",
+	                { height: "400", scrolling: "no", src: "//codepen.io/andrewdelprete/embed/VKYQqb/?height=400&theme-id=0&default-tab=js,result&embed-version=2", frameBorder: "no", allowTransparency: "true", allowFullScreen: "true", className: nb("w100") },
+	                "See the Pen ",
+	                _react2.default.createElement(
+	                    "a",
+	                    { href: "http://codepen.io/andrewdelprete/pen/VKYQqb/" },
+	                    "Neckbeard Button Component Demo in ReactJS"
+	                ),
+	                " by Andrew Del Prete (",
+	                _react2.default.createElement(
+	                    "a",
+	                    { href: "http://codepen.io/andrewdelprete" },
+	                    "@andrewdelprete"
+	                ),
+	                ") on ",
+	                _react2.default.createElement(
+	                    "a",
+	                    { href: "http://codepen.io" },
+	                    "CodePen"
+	                ),
+	                "."
+	            )
+	        ),
+	        _react2.default.createElement(
+	            _H6.default,
+	            null,
+	            "Field Button Component - ReactJS"
+	        ),
+	        _react2.default.createElement(
+	            "div",
+	            null,
 	            _react2.default.createElement(
-	                "a",
-	                { href: "http://codepen.io/andrewdelprete" },
-	                "@andrewdelprete"
-	            ),
-	            ") on ",
-	            _react2.default.createElement(
-	                "a",
-	                { href: "http://codepen.io" },
-	                "CodePen"
-	            ),
-	            "."
+	                "iframe",
+	                { height: "400", scrolling: "no", src: "//codepen.io/andrewdelprete/embed/JRdQWR/?height=400&theme-id=0&default-tab=js,result&embed-version=2", frameBorder: "no", allowTransparency: "true", allowFullScreen: "true", className: nb("w100") },
+	                "See the Pen ",
+	                _react2.default.createElement(
+	                    "a",
+	                    { href: "http://codepen.io/andrewdelprete/pen/JRdQWR/" },
+	                    "Neckbeard Field  Component Demo in ReactJS"
+	                ),
+	                " by Andrew Del Prete (",
+	                _react2.default.createElement(
+	                    "a",
+	                    { href: "http://codepen.io/andrewdelprete" },
+	                    "@andrewdelprete"
+	                ),
+	                ") on ",
+	                _react2.default.createElement(
+	                    "a",
+	                    { href: "http://codepen.io" },
+	                    "CodePen"
+	                ),
+	                "."
+	            )
 	        )
 	    );
 	};
@@ -19037,25 +19348,21 @@
 	            "Default Settings"
 	        ),
 	        _react2.default.createElement(
-	            "div",
-	            { className: nb("lh5 mb2 ft3") },
+	            _Copy2.default,
+	            null,
+	            "See ",
 	            _react2.default.createElement(
-	                _Copy2.default,
-	                null,
-	                "See ",
-	                _react2.default.createElement(
-	                    _reactRouter.Link,
-	                    { to: "/usage#configuration", className: nb("tc5 xtd h-tc1") },
-	                    "Configuration"
-	                ),
-	                " to learn how to overwrite helper settings."
+	                _reactRouter.Link,
+	                { to: "/usage#configuration", className: nb("tc5 xtd h-tc1") },
+	                "Configuration"
 	            ),
-	            _react2.default.createElement(
-	                _reactHighlight2.default,
-	                { className: nb("pa1") },
-	                "// Neckbeard.defaultSettings.helpers.flex \n",
-	                JSON.stringify(_src2.default.defaultSettings.helpers.flex, null, "    ")
-	            )
+	            " to learn how to overwrite helper settings."
+	        ),
+	        _react2.default.createElement(
+	            _reactHighlight2.default,
+	            { className: nb("pa2 lh5 ft4") },
+	            "// Neckbeard.defaultSettings.helpers.flex \n",
+	            JSON.stringify(_src2.default.defaultSettings.helpers.flex, null, "    ")
 	        )
 	    );
 	};
@@ -19290,25 +19597,21 @@
 	            "Default Settings"
 	        ),
 	        _react2.default.createElement(
-	            "div",
-	            { className: nb("lh5 mb2 ft3") },
+	            _Copy2.default,
+	            null,
+	            "See ",
 	            _react2.default.createElement(
-	                _Copy2.default,
-	                null,
-	                "See ",
-	                _react2.default.createElement(
-	                    _reactRouter.Link,
-	                    { to: "/usage#configuration", className: nb("tc5 xtd h-tc1") },
-	                    "Configuration"
-	                ),
-	                " to learn how to overwrite helper settings."
+	                _reactRouter.Link,
+	                { to: "/usage#configuration", className: nb("tc5 xtd h-tc1") },
+	                "Configuration"
 	            ),
-	            _react2.default.createElement(
-	                _reactHighlight2.default,
-	                { className: nb("pa1") },
-	                "// Neckbeard.defaultSettings.helpers.float \n",
-	                JSON.stringify(_src2.default.defaultSettings.helpers.float, null, '    ')
-	            )
+	            " to learn how to overwrite helper settings."
+	        ),
+	        _react2.default.createElement(
+	            _reactHighlight2.default,
+	            { className: nb("pa2 lh5 ft4") },
+	            "// Neckbeard.defaultSettings.helpers.float \n",
+	            JSON.stringify(_src2.default.defaultSettings.helpers.float, null, '    ')
 	        )
 	    );
 	};
@@ -20286,43 +20589,39 @@
 	            "Default Settings"
 	        ),
 	        _react2.default.createElement(
-	            "div",
-	            { className: nb("lh5 mb2 ft3") },
+	            _Copy2.default,
+	            null,
+	            "See ",
 	            _react2.default.createElement(
-	                _Copy2.default,
-	                null,
-	                "See ",
-	                _react2.default.createElement(
-	                    _reactRouter.Link,
-	                    { to: "/usage#configuration", className: nb("tc5 xtd h-tc1") },
-	                    "Configuration"
-	                ),
-	                " to learn how to overwrite helper settings."
+	                _reactRouter.Link,
+	                { to: "/usage#configuration", className: nb("tc5 xtd h-tc1") },
+	                "Configuration"
 	            ),
-	            _react2.default.createElement(
-	                _reactHighlight2.default,
-	                { className: nb("pa1 mb2") },
-	                "// Neckbeard.defaultSettings.fonts \n",
-	                JSON.stringify(_src2.default.defaultSettings.fonts, null, '    ')
-	            ),
-	            _react2.default.createElement(
-	                _reactHighlight2.default,
-	                { className: nb("pa1 mb2") },
-	                "// Neckbeard.defaultSettings.helpers.fontFamily \n",
-	                JSON.stringify(_src2.default.defaultSettings.helpers.fontFamily, null, '    ')
-	            ),
-	            _react2.default.createElement(
-	                _reactHighlight2.default,
-	                { className: nb("pa1 mb2") },
-	                "// Neckbeard.defaultSettings.helpers.fontWeight \n",
-	                JSON.stringify(_src2.default.defaultSettings.helpers.fontWeight, null, '    ')
-	            ),
-	            _react2.default.createElement(
-	                _reactHighlight2.default,
-	                { className: nb("pa1") },
-	                "// Neckbeard.defaultSettings.helpers.fontSize \n",
-	                JSON.stringify(_src2.default.defaultSettings.helpers.fontSize, null, '    ')
-	            )
+	            " to learn how to overwrite helper settings."
+	        ),
+	        _react2.default.createElement(
+	            _reactHighlight2.default,
+	            { className: nb("pa2 lh5 ft4") },
+	            "// Neckbeard.defaultSettings.fonts \n",
+	            JSON.stringify(_src2.default.defaultSettings.fonts, null, '    ')
+	        ),
+	        _react2.default.createElement(
+	            _reactHighlight2.default,
+	            { className: nb("pa2 lh5 ft4") },
+	            "// Neckbeard.defaultSettings.helpers.fontFamily \n",
+	            JSON.stringify(_src2.default.defaultSettings.helpers.fontFamily, null, '    ')
+	        ),
+	        _react2.default.createElement(
+	            _reactHighlight2.default,
+	            { className: nb("pa2 lh5 ft4") },
+	            "// Neckbeard.defaultSettings.helpers.fontWeight \n",
+	            JSON.stringify(_src2.default.defaultSettings.helpers.fontWeight, null, '    ')
+	        ),
+	        _react2.default.createElement(
+	            _reactHighlight2.default,
+	            { className: nb("pa2 lh5 ft4") },
+	            "// Neckbeard.defaultSettings.helpers.fontSize \n",
+	            JSON.stringify(_src2.default.defaultSettings.helpers.fontSize, null, '    ')
 	        )
 	    );
 	};
@@ -20724,25 +21023,21 @@
 	            "Default Settings"
 	        ),
 	        _react2.default.createElement(
-	            "div",
-	            { className: nb("lh5 mb2 ft3") },
+	            _Copy2.default,
+	            null,
+	            "See ",
 	            _react2.default.createElement(
-	                _Copy2.default,
-	                null,
-	                "See ",
-	                _react2.default.createElement(
-	                    _reactRouter.Link,
-	                    { to: "/usage#configuration", className: nb("tc5 xtd h-tc1") },
-	                    "Configuration"
-	                ),
-	                " to learn how to overwrite helper settings."
+	                _reactRouter.Link,
+	                { to: "/usage#configuration", className: nb("tc5 xtd h-tc1") },
+	                "Configuration"
 	            ),
-	            _react2.default.createElement(
-	                _reactHighlight2.default,
-	                { className: nb("pa1") },
-	                "// Neckbeard.defaultSettings.helpers.grid \n",
-	                JSON.stringify(_src2.default.defaultSettings.helpers.grid, null, '    ')
-	            )
+	            " to learn how to overwrite helper settings."
+	        ),
+	        _react2.default.createElement(
+	            _reactHighlight2.default,
+	            { className: nb("pa2 lh5 ft4") },
+	            "// Neckbeard.defaultSettings.helpers.grid \n",
+	            JSON.stringify(_src2.default.defaultSettings.helpers.grid, null, '    ')
 	        )
 	    );
 	};
@@ -21199,25 +21494,21 @@
 	            "Default Settings"
 	        ),
 	        _react2.default.createElement(
-	            "div",
-	            { className: nb("lh5 mb2 ft3") },
+	            _Copy2.default,
+	            null,
+	            "See ",
 	            _react2.default.createElement(
-	                _Copy2.default,
-	                null,
-	                "See ",
-	                _react2.default.createElement(
-	                    _reactRouter.Link,
-	                    { to: "/usage#configuration", className: nb("tc5 xtd h-tc1") },
-	                    "Configuration"
-	                ),
-	                " to learn how to overwrite helper settings."
+	                _reactRouter.Link,
+	                { to: "/usage#configuration", className: nb("tc5 xtd h-tc1") },
+	                "Configuration"
 	            ),
-	            _react2.default.createElement(
-	                _reactHighlight2.default,
-	                { className: nb("pa1") },
-	                "// Neckbeard.defaultSettings.helpers.letterSpacing \n",
-	                JSON.stringify(_src2.default.defaultSettings.helpers.letterSpacing, null, '    ')
-	            )
+	            " to learn how to overwrite helper settings."
+	        ),
+	        _react2.default.createElement(
+	            _reactHighlight2.default,
+	            { className: nb("pa2 lh5 ft4") },
+	            "// Neckbeard.defaultSettings.helpers.letterSpacing \n",
+	            JSON.stringify(_src2.default.defaultSettings.helpers.letterSpacing, null, '    ')
 	        )
 	    );
 	};
@@ -21543,25 +21834,21 @@
 	            "Default Settings"
 	        ),
 	        _react2.default.createElement(
-	            "div",
-	            { className: nb("lh5 mb2 ft3") },
+	            _Copy2.default,
+	            null,
+	            "See ",
 	            _react2.default.createElement(
-	                _Copy2.default,
-	                null,
-	                "See ",
-	                _react2.default.createElement(
-	                    _reactRouter.Link,
-	                    { to: "/usage#configuration", className: nb("tc5 xtd h-tc1") },
-	                    "Configuration"
-	                ),
-	                " to learn how to overwrite helper settings."
+	                _reactRouter.Link,
+	                { to: "/usage#configuration", className: nb("tc5 xtd h-tc1") },
+	                "Configuration"
 	            ),
-	            _react2.default.createElement(
-	                _reactHighlight2.default,
-	                { className: nb("pa1") },
-	                "// Neckbeard.defaultSettings.helpers.lineHeight \n",
-	                JSON.stringify(_src2.default.defaultSettings.helpers.lineHeight, null, '    ')
-	            )
+	            " to learn how to overwrite helper settings."
+	        ),
+	        _react2.default.createElement(
+	            _reactHighlight2.default,
+	            { className: nb("pa2 lh5 ft4") },
+	            "// Neckbeard.defaultSettings.helpers.lineHeight \n",
+	            JSON.stringify(_src2.default.defaultSettings.helpers.lineHeight, null, '    ')
 	        )
 	    );
 	};
@@ -21966,25 +22253,21 @@
 	            "Default Settings"
 	        ),
 	        _react2.default.createElement(
-	            "div",
-	            { className: nb("lh5 mb2 ft3") },
+	            _Copy2.default,
+	            null,
+	            "See ",
 	            _react2.default.createElement(
-	                _Copy2.default,
-	                null,
-	                "See ",
-	                _react2.default.createElement(
-	                    _reactRouter.Link,
-	                    { to: "/usage#configuration", className: nb("tc5 xtd h-tc1") },
-	                    "Configuration"
-	                ),
-	                " to learn how to overwrite helper settings."
+	                _reactRouter.Link,
+	                { to: "/usage#configuration", className: nb("tc5 xtd h-tc1") },
+	                "Configuration"
 	            ),
-	            _react2.default.createElement(
-	                _reactHighlight2.default,
-	                { className: nb("pa1 mb2") },
-	                "// Neckbeard.defaultSettings.helpers.misc \n",
-	                JSON.stringify(_src2.default.defaultSettings.helpers.misc, null, '    ')
-	            )
+	            " to learn how to overwrite helper settings."
+	        ),
+	        _react2.default.createElement(
+	            _reactHighlight2.default,
+	            { className: nb("pa2 lh5 ft4") },
+	            "// Neckbeard.defaultSettings.helpers.misc \n",
+	            JSON.stringify(_src2.default.defaultSettings.helpers.misc, null, '    ')
 	        )
 	    );
 	};
@@ -22154,25 +22437,21 @@
 	            "Default Settings"
 	        ),
 	        _react2.default.createElement(
-	            "div",
-	            { className: nb("lh5 mb2 ft3") },
+	            _Copy2.default,
+	            null,
+	            "See ",
 	            _react2.default.createElement(
-	                _Copy2.default,
-	                null,
-	                "See ",
-	                _react2.default.createElement(
-	                    _reactRouter.Link,
-	                    { to: "/usage#configuration", className: nb("tc5 xtd h-tc1") },
-	                    "Configuration"
-	                ),
-	                " to learn how to overwrite helper settings."
+	                _reactRouter.Link,
+	                { to: "/usage#configuration", className: nb("tc5 xtd h-tc1") },
+	                "Configuration"
 	            ),
-	            _react2.default.createElement(
-	                _reactHighlight2.default,
-	                { className: nb("pa1") },
-	                "// Neckbeard.defaultSettings.helpers.overflow \n",
-	                JSON.stringify(_src2.default.defaultSettings.helpers.overflow, null, '    ')
-	            )
+	            " to learn how to overwrite helper settings."
+	        ),
+	        _react2.default.createElement(
+	            _reactHighlight2.default,
+	            { className: nb("pa2 lh5 ft4") },
+	            "// Neckbeard.defaultSettings.helpers.overflow \n",
+	            JSON.stringify(_src2.default.defaultSettings.helpers.overflow, null, '    ')
 	        )
 	    );
 	};
@@ -22376,13 +22655,9 @@
 	            )
 	        ),
 	        _react2.default.createElement(
-	            "div",
-	            { className: nb("lh5 mb2 ft3") },
-	            _react2.default.createElement(
-	                _reactHighlight2.default,
-	                { className: nb("pa1") },
-	                snippet1
-	            )
+	            _reactHighlight2.default,
+	            { className: nb("pa2 lh5 ft4") },
+	            snippet1
 	        ),
 	        _react2.default.createElement(
 	            _Copy2.default,
@@ -22678,25 +22953,21 @@
 	            "Default Settings"
 	        ),
 	        _react2.default.createElement(
-	            "div",
-	            { className: nb("lh5 mb2 ft3") },
+	            _Copy2.default,
+	            null,
+	            "See ",
 	            _react2.default.createElement(
-	                _Copy2.default,
-	                null,
-	                "See ",
-	                _react2.default.createElement(
-	                    _reactRouter.Link,
-	                    { to: "/usage#configuration", className: nb("tc5 xtd h-tc1") },
-	                    "Configuration"
-	                ),
-	                " to learn how to overwrite helper settings."
+	                _reactRouter.Link,
+	                { to: "/usage#configuration", className: nb("tc5 xtd h-tc1") },
+	                "Configuration"
 	            ),
-	            _react2.default.createElement(
-	                _reactHighlight2.default,
-	                { className: nb("pa1") },
-	                "// Neckbeard.defaultSettings.helpers.position \n",
-	                JSON.stringify(_src2.default.defaultSettings.helpers.position, null, '    ')
-	            )
+	            " to learn how to overwrite helper settings."
+	        ),
+	        _react2.default.createElement(
+	            _reactHighlight2.default,
+	            { className: nb("pa2 lh5 ft4") },
+	            "// Neckbeard.defaultSettings.helpers.position \n",
+	            JSON.stringify(_src2.default.defaultSettings.helpers.position, null, '    ')
 	        )
 	    );
 	};
@@ -23098,25 +23369,21 @@
 	            "Default Settings"
 	        ),
 	        _react2.default.createElement(
-	            "div",
-	            { className: nb("lh5 mb2 ft3") },
+	            _Copy2.default,
+	            null,
+	            "See ",
 	            _react2.default.createElement(
-	                _Copy2.default,
-	                null,
-	                "See ",
-	                _react2.default.createElement(
-	                    _reactRouter.Link,
-	                    { to: "/usage#configuration", className: nb("tc5 xtd h-tc1") },
-	                    "Configuration"
-	                ),
-	                " to learn how to overwrite helper settings."
+	                _reactRouter.Link,
+	                { to: "/usage#configuration", className: nb("tc5 xtd h-tc1") },
+	                "Configuration"
 	            ),
-	            _react2.default.createElement(
-	                _reactHighlight2.default,
-	                { className: nb("pa1") },
-	                "// Neckbeard.defaultSettings.helpers.spacing \n",
-	                JSON.stringify(_src2.default.defaultSettings.helpers.spacing, null, '    ')
-	            )
+	            " to learn how to overwrite helper settings."
+	        ),
+	        _react2.default.createElement(
+	            _reactHighlight2.default,
+	            { className: nb("pa2 lh5 ft4") },
+	            "// Neckbeard.defaultSettings.helpers.spacing \n",
+	            JSON.stringify(_src2.default.defaultSettings.helpers.spacing, null, '    ')
 	        )
 	    );
 	};
@@ -23286,25 +23553,21 @@
 	            "Default Settings"
 	        ),
 	        _react2.default.createElement(
-	            "div",
-	            { className: nb("lh5 mb2 ft3") },
+	            _Copy2.default,
+	            null,
+	            "See ",
 	            _react2.default.createElement(
-	                _Copy2.default,
-	                null,
-	                "See ",
-	                _react2.default.createElement(
-	                    _reactRouter.Link,
-	                    { to: "/usage#configuration", className: nb("tc5 xtd h-tc1") },
-	                    "Configuration"
-	                ),
-	                " to learn how to overwrite helper settings."
+	                _reactRouter.Link,
+	                { to: "/usage#configuration", className: nb("tc5 xtd h-tc1") },
+	                "Configuration"
 	            ),
-	            _react2.default.createElement(
-	                _reactHighlight2.default,
-	                { className: nb("pa1") },
-	                "// Neckbeard.defaultSettings.helpers.textAlignment \n",
-	                JSON.stringify(_src2.default.defaultSettings.helpers.textAlignment, null, '    ')
-	            )
+	            " to learn how to overwrite helper settings."
+	        ),
+	        _react2.default.createElement(
+	            _reactHighlight2.default,
+	            { className: nb("pa2 lh5 ft4") },
+	            "// Neckbeard.defaultSettings.helpers.textAlignment \n",
+	            JSON.stringify(_src2.default.defaultSettings.helpers.textAlignment, null, '    ')
 	        )
 	    );
 	};
@@ -23496,25 +23759,21 @@
 	            "Default Settings"
 	        ),
 	        _react2.default.createElement(
-	            "div",
-	            { className: nb("lh5 mb2 ft3") },
+	            _Copy2.default,
+	            null,
+	            "See ",
 	            _react2.default.createElement(
-	                _Copy2.default,
-	                null,
-	                "See ",
-	                _react2.default.createElement(
-	                    _reactRouter.Link,
-	                    { to: "/usage#configuration", className: nb("tc5 xtd h-tc1") },
-	                    "Configuration"
-	                ),
-	                " to learn how to overwrite helper settings."
+	                _reactRouter.Link,
+	                { to: "/usage#configuration", className: nb("tc5 xtd h-tc1") },
+	                "Configuration"
 	            ),
-	            _react2.default.createElement(
-	                _reactHighlight2.default,
-	                { className: nb("pa1") },
-	                "// Neckbeard.defaultSettings.helpers.textDecoration \n",
-	                JSON.stringify(_src2.default.defaultSettings.helpers.textDecoration, null, '    ')
-	            )
+	            " to learn how to overwrite helper settings."
+	        ),
+	        _react2.default.createElement(
+	            _reactHighlight2.default,
+	            { className: nb("pa2 lh5 ft4") },
+	            "// Neckbeard.defaultSettings.helpers.textDecoration \n",
+	            JSON.stringify(_src2.default.defaultSettings.helpers.textDecoration, null, '    ')
 	        )
 	    );
 	};
@@ -24066,25 +24325,21 @@
 	            "Default Settings"
 	        ),
 	        _react2.default.createElement(
-	            "div",
-	            { className: nb("lh5 mb2 ft3") },
+	            _Copy2.default,
+	            null,
+	            "See ",
 	            _react2.default.createElement(
-	                _Copy2.default,
-	                null,
-	                "See ",
-	                _react2.default.createElement(
-	                    _reactRouter.Link,
-	                    { to: "/usage#configuration", className: nb("tc5 xtd h-tc1") },
-	                    "Configuration"
-	                ),
-	                " to learn how to overwrite helper settings."
+	                _reactRouter.Link,
+	                { to: "/usage#configuration", className: nb("tc5 xtd h-tc1") },
+	                "Configuration"
 	            ),
-	            _react2.default.createElement(
-	                _reactHighlight2.default,
-	                { className: nb("pa1") },
-	                "// Neckbeard.defaultSettings.helpers.zIndex \n",
-	                JSON.stringify(_src2.default.defaultSettings.helpers.zIndex, null, '    ')
-	            )
+	            " to learn how to overwrite helper settings."
+	        ),
+	        _react2.default.createElement(
+	            _reactHighlight2.default,
+	            { className: nb("pa2 lh5 ft4") },
+	            "// Neckbeard.defaultSettings.helpers.zIndex \n",
+	            JSON.stringify(_src2.default.defaultSettings.helpers.zIndex, null, '    ')
 	        )
 	    );
 	};
@@ -24133,6 +24388,10 @@
 	    /**
 	     * Borders
 	     */
+	    selectors["xbrdr"] = {
+	        border: "none"
+	    };
+
 	    for (var x = 1; x <= limit; x++) {
 	        selectors["brdr" + x] = {
 	            "border-style": "solid",

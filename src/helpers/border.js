@@ -15,6 +15,10 @@ export default function border({ helpers: { border: { limit, incrementBy, respon
     /**
      * Borders
      */
+    selectors["xbrdr"] = {
+        border: "none"
+    }
+
     for (let x = 1; x <= limit; x++) {
         selectors[`brdr${ x }`] = {
             "border-style": "solid",
