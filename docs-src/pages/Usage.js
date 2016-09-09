@@ -119,7 +119,7 @@ const Usage = () => (
         <Copy>
             After installing Neckbeard via NPM or CDN you'll invoke the <Code>Neckbeard.create()</Code> function and assign it to a variable.
         </Copy>
-        <Highlight className={ nb("pa1 mb2 lh5 ft3") }>
+        <Highlight className={ nb("pa2 mb2 lh5 ft4") }>
             { snippet }
         </Highlight>
         <Copy>
@@ -136,10 +136,10 @@ const Usage = () => (
         <Copy>
             Neckbeard has Default Settings for all helpers and can be found on the Neckbeard object as <Code>Neckbeard.defaultSettings</Code>.
         </Copy>
-        <Highlight className={ nb("pa1 mb2 lh5 ft3") }>
+        <Highlight className={ nb("pa2 mb2 lh5 ft4") }>
             { snippet2 }
         </Highlight>
-        <Highlight className={ nb("pa1 mb2 lh5 ft3") }>
+        <Highlight className={ nb("pa2 mb2 lh5 ft4") }>
             { snippet3 }
         </Highlight>
         <H2>Adding Custom Helpers</H2>
@@ -149,17 +149,17 @@ const Usage = () => (
         </Copy>
         <H3>Write a Helper Function</H3>
         <Copy>To create your own custom helper, write a function that has one parameter for settings and returns an object of selectors. Save your helper function file somewhere handy.</Copy>
-        <Highlight className={ nb("pa1 mb2 lh5 ft3") }>
+        <Highlight className={ nb("pa2 mb2 lh5 ft4") }>
             { snippet4 }
         </Highlight>
         <H3>Make Helper Available to Neckbeard</H3>
         <Copy>Once your helper class function is created, you need to make Neckbeard aware of it. You do this when initializing Neckbeard with the create() function and passing a new settings and helpers object.</Copy>
-        <Highlight className={ nb("pa1 mb2 lh5 ft3") }>
+        <Highlight className={ nb("pa2 mb2 lh5 ft4") }>
             { snippet5 }
         </Highlight>
         <H2>Default Settings</H2>
         <Copy>Neckbeard has a number of Default Settings that are declared in <Code>Neckbeard.defaultSettings</Code> and can be overwritten or extended as needed.</Copy>
-        <Highlight className={ nb("pa1 mb2 lh5 ft3") }>
+        <Highlight className={ nb("pa2 mb2 lh5 ft4") }>
             { snippet6 }
         </Highlight>
         <Copy>

@@ -47,7 +47,7 @@ const Installation = () => (
         <Copy>
             An example of a Helper Class to add spacing looks like <Code>.pv1</Code> which translates to <Code>padding-top: 1rem; padding-bottom: 1rem;</Code>.
             These helper classes can be composed to create complex ui elements. The code blocks that you see in this very paragraph are
-            styled using a group of helper classes <Code>.ft3.brdr1.br2.bcg10.bgg05.pv05.ph1</Code> and in fact, every piece of styling on this 
+            styled using a group of helper classes <Code>.ft3.brdr1.br2.bcg10.bgg05.pv05.ph1</Code> and in fact, every piece of styling on this
             site is made using a similar grouping of helpers.
         </Copy>
         <H3>CSS in Javascript</H3>
@@ -76,11 +76,9 @@ const Installation = () => (
             <H3>Example in ReactJS</H3>
         </div>
 
-        <div className={ nb("lh5 mb2 ft3") }>
-            <Highlight className={ nb("pa1") }>
-                { snippet1 }
-            </Highlight>
-        </div>
+        <Highlight className={ nb("pa2 lh5 ft4") }>
+            { snippet1 }
+        </Highlight>
         <Copy>
             <span className={ nb('fwsemibold') }>*Note</span> - The <Code>{ "<script></script>" }</Code> tags in these examples are for highlighting purposes only.
         </Copy>

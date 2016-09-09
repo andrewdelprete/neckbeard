@@ -92,7 +92,7 @@ const Spacing = () => (
             </tbody>
         </table>
         <H2>Example</H2>
-        <Highlight className={ nb("pa1 mb2 lh5 ft3") }>
+        <Highlight className={ nb("pa2 mb2 lh5 ft4") }>
             { snippet }
         </Highlight>
         <div className={ nb("md-pa1 lg-pa3 xlg-pa5 mb2 brdr1 br5 tac") }>
@@ -100,13 +100,11 @@ const Spacing = () => (
         </div>
 
         <H2>Default Settings</H2>
-        <div className={ nb("lh5 mb2 ft3") }>
-            <Copy>See <Link to="/usage#configuration" className={ nb("tc5 xtd h-tc1") }>Configuration</Link> to learn how to overwrite helper settings.</Copy>
-            <Highlight className={ nb("pa1") }>
-                {"// Neckbeard.defaultSettings.helpers.spacing \n" }
-                { JSON.stringify(Neckbeard.defaultSettings.helpers.spacing, null, '    ') }
-            </Highlight>
-        </div>
+        <Copy>See <Link to="/usage#configuration" className={ nb("tc5 xtd h-tc1") }>Configuration</Link> to learn how to overwrite helper settings.</Copy>
+        <Highlight className={ nb("pa2 lh5 ft4") }>
+            {"// Neckbeard.defaultSettings.helpers.spacing \n" }
+            { JSON.stringify(Neckbeard.defaultSettings.helpers.spacing, null, '    ') }
+        </Highlight>
     </div>
 )
 

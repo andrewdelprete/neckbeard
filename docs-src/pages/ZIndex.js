@@ -69,13 +69,11 @@ const ZIndex = () => (
         </table>
 
         <H2>Default Settings</H2>
-        <div className={ nb("lh5 mb2 ft3") }>
-            <Copy>See <Link to="/usage#configuration" className={ nb("tc5 xtd h-tc1") }>Configuration</Link> to learn how to overwrite helper settings.</Copy>
-            <Highlight className={ nb("pa1") }>
-                {"// Neckbeard.defaultSettings.helpers.zIndex \n" }
-                { JSON.stringify(Neckbeard.defaultSettings.helpers.zIndex, null, '    ') }
-            </Highlight>
-        </div>
+        <Copy>See <Link to="/usage#configuration" className={ nb("tc5 xtd h-tc1") }>Configuration</Link> to learn how to overwrite helper settings.</Copy>
+        <Highlight className={ nb("pa2 lh5 ft4") }>
+            {"// Neckbeard.defaultSettings.helpers.zIndex \n" }
+            { JSON.stringify(Neckbeard.defaultSettings.helpers.zIndex, null, '    ') }
+        </Highlight>
     </div>
 )
 

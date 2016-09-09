@@ -16726,7 +16726,7 @@
 	        ),
 	        _react2.default.createElement(
 	            _reactHighlight2.default,
-	            { className: nb("pa1 mb2 lh5 ft3") },
+	            { className: nb("pa2 mb2 lh5 ft4") },
 	            snippet
 	        ),
 	        _react2.default.createElement(
@@ -16755,7 +16755,7 @@
 	            ),
 	            _react2.default.createElement(
 	                _reactHighlight2.default,
-	                { className: nb("pa1 lh5") },
+	                { className: nb("pa2 lh5 ft4") },
 	                "// Neckbeard.defaultSettings.helpers.border \n",
 	                snippet2
 	            )
@@ -17005,7 +17005,7 @@
 	        ),
 	        _react2.default.createElement(
 	            _reactHighlight2.default,
-	            { className: nb("pa1 mb2 lh5 ft3") },
+	            { className: nb("pa2 mb2 lh5 ft4") },
 	            snippet2
 	        ),
 	        _react2.default.createElement(
@@ -17034,7 +17034,7 @@
 	            ),
 	            _react2.default.createElement(
 	                _reactHighlight2.default,
-	                { className: nb("pa1 lh5") },
+	                { className: nb("pa2 lh5 ft4") },
 	                "// Neckbeard.defaultSettings.helpers.borderRadius \n",
 	                JSON.stringify(_src2.default.defaultSettings.helpers.borderRadius, null, '    ')
 	            )
@@ -17919,7 +17919,7 @@
 	        ),
 	        _react2.default.createElement(
 	            _reactHighlight2.default,
-	            { className: nb("pa1 mb2 lh5 ft3") },
+	            { className: nb("pa2 mb2 lh5 ft4") },
 	            snippet2
 	        ),
 	        _react2.default.createElement(
@@ -17948,13 +17948,13 @@
 	            ),
 	            _react2.default.createElement(
 	                _reactHighlight2.default,
-	                { className: nb("pa1 mb2 lh5 ft3") },
+	                { className: nb("pa2 mb2 lh5 ft4") },
 	                "// Neckbeard.defaultSettings.colors \n",
 	                JSON.stringify(_src2.default.defaultSettings.colors, null, '    ')
 	            ),
 	            _react2.default.createElement(
 	                _reactHighlight2.default,
-	                { className: nb("pa1 mb2 lh5 ft3") },
+	                { className: nb("pa2 mb2 lh5 ft4") },
 	                "// Neckbeard.defaultSettings.helpers.colors \n",
 	                JSON.stringify(_src2.default.defaultSettings.helpers.colors, null, '    ')
 	            )
@@ -18158,7 +18158,7 @@
 	        ),
 	        _react2.default.createElement(
 	            _reactHighlight2.default,
-	            { className: nb("pa1 mb2 lh5 ft3") },
+	            { className: nb("pa2 mb2 lh5 ft4") },
 	            snippet
 	        ),
 	        _react2.default.createElement(
@@ -19015,7 +19015,7 @@
 	        ),
 	        _react2.default.createElement(
 	            _reactHighlight2.default,
-	            { className: nb("pa1 mb2 lh5 ft3") },
+	            { className: nb("pa2 mb2 lh5 ft4") },
 	            snippet
 	        ),
 	        _react2.default.createElement(
@@ -19272,7 +19272,7 @@
 	        ),
 	        _react2.default.createElement(
 	            _reactHighlight2.default,
-	            { className: nb("pa1 mb2 lh5 ft3") },
+	            { className: nb("pa2 mb2 lh5 ft4") },
 	            snippet
 	        ),
 	        _react2.default.createElement(
@@ -20715,7 +20715,7 @@
 	        ),
 	        _react2.default.createElement(
 	            _reactHighlight2.default,
-	            { className: nb("pa1 mb2 lh5 ft3") },
+	            { className: nb("pa2 mb2 lh5 ft4") },
 	            snippet
 	        ),
 	        _react2.default.createElement(
@@ -20817,12 +20817,12 @@
 	        ),
 	        _react2.default.createElement(
 	            _reactHighlight2.default,
-	            { className: nb("pa1 mb2 lh5 ft3") },
+	            { className: nb("pa2 mb2 lh5 ft4") },
 	            "> npm install neckbeard --save-dev"
 	        ),
 	        _react2.default.createElement(
 	            _reactHighlight2.default,
-	            { className: nb("pa1 mb2 lh5 ft3") },
+	            { className: nb("pa2 mb2 lh5 ft4") },
 	            snippet
 	        ),
 	        _react2.default.createElement(
@@ -20832,7 +20832,7 @@
 	        ),
 	        _react2.default.createElement(
 	            _reactHighlight2.default,
-	            { className: nb("pa1 mb2 lh5 ft3") },
+	            { className: nb("pa2 mb2 lh5 ft4") },
 	            '<script src="https://unpkg.com/neckbeard"></script>'
 	        ),
 	        _react2.default.createElement(
@@ -20857,7 +20857,7 @@
 	        ),
 	        _react2.default.createElement(
 	            _reactHighlight2.default,
-	            { className: nb("pa1 mb2 lh5 ft3") },
+	            { className: nb("pa2 mb2 lh5 ft4") },
 	            '<link href="https://unpkg.com/neckbeard/build/nb.css" rel="stylesheet" />'
 	        )
 	    );
@@ -21185,7 +21185,7 @@
 	        ),
 	        _react2.default.createElement(
 	            _reactHighlight2.default,
-	            { className: nb("pa1 mb2 lh5 ft3") },
+	            { className: nb("pa2 mb2 lh5 ft4") },
 	            snippet
 	        ),
 	        _react2.default.createElement(
@@ -23084,7 +23084,7 @@
 	        ),
 	        _react2.default.createElement(
 	            _reactHighlight2.default,
-	            { className: nb("pa1 mb2 lh5 ft3") },
+	            { className: nb("pa2 mb2 lh5 ft4") },
 	            snippet
 	        ),
 	        _react2.default.createElement(
@@ -23609,7 +23609,7 @@
 	        ),
 	        _react2.default.createElement(
 	            _reactHighlight2.default,
-	            { className: nb("pa1 mb2 lh5 ft3") },
+	            { className: nb("pa2 mb2 lh5 ft4") },
 	            snippet
 	        ),
 	        _react2.default.createElement(
@@ -23675,12 +23675,12 @@
 	        ),
 	        _react2.default.createElement(
 	            _reactHighlight2.default,
-	            { className: nb("pa1 mb2 lh5 ft3") },
+	            { className: nb("pa2 mb2 lh5 ft4") },
 	            snippet2
 	        ),
 	        _react2.default.createElement(
 	            _reactHighlight2.default,
-	            { className: nb("pa1 mb2 lh5 ft3") },
+	            { className: nb("pa2 mb2 lh5 ft4") },
 	            snippet3
 	        ),
 	        _react2.default.createElement(
@@ -23729,7 +23729,7 @@
 	        ),
 	        _react2.default.createElement(
 	            _reactHighlight2.default,
-	            { className: nb("pa1 mb2 lh5 ft3") },
+	            { className: nb("pa2 mb2 lh5 ft4") },
 	            snippet4
 	        ),
 	        _react2.default.createElement(
@@ -23744,7 +23744,7 @@
 	        ),
 	        _react2.default.createElement(
 	            _reactHighlight2.default,
-	            { className: nb("pa1 mb2 lh5 ft3") },
+	            { className: nb("pa2 mb2 lh5 ft4") },
 	            snippet5
 	        ),
 	        _react2.default.createElement(
@@ -23765,7 +23765,7 @@
 	        ),
 	        _react2.default.createElement(
 	            _reactHighlight2.default,
-	            { className: nb("pa1 mb2 lh5 ft3") },
+	            { className: nb("pa2 mb2 lh5 ft4") },
 	            snippet6
 	        ),
 	        _react2.default.createElement(
