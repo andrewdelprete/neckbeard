@@ -85,7 +85,7 @@ export default function unicorn({ helpers: { unicorn: { responsive } }, breakpoi
     /**
      * My New Helper
      */
-    selectors["unicorn-awesome"] = {
+    selectors["awesome-unicorn"] = {
         fontSize: "2rem",
         // and so on
     }
@@ -123,7 +123,7 @@ helpers.unicorn = unicorn;
 
 const nb = Neckbeard.create(settings, helpers);
 
-nb('unicorn-awesome');
+nb('awesome-unicorn');
 </script>
 `
 
