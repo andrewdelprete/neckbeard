@@ -157,7 +157,8 @@ function create(settings = defaultSettings, helperFns = helpers) {
         return css(...stylesArray)
     }
 
-    // Add allSelectors to our function
+    // Add allSelectors to our
+    // function as properties
     for (var selector in allSelectors) {
         self[selector] = selector
     }
