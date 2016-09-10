@@ -1,71 +1,87 @@
 import { assert } from "chai"
 import sinon from "sinon"
 
-import nb from "../"
+import Neckbeard from "../"
 
 var jsdom = require("mocha-jsdom")
 
 describe("create() function", function () {
     jsdom()
 
-    it("Should allow a string of selectors that exist as helper selectors", function() {
-        const css = nb.create()
-        assert.isOk(css("mb1 mb2"))
+    it("Should allow a string of helpers", function() {
+        const nb = Neckbeard.create()
+        assert.isOk(nb("mb1 mb2"))
     })
 
-    it("Doesn't allow selectors that don't exist", function() {
-        const css = nb.create()
-        assert.isNotOk(css("fakeclass"))
+    it("Should allow an array of helper objects", function() {
+        const nb = Neckbeard.create()
+        assert.isOk(nb([nb.mb1, nb.mb2]))
+    })
+
+    it("Should allow custom styles object", function() {
+        const nb = Neckbeard.create()
+
+        const styles = {
+            makeBold: {
+                fontWeight: "bold"
+            }
+        }
+        assert.isOk(nb(styles))
+    })
+
+    it("Should allow selectors that don't exist aslong as some do", function() {
+        const nb = Neckbeard.create()
+        assert.isOk(nb("fakeclass mb1"))
     })
 
     it("Should allow single helper to be passed as an argument", function() {
-        const css = nb.create(nb.defaultSettings, { spacing: nb.helpers.spacing })
-        assert.isOk(css("mb1"))
-        assert.isNotOk(css("ft1"))
+        const nb = Neckbeard.create(Neckbeard.defaultSettings, { spacing: Neckbeard.helpers.spacing })
+        assert.isOk(nb("mb1"))
+        assert.isNotOk(nb("ft1"))
     })
 
     it("Should allow overwrite of custom breakpoints", function() {
         const settings = {
-            ...nb.defaultSettings,
+            ...Neckbeard.defaultSettings,
             breakpoints: {
                 xxlg: 1600
             }
         }
 
-        const css = nb.create(settings, nb.helpers)
-        assert.isOk(css("xxlg-mb1"))
-        assert.isNotOk(css("sm-mb1"))
+        const nb = Neckbeard.create(settings, Neckbeard.helpers)
+        assert.isOk(nb("xxlg-mb1"))
+        assert.isNotOk(nb("sm-mb1"))
     })
 
     it("Should disable all media queries", function() {
         const settings = {
-            ...nb.defaultSettings,
+            ...Neckbeard.defaultSettings,
             breakpoints: {}
         }
 
-        const css = nb.create(settings, nb.helpers)
-        assert.isNotOk(css("lg-mb1"))
+        const nb = Neckbeard.create(settings, Neckbeard.helpers)
+        assert.isNotOk(nb("lg-mb1"))
     })
 
     it("Should disable spacing media queries only", function() {
         const settings = {
-            ...nb.defaultSettings,
+            ...Neckbeard.defaultSettings,
             helpers: {
-                ...nb.defaultSettings.helpers,
+                ...Neckbeard.defaultSettings.helpers,
                 spacing: {
                     responsive: false
                 }
             }
         }
 
-        const css = nb.create(settings, nb.helpers)
-        assert.isNotOk(css("lg-mb1"))
-        assert.isOk(css("lg-ft1"))
+        const nb = Neckbeard.create(settings, Neckbeard.helpers)
+        assert.isNotOk(nb("lg-mb1"))
+        assert.isOk(nb("lg-ft1"))
     })
 
     it("Should allow overwrite of fonts", function() {
         const settings = {
-            ...nb.defaultSettings,
+            ...Neckbeard.defaultSettings,
             fonts: {
                 sans: "'Times New Roman'"
             }
@@ -78,21 +94,21 @@ describe("create() function", function () {
 
 describe("addMediaQueries() function", function () {
     it("Should return helper selectors with media queries added to it", function() {
-        const spacing = nb.helpers.spacing(nb.defaultSettings)
-        const css = nb.addMediaQueries(spacing, nb.defaultSettings.breakpoints)
-        assert.isOk(Object.keys(css[Object.keys(css)[0]])[0].includes("@media"))
+        const spacing = Neckbeard.helpers.spacing(Neckbeard.defaultSettings)
+        const nb = Neckbeard.addMediaQueries(spacing, Neckbeard.defaultSettings.breakpoints)
+        assert.isOk(Object.keys(nb[Object.keys(nb)[0]])[0].includes("@media"))
     })
 })
 
 describe("setBeardColors() function", function () {
     it("Should return an object of default colors", function() {
-        const colors = nb.setBeardColors()
+        const colors = Neckbeard.setBeardColors()
         assert.isOk(typeof colors === 'object')
         assert.isOk(colors.brandColor)
     })
 
     it("Should have getters", function() {
-        const colors = nb.setBeardColors()
+        const colors = Neckbeard.setBeardColors()
         assert.isOk(colors.brandColor2)
         assert.isOk(colors.brandColor3)
         assert.isOk(colors.brandColor4)
@@ -100,12 +116,12 @@ describe("setBeardColors() function", function () {
     })
 
     it("Should overwrite defaults", function() {
-        const colors = nb.setBeardColors({ brandColor: "#00FF00" })
+        const colors = Neckbeard.setBeardColors({ brandColor: "#00FF00" })
         assert.isOk(colors.brandColor === "#00FF00")
     })
 
     it("Should darken colors incrementally", function() {
-        const colors = nb.setBeardColors()
+        const colors = Neckbeard.setBeardColors()
         assert.isOk(colors.g05 !== colors.g10)
         assert.isOk(colors.g50 === "#808080")
     })
@@ -113,40 +129,11 @@ describe("setBeardColors() function", function () {
 
 describe("prefixSelectors() function", function () {
     it("Should return an object with helper selectors prefixed with a '.'", function() {
-        const css = nb.prefixSelectors(nb.defaultSettings, { misc: nb.helpers.misc })
-        assert.isOk(css['.clearfix'])
+        const nb = Neckbeard.prefixSelectors(Neckbeard.defaultSettings, { misc: Neckbeard.helpers.misc })
+        assert.isOk(nb['.clearfix'])
     })
     it("Should return an object with psuedo helper selectors prefixed with a '&'", function() {
-        const css = nb.prefixSelectors(nb.defaultSettings, { misc: nb.helpers.misc })
-        assert.isOk(css['.clearfix']['&:after'])
+        const nb = Neckbeard.prefixSelectors(Neckbeard.defaultSettings, { misc: Neckbeard.helpers.misc })
+        assert.isOk(nb['.clearfix']['&:after'])
     })
 })
-
-// describe("Helpers", function () {
-//     jsdom()
-//
-//     describe("borderRadius Helper", function () {
-//         it("Should create selectors 1 to 9", function() {
-//             const css = nb.create([ nb.helpers.borderRadius ], nb.defaultSettings)
-//             assert.isOk(css("br1 br10"))
-//             assert.isNotOk(css("br11"))
-//         })
-//
-//         it("Should incrementBy by 2", function() {
-//             const settings = {
-//                 ...nb.defaultSettings,
-//                 helpers: {
-//                     ...nb.defaultSettings.helpers,
-//                     borderRadius: {
-//                         limit: 10,
-//                         incrementBy: 2,
-//                         responsive: true
-//                     }
-//                 }
-//             }
-//
-//             const css = nb.helpers.borderRadius(settings, nb.defaultSettings.breakpoints)
-//             assert.isNotOk()
-//         })
-//     })
-// })

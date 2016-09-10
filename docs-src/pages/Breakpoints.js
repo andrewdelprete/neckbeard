@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React from "react"
 import { Router, Route, Link } from 'react-router'
 import Neckbeard from "../../src"
 import Highlight from "react-highlight"

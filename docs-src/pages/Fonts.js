@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React from "react"
 import { Router, Route, Link } from 'react-router'
 import Neckbeard from "../../src"
 import Highlight from "react-highlight"
@@ -50,7 +50,7 @@ const Fonts = () => (
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
                     <td className={ nb("tcg50 fw3 pv2 ph1") }>Code</td>
-                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>.Code</Code></td>
+                    <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>.code</Code></td>
                     <td className={ nb("tcg50 fw3 pv2 ph1") }><Code>Consolas, Monaco, 'Andale Mono', monospace</Code></td>
                 </tr>
             </tbody>
@@ -201,17 +201,17 @@ const Fonts = () => (
                     <td className={ nb("tcg50 fw3 pv1 ph1 vam") }><Code>.ft14</Code></td>
                     <td className={ nb("vam pv1 ft14") }>Hi</td>
                 </tr>
-                <tr className={ nb("brdr1--bottom bcg15") }>
+                <tr className={ nb("brdr1--bottom bcg10") }>
                     <td className={ nb("tcg50 fw3 pv1 ph1 vam") }>Font Level 15</td>
                     <td className={ nb("tcg50 fw3 pv1 ph1 vam") }><Code>.ft15</Code></td>
                     <td className={ nb("vam pv1 ft15") }>Hi</td>
                 </tr>
-                <tr className={ nb("brdr1--bottom bcg15") }>
+                <tr className={ nb("brdr1--bottom bcg10") }>
                     <td className={ nb("tcg50 fw3 pv1 ph1 vam") }>Font Level 16</td>
                     <td className={ nb("tcg50 fw3 pv1 ph1 vam") }><Code>.ft16</Code></td>
                     <td className={ nb("vam pv1 ft16") }>Hi</td>
                 </tr>
-                <tr className={ nb("brdr1--bottom bcg15") }>
+                <tr className={ nb("brdr1--bottom bcg10") }>
                     <td className={ nb("tcg50 fw3 pv1 ph1 vam") }>Font Level 17</td>
                     <td className={ nb("tcg50 fw3 pv1 ph1 vam") }><Code>.ft17</Code></td>
                     <td className={ nb("vam pv1 ft17") }>Hi</td>

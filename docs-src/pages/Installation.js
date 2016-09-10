@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React from "react"
 import Highlight from "react-highlight"
 import H1 from "../components/elements/H1"
 import H2 from "../components/elements/H2"
@@ -11,7 +11,7 @@ import Copy from "../components/elements/Copy"
  */
 
 const snippet =
-`import React, { Component } from "react"
+`import React from "react"
 
 // ES6 Modules and CommonJS compatible
 import Neckbeard from "neckbeard"

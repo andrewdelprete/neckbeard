@@ -126,25 +126,29 @@ function create(settings = defaultSettings, helperFns = helpers) {
         .map(fnKey => helperFns[fnKey](settings))
         .reduce((previous, current) => ({ ...previous, ...current }))
 
-    return (selectors) => {
-        // Takes a string of CSS selectors and
-        // checks to make sure each selector exists
-        // and then returns a usable object.
-        var selectorsObj = selectors
-            .split(' ')
-            .reduce((previous, current) => {
-                if (allSelectors.hasOwnProperty(current)) {
-                    return {
-                        ...previous,
-                        [current]: allSelectors[current]
-                    }
-                }
+    // Takes a string of selector names or
+    // an array of objects selectors and
+    // returns a function.
+    let self = (selectors) => {
+        if (typeof selectors === 'string') {
+            selectors = selectors.split(' ')
+        }
 
-                return { ...previous }
-            }, {})
+        if (Array.isArray(selectors)) {
+            selectors = selectors
+                .reduce((previous, current) => {
+                    if (allSelectors.hasOwnProperty(current)) {
+                        return {
+                            ...previous,
+                            [current]: allSelectors[current]
+                        }
+                    }
+                    return { ...previous }
+                }, {})
+        }
 
         // Run our object through Aphrodite
-        const stylesObj = StyleSheet.create(selectorsObj)
+        const stylesObj = StyleSheet.create(selectors)
 
         const stylesArray = Object
             .keys(stylesObj)
@@ -152,6 +156,13 @@ function create(settings = defaultSettings, helperFns = helpers) {
 
         return css(...stylesArray)
     }
+
+    // Add allSelectors to our function
+    for (var selector in allSelectors) {
+        self[selector] = selector
+    }
+
+    return self
 }
 
 /**

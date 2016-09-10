@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React from "react"
 import { Router, Route, Link } from 'react-router'
 import Neckbeard from "../../src"
 import Highlight from "react-highlight"
@@ -12,7 +12,7 @@ import Code from "../components/elements/Code"
  * Overview Page
  */
 const snippet =
-`import React, { Component } from "react"
+`import React from "react"
 
 // ES6 Modules and CommonJS compatible
 import Neckbeard from "neckbeard"

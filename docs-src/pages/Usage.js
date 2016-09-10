@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React from "react"
 import Neckbeard from "../../src"
 import Highlight from "react-highlight"
 import H1 from "../components/elements/H1"
@@ -16,9 +16,26 @@ import Neckbeard from 'neckbeard';
 
 const nb = Neckbeard.create();
 
-// Classes are injected into the
-// DOM dynamically using Aphrodite.
+// Option 1:
+// Pass a string of helpers to be injected
+// into the DOM dynamically using Aphrodite.
 nb('pv1 ph1 ft2');
+
+// Option 2:
+// Pass an array of helper objects to be injected
+// into the DOM dynamically using Aphrodite.
+nb([ nb.pv1, nb.ph1, nb.ft2 ]);
+
+// Option 3:
+// Pass your own styles object to be injected
+// into the DOM dynamically using Aphrodite.
+const styles = {
+    makeBold: {
+        fontWeight: "bold"
+    }
+}
+
+nb(styles);
 </script>`
 
 const snippet2 = `<script>
@@ -163,7 +180,7 @@ const Usage = () => (
             { snippet6 }
         </Highlight>
         <Copy>
-            <span className={ nb('fwsemibold') }>*Note</span> - The <Code>{ "<script></script>" }</Code> tags in these examples are for highlighting purposes only.
+            <span className={ nb([ nb.fwsemibold ]) }>*Note</span> - The <Code>{ "<script></script>" }</Code> tags in these examples are for highlighting purposes only.
         </Copy>
     </div>
 )

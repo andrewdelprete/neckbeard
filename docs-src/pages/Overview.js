@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React from "react"
 import Highlight from "react-highlight"
 import H1 from "../components/elements/H1"
 import H2 from "../components/elements/H2"
@@ -10,7 +10,7 @@ import Copy from "../components/elements/Copy"
  * Overview Page
  */
 const snippet1 = `<script>
-import React, { Component } from "react";
+import React from "react";
 import Neckbeard from "neckbeard";
 
 // Instantiates Neckbeard and returns a function
