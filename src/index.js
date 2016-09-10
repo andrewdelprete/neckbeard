@@ -129,7 +129,7 @@ function create(settings = defaultSettings, helperFns = helpers) {
     // Takes a string of selector names or
     // an array of objects selectors and
     // returns a function.
-    let self = (selectors) => {
+    const self = (selectors) => {
         if (typeof selectors === 'string') {
             selectors = selectors.split(' ')
         }

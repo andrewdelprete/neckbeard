@@ -19,12 +19,24 @@ const nb = Neckbeard.create();
 // Option 1:
 // Pass a string of helpers to be injected
 // into the DOM dynamically using Aphrodite.
-nb('pv1 ph1 ft2');
+<MyComponent className={ nb("pv1 ph1 ft2") } />
+</script>`
+
+const snippetb = `<script>
+import Neckbeard from 'neckbeard';
+
+const nb = Neckbeard.create();
 
 // Option 2:
 // Pass an array of helper objects to be injected
 // into the DOM dynamically using Aphrodite.
-nb([ nb.pv1, nb.ph1, nb.ft2 ]);
+<MyComponent className={ nb([ nb.pv1, nb.ph1, nb.ft2 ]) } />
+</script>`
+
+const snippetc = `<script>
+import Neckbeard from 'neckbeard';
+
+const nb = Neckbeard.create();
 
 // Option 3:
 // Pass your own styles object to be injected
@@ -33,9 +45,9 @@ const styles = {
     makeBold: {
         fontWeight: "bold"
     }
-}
+};
 
-nb(styles);
+<MyComponent className={ nb(styles) } />
 </script>`
 
 const snippet2 = `<script>
@@ -52,7 +64,7 @@ settings.helpers.fontSize = {
 
 const nb = Neckbeard.create(settings);
 
-nb('pv1 ph1 ft2');
+<MyComponent className={ nb('pv1 ph1 ft2') } />
 </script>
 `
 
@@ -70,7 +82,7 @@ settings.helpers.fontSize = {
 
 var nb = Neckbeard.create(settings);
 
-nb('pv1 ph1 ft2');
+<MyComponent className={ nb('pv1 ph1 ft2') } />
 </script>`
 
 const snippet4 = `<script>
@@ -123,7 +135,7 @@ helpers.unicorn = unicorn;
 
 const nb = Neckbeard.create(settings, helpers);
 
-nb('awesome-unicorn');
+<MyComponent className={ nb('awesome-unicorn') } />
 </script>
 `
 
@@ -134,10 +146,22 @@ const Usage = () => (
         <H1>Usage</H1>
         <H2>The Basics</H2>
         <Copy>
-            After installing Neckbeard via NPM or CDN you'll invoke the <Code>Neckbeard.create()</Code> function and assign it to a variable.
+            After installing Neckbeard via NPM or CDN, invoke the <Code>Neckbeard.create()</Code> function and assign it to a variable.
         </Copy>
-        <Highlight className={ nb("pa2 mb2 lh5 ft4") }>
+        <Copy>
+            Neckbeard offers three ways of implementing styles.
+        </Copy>
+        <H3>Option #1 - Pass a String of helpers</H3>
+        <Highlight className={ nb("pa2 mb3 lh5 ft4") }>
             { snippet }
+        </Highlight>
+        <H3>Option #2 - Pass an Array of Helper objects</H3>
+        <Highlight className={ nb("pa2 mb3 lh5 ft4") }>
+            { snippetb }
+        </Highlight>
+        <H3>Option #3 - Pass a new style object</H3>
+        <Highlight className={ nb("pa2 mb3 lh5 ft4") }>
+            { snippetc }
         </Highlight>
         <Copy>
             Neckbeard.create([ settings, helpers ])
@@ -153,10 +177,10 @@ const Usage = () => (
         <Copy>
             Neckbeard has Default Settings for all helpers and can be found on the Neckbeard object as <Code>Neckbeard.defaultSettings</Code>.
         </Copy>
-        <Highlight className={ nb("pa2 mb2 lh5 ft4") }>
+        <Highlight className={ nb("pa2 mb3 lh5 ft4") }>
             { snippet2 }
         </Highlight>
-        <Highlight className={ nb("pa2 mb2 lh5 ft4") }>
+        <Highlight className={ nb("pa2 mb3 lh5 ft4") }>
             { snippet3 }
         </Highlight>
         <H2>Adding Custom Helpers</H2>
@@ -166,17 +190,17 @@ const Usage = () => (
         </Copy>
         <H3>Write a Helper Function</H3>
         <Copy>To create your own custom helper, write a function that has one parameter for settings and returns an object of selectors. Save your helper function file somewhere handy.</Copy>
-        <Highlight className={ nb("pa2 mb2 lh5 ft4") }>
+        <Highlight className={ nb("pa2 mb3 lh5 ft4") }>
             { snippet4 }
         </Highlight>
         <H3>Make Helper Available to Neckbeard</H3>
         <Copy>Once your helper class function is created, you need to make Neckbeard aware of it. You do this when initializing Neckbeard with the create() function and passing a new settings and helpers object.</Copy>
-        <Highlight className={ nb("pa2 mb2 lh5 ft4") }>
+        <Highlight className={ nb("pa2 mb3 lh5 ft4") }>
             { snippet5 }
         </Highlight>
         <H2>Default Settings</H2>
         <Copy>Neckbeard has a number of Default Settings that are declared in <Code>Neckbeard.defaultSettings</Code> and can be overwritten or extended as needed.</Copy>
-        <Highlight className={ nb("pa2 mb2 lh5 ft4") }>
+        <Highlight className={ nb("pa2 mb3 lh5 ft4") }>
             { snippet6 }
         </Highlight>
         <Copy>
