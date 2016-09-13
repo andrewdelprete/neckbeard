@@ -121,7 +121,7 @@ function create(settings = defaultSettings, helperFns = helpers) {
 
     // Invokes each helper function passed and returns
     // an aggregrated object of all selector properties.
-    const allSelectors = Object
+    let allSelectors = Object
         .keys(helperFns)
         .map(fnKey => helperFns[fnKey](settings))
         .reduce((previous, current) => ({ ...previous, ...current }))
@@ -160,7 +160,7 @@ function create(settings = defaultSettings, helperFns = helpers) {
     // Add allSelectors to our
     // function as properties
     for (var selector in allSelectors) {
-        self[selector] = selector
+        self[selector] = allSelectors[selector]
     }
 
     return self

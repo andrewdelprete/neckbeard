@@ -28,24 +28,16 @@ import Neckbeard from 'neckbeard';
 const nb = Neckbeard.create();
 
 // Option 2:
-// Pass an array of helper objects to be injected
+// Pass your own custom styles object to be injected
 // into the DOM dynamically using Aphrodite.
-<MyComponent className={ nb([ nb.pv1, nb.ph1, nb.ft2 ]) } />
-</script>`
-
-const snippetc = `<script>
-import Neckbeard from 'neckbeard';
-
-const nb = Neckbeard.create();
-
-// Option 3:
-// Pass your own styles object to be injected
-// into the DOM dynamically using Aphrodite.
+// You can use Neckbeard styles to compose!
 const styles = {
-    makeBold: {
-        fontWeight: "bold"
+    "text": {
+        ...nb.fwbold, // fontWeight: bold
+        ...nb.ft5, // fontSize: 1.4rem
+        "color": "red" // Your custom properties
     }
-};
+}
 
 <MyComponent className={ nb(styles) } />
 </script>`
@@ -57,16 +49,15 @@ import Neckbeard from 'neckbeard';
 const settings = { ...NeckBeard.defaultSettings };
 
 settings.helpers.fontSize = {
-    limit: 20,
-    incrementBy: .10,
-    responsive: false
+    "limit": 20,
+    "incrementBy": .10,
+    "responsive": false
 }
 
-const nb = Neckbeard.create(settings);
+const nb = Neckbeard.create(settings)
 
 <MyComponent className={ nb('pv1 ph1 ft2') } />
-</script>
-`
+</script>`
 
 const snippet3 = `<script>
 import Neckbeard from 'neckbeard';
@@ -75,12 +66,12 @@ import Neckbeard from 'neckbeard';
 var settings = Object.assign({}, Neckbeard.defaultSettings);
 
 settings.helpers.fontSize = {
-    limit: 20,
-    incrementBy: .10,
-    responsive: false
-}
+    "limit": 20,
+    "incrementBy": .10,
+    "responsive": false
+};
 
-var nb = Neckbeard.create(settings);
+var nb = Neckbeard.create(settings)
 
 <MyComponent className={ nb('pv1 ph1 ft2') } />
 </script>`
@@ -125,7 +116,7 @@ import unicorn from '/path/where/your/helpers/are/unicorn';
 const settings = { ...NeckBeard.defaultSettings };
 
 settings.helpers.unicorn = {
-    responsive: true
+    "responsive": true
 }
 
 // Extend helpers
@@ -149,30 +140,26 @@ const Usage = () => (
             After installing Neckbeard via NPM or CDN, invoke the <Code>Neckbeard.create()</Code> function and assign it to a variable.
         </Copy>
         <Copy>
-            Neckbeard offers three ways of implementing styles.
+            Neckbeard offers two ways to implement:
         </Copy>
-        <H3>Option #1 - Pass a String of helpers</H3>
+        <H3>Option #1 - Pass a string of helpers</H3>
         <Highlight className={ nb("pa2 mb3 lh5 ft4") }>
             { snippet }
         </Highlight>
-        <H3>Option #2 - Pass an Array of Helper objects</H3>
+        <H3>Option #2 - Pass a style object</H3>
         <Highlight className={ nb("pa2 mb3 lh5 ft4") }>
             { snippetb }
         </Highlight>
-        <H3>Option #3 - Pass a new style object</H3>
-        <Highlight className={ nb("pa2 mb3 lh5 ft4") }>
-            { snippetc }
-        </Highlight>
-        <Copy>
-            Neckbeard.create([ settings, helpers ])
-            <div className={ nb("ph1 pt1 tcg40 sm-mb1 md-xmb") }>- settings (optional) - An object of all available settings</div>
-            <div className={ nb("ph1 tcg40 sm-mb1 md-xmb") }>- helpers (optional) - An object of all available helper functions</div>
-        </Copy>
         <a name="configuration"></a>
         <H2>Configuration</H2>
         <Copy>
             The <Code>Neckbeard.create()</Code> function has an optional first parameter (object) to overwrite or extend default settings.
             You can do this by using the <a href="http://babeljs.io/docs/plugins/transform-object-rest-spread/" className={ nb("tc5 xtd h-tc1") }>Object Spread Syntax</a> <Code>...nb.defaultSettings</Code> or <Code>Object.assign()</Code>.
+        </Copy>
+        <Copy>
+            Neckbeard.create([ settings, helpers ])
+            <div className={ nb("ph1 pt1 tcg40 sm-mb1 md-xmb") }>- settings (optional) - An object of all available settings</div>
+            <div className={ nb("ph1 tcg40 sm-mb1 md-xmb") }>- helpers (optional) - An object of all available helper functions</div>
         </Copy>
         <Copy>
             Neckbeard has Default Settings for all helpers and can be found on the Neckbeard object as <Code>Neckbeard.defaultSettings</Code>.
@@ -203,8 +190,9 @@ const Usage = () => (
         <Highlight className={ nb("pa2 mb3 lh5 ft4") }>
             { snippet6 }
         </Highlight>
+
         <Copy>
-            <span className={ nb([ nb.fwsemibold ]) }>*Note</span> - The <Code>{ "<script></script>" }</Code> tags in these examples are for highlighting purposes only.
+            <span className={ nb({ bold: { ...nb.fwbold }}) }>*Note</span> - The <Code>{ "<script></script>" }</Code> tags in these examples are for highlighting purposes only.
         </Copy>
     </div>
 )

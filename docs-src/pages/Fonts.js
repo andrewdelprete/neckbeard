@@ -153,12 +153,12 @@ const Fonts = () => (
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
                     <td className={ nb("tcg50 fw3 pv1 ph1 vam") }>Font Level 5</td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1 vam") }><Code>.ft4</Code></td>
+                    <td className={ nb("tcg50 fw3 pv1 ph1 vam") }><Code>.ft5</Code></td>
                     <td className={ nb("vam pv1 ft5") }>Hi</td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>
                     <td className={ nb("tcg50 fw3 pv1 ph1 vam") }>Font Level 6</td>
-                    <td className={ nb("tcg50 fw3 pv1 ph1 vam") }><Code>.ft4</Code></td>
+                    <td className={ nb("tcg50 fw3 pv1 ph1 vam") }><Code>.ft6</Code></td>
                     <td className={ nb("vam pv1 ft6") }>Hi</td>
                 </tr>
                 <tr className={ nb("brdr1--bottom bcg10") }>

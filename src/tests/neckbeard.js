@@ -13,16 +13,12 @@ describe("create() function", function () {
         assert.isOk(nb("mb1 mb2"))
     })
 
-    it("Should allow an array of helper objects", function() {
-        const nb = Neckbeard.create()
-        assert.isOk(nb([nb.mb1, nb.mb2]))
-    })
-
     it("Should allow custom styles object", function() {
         const nb = Neckbeard.create()
 
         const styles = {
             makeBold: {
+                ...nb.ft2,
                 fontWeight: "bold"
             }
         }
