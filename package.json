@@ -2,7 +2,7 @@
   "name": "neckbeard",
   "description": "A CSS in JS framework for people with better things to do",
   "version": "0.1.8",
-  "main": "index.js",
+  "main": "build/index.js",
   "files": [
     "build"
   ],
