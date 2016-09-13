@@ -2,7 +2,8 @@
   "name": "neckbeard",
   "description": "A CSS in JS framework for people with better things to do",
   "version": "0.1.7",
-  "main": "build/index.js",
+  "main": "index.js",
+  "files": ["build"],
   "devDependencies": {
     "aphrodite": "~0.5.0",
     "autoprefixer": "^6.4.1",
