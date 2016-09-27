@@ -33,7 +33,7 @@ const Installation = () => (
         <H1>Overview</H1>
         <H2>Why Neckbeard?</H2>
         <Copy>
-            Neckbeard is an Atomic CSS in Javascript framework that leverages the composibility nature of helper (utility) classes and the awesome power of <a href="https://github.com/Khan/aphrodite" className={ nb("tc5 xtd h-tc1") }>Aphrodite</a> to rapidly build components.
+            Neckbeard is an Atomic CSS in JS framework that leverages the composibility nature of helper (utility) classes and the awesome power of <a href="https://github.com/Khan/aphrodite" className={ nb("tc5 xtd h-tc1") }>Aphrodite</a> to rapidly build components.
             Neckbeard is created by <a href="https://www.twitter.com/andrewdelprete" className={ nb("tc5 xtd h-tc1") }>@andrewdelprete</a> and <a href="https://www.twitter.com/colinhoweth" className={ nb("tc5 xtd h-tc1") }>@colinhoweth</a> and highly inspired by <a href="https://www.buildwithbeard.com" className={ nb("tc5 xtd h-tc1") }>Beard CSS</a> and mimics much of the same syntax as Beard.
             The main difference is Neckbeard is built with Javascript and Beard is built with SCSS. Using Javascript to build a CSS framework allows us to do some
             fantastic things.
@@ -50,9 +50,9 @@ const Installation = () => (
             styled using a group of helper classes <Code>.ft3.brdr1.br2.bcg10.bgg05.pv05.ph1</Code> and in fact, every piece of styling on this
             site is made using a similar grouping of helpers.
         </Copy>
-        <H3>CSS in Javascript</H3>
+        <H3>CSS in JS</H3>
         <Copy>
-            CSS in Javascript is a fairly new practice in which we write CSS in Javascript as an object and load styles on the page dynamically. Because the CSS syntax is fairly JSONish to begin with, using Javascript
+            CSS in JS is a fairly new practice in which we write CSS in our JS as an object and load styles on the page dynamically. Because the CSS syntax is fairly JSONish to begin with, using Javascript
             just makes sense. Javascript gives us the power of a real programming language to generate, extend, and compose CSS classes. Tools like SCSS and LESS are great but feel limiting at times.
         </Copy>
         <Copy>
@@ -63,7 +63,7 @@ const Installation = () => (
         </Copy>
         <H3>The Magical Unicorn 🦄</H3>
         <Copy>
-            When we combine the Helper Classes and the CSS in Javascript concepts together something magical happen:
+            When we combine the Helper Classes and the CSS in JS concepts together something magical happen:
             <div className={ nb("ph1 pt1 tcg40 sm-mb1 md-xmb") }>- It works great with component based libraries / frameworks like ReactJS because you can couple style + component in the same file together forever in harmony.</div>
             <div className={ nb("ph1 tcg40 sm-mb1 md-xmb") }>- In the case with something like ReactJS, your component name IS all you are concerned with.</div>
             <div className={ nb("ph1 tcg40 sm-mb1 md-xmb") }>- No more global CSS scope.</div>
