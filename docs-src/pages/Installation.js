@@ -37,7 +37,7 @@ const Installation = () => (
         <Copy>There are several ways of installing the awesome that is Neckbeard:</Copy>
         <H2>NPM</H2>
         <Highlight className={ nb("pa2 mb2 lh5 ft4") }>
-            > npm install neckbeard --save-dev
+            > npm install neckbeard
         </Highlight>
         <Highlight className={ nb("pa2 mb2 lh5 ft4") }>
             { snippet }

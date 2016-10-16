@@ -31,15 +31,13 @@ const nb = Neckbeard.create();
 // Pass your own custom styles object to be injected
 // into the DOM dynamically using Aphrodite.
 // You can use Neckbeard styles to compose!
-const styles = {
-    "text": {
-        ...nb.fwbold, // fontWeight: bold
-        ...nb.ft5, // fontSize: 1.4rem
-        "color": "red" // Your custom properties
-    }
+const text = {
+    ...nb.fwbold, // fontWeight: bold
+    ...nb.ft5, // fontSize: 1.4rem
+    "color": "red" // Your custom properties
 }
 
-<MyComponent className={ nb(styles) } />
+<MyComponent className={ nb(text) } />
 </script>`
 
 const snippet2 = `<script>
