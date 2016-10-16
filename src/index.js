@@ -130,6 +130,8 @@ function create(settings = defaultSettings, helperFns = helpers) {
     // an array of objects selectors and
     // returns a function.
     const self = (selectors) => {
+        let stylesObj = {}
+
         if (typeof selectors === 'string') {
             selectors = selectors.split(' ')
         }
@@ -145,10 +147,12 @@ function create(settings = defaultSettings, helperFns = helpers) {
                     }
                     return { ...previous }
                 }, {})
-        }
 
-        // Run our object through Aphrodite
-        const stylesObj = StyleSheet.create(selectors)
+            // Run our object through Aphrodite
+            stylesObj = StyleSheet.create(selectors)
+        } else {
+            stylesObj = StyleSheet.create({ styles: selectors })
+        }
 
         const stylesArray = Object
             .keys(stylesObj)

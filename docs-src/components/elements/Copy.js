@@ -3,8 +3,17 @@ import React, { Component } from 'react'
 /**
  * Copy
  */
-const Copy = ({ children }) => (
-    <div className={ nb("ft5 sans tcg50 lh9 fwlight mb2") }>{ children }</div>
-)
+const Copy = ({ children }) => {
+    const text = {
+        ...nb.ft5,
+        ...nb.sans,
+        ...nb.tcg50,
+        ...nb.lh9,
+        ...nb.fwlight,
+        ...nb.mb2
+    }
+
+    return <div className={ nb(text) }>{ children }</div>
+}
 
 export default Copy
