@@ -709,11 +709,13 @@
 /* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+	    value: true
 	});
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 	var _react = __webpack_require__(2);
 
@@ -725,16 +727,19 @@
 	 * Copy
 	 */
 	var Copy = function Copy(_ref) {
-	  var children = _ref.children;
-	  return _react2.default.createElement(
-	    "div",
-	    { className: nb("ft5 sans tcg50 lh9 fwlight mb2") },
-	    children
-	  );
+	    var children = _ref.children;
+
+	    var text = _extends({}, nb.ft5, nb.sans, nb.tcg50, nb.lh9, nb.fwlight, nb.mb2);
+
+	    return _react2.default.createElement(
+	        'div',
+	        { className: nb(text) },
+	        children
+	    );
 	};
 
 	exports.default = Copy;
-	module.exports = exports["default"];
+	module.exports = exports['default'];
 
 /***/ },
 /* 10 */
@@ -982,6 +987,8 @@
 	    // an array of objects selectors and
 	    // returns a function.
 	    var self = function self(selectors) {
+	        var stylesObj = {};
+
 	        if (typeof selectors === 'string') {
 	            selectors = selectors.split(' ');
 	        }
@@ -993,10 +1000,12 @@
 	                }
 	                return _extends({}, previous);
 	            }, {});
-	        }
 
-	        // Run our object through Aphrodite
-	        var stylesObj = _aphrodite.StyleSheet.create(selectors);
+	            // Run our object through Aphrodite
+	            stylesObj = _aphrodite.StyleSheet.create(selectors);
+	        } else {
+	            stylesObj = _aphrodite.StyleSheet.create({ styles: selectors });
+	        }
 
 	        var stylesArray = Object.keys(stylesObj).map(function (key) {
 	            return stylesObj[key];
@@ -21000,7 +21009,7 @@
 	        _react2.default.createElement(
 	            _reactHighlight2.default,
 	            { className: nb("pa2 mb2 lh5 ft4") },
-	            "> npm install neckbeard --save-dev"
+	            "> npm install neckbeard"
 	        ),
 	        _react2.default.createElement(
 	            _reactHighlight2.default,
@@ -22407,7 +22416,7 @@
 	        _react2.default.createElement(
 	            _Copy2.default,
 	            null,
-	            "Neckbeard is an Atomic CSS in Javascript framework that leverages the composibility nature of helper (utility) classes and the awesome power of ",
+	            "Neckbeard is an Atomic CSS in JS framework that leverages the composibility nature of helper (utility) classes and the awesome power of ",
 	            _react2.default.createElement(
 	                "a",
 	                { href: "https://github.com/Khan/aphrodite", className: nb("tc5 xtd h-tc1") },
@@ -22469,12 +22478,12 @@
 	        _react2.default.createElement(
 	            _H6.default,
 	            null,
-	            "CSS in Javascript"
+	            "CSS in JS"
 	        ),
 	        _react2.default.createElement(
 	            _Copy2.default,
 	            null,
-	            "CSS in Javascript is a fairly new practice in which we write CSS in Javascript as an object and load styles on the page dynamically. Because the CSS syntax is fairly JSONish to begin with, using Javascript just makes sense. Javascript gives us the power of a real programming language to generate, extend, and compose CSS classes. Tools like SCSS and LESS are great but feel limiting at times."
+	            "CSS in JS is a fairly new practice in which we write CSS in our JS as an object and load styles on the page dynamically. Because the CSS syntax is fairly JSONish to begin with, using Javascript just makes sense. Javascript gives us the power of a real programming language to generate, extend, and compose CSS classes. Tools like SCSS and LESS are great but feel limiting at times."
 	        ),
 	        _react2.default.createElement(
 	            _Copy2.default,
@@ -22500,7 +22509,7 @@
 	        _react2.default.createElement(
 	            _Copy2.default,
 	            null,
-	            "When we combine the Helper Classes and the CSS in Javascript concepts together something magical happen:",
+	            "When we combine the Helper Classes and the CSS in JS concepts together something magical happen:",
 	            _react2.default.createElement(
 	                "div",
 	                { className: nb("ph1 pt1 tcg40 sm-mb1 md-xmb") },
@@ -23720,7 +23729,7 @@
 
 	var snippet = "<script>\nimport Neckbeard from 'neckbeard';\n\nconst nb = Neckbeard.create();\n\n// Option 1:\n// Pass a string of helpers to be injected\n// into the DOM dynamically using Aphrodite.\n<MyComponent className={ nb(\"pv1 ph1 ft2\") } />\n</script>";
 
-	var snippetb = "<script>\nimport Neckbeard from 'neckbeard';\n\nconst nb = Neckbeard.create();\n\n// Option 2:\n// Pass your own custom styles object to be injected\n// into the DOM dynamically using Aphrodite.\n// You can use Neckbeard styles to compose!\nconst styles = {\n    \"text\": {\n        ...nb.fwbold, // fontWeight: bold\n        ...nb.ft5, // fontSize: 1.4rem\n        \"color\": \"red\" // Your custom properties\n    }\n}\n\n<MyComponent className={ nb(styles) } />\n</script>";
+	var snippetb = "<script>\nimport Neckbeard from 'neckbeard';\n\nconst nb = Neckbeard.create();\n\n// Option 2:\n// Pass your own custom styles object to be injected\n// into the DOM dynamically using Aphrodite.\n// You can use Neckbeard styles to compose!\nconst text = {\n    ...nb.fwbold, // fontWeight: bold\n    ...nb.ft5, // fontSize: 1.4rem\n    \"color\": \"red\" // Your custom properties\n}\n\n<MyComponent className={ nb(text) } />\n</script>";
 
 	var snippet2 = "<script>\nimport Neckbeard from 'neckbeard';\n\n// Using ES6 Spread makes it easy\nconst settings = { ...NeckBeard.defaultSettings };\n\nsettings.helpers.fontSize = {\n    \"limit\": 20,\n    \"incrementBy\": .10,\n    \"responsive\": false\n}\n\nconst nb = Neckbeard.create(settings)\n\n<MyComponent className={ nb('pv1 ph1 ft2') } />\n</script>";
 
