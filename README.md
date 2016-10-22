@@ -14,7 +14,7 @@ https://www.neckbeardjs.com
 7. 11.5kb gzipped
 
 ## Installation
-1. > npm install neckbeard --save-dev
+1. > npm install neckbeard
 
 ### CDN (umd version)
 1. https://unpkg.com/neckbeard
@@ -38,17 +38,11 @@ const settings = {
 
 const nb = Neckbeard.create(settings)
 
-class App extends Component {
-    render() {
-        return (
-            <div className={ nb("flex jcc aic absolute h100 w100") }>
-                <p className={ nb("ft5 tc1 tac fwthin") }>
-                    Neckbeard
-                </p>
-            </div>
-        )
-    }
-}
-
-export default App
+const Component = () => (
+    <div className={ nb("flex jcc aic absolute h100 w100") }>
+        <p className={ nb("ft5 tc1 tac fwthin") }>
+            Neckbeard
+        </p>
+    </div>
+)
 ```
