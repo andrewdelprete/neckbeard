@@ -2,7 +2,7 @@
 Neckbeard is an Atomic CSS in JS Framework highly inspired by [Beard](http://www.buildwithbeard.com) and powered by [Aphrodite](https://github.com/Khan/aphrodite). Neckbeard provides common CSS utility classes to help you scaffold components quickly.
 
 ## Documentation Site
-https://www.neckbeardjs.com
+https://neckbeard.andrewdelprete.com
 
 ## Benefits
 1. Works great with component based frameworks / libraries like React or standalone.
